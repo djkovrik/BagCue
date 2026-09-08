@@ -1,0 +1,98 @@
+name: Create Android release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: SemVer part to increment
+        required: true
+        type: choice
+        options: [patch, minor, major]
+      notes_en:
+        description: English (en-US) release notes, 20-500 characters
+        required: true
+        type: string
+      notes_ru:
+        description: Russian (ru-RU) release notes, 20-500 characters
+        required: true
+        type: string
+
+concurrency:
+  group: create-android-release
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      release_tag: ${{ steps.version.outputs.tag }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Authorize actor and branch
+        env:
+          RELEASE_ACTORS: ${{ vars.RELEASE_ACTORS }}
+        run: |
+          test "$GITHUB_REF" = "refs/heads/master" || { echo 'Release creation requires master' >&2; exit 1; }
+          test -n "$RELEASE_ACTORS" || { echo 'Missing RELEASE_ACTORS repository variable' >&2; exit 1; }
+          case ",$RELEASE_ACTORS," in *",$GITHUB_ACTOR,"*) ;; *) echo "Unauthorized release actor" >&2; exit 1;; esac
+      - name: Validate localized notes
+        env:
+          NOTES_EN: ${{ inputs.notes_en }}
+          NOTES_RU: ${{ inputs.notes_ru }}
+        run: |
+          python - <<'PY'
+          import os
+          for key in ('NOTES_EN', 'NOTES_RU'):
+              size = len(os.environ[key].strip())
+              if not 20 <= size <= 500:
+                  raise SystemExit(f'{key} must contain 20-500 characters, got {size}')
+          PY
+      - name: Calculate next SemVer
+        id: version
+        env:
+          BUMP: ${{ inputs.bump }}
+        run: |
+          latest="$(git tag --list 'v[0-9]*.[0-9]*.[0-9]*' --sort=-version:refname | head -n1)"
+          latest="${latest:-v0.0.0}"
+          IFS=. read -r major minor patch <<< "${latest#v}"
+          case "$BUMP" in
+            major) major=$((major + 1)); minor=0; patch=0 ;;
+            minor) minor=$((minor + 1)); patch=0 ;;
+            patch) patch=$((patch + 1)) ;;
+            *) echo 'Unsupported SemVer bump' >&2; exit 1 ;;
+          esac
+          (( major <= 2100 && minor < 1000 && patch < 1000 )) || { echo 'SemVer is outside versionCode mapping' >&2; exit 1; }
+          tag="v${major}.${minor}.${patch}"
+          git rev-parse "$tag" >/dev/null 2>&1 && { echo "Tag already exists: $tag" >&2; exit 1; }
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+      - name: Create immutable tag and GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+          NOTES_EN: ${{ inputs.notes_en }}
+          NOTES_RU: ${{ inputs.notes_ru }}
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          printf '%s\n' "$NOTES_EN" > release-notes-en-US.txt
+          printf '%s\n' "$NOTES_RU" > release-notes-ru-RU.txt
+          git tag -a "$TAG" -m "BagCue $TAG"
+          git push origin "$TAG"
+          gh release create "$TAG" --prerelease --verify-tag --title "BagCue $TAG" \
+            --notes "Automated prerelease for Google Play Internal testing." \
+            release-notes-en-US.txt release-notes-ru-RU.txt
+
+  publish:
+    needs: prepare
+    uses: ./.github/workflows/PublishAndroidRelease.yml
+    with:
+      release_tag: ${{ needs.prepare.outputs.release_tag }}
+    secrets: inherit

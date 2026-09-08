@@ -1,0 +1,150 @@
+{
+  "acceptanceScenarioIds": [],
+  "allowedFiles": [
+    "androidApp/build.gradle.kts",
+    "gradle/libs.versions.toml"
+  ],
+  "assignmentBaselineRef": {
+    "path": ".vibe/snapshots/440a4536d9cc5453faea54634cf004946c46e7388faf4a98c5352c0bd9fa68ac.json",
+    "sha256": "8a2128771d9e0e8d6b82692582052d11b321cbb2aa160b480b96903904c3c240"
+  },
+  "assignmentId": "android-fragment-lint",
+  "blockers": [
+    "The combined release check compiled all release Kotlin/Java, completed lintRelease and R8, then packageRelease stopped only because the external release signing storeFile is intentionally unavailable in this workspace. Full signed assembleRelease remains NOT RUN until the documented upload-key secrets are supplied; receipt RECEIPT-6a559cfd-0d28-4724-b9e2-a74d7bccc2bd.json."
+  ],
+  "changedFiles": [
+    "androidApp/build.gradle.kts",
+    "gradle/libs.versions.toml"
+  ],
+  "completedAt": "2026-09-08T16:33:14.236437Z",
+  "evidenceMode": "assignment",
+  "handoffId": "HANDOFF-android-fragment-lint-20260908",
+  "nonGradleChecks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "gradle/libs.versions.toml",
+        "androidApp/build.gradle.kts"
+      ],
+      "details": "No whitespace errors; only line-ending normalization warnings.",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "rg",
+        "-n",
+        "fragment|baseline|suppress",
+        "gradle/libs.versions.toml",
+        "androidApp/build.gradle.kts"
+      ],
+      "details": "Fragment 1.9.0 catalog/dependency wiring is present; no lint baseline or suppression was added.",
+      "exitCode": 0
+    }
+  ],
+  "owner": "vibe-project-architect-android-lint",
+  "productionEvidence": [
+    {
+      "path": "gradle/libs.versions.toml",
+      "surface": "explicit-stable-fragment-version",
+      "symbol": "androidx-fragment = \"1.9.0\""
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "surface": "fragment-version-catalog-alias",
+      "symbol": "androidx-fragment-ktx"
+    },
+    {
+      "path": "androidApp/build.gradle.kts",
+      "surface": "android-release-fragment-runtime-compatibility",
+      "symbol": "implementation(libs.androidx.fragment.ktx)"
+    }
+  ],
+  "qualityGateIds": [
+    "QG-001",
+    "QG-002",
+    "QG-004"
+  ],
+  "requestedCommands": [
+    {
+      "argv": [
+        "gradlew.bat",
+        ":androidApp:lintRelease"
+      ],
+      "coveredObligations": [
+        {
+          "obligationId": "QG-001",
+          "surfaces": [
+            "android-release-compilation"
+          ]
+        },
+        {
+          "obligationId": "QG-002",
+          "surfaces": [
+            "android-release-dependency-resolution"
+          ]
+        },
+        {
+          "obligationId": "QG-004",
+          "surfaces": [
+            "android-release-lint"
+          ]
+        }
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-530d3fba-94d4-45f9-9480-2b503e1a0bcd.json",
+      "tasks": [
+        ":androidApp:lintRelease"
+      ]
+    },
+    {
+      "argv": [
+        "gradlew.bat",
+        ":androidApp:assembleRelease",
+        ":androidApp:lintRelease"
+      ],
+      "coveredObligations": [
+        {
+          "obligationId": "QG-001",
+          "surfaces": [
+            "release-compilation-and-r8"
+          ]
+        },
+        {
+          "obligationId": "QG-004",
+          "surfaces": [
+            "release-lint"
+          ]
+        }
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-6a559cfd-0d28-4724-b9e2-a74d7bccc2bd.json",
+      "tasks": [
+        ":androidApp:assembleRelease",
+        ":androidApp:lintRelease"
+      ]
+    }
+  ],
+  "resultScopeFingerprint": {
+    "algorithm": "sha256",
+    "digest": "aee0aef76be9174b612fc975008582147e3b077612400723fe8bfd2fb4fc0878",
+    "files": [
+      {
+        "path": "androidApp/build.gradle.kts",
+        "sha256": "de11db0a03a7b014fdf6586f2a25d1390957411c72b47ab53975c0b41146d717"
+      },
+      {
+        "path": "gradle/libs.versions.toml",
+        "sha256": "c4991fe5ecbd3585220bd0c121a30af84013d3aca95477b006ce127989ddc6b3"
+      }
+    ],
+    "patterns": [
+      "androidApp/build.gradle.kts",
+      "gradle/libs.versions.toml"
+    ]
+  },
+  "schemaVersion": "2.0",
+  "startedAt": "2026-09-08T16:26:14.202970Z",
+  "supersedes": [],
+  "testEvidence": []
+}

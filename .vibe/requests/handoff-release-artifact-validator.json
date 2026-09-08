@@ -1,0 +1,15 @@
+{
+  "action": "handoff",
+  "assignmentId": "release-artifact-validator",
+  "handoffId": "HANDOFF-release-artifact-validator-20260908",
+  "productionEvidence": [
+    {"path":".github/workflows/scripts/validate_release_artifacts.py","symbol":"BundleConfig.pb","surface":"standard-android-app-bundle-structure"}
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {"argv":["python",".github/workflows/scripts/validate_release_artifacts.py","androidApp/build/outputs/apk/release/androidApp-release.apk","androidApp/build/outputs/bundle/release/androidApp-release.aab","androidApp/build/outputs/mapping/release/mapping.txt"],"exitCode":0,"details":"Generated APK, AAB, and R8 mapping are non-empty; APK/AAB are ZIP containers; AAB contains standard BundleConfig.pb and base manifest."},
+    {"argv":["python","-m","py_compile",".github/workflows/scripts/validate_release_artifacts.py"],"exitCode":0,"details":"Validator compiles after the exact structure correction."}
+  ],
+  "requestedCommands": [],
+  "blockers": []
+}

@@ -1,0 +1,12 @@
+{
+  "action": "check",
+  "runner": "command",
+  "kind": "integration",
+  "argv": ["python", ".github/workflows/scripts/validate_repository.py"],
+  "coveredObligations": [
+    {"obligationId":"QG-001","surfaces":["repository-invariants"]},
+    {"obligationId":"QG-004","surfaces":["release-workflow-contract"]},
+    {"obligationId":"QG-010","surfaces":["documentation-contract"]}
+  ],
+  "timeoutSeconds": 300
+}

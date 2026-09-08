@@ -1,0 +1,8 @@
+{
+  "action": "assign",
+  "assignmentId": "android-fragment-lint",
+  "owner": "vibe-project-architect-android-lint",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-001", "QG-002", "QG-004"],
+  "allowedFiles": ["gradle/libs.versions.toml", "androidApp/build.gradle.kts"]
+}

@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
@@ -7,9 +6,6 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.android.kmp.library)
-    alias(libs.plugins.kotlinx.serialization)
-    alias(libs.plugins.room)
-    alias(libs.plugins.ksp)
 }
 
 kotlin {
@@ -18,6 +14,7 @@ kotlin {
         compileSdk = 37
         minSdk = 23
         androidResources.enable = true
+        withHostTest {}
         compilerOptions { jvmTarget = JvmTarget.JVM_17 }
     }
 
@@ -32,19 +29,15 @@ kotlin {
             api(libs.compose.resources)
             api(libs.compose.ui.tooling.preview)
             api(libs.compose.material3)
+            implementation(project(":shared:root"))
+            implementation(project(":shared:component:catalog"))
+            implementation(project(":shared:component:templates"))
+            implementation(project(":shared:component:session"))
+            implementation(project(":shared:component:history"))
+            implementation(project(":shared:component:settings"))
+            implementation(libs.decompose.extensions.compose)
             implementation(libs.kermit)
             implementation(libs.kotlinx.coroutines.core)
-            implementation(libs.ktor.client.core)
-            implementation(libs.ktor.client.content.negotiation)
-            implementation(libs.ktor.client.serialization)
-            implementation(libs.ktor.serialization.json)
-            implementation(libs.ktor.client.logging)
-            implementation(libs.kotlinx.serialization.json)
-            implementation(libs.coil)
-            implementation(libs.coil.network.ktor)
-            implementation(libs.multiplatformSettings)
-            implementation(libs.kotlinx.datetime)
-            implementation(libs.room.runtime)
         }
 
         commonTest.dependencies {
@@ -53,42 +46,25 @@ kotlin {
             implementation(libs.kotlinx.coroutines.test)
         }
 
-        androidMain.dependencies {
-            implementation(libs.kotlinx.coroutines.android)
-            implementation(libs.ktor.client.okhttp)
-        }
+        androidMain.dependencies { implementation(libs.kotlinx.coroutines.android) }
 
         iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
+            implementation(project(":shared:data"))
+            implementation(project(":shared:platform"))
+            implementation(project(":shared:network"))
+            implementation(libs.mvikotlin)
+            implementation(libs.mvikotlin.main)
         }
-
     }
 
-    targets
-        .withType<KotlinNativeTarget>()
+    targets.withType<KotlinNativeTarget>()
         .matching { it.konanTarget.family.isAppleFamily }
         .configureEach {
-            binaries {
-                framework {
-                    baseName = "compose"
-                    isStatic = true
-                }
+            binaries.framework {
+                baseName = "compose"
+                isStatic = true
             }
         }
 }
 
-dependencies {
-    androidRuntimeClasspath(libs.compose.ui.tooling)
-}
-
-room {
-    schemaDirectory("$projectDir/schemas")
-}
-
-dependencies {
-    with(libs.room.compiler) {
-        add("kspAndroid", this)
-        add("kspIosArm64", this)
-        add("kspIosSimulatorArm64", this)
-    }
-}
+dependencies { androidRuntimeClasspath(libs.compose.ui.tooling) }

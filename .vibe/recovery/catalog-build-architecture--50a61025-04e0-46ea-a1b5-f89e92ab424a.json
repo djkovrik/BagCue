@@ -1,0 +1,72 @@
+{
+  "assignmentId": "catalog-build-architecture",
+  "blockers": [],
+  "createdAt": "2026-09-08T08:03:10.920376Z",
+  "fileBoundaries": [
+    "settings.gradle.kts",
+    "build.gradle.kts",
+    "gradle/**",
+    "shared/domain/build.gradle.kts",
+    "shared/data/build.gradle.kts",
+    "shared/component/catalog/build.gradle.kts",
+    "shared/root/build.gradle.kts",
+    "shared/compose/build.gradle.kts",
+    "androidApp/build.gradle.kts"
+  ],
+  "nextAction": "Inspect AppSpec and current build graph, then implement only assignment build wiring",
+  "obligationIds": [
+    "AC-001",
+    "AC-002",
+    "AC-003",
+    "AC-004",
+    "AC-005"
+  ],
+  "owner": "vibe-project-architect",
+  "pendingChecks": [
+    "Orchestrator must run requested Gradle compilation and tests"
+  ],
+  "previousPacketDigest": null,
+  "requiredReadHashes": [
+    {
+      "path": ".vibe/requests/assign-architect-catalog.json",
+      "sha256": "04c5e9c680823988fca7f55e440d6c62b9ef2506852482eca9e66213245497eb"
+    },
+    {
+      "path": "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+      "sha256": "ddf5d641c5e4d5b2f4078b125ff701ce03ef89987f24422f4bd1b11a171493f6"
+    },
+    {
+      "path": "spec/app-spec/app-spec.json",
+      "sha256": "a0879cb7c296f1e13cd21ad0b762b9eec14fb9b62e6157d5b509f19f965397fc"
+    }
+  ],
+  "requiredReads": [
+    ".vibe/requests/assign-architect-catalog.json",
+    "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+    "spec/app-spec/app-spec.json"
+  ],
+  "resolutions": {
+    "blockers": [],
+    "pendingChecks": [],
+    "reason": null
+  },
+  "schemaVersion": "2.0",
+  "scopedInstructions": [],
+  "status": "active",
+  "workspaceFingerprint": {
+    "algorithm": "sha256",
+    "binaryDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "digest": "16b895c17cc4c79777cdfc2a26e28f86424c9fcad48934ae2e0ebeba4433720e",
+    "gitHead": "fdea4c1a871e2d3952a930b8d7bf9e780851dcc7",
+    "workingFiles": [
+      {
+        "path": "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+        "sha256": "ddf5d641c5e4d5b2f4078b125ff701ce03ef89987f24422f4bd1b11a171493f6"
+      },
+      {
+        "path": "docs/decisions/DEC-YANDEX-PRODUCTION-AD-UNIT.json",
+        "sha256": "d28c03639f6ea3b30744f7f5162a2f96af88011785fa50b6c018517de579bf8f"
+      }
+    ]
+  }
+}

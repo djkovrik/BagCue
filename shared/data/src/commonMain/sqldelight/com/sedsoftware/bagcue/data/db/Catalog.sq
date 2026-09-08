@@ -1,0 +1,190 @@
+PRAGMA foreign_keys = 1;
+
+CREATE TABLE packing_item (
+  id TEXT NOT NULL PRIMARY KEY,
+  seed_resource_key TEXT,
+  user_name_override TEXT,
+  usual_location TEXT,
+  created_order INTEGER NOT NULL,
+  updated_at INTEGER NOT NULL,
+  CHECK (seed_resource_key IS NOT NULL OR user_name_override IS NOT NULL),
+  CHECK (user_name_override IS NULL OR length(trim(user_name_override)) > 0),
+  CHECK (usual_location IS NULL OR length(trim(usual_location)) > 0)
+);
+
+CREATE TABLE seed_override (
+  seed_id TEXT NOT NULL,
+  seed_kind TEXT NOT NULL,
+  state TEXT NOT NULL,
+  updated_at INTEGER NOT NULL,
+  PRIMARY KEY (seed_id, seed_kind),
+  CHECK (state IN ('modified', 'deleted'))
+);
+
+CREATE TABLE kit_template (
+  id TEXT NOT NULL PRIMARY KEY,
+  seed_resource_key TEXT,
+  user_name_override TEXT,
+  sort_order INTEGER NOT NULL
+);
+
+CREATE TABLE template_position (
+  id TEXT NOT NULL PRIMARY KEY,
+  template_id TEXT NOT NULL REFERENCES kit_template(id) ON DELETE CASCADE,
+  item_id TEXT NOT NULL REFERENCES packing_item(id) ON DELETE CASCADE,
+  quantity INTEGER NOT NULL DEFAULT 1,
+  seed_bag_resource_key TEXT,
+  user_bag_label TEXT,
+  source_hint_override TEXT,
+  sort_order INTEGER NOT NULL,
+  UNIQUE (template_id, item_id),
+  CHECK (quantity BETWEEN 1 AND 99)
+);
+
+CREATE TABLE packing_session (
+  id TEXT NOT NULL PRIMARY KEY,
+  local_date TEXT NOT NULL UNIQUE,
+  status TEXT NOT NULL,
+  completion_mode TEXT,
+  created_at INTEGER NOT NULL DEFAULT 0,
+  completed_at INTEGER,
+  revision INTEGER NOT NULL DEFAULT 0,
+  display_seed_resource_key TEXT,
+  display_user_name TEXT,
+  CHECK (status IN ('active', 'completed')),
+  CHECK (completion_mode IS NULL OR completion_mode IN ('all-packed', 'with-skipped'))
+);
+
+CREATE TABLE session_template_snapshot (
+  session_id TEXT NOT NULL REFERENCES packing_session(id) ON DELETE CASCADE,
+  template_id TEXT NOT NULL,
+  display_seed_resource_key TEXT,
+  display_user_name TEXT,
+  sort_order INTEGER NOT NULL,
+  PRIMARY KEY (session_id, template_id)
+);
+
+CREATE TABLE session_packing_item (
+  id TEXT NOT NULL PRIMARY KEY,
+  session_id TEXT NOT NULL REFERENCES packing_session(id) ON DELETE CASCADE,
+  catalog_item_id TEXT REFERENCES packing_item(id) ON DELETE SET NULL,
+  display_seed_resource_key TEXT,
+  display_user_name TEXT,
+  quantity INTEGER NOT NULL DEFAULT 1,
+  bag_kind TEXT NOT NULL DEFAULT 'none',
+  bag_seed_resource_key TEXT,
+  bag_user_text TEXT,
+  source_hint TEXT,
+  item_state TEXT NOT NULL DEFAULT 'not-packed',
+  skipped INTEGER NOT NULL DEFAULT 0,
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  CHECK (bag_kind IN ('none', 'assigned', 'unresolved')),
+  CHECK (item_state IN ('not-packed', 'packed')),
+  CHECK (quantity BETWEEN 1 AND 99)
+);
+
+CREATE TABLE session_item_bag_candidate (
+  session_item_id TEXT NOT NULL REFERENCES session_packing_item(id) ON DELETE CASCADE,
+  seed_resource_key TEXT,
+  user_text TEXT,
+  sort_order INTEGER NOT NULL,
+  PRIMARY KEY (session_item_id, sort_order),
+  CHECK (seed_resource_key IS NOT NULL OR user_text IS NOT NULL)
+);
+
+selectAllItems:
+SELECT * FROM packing_item ORDER BY created_order, id;
+
+selectItemById:
+SELECT * FROM packing_item WHERE id = ?;
+
+insertItem:
+INSERT INTO packing_item(id, seed_resource_key, user_name_override, usual_location, created_order, updated_at)
+VALUES (?, ?, ?, ?, ?, ?);
+
+updateStarterIfAllowed:
+UPDATE packing_item
+SET seed_resource_key = ?, created_order = ?, updated_at = ?
+WHERE id = ?
+  AND user_name_override IS NULL
+  AND NOT EXISTS (
+    SELECT 1 FROM seed_override WHERE seed_id = ? AND seed_kind = 'item'
+  );
+
+insertStarterIfAllowed:
+INSERT OR IGNORE INTO packing_item(id, seed_resource_key, user_name_override, usual_location, created_order, updated_at)
+SELECT ?, ?, NULL, NULL, ?, ?
+WHERE NOT EXISTS (
+  SELECT 1 FROM seed_override WHERE seed_id = ? AND seed_kind = 'item'
+);
+
+updateItem:
+UPDATE packing_item
+SET user_name_override = ?, usual_location = ?, updated_at = ?
+WHERE id = ?;
+
+upsertSeedOverride:
+INSERT OR REPLACE INTO seed_override(seed_id, seed_kind, state, updated_at)
+VALUES (?, 'item', ?, ?);
+
+selectTemplateDependencies:
+SELECT kit_template.id, kit_template.seed_resource_key, kit_template.user_name_override
+FROM kit_template
+JOIN template_position ON template_position.template_id = kit_template.id
+WHERE template_position.item_id = ?
+ORDER BY kit_template.sort_order, kit_template.id;
+
+selectActiveSessionDependencies:
+SELECT DISTINCT packing_session.id, packing_session.display_seed_resource_key, packing_session.display_user_name
+FROM packing_session
+JOIN session_packing_item ON session_packing_item.session_id = packing_session.id
+WHERE session_packing_item.catalog_item_id = ? AND packing_session.status = 'active'
+ORDER BY packing_session.local_date, packing_session.id;
+
+deleteTemplatePositionsForItem:
+DELETE FROM template_position WHERE item_id = ?;
+
+deleteActiveSessionItemsForItem:
+DELETE FROM session_packing_item
+WHERE catalog_item_id = ? AND session_id IN (SELECT id FROM packing_session WHERE status = 'active');
+
+deletePackingItem:
+DELETE FROM packing_item WHERE id = ?;
+
+selectSeedOverride:
+SELECT * FROM seed_override WHERE seed_id = ? AND seed_kind = 'item';
+
+countTemplatePositionsForItem:
+SELECT count(*) FROM template_position WHERE item_id = ?;
+
+countActiveSessionItemsForItem:
+SELECT count(*) FROM session_packing_item
+JOIN packing_session ON packing_session.id = session_packing_item.session_id
+WHERE catalog_item_id = ? AND packing_session.status = 'active';
+
+countCompletedSessionItemsForItem:
+SELECT count(*) FROM session_packing_item
+JOIN packing_session ON packing_session.id = session_packing_item.session_id
+WHERE catalog_item_id = ? AND packing_session.status = 'completed';
+
+insertTemplate:
+INSERT INTO kit_template(id, seed_resource_key, user_name_override, sort_order)
+VALUES (?, ?, ?, ?);
+
+insertTemplatePosition:
+INSERT INTO template_position(id, template_id, item_id, quantity, seed_bag_resource_key, user_bag_label, sort_order)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+insertSession:
+INSERT INTO packing_session(id, local_date, status, display_seed_resource_key, display_user_name)
+VALUES (?, ?, ?, ?, ?);
+
+insertSessionItem:
+INSERT INTO session_packing_item(id, session_id, catalog_item_id, display_seed_resource_key, display_user_name, quantity)
+VALUES (?, ?, ?, ?, ?, ?);
+
+selectAllSessionItems:
+SELECT * FROM session_packing_item ORDER BY id;
+
+selectSessionById:
+SELECT * FROM packing_session WHERE id = ?;

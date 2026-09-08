@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "template-component-root",
+  "owner": "vibe-decompose-and-mvikotlin-engineer",
+  "acceptanceScenarioIds": ["AC-006", "AC-007", "AC-008", "AC-009", "AC-010", "AC-011"],
+  "qualityGateIds": [],
+  "allowedFiles": ["shared/component/templates/src/**", "shared/root/src/**"],
+  "inputScopeId": "catalog-core-v1"
+}

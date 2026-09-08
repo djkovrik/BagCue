@@ -1,0 +1,7 @@
+{
+  "action":"package","packageId":"assets-and-visual-matrix","owner":"vibe-developer",
+  "acceptanceScenarioIds":["AC-040","AC-041","AC-042","AC-043","AC-044","AC-045","AC-046","AC-047","AC-048","AC-049","AC-050"],"qualityGateIds":["QG-006"],
+  "fileBoundaries":["gradle/**","build.gradle.kts","settings.gradle.kts","shared/compose/**","shared/component/**","shared/root/**","androidApp/**","iosApp/iosApp/**","docs/assets/**","docs/design/**",".gitattributes"],
+  "integrationGoal":"Deliver the complete BagCue asset inventory and deterministic preview/golden matrix for all product screens and risk states, then inspect and review the production visual system across themes, locales, text scale and adaptive widths.",
+  "nextAction":"Create and validate ASSET-001 through ASSET-017 with portable resources, launcher derivatives, provenance/hashes and production usages before registering overlapping preview/golden work."
+}

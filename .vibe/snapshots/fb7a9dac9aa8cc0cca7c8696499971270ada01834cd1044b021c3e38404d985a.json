@@ -1,0 +1,142 @@
+{
+  "algorithm": "sha256",
+  "digest": "d7abe1437f31cf93f2e5834a492809df146d0018762e87fd7aaf67954e0becf2",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "2f34ddd5191db53bacd63c3ab6f70d2cc904d3b3601a56139fe03cff8068c24b"
+    },
+    {
+      "path": "androidApp/build.gradle.kts",
+      "sha256": "5168be5222da33accfa0f13ebccb2d69169cd6fac00944b9428b792a8b9ad076"
+    },
+    {
+      "path": "build.gradle.kts",
+      "sha256": "9cb2b5edce1fbbbfc9cdeec50c71128bd8e8bd9c060fe8a497d03a4641c2b331"
+    },
+    {
+      "path": "docs/CI-RELEASE-SETUP.md",
+      "sha256": null
+    },
+    {
+      "path": "docs/IOS-RELEASE-SETUP.md",
+      "sha256": null
+    },
+    {
+      "path": "gradle.properties",
+      "sha256": "2b041bd1eb14e3bb0d0df0c6155d275912b2d5da3512edc2719c77b72a741bde"
+    },
+    {
+      "path": "gradle/gradle-daemon-jvm.properties",
+      "sha256": "231649d2f8e8dc24310f18c921e3ae33fd2715b7f48a7ddcaf27a85003e0729a"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "sha256": "8ef5836d38fb4ad6d1fa5934f0cf174f734c66e8bf33b1176a892dd31e4d99aa"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "sha256": "423cb469ccc0ecc31f0e4e1c309976198ccb734cdcbb7029d4bda0f18f57e8d9"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "c89af773425cae016d64791247cb548f0d1209225917209ff5728df4298ccd43"
+    },
+    {
+      "path": "iosApp/Podfile",
+      "sha256": null
+    },
+    {
+      "path": "iosApp/Podfile.lock",
+      "sha256": null
+    },
+    {
+      "path": "iosApp/iosApp.xcodeproj/project.pbxproj",
+      "sha256": "1ccee1b2c0d59aa598933b8348f084a3c1938300f69185d3f3b4c008a589b922"
+    },
+    {
+      "path": "iosApp/iosApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "sha256": "7f3b00b5c3fdb45242d7b87e1e5c4e25d1fa8129a16c94295ecc4e8ea2235c5f"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "sha256": "ef3b9efaa0e816b11487128e2ce779212008b12867db84e9202ac645f3a26558"
+    },
+    {
+      "path": "shared/component/catalog/build.gradle.kts",
+      "sha256": "5328b45fd8046dbf23f7489968512384089edaa316a85075fc747cc83efb1076"
+    },
+    {
+      "path": "shared/component/history/build.gradle.kts",
+      "sha256": "5ca8f330e2ee1c3bc1b07ab9f7019e3380df720bd0f125d7f9928d6904c9d39c"
+    },
+    {
+      "path": "shared/component/session/build.gradle.kts",
+      "sha256": "e0dac0ac42dadc6a9fedc2e369cdfe849043d9ec863deb836d97b5fcd97c8b8e"
+    },
+    {
+      "path": "shared/component/settings/build.gradle.kts",
+      "sha256": "0f3d41fcac13387f6cfdb9fc77120efe22dfca940d27cf6ba93b7b44a1a8c9f5"
+    },
+    {
+      "path": "shared/component/templates/build.gradle.kts",
+      "sha256": "ec46bc27faef3c78484ab50d588c98d94db1ee05f261ec0a1ee6fe44471a1eaa"
+    },
+    {
+      "path": "shared/compose/build.gradle.kts",
+      "sha256": "81fa7195fbd4c6c093b58bd240ca22fd8ea142b0df616630d25b58619bbb69c9"
+    },
+    {
+      "path": "shared/compose/visual-test/build.gradle.kts",
+      "sha256": "542edc59b3c6448de0976327b9be46ffa31e949467f59711b7eed780df6969be"
+    },
+    {
+      "path": "shared/data/build.gradle.kts",
+      "sha256": "c57bff1c8c7388be8110323bd6d4abc4d1074988b4af93698a9e05109baf1d0e"
+    },
+    {
+      "path": "shared/domain/build.gradle.kts",
+      "sha256": "19942fa29413c3fe71895a86029f443b858fd269b765bf837b2f67952603dd7d"
+    },
+    {
+      "path": "shared/network/build.gradle.kts",
+      "sha256": "62eef8ee50cbb85af4577265d2ffa3f72328a9260046fa11559b861c6d9222a9"
+    },
+    {
+      "path": "shared/platform/build.gradle.kts",
+      "sha256": "9afd2c3e8f502fd878ccf6309e3ea6b474d5574fd22ee8a6922dd411baeb389b"
+    },
+    {
+      "path": "shared/root/build.gradle.kts",
+      "sha256": "70453918f2cc99c8373909d63d070bb921ad199213f506d3326c4e6c03ced5b0"
+    }
+  ],
+  "patterns": [
+    ".github/workflows/**",
+    "README.md",
+    "androidApp/build.gradle.kts",
+    "build.gradle.kts",
+    "detekt/**",
+    "docs/CI-RELEASE-SETUP.md",
+    "docs/IOS-RELEASE-SETUP.md",
+    "gradle.properties",
+    "gradle/**",
+    "iosApp/Podfile",
+    "iosApp/Podfile.lock",
+    "iosApp/iosApp.xcodeproj/**",
+    "iosApp/iosApp.xcworkspace/**",
+    "settings.gradle.kts",
+    "shared/component/catalog/build.gradle.kts",
+    "shared/component/history/build.gradle.kts",
+    "shared/component/session/build.gradle.kts",
+    "shared/component/settings/build.gradle.kts",
+    "shared/component/templates/build.gradle.kts",
+    "shared/compose/build.gradle.kts",
+    "shared/compose/visual-test/build.gradle.kts",
+    "shared/data/build.gradle.kts",
+    "shared/domain/build.gradle.kts",
+    "shared/network/build.gradle.kts",
+    "shared/platform/build.gradle.kts",
+    "shared/root/build.gradle.kts"
+  ]
+}

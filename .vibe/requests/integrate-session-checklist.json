@@ -1,0 +1,11 @@
+{
+  "action": "integrate",
+  "packageId": "session-checklist",
+  "receiptRef": ".vibe/receipts/RECEIPT-9d7a3c8b-70ff-4dbc-b1b8-ae942a2b82ca.json",
+  "integrationEvidence": [
+    {"path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt", "symbol": "packingSessionRepository", "role": "entry-point"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "RootComponent.Child.Session", "role": "navigation"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "symbol": "exactSnapshotRestartsWithTemplatesBagsHintsConflictsAndPackedState", "role": "restart"}
+  ],
+  "nextAction": "Bind AC-012 through AC-025 to current literal production and exact test evidence, clear satisfied checks, verify the package, then register the history package."
+}

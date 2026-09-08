@@ -1,0 +1,7 @@
+{
+  "action":"package","packageId":"adaptive-localization-resilience","owner":"vibe-developer",
+  "acceptanceScenarioIds":["AC-047","AC-048","AC-049","AC-050","AC-051"],"qualityGateIds":[],
+  "fileBoundaries":["shared/root/**","shared/compose/**","shared/domain/**","shared/data/**","shared/component/**","shared/platform/**","androidApp/src/main/AndroidManifest.xml","androidApp/src/main/kotlin/**","iosApp/iosApp/**","docs/**"],
+  "integrationGoal":"Deliver a four-destination adaptive product shell, complete EN/RU fallback and authored-text preservation, accessible reflow, failure-retained input, and atomic cascade deletion across the production Android/iOS roots.",
+  "nextAction":"Implement root destination/restoration contracts, adaptive Compose shell and localization/accessibility checks, plus cross-feature failure/cancellation/transaction regression tests."
+}

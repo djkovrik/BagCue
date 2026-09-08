@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "history-build-architecture",
+  "owner": "vibe-project-architect",
+  "acceptanceScenarioIds": ["AC-026", "AC-027", "AC-028", "AC-029", "AC-030"],
+  "qualityGateIds": [],
+  "allowedFiles": ["settings.gradle.kts", "gradle/libs.versions.toml", "shared/component/history/build.gradle.kts", "shared/root/build.gradle.kts", "shared/compose/build.gradle.kts"],
+  "inputScopeId": "catalog-core-v1"
+}

@@ -1,0 +1,53 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:network:testAndroidHostTest",
+    ":shared:platform:testAndroidHostTest",
+    ":androidApp:assembleDebug",
+    ":androidApp:processReleaseMainManifest",
+    ":androidApp:verifyAndroidReleaseConfiguration"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-007",
+      "surfaces": ["privacy-network-contract", "firebase-adapter-contract", "ad-lifecycle-contract"]
+    },
+    {
+      "obligationId": "QG-008",
+      "surfaces": ["release-manifest-privacy", "debug-no-production-ad-unit"]
+    },
+    {
+      "obligationId": "QG-010",
+      "surfaces": ["privacy-fail-closed-contract", "consent-before-init-contract"]
+    },
+    {
+      "obligationId": "AC-036",
+      "surfaces": ["analytics-default-off"]
+    },
+    {
+      "obligationId": "AC-037",
+      "surfaces": ["analytics-toggle"]
+    },
+    {
+      "obligationId": "AC-038",
+      "surfaces": ["analytics-reset"]
+    },
+    {
+      "obligationId": "AC-040",
+      "surfaces": ["privacy-network-contract"]
+    },
+    {
+      "obligationId": "AC-042",
+      "surfaces": ["consent-before-init-contract"]
+    },
+    {
+      "obligationId": "AC-046",
+      "surfaces": ["ios-null-ad-configuration"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Verify the owned privacy-region streaming bound and fail-closed tests, analytics/ad controller contracts, native default-off manifest settings, Android Firebase/Yandex compilation, debug no-request configuration, and release-only production Yandex unit invariant after the architecture dependency contract landed."
+}

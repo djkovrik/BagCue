@@ -1,0 +1,36 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:compose:compileAndroidMain :shared:compose:visual-test:generateBagCuePreviewTests :shared:compose:visual-test:testDebugUnitTest
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+Configuration cache entry stored.
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'D:\Sources\Android\BagCue\shared\compose\visual-test\build.gradle.kts' line: 119
+
+* What went wrong:
+Error : You cannot add Provider instances to the Android SourceSet API.
+It is not possible for Android Studio to determine if the Provider points
+to a directory that contains generated (read-only) or static (read-write) files. 
+
+Instead you should use the Sources interface in the Variant API, in particular
+SourceDirectories.addGeneratedDirectory and SourceDirectories.addStaticDirectories.
+
+You can re-enable the behavior by setting the `android.sourceset.disallowProvider=false` to gradle.properties.
+However, be aware that any Gradle Task dependency will not be automatically carried.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 28s

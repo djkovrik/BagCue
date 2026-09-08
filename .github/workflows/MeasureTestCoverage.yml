@@ -1,0 +1,71 @@
+name: Measure test coverage
+
+on:
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: coverage-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      coverage: ${{ steps.coverage.outputs.value }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
+      - name: Verify baseline-derived overall threshold
+        run: ./gradlew koverVerify koverXmlReport
+      - name: Read numeric coverage
+        id: coverage
+        shell: bash
+        run: |
+          value="$(./gradlew -q printKoverLineCoverage)"
+          [[ "$value" =~ ^[0-9]+\.[0-9]{2}$ ]] || { echo "Unexpected coverage output: $value" >&2; exit 1; }
+          echo "value=$value" >> "$GITHUB_OUTPUT"
+      - name: Enforce changed-line policy
+        run: python .github/workflows/scripts/changed_line_coverage.py build/reports/kover/report.xml origin/master 70
+      - name: Upload Kover XML
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: bagcue-kover-pr-${{ github.event.pull_request.number }}
+          if-no-files-found: error
+          path: build/reports/kover/report.xml
+
+  comment:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    needs: measure
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Create or update coverage comment
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const marker = '<!-- bagcue-kover -->';
+            const body = `${marker}\nBagCue filtered line coverage: **${{ needs.measure.outputs.coverage }}%**. Overall baseline gate and 70% changed-executable-line gate passed.`;
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number });
+            const existing = comments.find(comment => comment.user.type === 'Bot' && comment.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }

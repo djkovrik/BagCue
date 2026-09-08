@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "privacy-release-platform-convergence",
+  "owner": "vibe-platform-monetization-engineer",
+  "acceptanceScenarioIds": ["AC-036", "AC-037", "AC-038", "AC-039", "AC-040", "AC-041", "AC-042", "AC-043", "AC-044", "AC-045", "AC-046"],
+  "qualityGateIds": ["QG-007", "QG-008", "QG-009", "QG-010", "QG-011", "QG-012"],
+  "allowedFiles": ["androidApp/src/main/**", "shared/platform/src/**", "shared/network/src/**", "iosApp/iosApp/**", "docs/PRIVACY-REGION-ENDPOINT.md", "docs/PRIVACY-POLICY.md", "docs/bagcue-policy.html", "docs/APA-EXTERNAL-SETUP.md", "docs/PLAY-DATA-SAFETY.md"],
+  "inputScopeId": "catalog-core-v1"
+}

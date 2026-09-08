@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "detekt-semantic-policy",
+  "owner": "vibe-project-architect-detekt-policy",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-001"],
+  "allowedFiles": ["detekt/**"],
+  "inputScopeId": "catalog-core-v1"
+}

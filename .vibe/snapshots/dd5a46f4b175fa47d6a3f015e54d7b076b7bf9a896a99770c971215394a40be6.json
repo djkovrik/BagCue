@@ -1,0 +1,13 @@
+{
+  "algorithm": "sha256",
+  "digest": "922127e5d40341814541273864a67d1172c51f30d04486ef1c8ae4dff9db84f4",
+  "files": [
+    {
+      "path": "detekt/base-config.yml",
+      "sha256": "4051f8d3a0436e76b3d560b936a6782e541ac9ad160699ecab105a8a8fb171ec"
+    }
+  ],
+  "patterns": [
+    "detekt/**"
+  ]
+}

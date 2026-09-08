@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-privacy-release-platform-convergence-20260908.json",
+  "expectedLedgerDigest": "43480c2719e8724bff5057cecd1091d5d9b9e7bccd008c8252ff701fd8a29c85",
+  "inspectionNote": "Inspected the immutable privacy/platform handoff, bounded privacy transport and adversarial tests, consent-gated Firebase/Yandex lifecycle adapters, Android/iOS privacy defaults, policy/Data Safety parity documents, clean merged-manifest ID audit, release-only exact Android ad unit validation, and stable green network/platform/Android receipt. External RSYA, controlled endpoint, Firebase console, hosted policy/Play, and macOS evidence remain exact blockers."
+}

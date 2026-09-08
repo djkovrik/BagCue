@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-release-architecture-v2-nochange-20260908.json",
+  "expectedLedgerDigest": "80c8075e53809f97a11c08dbc34ba53d8524287918df1b1dc52f94803aba7f1e",
+  "inspectionNote": "Inspected the immutable v2 no-change handoff. The assignment is returned before edits solely to add the exact Android project ProGuard rules path required by the registered release boundary."
+}

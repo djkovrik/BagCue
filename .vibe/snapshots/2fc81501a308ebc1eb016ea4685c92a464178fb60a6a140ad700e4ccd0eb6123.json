@@ -1,0 +1,273 @@
+{
+  "algorithm": "sha256",
+  "digest": "130c1288a918376479dc7cb69f34c4ce548b72583c58c863c7f19cb0f0c24c0d",
+  "files": [
+    {
+      "path": "androidApp/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "sha256": "26310833a35076dfe3bdcd9fa469c5c7e36c26623eaf6009bf2d450f779189a3"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "sha256": "8cea067f36938c23f7633173f7dc09ee22c4a2afb13467af1a4d7dbe397bc626"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_background.png",
+      "sha256": "bd235949335acf835669855a47574a7e9ed1c49869d4af134db95915c03d4726"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "24ce65b362e8f69ae55145943cf9afa3480bcfd5666726c6a61a046368649569"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_monochrome.png",
+      "sha256": "8517f67912c428ead215aa1b358f87d6638b445c320d5dc4438b042e60db4b49"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "sha256": "0f6e9857a5bb486d1be9ceec4293f6eec6298e415bfd912afacd53039c9c522d"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_background.png",
+      "sha256": "3459cc0c2eac38db0ebde63f7af9d0ba325490303b57dd1e2fb679e8a9131885"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "0974149b788226856d105f8546cb2d335f89705d7126f93566d699094ebd7e73"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_monochrome.png",
+      "sha256": "50c2fa5cdf623a58a04c6a0d5944bc7578d023952cf8f749e2bdd06f84262080"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "aad810484070fb285bc55c0210314fa7f2c8fec5901341f235ae029d34cd7c51"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_background.png",
+      "sha256": "71633fc7daa8140d488910e5f613173241dfd4344810ca4714f993085b2809bf"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "6e1809deb87131b91dbee64db4d591dc34cce7dd125ee4cff744058482f668f7"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_monochrome.png",
+      "sha256": "e9833502abe8fdfe992e0674b97b5a7ee8815c8433e6bb4fa98afac375e5bca5"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "930bff519bb79910c4903f772ac06ec32cfd6e9b5bb62128f65dbdf2316aa703"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_background.png",
+      "sha256": "8854595b58959cd36963acb87d5b304fe4497cca93b6339dfb6b40bceb23eb04"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "0723ed36c791241125e4662c3a0be79ff31e0505e67470f5ce0a9e69e5247ccc"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_monochrome.png",
+      "sha256": "6d75ae24f57fdfde662808858be8e3e33bdbb2575a62d79676f7a81148f51c14"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "de24698d75d4cf88bb836c22f01a3afcdc60838b31b754391ae5c874a314af50"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png",
+      "sha256": "2d03ee5a56c8bd30c2a17a255c728dcd4a853e0572e211385bf7c7b324c6557d"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "d6630cb179e560b4282c4e3fb2b848db558a21f6bcddf81d5c239679841429a1"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_monochrome.png",
+      "sha256": "2ab0a61cc0407c86e9f09c21b9388bd1fff34915ca75f420c817706882ce8378"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AccentColor.colorset/Contents.json",
+      "sha256": "9af65086fa30b49252fae1a1225731691de794f7775af74d71befeb507d12b7c"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x.png",
+      "sha256": "8dc87dfa42f165a295629149d8ea2a1a8bf46b193720fc7cf152c6846c3ea153"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x~ipad.png",
+      "sha256": "8dc87dfa42f165a295629149d8ea2a1a8bf46b193720fc7cf152c6846c3ea153"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@3x.png",
+      "sha256": "88ef903bfa09d62a61cb817b7b0fb8f156bcdc174d6a695dea0272a2c01dfe27"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20~ipad.png",
+      "sha256": "fa44cfc0467ab32dca9b8042023575f506a14c02402c58c55d3cb8f2ef2d2ebd"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29.png",
+      "sha256": "ec9a632d25c6359e2d8684dbef9b33bf768c7d94f9566b1355f6752e3ffed508"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x.png",
+      "sha256": "2b75e7351d48cbe288e868991d68630ae781bc7adfdd9e6a28f63dab1adfcdb4"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x~ipad.png",
+      "sha256": "2b75e7351d48cbe288e868991d68630ae781bc7adfdd9e6a28f63dab1adfcdb4"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@3x.png",
+      "sha256": "ea7f0610b8af31c4e00717b116b1560025ab33733c4d124c2843c974ca588e92"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29~ipad.png",
+      "sha256": "ec9a632d25c6359e2d8684dbef9b33bf768c7d94f9566b1355f6752e3ffed508"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x.png",
+      "sha256": "80937e00ec05e1ba02951f7f9b5633a5cd528b89052fbcbc862465a9c25ed7b5"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x~ipad.png",
+      "sha256": "80937e00ec05e1ba02951f7f9b5633a5cd528b89052fbcbc862465a9c25ed7b5"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@3x.png",
+      "sha256": "0c465540a459725e6e4577c2e44bba6c8b32fd4b6691e0d4277763dfe77fbe6a"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40~ipad.png",
+      "sha256": "8dc87dfa42f165a295629149d8ea2a1a8bf46b193720fc7cf152c6846c3ea153"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@2x~car.png",
+      "sha256": "0c465540a459725e6e4577c2e44bba6c8b32fd4b6691e0d4277763dfe77fbe6a"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@3x~car.png",
+      "sha256": "e85d0b7e3251d1075af4ecf3658465a3ebab86fdc701b6f13212561e2a69a57d"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-83.5@2x~ipad.png",
+      "sha256": "f2cf43f9c90faf7a9680be24be0f14ef429274f81755a96884db89c41f754e4c"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x.png",
+      "sha256": "0c465540a459725e6e4577c2e44bba6c8b32fd4b6691e0d4277763dfe77fbe6a"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x~ipad.png",
+      "sha256": "872614d0c76ee5ee3474fff7c67ce2486e99937cb7715d5bd62c9bff18fcbf89"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@3x.png",
+      "sha256": "e85d0b7e3251d1075af4ecf3658465a3ebab86fdc701b6f13212561e2a69a57d"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png",
+      "sha256": "880e05f8cc2ea96a40439958974a346c9c9a5a6968f22bc0cabfb1a9242b39ef"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ipad.png",
+      "sha256": "1aaacaf7e64d860bdd272f7e664fc036cfc9d11d109ce2af5d1b8ccb0411bce2"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "sha256": "266dc8f743788643ad5256ba29c3d7151f32a9de6b421ebe43ae9344aaceca69"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/Contents.json",
+      "sha256": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_cyclone.xml",
+      "sha256": "7f53513fe352f0fe5bd4fbd161326a3d2d702524c53c2a9df9c340ec7688867d"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_dark_mode.xml",
+      "sha256": "cdc9a08b6654ceb82e6cc4088301df78ff9ea19994496b96e60c810c797dcd88"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_light_mode.xml",
+      "sha256": "6de9720e76a88f26d6f479e3213c427c4e82679142e5582cd72025f3a44f7405"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_rotate_right.xml",
+      "sha256": "a9456e3f9f4d3bc9fb6adcb9c642eecac0867447c9dfc486ddd1a9a1e10209da"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_sessions.xml",
+      "sha256": "b8c4f72ce607b2d9cf5c45123328c541b4a22ca5d359554353c62490aba3d7f4"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_settings.xml",
+      "sha256": "d23b25a97fab0a4ec0ef9ca4c097ae8356f40c2fceadf9df1eed524f65d5ca81"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_templates.xml",
+      "sha256": "10d46e76f045ba588d33ea8de3b993998741cfa54ca614eb970fb2d55fdc7136"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_today.xml",
+      "sha256": "965fd0b60db0bd4f96e83cb464f21083312efe2dcfe7249018cd25c3a73c1832"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+      "sha256": "f1c4102530644bea1be691f12f469c6a844bb920b7d4106e82e3b5b9c7497729"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogResources.kt",
+      "sha256": "4bef3792b46eb68cc3a9858f4721e90bc4de4ca06c913c7ed5c479de86c9a3ba"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt",
+      "sha256": "73f7e38a5016920e69177ab99e5c9895059aa770286f3e679c0e53dabb8a64b7"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryResources.kt",
+      "sha256": "98623d61eef75a64b0aea1f0d9444b51c54baf3f811f41f96b74693414084252"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryScreen.kt",
+      "sha256": "e7d6122c7595dc220f5b7d7cc83e51f100d1f71fe7df18f7f6e0e0d24cd385f4"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionResources.kt",
+      "sha256": "bb4b67897c237a4c7672eb159d26a331c608f9e77a6df204cbe6955a1ae6e9d7"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt",
+      "sha256": "7099c9204a3f7722403a710276e1b9cb97a26bca6c35833156a371b0a7072d1c"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt",
+      "sha256": "1f4cafcadf1f7989b2292b8fc37db203261479ab40dc678443dedccbd40c7223"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateResources.kt",
+      "sha256": "1a038002eb211b587310a74535b5a30257cdae98e49271d59788b14f93978aef"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateScreen.kt",
+      "sha256": "40472c7405f4bb286880e04fcef457db6b94ad35336d6446db25b33824df482f"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/Color.kt",
+      "sha256": "6897e5aa760e356ff6be51f7ec5ab50785aa348795a1cb748c84ae59bfe71594"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/Theme.kt",
+      "sha256": "1a200fe1b2b982119af2ce8b9f98052782936b59df6f9ca18e320afdc85474c3"
+    }
+  ],
+  "patterns": [
+    "androidApp/src/main/res/**",
+    "docs/assets/**",
+    "iosApp/iosApp/Assets.xcassets/**",
+    "shared/compose/src/commonMain/composeResources/drawable/**",
+    "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/**"
+  ]
+}

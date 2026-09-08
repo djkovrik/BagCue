@@ -1,0 +1,5 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-android-fragment-lint-20260908.json",
+  "inspectionNote": "Inspected the immutable handoff and exact two-file diff. The explicit stable Fragment 1.9.0 dependency resolves the Activity Result lint requirement; isolated lintRelease is green, no lint baseline or suppression was introduced, and the absent external release signing keystore remains honestly recorded as NOT RUN."
+}

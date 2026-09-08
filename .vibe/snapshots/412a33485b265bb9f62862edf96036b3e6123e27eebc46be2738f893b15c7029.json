@@ -1,0 +1,313 @@
+{
+  "algorithm": "sha256",
+  "digest": "06bf7668851e61e27bffeb211fd51cfa3e4434ab2a8115d7edafc5b242e2889c",
+  "files": [
+    {
+      "path": "androidApp/src/main/AndroidManifest.xml",
+      "sha256": "3c3c49f989ea345fe82bde9193815b01e3220af648546b5404f872289d3f4f03"
+    },
+    {
+      "path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt",
+      "sha256": "6c3c7b7652498db6ba1c50e3c46ce071ee52686c945784ec0204f3cd2186b530"
+    },
+    {
+      "path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/apa/AndroidApaPlatform.kt",
+      "sha256": "f507fb01c68eaec72695febb92a3be06b5fc77a13bf99cb4aedfe40c8fb274ef"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "sha256": "26310833a35076dfe3bdcd9fa469c5c7e36c26623eaf6009bf2d450f779189a3"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "sha256": "4f74dde282a9a88f41e150601e3e7703d20701c33d3a676909777b75c3fbe7e2"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_background.png",
+      "sha256": "4f74dde282a9a88f41e150601e3e7703d20701c33d3a676909777b75c3fbe7e2"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "89163ed84b1f3f64b0379c09ef367fd95511e714380629bc3d74df82413a96b5"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_monochrome.png",
+      "sha256": "1efc629f023a440120590cfec734d090f14d44fcd4a989c1ed77da660fb7adf1"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "sha256": "561cfe755c31de3844d1d9dc3eff35dd6eca952babed8f15ad63420c348f73b9"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_background.png",
+      "sha256": "561cfe755c31de3844d1d9dc3eff35dd6eca952babed8f15ad63420c348f73b9"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "c88d5132325bf54e408bb30653c717294f8b40da178028936e2189ed19a029db"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_monochrome.png",
+      "sha256": "16a5124677273cef5d7cdec5980dad069892b1dfa8fab9c53621a7140aa7dfd1"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "65a61851afcdaedcb62568e70fcbef91a187776882bbeac46fcb002095bd9e5d"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_background.png",
+      "sha256": "65a61851afcdaedcb62568e70fcbef91a187776882bbeac46fcb002095bd9e5d"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "6e2840206048a696553ee4b221997b9d9cd87f75c7ec4cec0823fa61b0abe9e7"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_monochrome.png",
+      "sha256": "c6f580082a04c89456f2fa8cdae23705ef5a94cc3404f14c1ab7c71abfd0e32e"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "70c45d500a64531ae75e29fca2d7d1d7629373a832e1495fafe2a2bf39d49044"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_background.png",
+      "sha256": "70c45d500a64531ae75e29fca2d7d1d7629373a832e1495fafe2a2bf39d49044"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "9a44670d5acb25e904f20bb09314584ea2b89b450714b283eb01c4874ac84056"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_monochrome.png",
+      "sha256": "f2cebc2c68b455132f3d48f3527143de325c737729f7cbb40a16fdbc03c79253"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "e786fd40168a1ef057993b07ebf0109e4b45651af75e44b58513214020e3e130"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png",
+      "sha256": "e786fd40168a1ef057993b07ebf0109e4b45651af75e44b58513214020e3e130"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "bae3690216f5aa1278d7b46dcc8294c1b58adf2ac2bf7e1b381444db8d0016d9"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_monochrome.png",
+      "sha256": "2ea30126f724481dca802af6fe03df3f5b4eee93cfedd0f20692bbd34a41de02"
+    },
+    {
+      "path": "docs/APA-EXTERNAL-SETUP.md",
+      "sha256": "bb7277a6be7bdf720a89df568475778928d136335428192895dd5153c28b618a"
+    },
+    {
+      "path": "docs/PLAY-DATA-SAFETY.md",
+      "sha256": null
+    },
+    {
+      "path": "docs/PRIVACY-POLICY.md",
+      "sha256": null
+    },
+    {
+      "path": "docs/PRIVACY-REGION-ENDPOINT.md",
+      "sha256": "71042b68296477feac5338b0ac9e7808942bf7a9464d2a83df462230d38a9ae3"
+    },
+    {
+      "path": "docs/bagcue-policy.html",
+      "sha256": "5bb694aa9127392c9ab87e7c47d8171ff6cacc058a2c4f439d20ef45ebcae613"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AccentColor.colorset/Contents.json",
+      "sha256": "9af65086fa30b49252fae1a1225731691de794f7775af74d71befeb507d12b7c"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x.png",
+      "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x~ipad.png",
+      "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@3x.png",
+      "sha256": "676bf73cc48267ed461e93ce93bc4e274cf3b65e12997abe0bafd38ad0564c08"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20~ipad.png",
+      "sha256": "cad51e4c6d9815fde41c75cddc79781abeb05e3fdf234ed6e57ba8b3a80fff85"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29.png",
+      "sha256": "dc9d8f245b87f92a8242da8a121a28541e0e3c9e9fc31289a289c79b632c85a0"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x.png",
+      "sha256": "ff7ab16d16bf2b2b981b123399381bf15864adeab6f9452b23e0870f22e2e23d"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x~ipad.png",
+      "sha256": "ff7ab16d16bf2b2b981b123399381bf15864adeab6f9452b23e0870f22e2e23d"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@3x.png",
+      "sha256": "e15392ba2c07aa9d48e6f55b317b8a4fb47c7c8450e2a5d9f5d049df14c33e39"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29~ipad.png",
+      "sha256": "dc9d8f245b87f92a8242da8a121a28541e0e3c9e9fc31289a289c79b632c85a0"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x.png",
+      "sha256": "457117fd700ffd152c30f05e76e43be15a97a100763615334373787ec6f17b39"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x~ipad.png",
+      "sha256": "457117fd700ffd152c30f05e76e43be15a97a100763615334373787ec6f17b39"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@3x.png",
+      "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40~ipad.png",
+      "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@2x~car.png",
+      "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@3x~car.png",
+      "sha256": "d2b1b6b2744efd1588ce472f17caba2ab208be7cd06205f2f7f3471f7b0756dd"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-83.5@2x~ipad.png",
+      "sha256": "6d2c72b7d6cec918fddde2ad2cef337b72855886e673e4ca018a6a9a45f8f27b"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x.png",
+      "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x~ipad.png",
+      "sha256": "ebdba8a4cef9278bbbf6ddff453319c96ea20d98126b8d7eca581ff6ca4c9d63"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@3x.png",
+      "sha256": "d2b1b6b2744efd1588ce472f17caba2ab208be7cd06205f2f7f3471f7b0756dd"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png",
+      "sha256": "b5052c794cf106a08dda8053f7870d6d50f1b374e132bdd03d614759bcc11bfc"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ipad.png",
+      "sha256": "6c7355da8be12c03ede80c4b5246948c58b73ea06199885570b453fcb20a2ebc"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "sha256": "266dc8f743788643ad5256ba29c3d7151f32a9de6b421ebe43ae9344aaceca69"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/Contents.json",
+      "sha256": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b"
+    },
+    {
+      "path": "iosApp/iosApp/Info.plist",
+      "sha256": "b984d2f4ab97ef48fb2999fc8f3a910e2215bd8e159f3b2b7b03c66aaf4178ca"
+    },
+    {
+      "path": "iosApp/iosApp/Preview Content/Preview Assets.xcassets/Contents.json",
+      "sha256": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b"
+    },
+    {
+      "path": "iosApp/iosApp/iosApp.swift",
+      "sha256": "36c4d12bc0297e5b55e5dfcc3575328f0c365e8e311f15f7e786984c73d7eb14"
+    },
+    {
+      "path": "shared/network/src/androidMain/kotlin/com/sedsoftware/bagcue/network/privacy/AndroidPrivacyRegionApi.kt",
+      "sha256": "39ab58755884425175746cb70e59964d4d5d0abe20477f2f058ada8ca7408b67"
+    },
+    {
+      "path": "shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApi.kt",
+      "sha256": "2ebd9caf66ea48c4e294746c55dd6f3cdfe146e134b614c2592207c6154a177a"
+    },
+    {
+      "path": "shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/PrivacyRegionHttpClient.kt",
+      "sha256": "023c2923f64c66dfc86388c842698f7562f5b145577b2ec8b7bd6ad6ca5bea08"
+    },
+    {
+      "path": "shared/network/src/commonTest/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApiTest.kt",
+      "sha256": "71257cd2eae3cb7ab9292677ac65d3fda439c7b3dbb123b9dfeaec0332e01c37"
+    },
+    {
+      "path": "shared/network/src/iosMain/kotlin/com/sedsoftware/bagcue/network/privacy/IosPrivacyRegionApi.kt",
+      "sha256": "db7565a0cabf86076b83b3d8e3618179fb3dfff30daf054f4c36166352f8d5d2"
+    },
+    {
+      "path": "shared/platform/src/androidMain/AndroidManifest.xml",
+      "sha256": "ed2e5e94fc41a274d535ad151f03a62f91aaddcd78d4861f7ff06bec4f546635"
+    },
+    {
+      "path": "shared/platform/src/androidMain/kotlin/com/sedsoftware/bagcue/platform/reminder/AndroidReminderNotificationScheduler.kt",
+      "sha256": "6a4108a97b59893d211e82b321426b8f884772b02ca7f26ba86b00885ce65a0a"
+    },
+    {
+      "path": "shared/platform/src/androidMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderNotificationReceiver.kt",
+      "sha256": "e0387128225a99364519511eb8ad086238f6f3518d4cd1cfeabd87e1bfbc2b31"
+    },
+    {
+      "path": "shared/platform/src/androidMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderRescheduleReceiver.kt",
+      "sha256": "f46464985ad5762d45f3d306792c19119c87fd3dd4e54d9130e8cb0a7098b3bf"
+    },
+    {
+      "path": "shared/platform/src/androidMain/res/values-ru/strings.xml",
+      "sha256": "12400b0fa3347bbf73f2ebba94f12b61791ba68b94016f49d0387bfb818bdcdb"
+    },
+    {
+      "path": "shared/platform/src/androidMain/res/values/strings.xml",
+      "sha256": "ad5c686bef5e14d22b161f67204d52bba8f10537d39e146687e5b4f633008879"
+    },
+    {
+      "path": "shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/apa/PrivacyFirstInlineAdController.kt",
+      "sha256": "54610ad3f0e3040922ba565686d68f980fd4adef7597590a7f743883d9d9f9a6"
+    },
+    {
+      "path": "shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/apa/SafeAnalyticsController.kt",
+      "sha256": "0916f5fae8672fe54f29ecabd6ed1419d273e72d0ad8076e92b7260a1286d560"
+    },
+    {
+      "path": "shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderPlatformIds.kt",
+      "sha256": "adc7e77a9a1233afc2ed0ed3443cc09b933ee42d579d2ebe12a995ae2c7deb42"
+    },
+    {
+      "path": "shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/apa/ApaPlatformContractTest.kt",
+      "sha256": "678dc2070c3b6a168b1f05342ddd600ed1d354a08bd9fdc5aa299ff59902fa4f"
+    },
+    {
+      "path": "shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderPlatformIdsTest.kt",
+      "sha256": "7b5b539feddb592e6e3803d6a9ac8f8b95cfb5e265a6a1557f33720499f749dd"
+    },
+    {
+      "path": "shared/platform/src/iosMain/kotlin/com/sedsoftware/bagcue/platform/apa/IosApaPlatform.kt",
+      "sha256": "fb2c2841f42f6ca086f6d5f8b37c721be4fabb883ea39ec60aae9258c81d6296"
+    },
+    {
+      "path": "shared/platform/src/iosMain/kotlin/com/sedsoftware/bagcue/platform/reminder/IosReminderNotificationScheduler.kt",
+      "sha256": "108cefc2f20e644fca7fbc7ef65d889a49fdb2050d7917d78849ae71340720a6"
+    }
+  ],
+  "patterns": [
+    "androidApp/src/main/**",
+    "docs/APA-EXTERNAL-SETUP.md",
+    "docs/PLAY-DATA-SAFETY.md",
+    "docs/PRIVACY-POLICY.md",
+    "docs/PRIVACY-REGION-ENDPOINT.md",
+    "docs/bagcue-policy.html",
+    "iosApp/iosApp/**",
+    "shared/network/src/**",
+    "shared/platform/src/**"
+  ]
+}

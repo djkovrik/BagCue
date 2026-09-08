@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "history-component-root",
+  "owner": "vibe-decompose-mvikotlin-engineer",
+  "acceptanceScenarioIds": ["AC-026", "AC-027", "AC-028", "AC-029", "AC-030"],
+  "qualityGateIds": [],
+  "allowedFiles": ["shared/component/history/src/**", "shared/root/src/**"],
+  "inputScopeId": "catalog-core-v1"
+}

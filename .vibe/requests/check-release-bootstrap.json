@@ -1,0 +1,12 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": ["detektGenerateConfig", "tasks"],
+  "coveredObligations": [
+    {"obligationId": "QG-001", "surfaces": ["repository-check"]}
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Registered release-architecture assignment v3 owns the exact build, CI, release and native-linkage files; this bootstrap validates plugin DSL and generates the selected Detekt 2.0.0-alpha.6 default configuration before policy thresholds are merged."
+}

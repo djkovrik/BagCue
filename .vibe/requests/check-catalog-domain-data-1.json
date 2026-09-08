@@ -1,0 +1,19 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:domain:allTests",
+    ":shared:data:testAndroidHostTest"
+  ],
+  "coveredObligations": [
+    {"obligationId": "AC-001", "surfaces": ["persistence-integration-test"]},
+    {"obligationId": "AC-002", "surfaces": ["persistence-integration-test"]},
+    {"obligationId": "AC-003", "surfaces": ["persistence-integration-test"]},
+    {"obligationId": "AC-004", "surfaces": ["persistence-integration-test"]},
+    {"obligationId": "AC-005", "surfaces": ["domain-test"]}
+  ],
+  "timeoutSeconds": 1800
+  ,"reconcileDrift": "Inspected concurrent changes: all intended implementation drift belongs to the four registered catalog-core assignments; the stray top-level commonMain files were reported to their author for removal before closure."
+}

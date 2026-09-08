@@ -1,0 +1,17 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:data:compileKotlinIosSimulatorArm64",
+    ":shared:component:catalog:compileKotlinIosSimulatorArm64",
+    ":shared:root:compileKotlinIosSimulatorArm64",
+    ":shared:compose:compileKotlinIosSimulatorArm64"
+  ],
+  "coveredObligations": [
+    {"obligationId": "AC-001", "surfaces": []}
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Inspected final catalog-core source convergence inside registered assignments; this compile-only receipt intentionally claims no verification surface."
+}

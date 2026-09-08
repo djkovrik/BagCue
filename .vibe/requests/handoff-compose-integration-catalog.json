@@ -1,0 +1,41 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-catalog-compose-production-integration-20260908",
+  "assignmentId": "catalog-compose-production-integration",
+  "productionEvidence": [
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt", "symbol": "App", "surface": "production-root-ui"},
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt", "symbol": "CatalogScreen", "surface": "catalog-ui"},
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogResources.kt", "symbol": "resolveCatalogResource", "surface": "localization-boundary"},
+    {"path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt", "symbol": "AppActivity.onCreate", "surface": "android-composition-root"},
+    {"path": "shared/compose/src/iosMain/kotlin/main.kt", "symbol": "MainViewController", "surface": "ios-composition-root"},
+    {"path": "shared/compose/src/commonMain/composeResources/values/strings.xml", "symbol": "catalog resources", "surface": "english-resources"},
+    {"path": "shared/compose/src/commonMain/composeResources/values-ru/strings.xml", "symbol": "catalog resources", "surface": "russian-resources"}
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {"argv": ["lazyweb", "agentic-search", "95a652c5-696c-4697-a463-2e8ed32c41c3"], "exitCode": 0, "details": "Catalog list/editor hierarchy was grounded in five finalized mobile references."}
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:domain:allTests", ":shared:data:testAndroidHostTest", ":shared:component:catalog:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug"],
+      "tasks": [":shared:domain:allTests", ":shared:data:testAndroidHostTest", ":shared:component:catalog:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug"],
+      "coveredObligations": [
+        {"obligationId": "AC-001", "surfaces": ["component-test", "persistence-integration-test"]},
+        {"obligationId": "AC-002", "surfaces": ["component-test", "persistence-integration-test"]},
+        {"obligationId": "AC-003", "surfaces": ["component-test", "persistence-integration-test"]},
+        {"obligationId": "AC-004", "surfaces": ["component-test", "persistence-integration-test"]},
+        {"obligationId": "AC-005", "surfaces": ["domain-test", "component-test"]}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json"
+    },
+    {
+      "argv": ["gradlew.bat", ":shared:data:compileKotlinIosSimulatorArm64", ":shared:component:catalog:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "tasks": [":shared:data:compileKotlinIosSimulatorArm64", ":shared:component:catalog:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "coveredObligations": [
+        {"obligationId": "AC-001", "surfaces": []}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-45cb3d09-cea6-400a-b2a2-54548e55ace7.json"
+    }
+  ],
+  "blockers": []
+}

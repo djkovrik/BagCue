@@ -1,0 +1,55 @@
+selectAllTemplates:
+SELECT * FROM kit_template ORDER BY sort_order, id;
+
+selectTemplateById:
+SELECT * FROM kit_template WHERE id = ?;
+
+selectPositionsByTemplate:
+SELECT * FROM template_position WHERE template_id = ? ORDER BY sort_order, id;
+
+countTemplateSeedOverrides:
+SELECT count(*) FROM seed_override WHERE seed_id = ? AND seed_kind = 'template';
+
+selectTemplateSeedOverride:
+SELECT * FROM seed_override WHERE seed_id = ? AND seed_kind = 'template';
+
+updateStarterTemplateIfAllowed:
+UPDATE kit_template
+SET seed_resource_key = ?, sort_order = ?
+WHERE id = ?
+  AND user_name_override IS NULL
+  AND NOT EXISTS (
+    SELECT 1 FROM seed_override WHERE seed_id = ? AND seed_kind = 'template'
+  );
+
+insertStarterTemplateIfAllowed:
+INSERT OR IGNORE INTO kit_template(id, seed_resource_key, user_name_override, sort_order)
+SELECT ?, ?, NULL, ?
+WHERE NOT EXISTS (
+  SELECT 1 FROM seed_override WHERE seed_id = ? AND seed_kind = 'template'
+);
+
+insertKitTemplate:
+INSERT INTO kit_template(id, seed_resource_key, user_name_override, sort_order)
+VALUES (?, ?, ?, ?);
+
+updateKitTemplate:
+UPDATE kit_template
+SET seed_resource_key = ?, user_name_override = ?, sort_order = ?
+WHERE id = ?;
+
+deletePositionsByTemplate:
+DELETE FROM template_position WHERE template_id = ?;
+
+insertKitTemplatePosition:
+INSERT INTO template_position(
+  id, template_id, item_id, quantity, seed_bag_resource_key, user_bag_label, source_hint_override, sort_order
+)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+
+upsertTemplateSeedOverride:
+INSERT OR REPLACE INTO seed_override(seed_id, seed_kind, state, updated_at)
+VALUES (?, 'template', ?, ?);
+
+deleteKitTemplate:
+DELETE FROM kit_template WHERE id = ?;

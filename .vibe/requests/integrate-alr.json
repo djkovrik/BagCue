@@ -1,0 +1,9 @@
+{
+  "action":"integrate","packageId":"adaptive-localization-resilience","receiptRef":".vibe/receipts/RECEIPT-c3b84601-1ab0-44fc-9a58-478796ecc753.json",
+  "integrationEvidence":[
+    {"path":"androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt","symbol":"App(","role":"entry-point"},
+    {"path":"shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt","symbol":"PrimaryNavigationBar","role":"navigation"},
+    {"path":"shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt","symbol":"selectedPrimaryDestinationRestoresWithSerializedStack","role":"restart"}
+  ],
+  "nextAction":"Register assets-and-visual-matrix for QG-006 and all deferred golden/accessibility/manual-visual surfaces, then complete repository/release convergence and independent acceptance audit."
+}

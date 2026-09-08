@@ -1,0 +1,9 @@
+{
+  "action":"integrate","packageId":"analytics-event-continuation","receiptRef":".vibe/receipts/RECEIPT-395bc78b-c271-403a-bc52-b1b04fa074de.json",
+  "integrationEvidence":[
+    {"path":"androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt","symbol":"analyticsController = apaPlatform.analyticsController","role":"entry-point"},
+    {"path":"shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt","symbol":"analyticsController = analyticsController","role":"navigation"},
+    {"path":"shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/apa/ApaPlatformContractTest.kt","symbol":"persistedEnabledStateAllowsTheFirstEventAfterRestart","role":"restart"}
+  ],
+  "nextAction":"Register adaptive-localization-resilience for AC-047 through AC-051; retain Firebase console/project as an explicit external verification dependency."
+}

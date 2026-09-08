@@ -1,0 +1,14 @@
+{
+  "action":"handoff","handoffId":"HANDOFF-reminders-compose-20260908","assignmentId":"reminders-compose",
+  "productionEvidence":[
+    {"path":"shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt","symbol":"is RootComponent.Child.Settings -> SettingsScreen(child.component, onBack = rootComponent::showSession)","surface":"production-navigation-ui"},
+    {"path":"shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt","symbol":"fun SettingsScreen(component: SettingsComponent, onBack: () -> Unit)","surface":"reminder-settings-ui"},
+    {"path":"shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt","symbol":"onOpenSettings: () -> Unit", "surface":"settings-entry"},
+    {"path":"shared/compose/src/iosMain/kotlin/main.kt","symbol":"IosReminderNotificationScheduler", "surface":"ios-production-entry"},
+    {"path":"shared/compose/src/commonMain/composeResources/values/strings.xml","symbol":"settings_permission_denied","surface":"english-resources"},
+    {"path":"shared/compose/src/commonMain/composeResources/values-ru/strings.xml","symbol":"settings_permission_denied","surface":"russian-resources"}
+  ],
+  "testEvidence":[],
+  "nonGradleChecks":[{"argv":["lazyweb","search","mobile notification reminder settings time permission denied"],"exitCode":0,"details":"Reminder switches, editable time, and nonblocking permission explanation were grounded in returned mobile references."}],
+  "requestedCommands":[{"argv":["gradlew.bat",":shared:domain:allTests",":shared:data:allTests",":shared:platform:allTests",":shared:component:settings:testAndroidHostTest",":shared:root:testAndroidHostTest",":shared:root:compileAndroidMain",":shared:compose:compileAndroidMain",":androidApp:assembleDebug",":shared:data:compileKotlinIosSimulatorArm64",":shared:platform:compileKotlinIosSimulatorArm64",":shared:component:settings:compileKotlinIosSimulatorArm64",":shared:root:compileKotlinIosSimulatorArm64",":shared:compose:compileKotlinIosSimulatorArm64"],"tasks":[":shared:domain:allTests",":shared:data:allTests",":shared:platform:allTests",":shared:component:settings:testAndroidHostTest",":shared:root:testAndroidHostTest",":shared:root:compileAndroidMain",":shared:compose:compileAndroidMain",":androidApp:assembleDebug",":shared:data:compileKotlinIosSimulatorArm64",":shared:platform:compileKotlinIosSimulatorArm64",":shared:component:settings:compileKotlinIosSimulatorArm64",":shared:root:compileKotlinIosSimulatorArm64",":shared:compose:compileKotlinIosSimulatorArm64"],"coveredObligations":[{"obligationId":"AC-031","surfaces":["production-ui"]},{"obligationId":"AC-032","surfaces":["production-ui"]},{"obligationId":"AC-033","surfaces":["production-ui"]},{"obligationId":"AC-034","surfaces":["production-ui"]}],"receiptRef":".vibe/receipts/RECEIPT-290830ad-32a3-4c7b-86b6-9721b90291c1.json"}],"blockers":[]
+}

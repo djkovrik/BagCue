@@ -1,0 +1,532 @@
+{
+  "schemaVersion": "2.0",
+  "receiptId": "RECEIPT-b23075ac-e4af-4c9c-b53b-92ff25f09719",
+  "kind": "integration",
+  "argv": [
+    "D:\\Sources\\Android\\BagCue\\gradlew.bat",
+    "--max-workers=1",
+    "--no-parallel",
+    "detekt",
+    "koverVerify",
+    "koverXmlReport",
+    "printKoverLineCoverage",
+    ":shared:domain:allTests",
+    ":shared:data:allTests",
+    ":shared:network:allTests",
+    ":shared:platform:allTests",
+    ":shared:compose:testAndroidHostTest",
+    ":shared:component:catalog:testAndroidHostTest",
+    ":shared:component:templates:testAndroidHostTest",
+    ":shared:component:session:testAndroidHostTest",
+    ":shared:component:history:testAndroidHostTest",
+    ":shared:component:settings:testAndroidHostTest",
+    ":shared:root:testAndroidHostTest",
+    ":shared:data:compileKotlinIosSimulatorArm64",
+    ":shared:network:compileKotlinIosSimulatorArm64",
+    ":shared:platform:compileKotlinIosSimulatorArm64",
+    ":shared:component:catalog:compileKotlinIosSimulatorArm64",
+    ":shared:component:templates:compileKotlinIosSimulatorArm64",
+    ":shared:component:session:compileKotlinIosSimulatorArm64",
+    ":shared:component:history:compileKotlinIosSimulatorArm64",
+    ":shared:component:settings:compileKotlinIosSimulatorArm64",
+    ":shared:root:compileKotlinIosSimulatorArm64",
+    ":shared:compose:compileKotlinIosSimulatorArm64",
+    ":shared:compose:visual-test:verifyPaparazziDebug",
+    ":androidApp:assembleDebug",
+    ":androidApp:assembleRelease",
+    ":androidApp:processReleaseMainManifest",
+    ":androidApp:verifyAndroidReleaseConfiguration"
+  ],
+  "tasks": [
+    "--max-workers=1",
+    "--no-parallel",
+    "detekt",
+    "koverVerify",
+    "koverXmlReport",
+    "printKoverLineCoverage",
+    ":shared:domain:allTests",
+    ":shared:data:allTests",
+    ":shared:network:allTests",
+    ":shared:platform:allTests",
+    ":shared:compose:testAndroidHostTest",
+    ":shared:component:catalog:testAndroidHostTest",
+    ":shared:component:templates:testAndroidHostTest",
+    ":shared:component:session:testAndroidHostTest",
+    ":shared:component:history:testAndroidHostTest",
+    ":shared:component:settings:testAndroidHostTest",
+    ":shared:root:testAndroidHostTest",
+    ":shared:data:compileKotlinIosSimulatorArm64",
+    ":shared:network:compileKotlinIosSimulatorArm64",
+    ":shared:platform:compileKotlinIosSimulatorArm64",
+    ":shared:component:catalog:compileKotlinIosSimulatorArm64",
+    ":shared:component:templates:compileKotlinIosSimulatorArm64",
+    ":shared:component:session:compileKotlinIosSimulatorArm64",
+    ":shared:component:history:compileKotlinIosSimulatorArm64",
+    ":shared:component:settings:compileKotlinIosSimulatorArm64",
+    ":shared:root:compileKotlinIosSimulatorArm64",
+    ":shared:compose:compileKotlinIosSimulatorArm64",
+    ":shared:compose:visual-test:verifyPaparazziDebug",
+    ":androidApp:assembleDebug",
+    ":androidApp:assembleRelease",
+    ":androidApp:processReleaseMainManifest",
+    ":androidApp:verifyAndroidReleaseConfiguration"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "AC-001",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-002",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-003",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-004",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-005",
+      "surfaces": [
+        "domain-test",
+        "component-test"
+      ]
+    },
+    {
+      "obligationId": "AC-006",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-007",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-008",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-009",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-010",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-011",
+      "surfaces": [
+        "domain-test",
+        "localization-contract-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-012",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-013",
+      "surfaces": [
+        "domain-test",
+        "component-test"
+      ]
+    },
+    {
+      "obligationId": "AC-014",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-015",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-016",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-017",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-018",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-019",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-020",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-021",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-022",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-023",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-024",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-025",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-026",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-027",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-028",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-029",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-030",
+      "surfaces": [
+        "domain-test",
+        "component-test",
+        "platform-test"
+      ]
+    },
+    {
+      "obligationId": "AC-031",
+      "surfaces": [
+        "settings-integration-test",
+        "component-test"
+      ]
+    },
+    {
+      "obligationId": "AC-032",
+      "surfaces": [
+        "settings-integration-test",
+        "component-test"
+      ]
+    },
+    {
+      "obligationId": "AC-033",
+      "surfaces": [
+        "settings-integration-test",
+        "component-test",
+        "platform-test"
+      ]
+    },
+    {
+      "obligationId": "AC-034",
+      "surfaces": [
+        "component-test",
+        "platform-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-035",
+      "surfaces": [
+        "domain-test",
+        "platform-test"
+      ]
+    },
+    {
+      "obligationId": "AC-036",
+      "surfaces": [
+        "settings-integration-test",
+        "firebase-contract-test"
+      ]
+    },
+    {
+      "obligationId": "AC-037",
+      "surfaces": [
+        "component-test",
+        "settings-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-038",
+      "surfaces": [
+        "component-test",
+        "settings-integration-test",
+        "firebase-contract-test"
+      ]
+    },
+    {
+      "obligationId": "AC-039",
+      "surfaces": [
+        "analytics-event-contract-test",
+        "privacy-static-check"
+      ]
+    },
+    {
+      "obligationId": "AC-040",
+      "surfaces": [
+        "network-mock-test",
+        "settings-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-041",
+      "surfaces": [
+        "network-mock-test",
+        "settings-integration-test"
+      ]
+    },
+    {
+      "obligationId": "AC-042",
+      "surfaces": [
+        "component-test",
+        "settings-integration-test",
+        "ad-lifecycle-test"
+      ]
+    },
+    {
+      "obligationId": "AC-043",
+      "surfaces": [
+        "network-mock-test",
+        "settings-integration-test",
+        "ad-lifecycle-test"
+      ]
+    },
+    {
+      "obligationId": "AC-044",
+      "surfaces": [
+        "component-test",
+        "ad-lifecycle-test",
+        "network-mock-test"
+      ]
+    },
+    {
+      "obligationId": "AC-045",
+      "surfaces": [
+        "component-test",
+        "ad-lifecycle-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-047",
+      "surfaces": [
+        "component-test",
+        "golden-test",
+        "accessibility-test"
+      ]
+    },
+    {
+      "obligationId": "AC-048",
+      "surfaces": [
+        "localization-contract-test",
+        "component-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-049",
+      "surfaces": [
+        "accessibility-test",
+        "golden-test",
+        "manual-visual-review"
+      ]
+    },
+    {
+      "obligationId": "AC-050",
+      "surfaces": [
+        "component-test",
+        "persistence-integration-test",
+        "golden-test"
+      ]
+    },
+    {
+      "obligationId": "AC-051",
+      "surfaces": [
+        "domain-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "QG-001",
+      "surfaces": [
+        "repository-check",
+        "domain-test",
+        "component-test",
+        "persistence-integration-test"
+      ]
+    },
+    {
+      "obligationId": "QG-002",
+      "surfaces": [
+        "android-build",
+        "android-platform-test"
+      ]
+    },
+    {
+      "obligationId": "QG-004",
+      "surfaces": [
+        "release-check"
+      ]
+    },
+    {
+      "obligationId": "QG-006",
+      "surfaces": [
+        "asset-check",
+        "asset-visual"
+      ]
+    },
+    {
+      "obligationId": "QG-007",
+      "surfaces": [
+        "network-mock-test",
+        "ad-lifecycle-test",
+        "firebase-contract-test",
+        "privacy-static-check"
+      ]
+    },
+    {
+      "obligationId": "QG-010",
+      "surfaces": [
+        "documentation-check"
+      ]
+    }
+  ],
+  "startedAt": "2026-09-08T19:23:26.4722898Z",
+  "exitCode": 0,
+  "completedAt": "2026-09-08T19:23:44.3076165Z",
+  "durationSeconds": 17.835,
+  "workspaceFingerprint": {
+    "algorithm": "sha256",
+    "binaryDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "digest": "e163080897e19ce8342547bd0ee41ef62c032f59c1cad1096b5cd3662dd838c9",
+    "gitHead": "edf754dbdaec3831178fb1e877a7ea9e757b42f0",
+    "workingFiles": [
+      {
+        "path": ".vibe/tools/reconcile-current-evidence.py",
+        "sha256": "0d51d3113f9b3a03c62e86def7f9d6e7390e12bac505fda8b501bb13c1a3d6e6"
+      }
+    ]
+  },
+  "startWorkspaceFingerprint": {
+    "algorithm": "sha256",
+    "binaryDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "digest": "e163080897e19ce8342547bd0ee41ef62c032f59c1cad1096b5cd3662dd838c9",
+    "gitHead": "edf754dbdaec3831178fb1e877a7ea9e757b42f0",
+    "workingFiles": [
+      {
+        "path": ".vibe/tools/reconcile-current-evidence.py",
+        "sha256": "0d51d3113f9b3a03c62e86def7f9d6e7390e12bac505fda8b501bb13c1a3d6e6"
+      }
+    ]
+  },
+  "executionStatus": "completed",
+  "log": {
+    "path": ".vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.log",
+    "sha256": "d2203fbd27d15bc3044d4e1a9af56ce5a80f75b6580bfa9989047135d55bccde"
+  }
+}

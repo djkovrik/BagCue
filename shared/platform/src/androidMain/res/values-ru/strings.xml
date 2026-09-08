@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="reminder_channel_name">Напоминания о сборах</string>
+    <string name="reminder_notification_title">BagCue</string>
+    <string name="reminder_evening_body">Подготовьте список вещей на завтра.</string>
+    <string name="reminder_morning_body">Проверьте список вещей перед выходом.</string>
+</resources>

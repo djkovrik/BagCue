@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-visual-responsive-production-20260908.json",
+  "expectedLedgerDigest": "c299b67ea7a417af0d009e2880f9c47b2665d2c0e490e2e9f0e4f844e4b1f07a",
+  "inspectionNote": "Inspected the immutable visual assignment handoff and green compile/preview-discovery receipt. Production responsive corrections stay within the registered assignment; full record, human review, ordered unresolved-screen Lazyweb re-review, and verify remain orchestration-owned and are not overclaimed."
+}

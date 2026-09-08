@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "detekt-production-remediation",
+  "owner": "vibe-project-architect-detekt-remediator",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-001"],
+  "allowedFiles": ["androidApp/src/**", "shared/**"],
+  "inputScopeId": "catalog-core-v1"
+}

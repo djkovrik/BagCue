@@ -1,0 +1,7 @@
+{
+  "action": "scope",
+  "scopeId": "catalog-domain-data-v2",
+  "patterns": ["shared/domain/**", "shared/data/**"],
+  "dependencyRationale": "Catalog domain and SQLDelight production/tests plus automatically included stable build/spec/instruction inputs; Compose and component implementation are not transitive inputs to these lower-layer checks",
+  "toolchainIdentity": "Gradle 9.5.1, JDK 21 daemon/JVM 17 bytecode, Kotlin 2.4.10, AGP 9.1.1, SQLDelight 2.3.2"
+}

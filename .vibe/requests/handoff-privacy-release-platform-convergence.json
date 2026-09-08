@@ -1,0 +1,67 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-privacy-release-platform-convergence-20260908",
+  "assignmentId": "privacy-release-platform-convergence",
+  "productionEvidence": [
+    {"path": "shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApi.kt", "symbol": "class KtorPrivacyRegionApi", "surface": "strict-streaming-privacy-endpoint"},
+    {"path": "shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/PrivacyRegionHttpClient.kt", "symbol": "fun privacyRegionHttpClient", "surface": "no-redirect-five-second-transport"},
+    {"path": "shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/apa/PrivacyFirstInlineAdController.kt", "symbol": "class PrivacyFirstInlineAdController", "surface": "consent-before-init-withdrawal-contract"},
+    {"path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/apa/AndroidApaPlatform.kt", "symbol": "class AndroidYandexInlineAdGateway", "surface": "yandex-load-callback-lifecycle"},
+    {"path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/apa/AndroidApaPlatform.kt", "symbol": "class AndroidAppOwnedAnalyticsSink", "surface": "firebase-default-off-toggle-reset-ad-consent-denial"},
+    {"path": "shared/platform/src/iosMain/kotlin/com/sedsoftware/bagcue/platform/apa/IosApaPlatform.kt", "symbol": "fun IosAnalyticsController", "surface": "ios-firebase-analytics-adapter"},
+    {"path": "shared/platform/src/iosMain/kotlin/com/sedsoftware/bagcue/platform/apa/IosApaPlatform.kt", "symbol": "fun IosInlineAdController", "surface": "ios-null-ad-unit-no-request"},
+    {"path": "androidApp/src/main/AndroidManifest.xml", "symbol": "com.yandex.mobile.ads.AUTOMATIC_SDK_INITIALIZATION", "surface": "native-default-off-and-ad-id-removal"},
+    {"path": "iosApp/iosApp/Info.plist", "symbol": "FIREBASE_ANALYTICS_COLLECTION_ENABLED", "surface": "ios-analytics-default-off"},
+    {"path": "docs/APA-EXTERNAL-SETUP.md", "symbol": "# Analytics, privacy-region, and advertising release setup", "surface": "external-release-blocker-contract"},
+    {"path": "docs/PLAY-DATA-SAFETY.md", "symbol": "# Google Play Data Safety worksheet", "surface": "conservative-data-safety-parity"},
+    {"path": "docs/PRIVACY-POLICY.md", "symbol": "# Privacy policy release record", "surface": "policy-publication-parity"},
+    {"path": "docs/PRIVACY-REGION-ENDPOINT.md", "symbol": "### Observed public-route evidence", "surface": "endpoint-contract-and-limited-observation"},
+    {"path": "docs/bagcue-policy.html", "symbol": "at most one non-blocking inline advertisement", "surface": "human-readable-policy"}
+  ],
+  "testEvidence": [
+    {"path": "shared/network/src/commonTest/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApiTest.kt", "testName": "validMinimalResponseUsesExactHttpsContractAndHeader", "surface": "network-contract-test"},
+    {"path": "shared/network/src/commonTest/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApiTest.kt", "testName": "missingWrongOrParameterizedContentTypeFailsClosed", "surface": "content-type-fail-closed-test"},
+    {"path": "shared/network/src/commonTest/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApiTest.kt", "testName": "declaredAndUndeclaredPayloadsOverFourKibFailClosed", "surface": "streaming-size-bound-test"},
+    {"path": "shared/network/src/commonTest/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApiTest.kt", "testName": "responseAtExactFreshnessAndPayloadBoundsIsAccepted", "surface": "exact-boundary-test"},
+    {"path": "shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/apa/ApaPlatformContractTest.kt", "testName": "privacyConsentIsAppliedBeforeSdkInitializationAndEveryAdRequest", "surface": "consent-order-test"},
+    {"path": "shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/apa/ApaPlatformContractTest.kt", "testName": "withdrawalIsForwardedBeforeSdkResourcesAreDisposed", "surface": "withdrawal-lifecycle-test"},
+    {"path": "shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/apa/ApaPlatformContractTest.kt", "testName": "nullIosConfigurationNeverInitializesOrRequestsTheSdk", "surface": "ios-no-request-test"}
+  ],
+  "nonGradleChecks": [
+    {
+      "argv": ["powershell", "parse AndroidManifest.xml and Info.plist; inspect merged debug manifest and generated debug/release BuildConfig"],
+      "exitCode": 0,
+      "details": "Both native XML files parsed; merged debug manifest contains zero Google/AdServices advertising identifier or attribution permissions/libraries and all collection/auto-init flags are false; generated debug ad unit is blank and release is exactly R-M-19857241-1."
+    },
+    {
+      "argv": ["curl.exe", "-fsSL", "https://168.222.252.178/v1/privacy/region"],
+      "exitCode": 0,
+      "details": "Read-only 2026-09-08 14:20:46 GMT observation: HTTP 200, exact application/json, 132-byte minimal schema-1 non-protected response, no-store and security headers; only this ordinary route was observed."
+    }
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:network:testAndroidHostTest", ":shared:platform:testAndroidHostTest", ":androidApp:assembleDebug", ":androidApp:processReleaseMainManifest", ":androidApp:verifyAndroidReleaseConfiguration"],
+      "tasks": [":shared:network:testAndroidHostTest", ":shared:platform:testAndroidHostTest", ":androidApp:assembleDebug", ":androidApp:processReleaseMainManifest", ":androidApp:verifyAndroidReleaseConfiguration"],
+      "coveredObligations": [
+        {"obligationId": "QG-007", "surfaces": ["privacy-network-contract", "firebase-adapter-contract", "ad-lifecycle-contract"]},
+        {"obligationId": "QG-008", "surfaces": ["release-manifest-privacy", "debug-no-production-ad-unit"]},
+        {"obligationId": "QG-010", "surfaces": ["privacy-fail-closed-contract", "consent-before-init-contract"]},
+        {"obligationId": "AC-036", "surfaces": ["analytics-default-off"]},
+        {"obligationId": "AC-037", "surfaces": ["analytics-toggle"]},
+        {"obligationId": "AC-038", "surfaces": ["analytics-reset"]},
+        {"obligationId": "AC-040", "surfaces": ["privacy-network-contract"]},
+        {"obligationId": "AC-042", "surfaces": ["consent-before-init-contract"]},
+        {"obligationId": "AC-046", "surfaces": ["ios-null-ad-configuration"]}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-88fca9ba-899c-4c43-805d-e11ccd5ccd90.json"
+    }
+  ],
+  "blockers": [
+    "QG-009: RSYA account and R-M-19857241-1 ownership, direct-only console configuration, signed-release physical Android load, and forbidden-surface network trace require owner/device evidence.",
+    "QG-010 external remainder: protected/non-protected/unknown controlled routes, trusted-proxy spoof resistance, GeoIP freshness, raw-IP/header log and trace redaction, operational ownership, and legal review are not proven by the one public-route observation.",
+    "QG-011: Firebase Android/iOS project configuration plus two-month retention, Signals, Ads personalization, User-ID, properties, Google Ads linkage, and advertising-data-sharing console state require owner evidence.",
+    "QG-012: counsel approval, hosted HTTPS policy URL, in-app/store link configuration, and final Google Play Data Safety Console parity require owner/legal/store evidence.",
+    "iOS Firebase/Yandex CocoaPods compilation, Xcode linkage, absence of IDFA/AdSupport in the final app, and device network behavior require the macOS release environment."
+  ]
+}

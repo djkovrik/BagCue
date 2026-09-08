@@ -1,0 +1,1 @@
+{"action":"assign","assignmentId":"apa-analytics-events","owner":"vibe-decompose-mvikotlin-engineer","acceptanceScenarioIds":["AC-039"],"qualityGateIds":[],"allowedFiles":["shared/component/templates/src/**","shared/component/history/src/**"],"inputScopeId":"catalog-core-v1"}

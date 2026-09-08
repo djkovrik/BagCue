@@ -1,0 +1,21 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:compose:compileAndroidMain",
+    ":shared:compose:visual-test:generateBagCuePreviewTests"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": [
+        "responsive-production-compile",
+        "preview-discovery-generation"
+      ]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Compile the five production Compose stress-layout repairs and regenerate the existing preview discovery sources without recording or modifying golden images. The intended drift is restricted to App.kt plus settings, template, catalog, and session production screen files."
+}

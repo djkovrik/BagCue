@@ -1,0 +1,201 @@
+{
+  "algorithm": "sha256",
+  "digest": "658f1d29f1e3749650b120f59f058a1ecbe45fa84e1847d94ec43551460935f0",
+  "files": [
+    {
+      "path": "androidApp/src/main/AndroidManifest.xml",
+      "sha256": "8e10d0aac7acb107aff713bfb7ad28865b51a066d270c7eb48b6bfcd36c7c71f"
+    },
+    {
+      "path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt",
+      "sha256": "9dfcb43178fe9ce23762338f46ab8432d5162ec63f3719f6fc64d778021c74eb"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "sha256": "26310833a35076dfe3bdcd9fa469c5c7e36c26623eaf6009bf2d450f779189a3"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "sha256": "8cea067f36938c23f7633173f7dc09ee22c4a2afb13467af1a4d7dbe397bc626"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_background.png",
+      "sha256": "bd235949335acf835669855a47574a7e9ed1c49869d4af134db95915c03d4726"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "24ce65b362e8f69ae55145943cf9afa3480bcfd5666726c6a61a046368649569"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_monochrome.png",
+      "sha256": "8517f67912c428ead215aa1b358f87d6638b445c320d5dc4438b042e60db4b49"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "sha256": "0f6e9857a5bb486d1be9ceec4293f6eec6298e415bfd912afacd53039c9c522d"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_background.png",
+      "sha256": "3459cc0c2eac38db0ebde63f7af9d0ba325490303b57dd1e2fb679e8a9131885"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "0974149b788226856d105f8546cb2d335f89705d7126f93566d699094ebd7e73"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_monochrome.png",
+      "sha256": "50c2fa5cdf623a58a04c6a0d5944bc7578d023952cf8f749e2bdd06f84262080"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "aad810484070fb285bc55c0210314fa7f2c8fec5901341f235ae029d34cd7c51"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_background.png",
+      "sha256": "71633fc7daa8140d488910e5f613173241dfd4344810ca4714f993085b2809bf"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "6e1809deb87131b91dbee64db4d591dc34cce7dd125ee4cff744058482f668f7"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_monochrome.png",
+      "sha256": "e9833502abe8fdfe992e0674b97b5a7ee8815c8433e6bb4fa98afac375e5bca5"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "930bff519bb79910c4903f772ac06ec32cfd6e9b5bb62128f65dbdf2316aa703"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_background.png",
+      "sha256": "8854595b58959cd36963acb87d5b304fe4497cca93b6339dfb6b40bceb23eb04"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "0723ed36c791241125e4662c3a0be79ff31e0505e67470f5ce0a9e69e5247ccc"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_monochrome.png",
+      "sha256": "6d75ae24f57fdfde662808858be8e3e33bdbb2575a62d79676f7a81148f51c14"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "de24698d75d4cf88bb836c22f01a3afcdc60838b31b754391ae5c874a314af50"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png",
+      "sha256": "2d03ee5a56c8bd30c2a17a255c728dcd4a853e0572e211385bf7c7b324c6557d"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "d6630cb179e560b4282c4e3fb2b848db558a21f6bcddf81d5c239679841429a1"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_monochrome.png",
+      "sha256": "2ab0a61cc0407c86e9f09c21b9388bd1fff34915ca75f420c817706882ce8378"
+    },
+    {
+      "path": "iosApp/iosApp/Info.plist",
+      "sha256": "b984d2f4ab97ef48fb2999fc8f3a910e2215bd8e159f3b2b7b03c66aaf4178ca"
+    },
+    {
+      "path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt",
+      "sha256": "ffb518b741f983453a38379b0310880eed610d473bcd0aeb91b0f95dabae2627"
+    },
+    {
+      "path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt",
+      "sha256": "2dfe48add3dabcd99f1c6bb467fa111bed908498f7a8876564e1531ae7a13150"
+    },
+    {
+      "path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/template/KitTemplatePersistenceTest.kt",
+      "sha256": "e2d0fb3228f2a71a033b855e1ba78558ef210709091a3787a4c1a506c62324e4"
+    },
+    {
+      "path": "shared/data/src/androidMain/kotlin/com/sedsoftware/bagcue/data/catalog/AndroidCatalogDatabaseDriverFactory.kt",
+      "sha256": "02bbafc59639db7047352f855ab8a217d65ada8eba1f16317fe1ad71e4fddd55"
+    },
+    {
+      "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt",
+      "sha256": "5200dc3ac6b82fb988b419d5ea0ccf2ffee3a12505c63ac588117444fe409158"
+    },
+    {
+      "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/SqlDelightCatalogRepository.kt",
+      "sha256": "3fe97992b3c3d0d4c3997b38d17868263da9e27e8b551fb16a493161f3a6e491"
+    },
+    {
+      "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/session/SqlDelightPackingSessionRepository.kt",
+      "sha256": "7af2fc8c3aeba6e15dc0f3f9608c3a45b40cc4144f2abf3de4f771e73671d033"
+    },
+    {
+      "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/template/SqlDelightKitTemplateRepository.kt",
+      "sha256": "9e11f365f54ebd844be530b12a07d87f7e963787bd5b667d5931f7467ed25655"
+    },
+    {
+      "path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq",
+      "sha256": "a71c720313abb32fefc955027cd3a3658c6e1d789b5413d7e883424744b57451"
+    },
+    {
+      "path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Session.sq",
+      "sha256": "3e944b21767486fc1411764b0540defac8952eabac3c05cb52c63fdc80c37c3d"
+    },
+    {
+      "path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Template.sq",
+      "sha256": "303bf4827f8581ceb95747bcb40b613f5c8381e7057134d16a60be182ca8f8d6"
+    },
+    {
+      "path": "shared/data/src/iosMain/kotlin/com/sedsoftware/bagcue/data/catalog/IosCatalogDatabaseDriverFactory.kt",
+      "sha256": "ecfe59c28c128e6fb4a3dad14d4890328ad246e387a15a271d6e8de872353927"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt",
+      "sha256": "7e7c2de3f82c7e7b6d0cd0ce88a6784aa62d38fcebdb670ad924e80049e18781"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRepository.kt",
+      "sha256": "0d8c2b11f6c7e8c01e1202dea7f1816196d68468ddc5e98b32c63c641d56e2f9"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/PackingSessionRepository.kt",
+      "sha256": "4a1d6adaeb7b48ed0ca979ee5516d59dd71f8796ea3afa3cead60cccdf2aaf71"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionHistoryRepository.kt",
+      "sha256": "70c87c552745e84d58c6ef0cdb102075fcafbcbf7ddc9ee27e08e3247d308728"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionModels.kt",
+      "sha256": "ebdd41b993a1f9d4fc72ff1b9301931492afa117fdec9db8391a7221bdfe7be0"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionRules.kt",
+      "sha256": "14a7047a7fed336ff99ee3dc12254829e07fd9ac6724e49fc32ec7baafad00a2"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/template/KitTemplateRepository.kt",
+      "sha256": "229670deb793f929913450658a4ae64fb7c34fa5e686bcc28fae31e7c6d9e735"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/template/TemplateModels.kt",
+      "sha256": "154912509f459ec72b551ffc94e9d9a81c963e3ffb2fb34c780c84df1f307ed9"
+    },
+    {
+      "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRulesTest.kt",
+      "sha256": "a61e1924b8755e6c7c7bcaf507a50fafbe1024458d6b917ea2b8c3717935fc39"
+    },
+    {
+      "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt",
+      "sha256": "c624336cd39832071436f2c130b9da272248e8cf92ee7010b4f5fd82773b509a"
+    },
+    {
+      "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/template/TemplateRulesTest.kt",
+      "sha256": "8837a1f8de1ff80457096b98f89fc79832158add865cf5fa92224712e48c4119"
+    }
+  ],
+  "patterns": [
+    "androidApp/src/**",
+    "iosApp/iosApp/Info.plist",
+    "shared/data/src/**",
+    "shared/domain/src/**",
+    "shared/platform/src/**"
+  ]
+}

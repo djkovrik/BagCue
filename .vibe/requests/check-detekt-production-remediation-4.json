@@ -1,0 +1,27 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    "detekt",
+    ":shared:domain:compileAndroidMain",
+    ":shared:data:compileAndroidMain",
+    ":shared:network:compileAndroidMain",
+    ":shared:platform:compileAndroidMain",
+    ":shared:component:catalog:compileAndroidMain",
+    ":shared:component:history:compileAndroidMain",
+    ":shared:component:settings:compileAndroidMain",
+    ":shared:component:templates:compileAndroidMain",
+    ":shared:component:session:compileAndroidMain",
+    ":shared:compose:compileAndroidMain"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-001",
+      "surfaces": ["strict-detekt-gate", "production-compile"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Capture the exact semantic-policy-only Detekt residual after all unambiguous production source remediation."
+}

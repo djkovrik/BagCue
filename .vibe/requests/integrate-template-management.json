@@ -1,0 +1,11 @@
+{
+  "action": "integrate",
+  "packageId": "template-management",
+  "receiptRef": ".vibe/receipts/RECEIPT-a5c6d08a-e372-4ea3-b1bb-94114074b163.json",
+  "integrationEvidence": [
+    {"path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt", "symbol": "kitTemplateRepository", "role": "entry-point"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "RootComponent.Child.Templates", "role": "navigation"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/template/KitTemplatePersistenceTest.kt", "symbol": "officeModificationAndPoolDeletionSurviveRestartAndReconciliation", "role": "restart"}
+  ],
+  "nextAction": "Bind AC-006 through AC-011 to their literal production and test evidence, clear only genuinely satisfied pending checks, mark each scenario verified, and register the next dependency-ready session creation and checklist package."
+}

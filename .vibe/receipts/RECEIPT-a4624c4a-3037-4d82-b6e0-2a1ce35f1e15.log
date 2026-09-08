@@ -1,0 +1,38 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:domain:allTests :shared:data:testAndroidHostTest :shared:component:session:testAndroidHostTest :shared:root:compileAndroidMain :shared:compose:compileAndroidMain :androidApp:assembleDebug :shared:data:compileKotlinIosSimulatorArm64 :shared:component:session:compileKotlinIosSimulatorArm64 :shared:root:compileKotlinIosSimulatorArm64 :shared:compose:compileKotlinIosSimulatorArm64
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+1 problem was found storing the configuration cache.
+- Task `:shared:component:session:compileAndroidHostTest` of type `org.jetbrains.kotlin.gradle.tasks.KotlinCompile`: error writing value of type 'org.gradle.api.internal.provider.DefaultProvider'
+
+See the complete report at file:///D:/Sources/Android/BagCue/build/reports/configuration-cache/b2o3rg1fiezxpvfa0ts6m70x3/5kwvcwpi0rqyabvqgaxarl5dp/configuration-cache-report.html
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+Configuration cache entry discarded due to serialization error.
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Configuration cache state could not be cached: field `provider` of `org.gradle.internal.serialize.codecs.core.ProviderBackedFileCollectionSpec` bean found in field `element` of `java.util.Collections$SingletonList` bean found in field `elements` of `org.gradle.internal.serialize.codecs.core.ResolutionBackedFileCollectionSpec` bean found in field `__classpathSnapshot__` of `org.jetbrains.kotlin.gradle.tasks.KotlinCompile$ClasspathSnapshotProperties_Decorated` bean found in field `__classpathSnapshotProperties__` of task `:shared:component:session:compileAndroidHostTest` of type `org.jetbrains.kotlin.gradle.tasks.KotlinCompile`: error writing value of type 'org.gradle.api.internal.provider.DefaultProvider'
+> Could not resolve all files for configuration ':shared:component:session:androidHostTestCompileClasspath'.
+   > Could not find com.arkivanov.decompose:decompose-test-utils:3.5.0.
+     Searched in the following locations:
+       - https://repo.maven.apache.org/maven2/com/arkivanov/decompose/decompose-test-utils/3.5.0/decompose-test-utils-3.5.0.pom
+     Required by:
+         project ':shared:component:session'
+
+* Try:
+> If the artifact you are trying to retrieve can be found in the repository but without metadata in 'Maven POM' format, you need to adjust the 'metadataSources { ... }' of the repository declaration.
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 19s

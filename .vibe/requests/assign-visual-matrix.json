@@ -1,0 +1,6 @@
+{
+  "action":"assign","assignmentId":"visual-preview-golden-matrix","owner":"vibe-visual-testing-product-designer",
+  "acceptanceScenarioIds":["AC-040","AC-041","AC-042","AC-043","AC-044","AC-045","AC-046","AC-047","AC-048","AC-049","AC-050"],"qualityGateIds":["QG-006"],
+  "allowedFiles":["gradle/**","build.gradle.kts","settings.gradle.kts","shared/compose/**","shared/component/**","shared/root/**","docs/design/**",".gitattributes"],
+  "inputScopeId":"catalog-core-v1"
+}

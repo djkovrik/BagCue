@@ -1,0 +1,5 @@
+{
+  "action": "bind",
+  "receiptRef": ".vibe/receipts/RECEIPT-1be4fcb1-dc55-4fe6-aedd-5f8267884a19.json",
+  "reconcileDrift": "Bind the immutable green serialized full-local receipt after the outer delivery-work process stalled during its automatic post-check ledger binding. The receipt itself completed with exit code 0 on the current source fingerprint."
+}

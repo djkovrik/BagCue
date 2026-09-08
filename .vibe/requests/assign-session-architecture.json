@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "session-build-architecture",
+  "owner": "vibe-project-architect",
+  "acceptanceScenarioIds": ["AC-012","AC-013","AC-014","AC-015","AC-016","AC-017","AC-018","AC-019","AC-020","AC-021","AC-022","AC-023","AC-024","AC-025"],
+  "qualityGateIds": [],
+  "allowedFiles": ["settings.gradle.kts", "gradle/**", "shared/component/session/build.gradle.kts", "shared/root/build.gradle.kts", "shared/compose/build.gradle.kts", "androidApp/build.gradle.kts"],
+  "inputScopeId": "catalog-core-v1"
+}

@@ -1,0 +1,115 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-catalog-build-architecture-20260908",
+  "assignmentId": "catalog-build-architecture",
+  "productionEvidence": [
+    {
+      "path": "settings.gradle.kts",
+      "symbol": ":shared:domain/:shared:data/:shared:component:catalog/:shared:root includes",
+      "surface": "module-graph"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "symbol": "SQLDelight/Decompose/Essenty/MVIKotlin catalog entries",
+      "surface": "dependency-catalog"
+    },
+    {
+      "path": "shared/data/build.gradle.kts",
+      "symbol": "BagCueDatabase SQLDelight database and platform drivers",
+      "surface": "persistence-runtime-wiring"
+    },
+    {
+      "path": "shared/component/catalog/build.gradle.kts",
+      "symbol": "catalog component Decompose and MVIKotlin dependencies",
+      "surface": "component-runtime-wiring"
+    },
+    {
+      "path": "shared/root/build.gradle.kts",
+      "symbol": "root composition dependencies",
+      "surface": "production-root-wiring"
+    },
+    {
+      "path": "shared/compose/build.gradle.kts",
+      "symbol": "root/catalog UI dependencies and Decompose Compose extensions",
+      "surface": "compose-integration-wiring"
+    },
+    {
+      "path": "androidApp/build.gradle.kts",
+      "symbol": "Android root and Decompose host dependencies",
+      "surface": "android-build-wiring"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "settings.gradle.kts",
+        "build.gradle.kts",
+        "gradle/libs.versions.toml",
+        "shared/domain/build.gradle.kts",
+        "shared/data/build.gradle.kts",
+        "shared/component/catalog/build.gradle.kts",
+        "shared/root/build.gradle.kts",
+        "shared/compose/build.gradle.kts",
+        "androidApp/build.gradle.kts"
+      ],
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "python",
+        "-c",
+        "import tomllib, pathlib; tomllib.loads(pathlib.Path(r'gradle/libs.versions.toml').read_text(encoding='utf-8'))"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "requestedCommands": [
+    {
+      "argv": [
+        "gradlew.bat",
+        ":shared:domain:allTests",
+        ":shared:data:testAndroidHostTest",
+        ":shared:component:catalog:allTests",
+        ":shared:root:allTests",
+        ":shared:compose:compileAndroidMain",
+        ":androidApp:assembleDebug"
+      ],
+      "tasks": [
+        ":shared:domain:allTests",
+        ":shared:data:testAndroidHostTest",
+        ":shared:component:catalog:allTests",
+        ":shared:root:allTests",
+        ":shared:compose:compileAndroidMain",
+        ":androidApp:assembleDebug"
+      ],
+      "coveredObligations": [
+        {
+          "obligationId": "AC-001",
+          "surfaces": ["component-test", "persistence-integration-test"]
+        },
+        {
+          "obligationId": "AC-002",
+          "surfaces": ["component-test", "persistence-integration-test"]
+        },
+        {
+          "obligationId": "AC-003",
+          "surfaces": ["component-test", "persistence-integration-test"]
+        },
+        {
+          "obligationId": "AC-004",
+          "surfaces": ["component-test", "persistence-integration-test"]
+        },
+        {
+          "obligationId": "AC-005",
+          "surfaces": ["domain-test", "component-test"]
+        }
+      ]
+    }
+  ],
+  "blockers": []
+}

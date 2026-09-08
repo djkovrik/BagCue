@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-kover-threshold-recovery-20260908.json",
+  "expectedLedgerDigest": "d2caeaf75a0bb9764d802fe7db0d92f07175e8793cf77a89f9c0f7691d09eec8",
+  "inspectionNote": "Inspected the immutable Kover recovery handoff. One deterministic domain assertion covers the real fail-closed consent-required/no-choice decision branch; focused tests and unchanged 72 percent threshold pass at 2172/3016 lines (72.01591512 percent), with no production/filter/threshold change."
+}

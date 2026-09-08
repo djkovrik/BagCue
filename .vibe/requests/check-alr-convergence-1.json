@@ -1,0 +1,13 @@
+{
+  "action":"check","runner":"gradle","kind":"targeted","inputScopeId":"catalog-core-v1",
+  "tasks":[":shared:domain:allTests",":shared:data:testAndroidHostTest",":shared:compose:testAndroidHostTest",":shared:component:catalog:testAndroidHostTest",":shared:component:templates:testAndroidHostTest",":shared:component:session:testAndroidHostTest",":shared:component:history:testAndroidHostTest",":shared:component:settings:testAndroidHostTest",":shared:root:testAndroidHostTest",":shared:compose:compileAndroidMain",":androidApp:assembleDebug",":shared:data:compileKotlinIosSimulatorArm64",":shared:platform:compileKotlinIosSimulatorArm64",":shared:component:catalog:compileKotlinIosSimulatorArm64",":shared:component:templates:compileKotlinIosSimulatorArm64",":shared:component:session:compileKotlinIosSimulatorArm64",":shared:component:history:compileKotlinIosSimulatorArm64",":shared:component:settings:compileKotlinIosSimulatorArm64",":shared:root:compileKotlinIosSimulatorArm64",":shared:compose:compileKotlinIosSimulatorArm64"],
+  "coveredObligations":[
+    {"obligationId":"AC-047","surfaces":["component-test","accessibility-test"]},
+    {"obligationId":"AC-048","surfaces":["localization-contract-test","component-test"]},
+    {"obligationId":"AC-049","surfaces":["accessibility-test"]},
+    {"obligationId":"AC-050","surfaces":["component-test","persistence-integration-test"]},
+    {"obligationId":"AC-051","surfaces":["domain-test","persistence-integration-test"]}
+  ],
+  "timeoutSeconds":1800,
+  "reconcileDrift":"Will run after inspecting and freezing the three non-overlapping adaptive/localization/resilience assignments. Golden and manual visual surfaces remain explicitly deferred to the next visual package."
+}

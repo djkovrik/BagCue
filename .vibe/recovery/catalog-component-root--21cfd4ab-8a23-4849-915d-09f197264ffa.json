@@ -1,0 +1,75 @@
+{
+  "assignmentId": "catalog-component-root",
+  "blockers": [],
+  "createdAt": "2026-09-08T08:04:08.178658Z",
+  "fileBoundaries": [
+    "shared/component/catalog/src/**",
+    "shared/root/src/**"
+  ],
+  "nextAction": "Implement catalog component Store, Manager, previews, and production root navigation within assigned boundaries",
+  "obligationIds": [
+    "AC-001",
+    "AC-002",
+    "AC-003",
+    "AC-004",
+    "AC-005"
+  ],
+  "owner": "vibe-decompose-and-mvikotlin-engineer",
+  "pendingChecks": [
+    "Orchestrator runs catalog/root compile and component tests"
+  ],
+  "previousPacketDigest": null,
+  "requiredReadHashes": [
+    {
+      "path": ".vibe/requests/assign-component-catalog.json",
+      "sha256": "8a432447600d5a6bfc13c9e624ce5d29d469410f4362ebc8c4df89a05707041e"
+    },
+    {
+      "path": "spec/app-spec/app-spec.json",
+      "sha256": "a0879cb7c296f1e13cd21ad0b762b9eec14fb9b62e6157d5b509f19f965397fc"
+    },
+    {
+      "path": "spec/app-spec/flows/FLOW-001.md",
+      "sha256": "d968d8d8dda19034968fe553b21fa0e871d848f6dd4ec0ae5b51ed17ac74fda5"
+    },
+    {
+      "path": "spec/app-spec/screens/SCREEN-008.md",
+      "sha256": "9b70df30cdc59263a9178a2887ed350f8bd7e7b64dfbf5605bc4b7be080b3689"
+    },
+    {
+      "path": "spec/app-spec/screens/SCREEN-009.md",
+      "sha256": "7e07a6a0da03496e53d45a53cb4e851c925dfd790aa012acbe278d77b4cbff0b"
+    }
+  ],
+  "requiredReads": [
+    ".vibe/requests/assign-component-catalog.json",
+    "spec/app-spec/app-spec.json",
+    "spec/app-spec/flows/FLOW-001.md",
+    "spec/app-spec/screens/SCREEN-008.md",
+    "spec/app-spec/screens/SCREEN-009.md"
+  ],
+  "resolutions": {
+    "blockers": [],
+    "pendingChecks": [],
+    "reason": null
+  },
+  "schemaVersion": "2.0",
+  "scopedInstructions": [],
+  "status": "active",
+  "workspaceFingerprint": {
+    "algorithm": "sha256",
+    "binaryDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "digest": "16b895c17cc4c79777cdfc2a26e28f86424c9fcad48934ae2e0ebeba4433720e",
+    "gitHead": "fdea4c1a871e2d3952a930b8d7bf9e780851dcc7",
+    "workingFiles": [
+      {
+        "path": "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+        "sha256": "ddf5d641c5e4d5b2f4078b125ff701ce03ef89987f24422f4bd1b11a171493f6"
+      },
+      {
+        "path": "docs/decisions/DEC-YANDEX-PRODUCTION-AD-UNIT.json",
+        "sha256": "d28c03639f6ea3b30744f7f5162a2f96af88011785fa50b6c018517de579bf8f"
+      }
+    ]
+  }
+}

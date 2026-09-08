@@ -1,0 +1,190 @@
+Reusing configuration cache.
+> Task :shared:component:history:androidPreBuild UP-TO-DATE
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :shared:compose:androidPreBuild UP-TO-DATE
+> Task :shared:component:catalog:androidPreBuild UP-TO-DATE
+> Task :shared:platform:androidPreBuild UP-TO-DATE
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:history:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:catalog:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:generateComposeResClass UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:compose:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :shared:platform:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:generateBagCuePreviewTests UP-TO-DATE
+> Task :shared:root:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:platform:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:catalog:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:component:settings:androidPreBuild UP-TO-DATE
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:session:androidPreBuild UP-TO-DATE
+> Task :shared:root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:history:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:settings:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:session:preAndroidMainBuild UP-TO-DATE
+> Task :shared:platform:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:catalog:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:templates:androidPreBuild UP-TO-DATE
+> Task :shared:component:templates:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:settings:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:session:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:history:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:templates:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:settings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:session:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:templates:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:platform:generateAndroidMainAssets UP-TO-DATE
+> Task :shared:root:androidPreBuild UP-TO-DATE
+> Task :shared:root:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :shared:compose:convertXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:component:catalog:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:platform:mergeAndroidMainAssets UP-TO-DATE
+> Task :shared:platform:packageAndroidMainResources UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForAndroidHostTest NO-SOURCE
+> Task :shared:component:session:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:history:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForAndroidMain NO-SOURCE
+> Task :shared:compose:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:compose:convertXmlValueResourcesForCommonTest NO-SOURCE
+> Task :shared:compose:copyNonXmlValueResourcesForAndroidHostTest NO-SOURCE
+> Task :shared:component:settings:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:domain:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:root:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:templates:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:compose:androidJar UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForCommonTest NO-SOURCE
+> Task :shared:platform:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForAndroidHostTest NO-SOURCE
+> Task :shared:compose:prepareComposeResourcesTaskForCommonTest NO-SOURCE
+> Task :shared:compose:generateResourceAccessorsForAndroidHostTest NO-SOURCE
+> Task :shared:compose:generateResourceAccessorsForCommonTest NO-SOURCE
+> Task :shared:platform:generateAndroidMainRFile UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :shared:compose:copyAndroidMainComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :shared:compose:generateActualResourceCollectorsForAndroidMain UP-TO-DATE
+> Task :shared:compose:packageAndroidMainResources UP-TO-DATE
+> Task :shared:compose:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:compose:generateAndroidMainRFile UP-TO-DATE
+> Task :shared:compose:preparePaparazziAndroidMainResources UP-TO-DATE
+> Task :shared:domain:compileAndroidMain UP-TO-DATE
+> Task :shared:domain:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:domain:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:domain:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:catalog:compileAndroidMain UP-TO-DATE
+> Task :shared:component:history:compileAndroidMain UP-TO-DATE
+> Task :shared:component:settings:compileAndroidMain UP-TO-DATE
+> Task :shared:component:history:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:catalog:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:catalog:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:component:history:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:component:catalog:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:settings:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:component:history:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:settings:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:settings:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:platform:compileAndroidMain UP-TO-DATE
+> Task :shared:platform:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:platform:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:platform:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:templates:compileAndroidMain UP-TO-DATE
+> Task :shared:component:session:compileAndroidMain UP-TO-DATE
+> Task :shared:component:templates:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:component:templates:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:session:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:component:session:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:session:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:templates:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:root:compileAndroidMain UP-TO-DATE
+> Task :shared:root:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:root:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:root:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:compose:compileAndroidMain UP-TO-DATE
+> Task :shared:compose:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:compose:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:compose:processAndroidMainJavaRes UP-TO-DATE
+
+> Task :shared:compose:compileAndroidHostTest
+w: file:///D:/Sources/Android/BagCue/shared/compose/src/androidHostTest/kotlin/com/sedsoftware/bagcue/compose/visual/BagCuePaparazziPreviewRule.kt:110:5 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+
+> Task :shared:compose:transformAndroidHostTestClassesWithAsm
+
+> Task :shared:compose:testAndroidHostTest
+
+BagCuePreviewDiscoveryTest > discoversRequiredPreviewMatrix STANDARD_OUT
+    BagCue preview diagnostic root=D:\Sources\Android\BagCue\shared\compose\build target=D:\Sources\Android\BagCue\shared\compose\build\classes\kotlin\android\main knownClass=D:\Sources\Android\BagCue\shared\compose\build\classes\kotlin\android\main\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrixKt.class
+    ==============================================================
+    Composable Preview Scanner
+    ==============================================================
+    Included package trees: com.sedsoftware.bagcue.compose.preview
+    Excluded package trees: 
+    Source set (compiled classes path): D:\Sources\Android\BagCue\shared\compose\build/classes/kotlin/android/main
+
+    @Preview annotation: androidx.compose.ui.tooling.preview.Preview
+    Amount of @Previews found: 1
+
+    Time to scan target files: 49 ms
+    Time to find @Previews: 1060 ms
+    --------------------------------------------------------------
+    Total time: 1109 ms
+    ==============================================================
+
+
+
+Gradle Test Executor 58 STANDARD_OUT
+    BagCue preview diagnostic root=D:\Sources\Android\BagCue\shared\compose\build target=D:\Sources\Android\BagCue\shared\compose\build\classes\kotlin\android\main knownClass=D:\Sources\Android\BagCue\shared\compose\build\classes\kotlin\android\main\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrixKt.class
+    ==============================================================
+    Composable Preview Scanner
+    ==============================================================
+    Included package trees: com.sedsoftware.bagcue.compose.preview
+    Excluded package trees: 
+    Source set (compiled classes path): D:\Sources\Android\BagCue\shared\compose\build/classes/kotlin/android/main
+
+    @Preview annotation: androidx.compose.ui.tooling.preview.Preview
+    Amount of @Previews found: 1
+
+    Time to scan target files: 13 ms
+    Time to find @Previews: 389 ms
+    --------------------------------------------------------------
+    Total time: 402 ms
+    ==============================================================
+
+
+
+GeneratedBagCuePreviewPaparazziTest > [com.sedsoftware.bagcue.compose.preview.BagCuePreviewMatrixKt_SCREEN_001_FirstRunStarter] > snapshot[com.sedsoftware.bagcue.compose.preview.BagCuePreviewMatrixKt_SCREEN_001_FirstRunStarter] STANDARD_ERROR
+    WARNING: A Java agent has been loaded dynamically (C:\Users\Sergey\.gradle\caches\9.5.1\transforms\6380ca452c581b2c019e6399a06889a4\transformed\byte-buddy-agent-1.18.7.jar)
+    WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+    WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+    WARNING: Dynamic loading of agents will be disallowed by default in a future release
+
+GeneratedBagCuePreviewPaparazziTest > [com.sedsoftware.bagcue.compose.preview.BagCuePreviewMatrixKt_SCREEN_001_FirstRunStarter] > snapshot[com.sedsoftware.bagcue.compose.preview.BagCuePreviewMatrixKt_SCREEN_001_FirstRunStarter] FAILED
+    java.lang.ClassNotFoundException at BuiltinClassLoader.java:641
+
+> Task :shared:compose:testAndroidHostTest FAILED
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+75 actionable tasks: 12 executed, 63 up-to-date
+Configuration cache entry reused.
+
+4 tests completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':shared:compose:testAndroidHostTest'.
+> There were failing tests. See the results at: file:///D:/Sources/Android/BagCue/shared/compose/build/test-results/testAndroidHostTest/
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 10s

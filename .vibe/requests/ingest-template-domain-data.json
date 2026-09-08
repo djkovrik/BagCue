@@ -1,0 +1,5 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-template-domain-persistence-20260908.json",
+  "inspectionNote": "Inspected the frozen domain and persistence handoff: aggregate invariants, stable starter identities, SQLDelight repository operations, seed overrides, restart behavior, transaction rollback, and session-snapshot isolation are represented by literal production symbols and exact test names within the registered boundary."
+}

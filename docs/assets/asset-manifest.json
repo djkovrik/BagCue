@@ -1,0 +1,784 @@
+{
+  "schemaVersion": "1.0",
+  "pathAdaptation": {
+    "reason": "The frozen AppSpec uses the template module name composeApp; BagCue owns Compose Multiplatform resources in shared/compose.",
+    "approvedPattern": "composeApp/src/commonMain/composeResources/drawable/<name>.xml",
+    "actualPattern": "shared/compose/src/commonMain/composeResources/drawable/<name>.xml"
+  },
+  "launcherDerivatives": [
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "sha256": "4f74dde282a9a88f41e150601e3e7703d20701c33d3a676909777b75c3fbe7e2"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_background.png",
+      "sha256": "4f74dde282a9a88f41e150601e3e7703d20701c33d3a676909777b75c3fbe7e2"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "sha256": "89163ed84b1f3f64b0379c09ef367fd95511e714380629bc3d74df82413a96b5"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_monochrome.png",
+      "sha256": "1efc629f023a440120590cfec734d090f14d44fcd4a989c1ed77da660fb7adf1"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "sha256": "561cfe755c31de3844d1d9dc3eff35dd6eca952babed8f15ad63420c348f73b9"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_background.png",
+      "sha256": "561cfe755c31de3844d1d9dc3eff35dd6eca952babed8f15ad63420c348f73b9"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "sha256": "c88d5132325bf54e408bb30653c717294f8b40da178028936e2189ed19a029db"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_monochrome.png",
+      "sha256": "16a5124677273cef5d7cdec5980dad069892b1dfa8fab9c53621a7140aa7dfd1"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "65a61851afcdaedcb62568e70fcbef91a187776882bbeac46fcb002095bd9e5d"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_background.png",
+      "sha256": "65a61851afcdaedcb62568e70fcbef91a187776882bbeac46fcb002095bd9e5d"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "sha256": "6e2840206048a696553ee4b221997b9d9cd87f75c7ec4cec0823fa61b0abe9e7"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_monochrome.png",
+      "sha256": "c6f580082a04c89456f2fa8cdae23705ef5a94cc3404f14c1ab7c71abfd0e32e"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "70c45d500a64531ae75e29fca2d7d1d7629373a832e1495fafe2a2bf39d49044"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_background.png",
+      "sha256": "70c45d500a64531ae75e29fca2d7d1d7629373a832e1495fafe2a2bf39d49044"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "sha256": "9a44670d5acb25e904f20bb09314584ea2b89b450714b283eb01c4874ac84056"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_monochrome.png",
+      "sha256": "f2cebc2c68b455132f3d48f3527143de325c737729f7cbb40a16fdbc03c79253"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "e786fd40168a1ef057993b07ebf0109e4b45651af75e44b58513214020e3e130"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png",
+      "sha256": "e786fd40168a1ef057993b07ebf0109e4b45651af75e44b58513214020e3e130"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "sha256": "bae3690216f5aa1278d7b46dcc8294c1b58adf2ac2bf7e1b381444db8d0016d9"
+    },
+    {
+      "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_monochrome.png",
+      "sha256": "2ea30126f724481dca802af6fe03df3f5b4eee93cfedd0f20692bbd34a41de02"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x.png",
+      "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x~ipad.png",
+      "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@3x.png",
+      "sha256": "676bf73cc48267ed461e93ce93bc4e274cf3b65e12997abe0bafd38ad0564c08"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20~ipad.png",
+      "sha256": "cad51e4c6d9815fde41c75cddc79781abeb05e3fdf234ed6e57ba8b3a80fff85"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29.png",
+      "sha256": "dc9d8f245b87f92a8242da8a121a28541e0e3c9e9fc31289a289c79b632c85a0"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x.png",
+      "sha256": "ff7ab16d16bf2b2b981b123399381bf15864adeab6f9452b23e0870f22e2e23d"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x~ipad.png",
+      "sha256": "ff7ab16d16bf2b2b981b123399381bf15864adeab6f9452b23e0870f22e2e23d"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@3x.png",
+      "sha256": "e15392ba2c07aa9d48e6f55b317b8a4fb47c7c8450e2a5d9f5d049df14c33e39"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29~ipad.png",
+      "sha256": "dc9d8f245b87f92a8242da8a121a28541e0e3c9e9fc31289a289c79b632c85a0"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x.png",
+      "sha256": "457117fd700ffd152c30f05e76e43be15a97a100763615334373787ec6f17b39"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x~ipad.png",
+      "sha256": "457117fd700ffd152c30f05e76e43be15a97a100763615334373787ec6f17b39"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@3x.png",
+      "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40~ipad.png",
+      "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@2x~car.png",
+      "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@3x~car.png",
+      "sha256": "d2b1b6b2744efd1588ce472f17caba2ab208be7cd06205f2f7f3471f7b0756dd"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-83.5@2x~ipad.png",
+      "sha256": "6d2c72b7d6cec918fddde2ad2cef337b72855886e673e4ca018a6a9a45f8f27b"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x.png",
+      "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x~ipad.png",
+      "sha256": "ebdba8a4cef9278bbbf6ddff453319c96ea20d98126b8d7eca581ff6ca4c9d63"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@3x.png",
+      "sha256": "d2b1b6b2744efd1588ce472f17caba2ab208be7cd06205f2f7f3471f7b0756dd"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png",
+      "sha256": "b5052c794cf106a08dda8053f7870d6d50f1b374e132bdd03d614759bcc11bfc"
+    },
+    {
+      "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ipad.png",
+      "sha256": "6c7355da8be12c03ede80c4b5246948c58b73ea06199885570b453fcb20a2ebc"
+    }
+  ],
+  "assets": [
+    {
+      "id": "ASSET-001",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml",
+          "sha256": "4aba441a8f0d290bb272ee5622e391eb036d83350052838126b667acc7aff8d2"
+        }
+      ],
+      "provenance": {
+        "method": "create-vector",
+        "source": "Original project artwork created from the approved BagCue AppSpec brief; editable vector source is the runtime XML.",
+        "rights": "Original artwork created for this BagCue project; no third-party artwork incorporated.",
+        "generationRecord": {
+          "path": "docs/assets/ASSET-001-generation-record.json",
+          "sha256": "6a6b5c29bb9d2451645b0d0d6ddc39461dd32e95b8d9682e9f5d94efe75ea8db"
+        }
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Mark",
+          "screenIds": [
+            "SCREEN-001",
+            "SCREEN-004",
+            "SCREEN-010"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-002",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_today.xml",
+          "sha256": "a17734ca3d10163b2f800a9bbc95ac81df661ce6fd109c62bb475211c6c0571a"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=home&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Today",
+          "screenIds": [
+            "SCREEN-001"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-003",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_sessions.xml",
+          "sha256": "40ac649bd29fe5c727abf4c1974a5f99a9e2cb3a94e7e37f0155de9ac3d397d0"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=calendar_month&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Sessions",
+          "screenIds": [
+            "SCREEN-005"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-004",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_templates.xml",
+          "sha256": "8407451bffa7f3020582cd54c17a6011ffb22f5bfd43989ba63d160cc9ebf8dd"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=checklist&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Templates",
+          "screenIds": [
+            "SCREEN-006"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-005",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_settings.xml",
+          "sha256": "350e8d7e69a4699f7842b35fc5ac8e53630c191bb6c2c4f1975ce6c52a02c096"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=settings&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Settings",
+          "screenIds": [
+            "SCREEN-010"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-006",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_add.xml",
+          "sha256": "aa2bc151da1b2e8277fbedf6ebd7c5deb97f426bf76e76883010db7c1a1f94be"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=add&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Add",
+          "screenIds": [
+            "SCREEN-001",
+            "SCREEN-002",
+            "SCREEN-003",
+            "SCREEN-006",
+            "SCREEN-008"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-007",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_check.xml",
+          "sha256": "8f907261934604e536a05ab1e4c0424459aa8f6f7ba5db236cbbf5893b82f0df"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=check&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Check",
+          "screenIds": [
+            "SCREEN-003",
+            "SCREEN-004"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-008",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_calendar.xml",
+          "sha256": "3d26dbf9c5b784fdcea7ed3c6f55244c4a6b197c62b40b207e7f4da7f1f8fbf2"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=calendar_month&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Calendar",
+          "screenIds": [
+            "SCREEN-002",
+            "SCREEN-005"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-009",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_edit.xml",
+          "sha256": "ba7570802e9f33518642ef6b8eda4590e184cce562217fe7ed889a24edc3f331"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=edit&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Edit",
+          "screenIds": [
+            "SCREEN-007",
+            "SCREEN-009"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-010",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_delete.xml",
+          "sha256": "644a3a2b690318949bafc8bf20e900642ce9ef35959e6deaf1650226525f9d6b"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=delete&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Delete",
+          "screenIds": [
+            "SCREEN-005",
+            "SCREEN-006",
+            "SCREEN-007",
+            "SCREEN-008",
+            "SCREEN-009"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-011",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_more.xml",
+          "sha256": "b2e1a278a0e522067c4ce5dbc4f3b97a50de2797a0f6077defdbae85a416bc9c"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=more_vert&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val More",
+          "screenIds": [
+            "SCREEN-003",
+            "SCREEN-005",
+            "SCREEN-006",
+            "SCREEN-008"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-012",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_search.xml",
+          "sha256": "81d5ddc1234d74cccf084b6b82bfb663008202581e8a8823c9657bffcbb4d351"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=search&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Search",
+          "screenIds": [
+            "SCREEN-008"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-013",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_duplicate.xml",
+          "sha256": "ae8ae4ee001b4dadbe901c56af7d0a110e9e6185a8f4f12ab9f56a4d0ae97b06"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=content_copy&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Duplicate",
+          "screenIds": [
+            "SCREEN-006"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-014",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_notifications.xml",
+          "sha256": "665293ab072f71bf738609af4782af91a3d20a5ee7dcdcee5d8137b710b73484"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=notifications&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Notifications",
+          "screenIds": [
+            "SCREEN-002",
+            "SCREEN-010"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-015",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_privacy.xml",
+          "sha256": "acfb976d689965b2b4edc9162a08fdf33c3d9ec1e4bf5a78afb6a28c6e487afd"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=privacy_tip&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Privacy",
+          "screenIds": [
+            "SCREEN-010",
+            "SCREEN-011"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-016",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_arrow_back.xml",
+          "sha256": "463bf340532697b4378fa4b9e3ebbadd5fd0f042cc831752ae865fdbaed0743e"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=arrow_back&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Back",
+          "screenIds": [
+            "SCREEN-002",
+            "SCREEN-003",
+            "SCREEN-004",
+            "SCREEN-007",
+            "SCREEN-008",
+            "SCREEN-009",
+            "SCREEN-011"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    },
+    {
+      "id": "ASSET-017",
+      "outputs": [
+        {
+          "path": "shared/compose/src/commonMain/composeResources/drawable/ic_bag.xml",
+          "sha256": "ea398efb55a3542b9b528cda3866fa42b529bb6e1d797f1fb70a746aea7dde4c"
+        }
+      ],
+      "provenance": {
+        "method": "reuse",
+        "source": "Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=work&icon.style=Rounded",
+        "rights": "Google Material Symbols and Icons, Apache License 2.0; adapted to portable Compose vector XML."
+      },
+      "usages": [
+        {
+          "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+          "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37",
+          "symbol": "val Bag",
+          "screenIds": [
+            "SCREEN-003",
+            "SCREEN-007",
+            "SCREEN-009"
+          ]
+        }
+      ],
+      "visualEvidence": [
+        {
+          "path": "docs/assets/asset-contact-sheet.png",
+          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+        },
+        {
+          "path": "docs/assets/visual-review.md",
+          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+        }
+      ]
+    }
+  ]
+}

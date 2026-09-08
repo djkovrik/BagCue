@@ -1,0 +1,109 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:compose:compileAndroidMain :shared:compose:visual-test:generateBagCuePreviewTests
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Task :shared:component:history:androidPreBuild UP-TO-DATE
+> Task :shared:platform:androidPreBuild UP-TO-DATE
+> Task :shared:component:history:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:platform:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :shared:component:session:androidPreBuild UP-TO-DATE
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:component:session:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:platform:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:generateComposeResClass UP-TO-DATE
+> Task :shared:component:session:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:androidPreBuild UP-TO-DATE
+> Task :shared:component:session:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:platform:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:compose:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:catalog:androidPreBuild UP-TO-DATE
+> Task :shared:component:settings:androidPreBuild UP-TO-DATE
+> Task :shared:component:templates:androidPreBuild UP-TO-DATE
+> Task :shared:component:settings:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:templates:preAndroidMainBuild UP-TO-DATE
+> Task :shared:platform:packageAndroidMainResources UP-TO-DATE
+> Task :shared:compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:root:androidPreBuild UP-TO-DATE
+> Task :shared:compose:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:catalog:preAndroidMainBuild UP-TO-DATE
+> Task :shared:root:preAndroidMainBuild UP-TO-DATE
+> Task :shared:root:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:visual-test:generateBagCuePreviewTests UP-TO-DATE
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :shared:component:catalog:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:history:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:settings:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:catalog:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:history:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:convertXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:component:templates:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:settings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:templates:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForAndroidMain NO-SOURCE
+> Task :shared:platform:generateAndroidMainRFile UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :shared:compose:copyAndroidMainComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :shared:compose:generateActualResourceCollectorsForAndroidMain UP-TO-DATE
+> Task :shared:compose:packageAndroidMainResources UP-TO-DATE
+> Task :shared:compose:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:compose:generateAndroidMainRFile UP-TO-DATE
+> Task :shared:domain:compileAndroidMain UP-TO-DATE
+> Task :shared:domain:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:history:compileAndroidMain UP-TO-DATE
+> Task :shared:component:catalog:compileAndroidMain UP-TO-DATE
+> Task :shared:component:settings:compileAndroidMain UP-TO-DATE
+> Task :shared:component:catalog:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:history:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:settings:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:platform:compileAndroidMain UP-TO-DATE
+> Task :shared:platform:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:templates:compileAndroidMain UP-TO-DATE
+> Task :shared:component:session:compileAndroidMain UP-TO-DATE
+> Task :shared:component:templates:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:session:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:root:compileAndroidMain UP-TO-DATE
+> Task :shared:root:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+
+> Task :shared:compose:compileAndroidMain FAILED
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+43 actionable tasks: 10 executed, 33 up-to-date
+Configuration cache entry stored.
+e: file:///D:/Sources/Android/BagCue/shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt:147:5 Unresolved reference 'NavigationBarItem'.
+e: file:///D:/Sources/Android/BagCue/shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt:150:18 @Composable invocations can only happen from the context of a @Composable function
+e: file:///D:/Sources/Android/BagCue/shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt:150:35 @Composable invocations can only happen from the context of a @Composable function
+e: file:///D:/Sources/Android/BagCue/shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt:152:40 @Composable invocations can only happen from the context of a @Composable function
+e: file:///D:/Sources/Android/BagCue/shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt:153:24 @Composable invocations can only happen from the context of a @Composable function
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':shared:compose:compileAndroidMain' (registered by plugin 'com.android.internal.kotlin.multiplatform.library').
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.btapi.BuildToolsApiCompilationWork
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 4s

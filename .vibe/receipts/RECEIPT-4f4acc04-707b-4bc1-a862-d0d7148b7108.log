@@ -1,0 +1,16 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:compose:generateBagCuePreviewTests :shared:compose:compileAndroidMain :shared:compose:testAndroidHostTest
+Configuration cache entry stored.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+A problem occurred configuring project ':shared:compose'.
+> One of com.android.application, com.android.library, com.android.dynamic-feature must be applied for Paparazzi to work properly.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 6s

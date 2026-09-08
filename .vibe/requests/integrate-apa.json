@@ -1,0 +1,9 @@
+{
+  "action":"integrate","packageId":"analytics-privacy-ads","receiptRef":".vibe/receipts/RECEIPT-c8f4cd84-d27b-480a-b4cf-7696ba92ca99.json",
+  "integrationEvidence":[
+    {"path":"androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt","symbol":"ApaDataModule(","role":"entry-point"},
+    {"path":"shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt","symbol":"RootComponent.Child.Settings","role":"navigation"},
+    {"path":"shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/apa/ApaSettingsTest.kt","symbol":"expiredOrMalformedPrivacyPayloadFailsClosedAcrossRestart","role":"restart"}
+  ],
+  "nextAction":"Register a narrow AC-039 continuation for the exact template-created and completed-session-reopened success hooks, then implement adaptive/localized/resilient product shell AC-047 through AC-051."
+}

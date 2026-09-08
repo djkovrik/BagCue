@@ -1,0 +1,6 @@
+{
+  "action":"assign","assignmentId":"analytics-event-continuation-components","owner":"vibe-decompose-mvikotlin-engineer",
+  "acceptanceScenarioIds":["AC-036","AC-037","AC-038","AC-039"],"qualityGateIds":[],
+  "allowedFiles":["shared/component/templates/src/**","shared/component/history/src/**","shared/root/src/**","androidApp/src/**","shared/compose/src/iosMain/**"],
+  "inputScopeId":"catalog-core-v1"
+}

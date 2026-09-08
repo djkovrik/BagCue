@@ -1,0 +1,142 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-session-build-architecture-20260908",
+  "assignmentId": "session-build-architecture",
+  "productionEvidence": [
+    {
+      "path": "settings.gradle.kts",
+      "symbol": "include(\":shared:component:session\")",
+      "surface": "module-graph"
+    },
+    {
+      "path": "shared/component/session/build.gradle.kts",
+      "symbol": "namespace = \"com.sedsoftware.bagcue.component.session\"",
+      "surface": "component-module-wiring"
+    },
+    {
+      "path": "shared/component/session/build.gradle.kts",
+      "symbol": "withHostTest {}",
+      "surface": "component-test-wiring"
+    },
+    {
+      "path": "shared/component/session/build.gradle.kts",
+      "symbol": "api(project(\":shared:domain\"))",
+      "surface": "domain-contract-wiring"
+    },
+    {
+      "path": "shared/component/session/build.gradle.kts",
+      "symbol": "api(libs.decompose)",
+      "surface": "component-runtime-wiring"
+    },
+    {
+      "path": "shared/component/session/build.gradle.kts",
+      "symbol": "implementation(libs.mvikotlin.extensions.coroutines)",
+      "surface": "store-runtime-wiring"
+    },
+    {
+      "path": "shared/component/session/build.gradle.kts",
+      "symbol": "api(libs.kotlinx.datetime)",
+      "surface": "public-date-contract-wiring"
+    },
+    {
+      "path": "shared/root/build.gradle.kts",
+      "symbol": "api(project(\":shared:component:session\"))",
+      "surface": "production-root-wiring"
+    },
+    {
+      "path": "shared/compose/build.gradle.kts",
+      "symbol": "implementation(project(\":shared:component:session\"))",
+      "surface": "compose-integration-wiring"
+    }
+  ],
+  "testEvidence": [
+    {
+      "path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt",
+      "testName": "createProducesOneMergedPersistedSnapshotForDate",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt",
+      "testName": "replacementPreservesPackedIdentityAndProvidesWholeUndo",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/store/SessionStoreTest.kt",
+      "testName": "createAndFullRowTogglePersistThroughStore",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/integration/SessionModelMapperTest.kt",
+      "testName": "completedSkippedSnapshotMapsToHonestResult",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt",
+      "testName": "sessionIsInitialAndDestinationClicksDoNotDuplicateConfigs",
+      "surface": "component-test"
+    }
+  ],
+  "nonGradleChecks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "settings.gradle.kts",
+        "gradle",
+        "shared/component/session/build.gradle.kts",
+        "shared/root/build.gradle.kts",
+        "shared/compose/build.gradle.kts",
+        "androidApp/build.gradle.kts"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "requestedCommands": [
+    {
+      "argv": [
+        "gradlew.bat",
+        ":shared:domain:allTests",
+        ":shared:data:testAndroidHostTest",
+        ":shared:component:session:testAndroidHostTest",
+        ":shared:root:compileAndroidMain",
+        ":shared:compose:compileAndroidMain",
+        ":androidApp:assembleDebug",
+        ":shared:data:compileKotlinIosSimulatorArm64",
+        ":shared:component:session:compileKotlinIosSimulatorArm64",
+        ":shared:root:compileKotlinIosSimulatorArm64",
+        ":shared:compose:compileKotlinIosSimulatorArm64"
+      ],
+      "tasks": [
+        ":shared:domain:allTests",
+        ":shared:data:testAndroidHostTest",
+        ":shared:component:session:testAndroidHostTest",
+        ":shared:root:compileAndroidMain",
+        ":shared:compose:compileAndroidMain",
+        ":androidApp:assembleDebug",
+        ":shared:data:compileKotlinIosSimulatorArm64",
+        ":shared:component:session:compileKotlinIosSimulatorArm64",
+        ":shared:root:compileKotlinIosSimulatorArm64",
+        ":shared:compose:compileKotlinIosSimulatorArm64"
+      ],
+      "coveredObligations": [
+        {"obligationId": "AC-012", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-013", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-014", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-015", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-016", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-017", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-018", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-019", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-020", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-021", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-022", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-023", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-024", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+        {"obligationId": "AC-025", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]}
+      ]
+    }
+  ],
+  "blockers": []
+}

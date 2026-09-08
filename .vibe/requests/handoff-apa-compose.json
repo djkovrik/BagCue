@@ -1,0 +1,14 @@
+{
+  "action":"handoff","handoffId":"HANDOFF-apa-compose-20260908","assignmentId":"apa-compose",
+  "productionEvidence":[
+    {"path":"shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt","symbol":"PrivacyControls","surface":"settings-ui"},
+    {"path":"shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt","symbol":"inlineResultAd","surface":"result-ad-ui"},
+    {"path":"shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt","symbol":"inlineResultAd = inlineResultAd","surface":"production-ui-root"},
+    {"path":"shared/compose/src/iosMain/kotlin/main.kt","symbol":"IosInlineAdController()","surface":"ios-entry-point"},
+    {"path":"shared/compose/src/commonMain/composeResources/values/strings.xml","symbol":"session_ad_consent_body","surface":"english-resources"},
+    {"path":"shared/compose/src/commonMain/composeResources/values-ru/strings.xml","symbol":"session_ad_consent_body","surface":"russian-resources"}
+  ],
+  "testEvidence":[],"nonGradleChecks":[{"argv":["lazyweb","agentic-search","d8209edf-fb81-4161-be7f-5cd164245af6"],"exitCode":0,"details":"Session result, settings privacy, reminder, and analytics hierarchy were grounded in the recorded Lazyweb research session."}],
+  "requestedCommands":[{"argv":["gradlew.bat",":shared:compose:compileAndroidMain",":androidApp:assembleDebug",":androidApp:assembleRelease",":shared:compose:compileKotlinIosSimulatorArm64"],"tasks":[":shared:compose:compileAndroidMain",":androidApp:assembleDebug",":androidApp:assembleRelease",":shared:compose:compileKotlinIosSimulatorArm64"],"coveredObligations":[{"obligationId":"AC-037","surfaces":["component-test"]},{"obligationId":"AC-042","surfaces":["component-test"]},{"obligationId":"AC-044","surfaces":["component-test"]},{"obligationId":"AC-045","surfaces":["component-test"]},{"obligationId":"AC-046","surfaces":["privacy-static-check"]}],"receiptRef":".vibe/receipts/RECEIPT-969f1f57-ccf6-4861-a7e5-ec2bed420644.json"}],
+  "blockers":["AC-045 golden-test is deferred to the registered visual package; public privacy-policy URL is external and remains null until supplied and hosted."]
+}

@@ -1,0 +1,40 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-template-component-root-20260908",
+  "assignmentId": "template-component-root",
+  "productionEvidence": [
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/TemplateComponent.kt", "symbol": "TemplateComponent", "surface": "public-component-contract"},
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManager.kt", "symbol": "TemplateManager", "surface": "manager-result-boundary"},
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/store/TemplateStore.kt", "symbol": "TemplateStore", "surface": "mvikotlin-store-contract"},
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/store/TemplateStoreProvider.kt", "symbol": "TemplateStoreProvider", "surface": "template-editor-state-machine"},
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/integration/TemplateComponentDefault.kt", "symbol": "TemplateComponentDefault", "surface": "decompose-production-component"},
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/integration/TemplateComponentPreview.kt", "symbol": "TemplateComponentPreview", "surface": "preview-component"},
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/integration/Mappers.kt", "symbol": "toComponentModel", "surface": "store-state-to-component-model"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt", "symbol": "RootComponent", "surface": "root-component-contract"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "RootComponentDefault", "surface": "production-navigation"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt", "symbol": "RootComponentFactory", "surface": "production-composition-factory"}
+  ],
+  "testEvidence": [
+    {"path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt", "testName": "duplicateCreatesIndependentAggregateWithDistinguishableName", "surface": "component-test"},
+    {"path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt", "testName": "deleteOnlyDelegatesTemplateAggregateDeletion", "surface": "component-test"},
+    {"path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt", "testName": "cancellationIsNotConvertedToFailure", "surface": "component-test"},
+    {"path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/integration/TemplateModelMapperTest.kt", "testName": "selectorUsesLocalizedSearchNameAndExcludesExistingPosition", "surface": "component-test"},
+    {"path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/integration/TemplateModelMapperTest.kt", "testName": "positionUsesCatalogLocationWhenNoSourceOverrideExists", "surface": "component-test"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:component:templates:testAndroidHostTest", ":shared:root:compileAndroidMain", ":androidApp:assembleDebug"],
+      "tasks": [":shared:component:templates:testAndroidHostTest", ":shared:root:compileAndroidMain", ":androidApp:assembleDebug"],
+      "coveredObligations": [
+        {"obligationId": "AC-006", "surfaces": ["component-test"]},
+        {"obligationId": "AC-007", "surfaces": ["component-test"]},
+        {"obligationId": "AC-008", "surfaces": ["component-test"]},
+        {"obligationId": "AC-009", "surfaces": ["component-test"]},
+        {"obligationId": "AC-010", "surfaces": ["component-test"]},
+        {"obligationId": "AC-011", "surfaces": ["component-test"]}
+      ]
+    }
+  ],
+  "blockers": []
+}

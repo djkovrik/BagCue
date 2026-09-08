@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "assetId": "ASSET-001",
+  "createdAt": "2026-09-08",
+  "method": "create-vector",
+  "tool": "Codex apply_patch with deterministic local Sharp derivative script",
+  "brief": "Original text-free BagCue mark combining an open bag and check mark in a calm blue-teal palette.",
+  "palette": {
+    "bag": "#0E7490",
+    "check": "#2563EB",
+    "launcherBackground": "#ECFEFF"
+  },
+  "editableSource": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml",
+  "derivativeScript": "docs/assets/generate-assets.cjs",
+  "outputs": {
+    "composeRuntime": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml",
+    "androidLauncher": "androidApp/src/main/res/mipmap-{mdpi,hdpi,xhdpi,xxhdpi,xxxhdpi}/ic_launcher*.png",
+    "iosLauncher": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/*.png",
+    "visualReview": "docs/assets/asset-contact-sheet.png"
+  },
+  "selection": "Single approved original vector; no remote generation service or external artwork was used.",
+  "exportSteps": [
+    "Render platform derivatives deterministically from the same vector geometry using Sharp.",
+    "Keep Compose and adaptive foreground/monochrome artwork transparent.",
+    "Flatten iOS and legacy Android icons on the approved launcher background.",
+    "Inspect the 1024px iOS marketing icon and the light/dark 24dp contact sheet."
+  ]
+}

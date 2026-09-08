@@ -1,0 +1,7 @@
+{
+  "action":"check","runner":"gradle","kind":"targeted","inputScopeId":"catalog-core-v1",
+  "tasks":[":shared:component:templates:testAndroidHostTest",":shared:component:history:testAndroidHostTest",":shared:root:testAndroidHostTest",":shared:root:compileAndroidMain",":androidApp:assembleDebug",":shared:component:templates:compileKotlinIosSimulatorArm64",":shared:component:history:compileKotlinIosSimulatorArm64",":shared:root:compileKotlinIosSimulatorArm64",":shared:compose:compileKotlinIosSimulatorArm64"],
+  "coveredObligations":[{"obligationId":"AC-036","surfaces":["settings-integration-test"]},{"obligationId":"AC-037","surfaces":["component-test","settings-integration-test"]},{"obligationId":"AC-038","surfaces":["component-test","settings-integration-test"]},{"obligationId":"AC-039","surfaces":["analytics-event-contract-test","privacy-static-check"]}],
+  "timeoutSeconds":1800,
+  "reconcileDrift":"Inspected the narrow continuation diff after interrupting the specialist at a stable static-scan point: exact TemplateCreated and PackingSessionReopened calls occur only after repository success, and tests cover success, failure, cancellation, and no user-content payload."
+}

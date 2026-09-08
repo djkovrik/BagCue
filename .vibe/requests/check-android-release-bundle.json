@@ -1,0 +1,13 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "integration",
+  "tasks": ["--max-workers=1", "--no-parallel", ":androidApp:bundleRelease", ":androidApp:verifyAndroidReleaseConfiguration"],
+  "coveredObligations": [
+    {"obligationId":"QG-002","surfaces":["android-release-aab"]},
+    {"obligationId":"QG-004","surfaces":["release-bundle-config"]},
+    {"obligationId":"QG-009","surfaces":["android-release-ad-config"]}
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Build the release AAB on the same converged source using the local debug keystore only as a validation signing seam; production upload-key ownership remains external and unproved."
+}

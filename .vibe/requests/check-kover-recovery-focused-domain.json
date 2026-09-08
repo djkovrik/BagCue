@@ -1,0 +1,17 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:domain:testAndroidHostTest"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-001",
+      "surfaces": ["domain-test"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Run the focused domain host suite after adding a behavioral assertion for the fresh current-policy missing-consent-choice fail-closed branch."
+}

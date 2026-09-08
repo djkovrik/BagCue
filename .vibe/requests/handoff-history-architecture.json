@@ -1,0 +1,144 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-history-build-architecture-20260908",
+  "assignmentId": "history-build-architecture",
+  "productionEvidence": [
+    {
+      "path": "settings.gradle.kts",
+      "symbol": "include(\":shared:component:history\")",
+      "surface": "module-graph"
+    },
+    {
+      "path": "shared/component/history/build.gradle.kts",
+      "symbol": "namespace = \"com.sedsoftware.bagcue.component.history\"",
+      "surface": "component-module-wiring"
+    },
+    {
+      "path": "shared/component/history/build.gradle.kts",
+      "symbol": "withHostTest {}",
+      "surface": "component-test-wiring"
+    },
+    {
+      "path": "shared/component/history/build.gradle.kts",
+      "symbol": "api(project(\":shared:domain\"))",
+      "surface": "domain-contract-wiring"
+    },
+    {
+      "path": "shared/component/history/build.gradle.kts",
+      "symbol": "api(libs.decompose)",
+      "surface": "component-runtime-wiring"
+    },
+    {
+      "path": "shared/component/history/build.gradle.kts",
+      "symbol": "api(libs.kotlinx.datetime)",
+      "surface": "public-date-contract-wiring"
+    },
+    {
+      "path": "shared/component/history/build.gradle.kts",
+      "symbol": "implementation(libs.mvikotlin.extensions.coroutines)",
+      "surface": "store-runtime-wiring"
+    },
+    {
+      "path": "shared/root/build.gradle.kts",
+      "symbol": "api(project(\":shared:component:history\"))",
+      "surface": "production-root-wiring"
+    },
+    {
+      "path": "shared/compose/build.gradle.kts",
+      "symbol": "implementation(project(\":shared:component:history\"))",
+      "surface": "compose-integration-wiring"
+    }
+  ],
+  "testEvidence": [
+    {
+      "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt",
+      "testName": "browseAndFilterPreserveStoredLocalDatesAndSections",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt",
+      "testName": "reopenKeepsSameIdentityDateAndSnapshots",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt",
+      "testName": "repeatReturnsHistoricalStableTemplateIdsOnly",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt",
+      "testName": "deleteAndUndoRestoreTheExactDatedAggregate",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/store/HistoryStoreTest.kt",
+      "testName": "filterReopenAndDeleteUndoAreStoreOwned",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/integration/HistoryModelMapperTest.kt",
+      "testName": "distinguishesGlobalEmptyFromFilteredEmptyAndMapsDeleteTarget",
+      "surface": "component-test"
+    },
+    {
+      "path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt",
+      "testName": "sessionIsInitialAndDestinationClicksDoNotDuplicateConfigs",
+      "surface": "component-test"
+    }
+  ],
+  "nonGradleChecks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "settings.gradle.kts",
+        "gradle/libs.versions.toml",
+        "shared/component/history/build.gradle.kts",
+        "shared/root/build.gradle.kts",
+        "shared/compose/build.gradle.kts"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "requestedCommands": [
+    {
+      "argv": [
+        "gradlew.bat",
+        ":shared:domain:allTests",
+        ":shared:data:testAndroidHostTest",
+        ":shared:component:history:testAndroidHostTest",
+        ":shared:root:testAndroidHostTest",
+        ":shared:root:compileAndroidMain",
+        ":shared:compose:compileAndroidMain",
+        ":androidApp:assembleDebug",
+        ":shared:data:compileKotlinIosSimulatorArm64",
+        ":shared:component:history:compileKotlinIosSimulatorArm64",
+        ":shared:root:compileKotlinIosSimulatorArm64",
+        ":shared:compose:compileKotlinIosSimulatorArm64"
+      ],
+      "tasks": [
+        ":shared:domain:allTests",
+        ":shared:data:testAndroidHostTest",
+        ":shared:component:history:testAndroidHostTest",
+        ":shared:root:testAndroidHostTest",
+        ":shared:root:compileAndroidMain",
+        ":shared:compose:compileAndroidMain",
+        ":androidApp:assembleDebug",
+        ":shared:data:compileKotlinIosSimulatorArm64",
+        ":shared:component:history:compileKotlinIosSimulatorArm64",
+        ":shared:root:compileKotlinIosSimulatorArm64",
+        ":shared:compose:compileKotlinIosSimulatorArm64"
+      ],
+      "coveredObligations": [
+        {"obligationId": "AC-026", "surfaces": ["domain-test", "persistence-integration-test", "component-test", "production-ui"]},
+        {"obligationId": "AC-027", "surfaces": ["domain-test", "persistence-integration-test", "component-test", "production-ui"]},
+        {"obligationId": "AC-028", "surfaces": ["domain-test", "persistence-integration-test", "component-test", "production-ui"]},
+        {"obligationId": "AC-029", "surfaces": ["domain-test", "persistence-integration-test", "component-test", "production-ui"]},
+        {"obligationId": "AC-030", "surfaces": ["domain-test", "persistence-integration-test", "component-test", "platform-test", "production-ui"]}
+      ]
+    }
+  ],
+  "blockers": []
+}

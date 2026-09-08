@@ -1,0 +1,9 @@
+{
+  "action": "package",
+  "packageId": "session-history",
+  "owner": "vibe-developer",
+  "acceptanceScenarioIds": ["AC-026", "AC-027", "AC-028", "AC-029", "AC-030"],
+  "qualityGateIds": [],
+  "fileBoundaries": ["settings.gradle.kts", "gradle/libs.versions.toml", "shared/domain/**", "shared/data/**", "shared/component/history/**", "shared/root/**", "shared/compose/**", "androidApp/src/**", "iosApp/iosApp/**"],
+  "integrationGoal": "A user can browse planned and completed sessions, reopen or repeat history, delete with confirmation and undo, and keep the original local date across timezone changes from both production entry points."
+}

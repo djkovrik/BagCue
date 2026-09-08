@@ -1,0 +1,22 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:compose:compileAndroidMain",
+    ":shared:compose:visual-test:verifyPaparazziDebug"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-001",
+      "surfaces": ["compose-production-compile"]
+    },
+    {
+      "obligationId": "QG-006",
+      "surfaces": ["paparazzi-verify", "compose-resource-assets"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Verify the CatalogScreen RowScope weight call and the explicit Compose resource asset producer dependency."
+}

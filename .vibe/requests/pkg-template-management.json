@@ -1,0 +1,20 @@
+{
+  "action": "package",
+  "packageId": "template-management",
+  "owner": "vibe-developer",
+  "acceptanceScenarioIds": ["AC-006", "AC-007", "AC-008", "AC-009", "AC-010", "AC-011"],
+  "qualityGateIds": [],
+  "fileBoundaries": [
+    "settings.gradle.kts",
+    "gradle/**",
+    "shared/domain/**",
+    "shared/data/**",
+    "shared/component/templates/**",
+    "shared/root/**",
+    "shared/compose/**",
+    "androidApp/**",
+    "iosApp/**"
+  ],
+  "integrationGoal": "Launch the production root, open Templates, create or edit a reusable template, reopen it after restart, and retain independent catalog/session snapshot semantics.",
+  "nextAction": "Implement template domain/persistence, Store-backed Decompose screens, production UI and root navigation, then verify restart and starter localization behavior."
+}

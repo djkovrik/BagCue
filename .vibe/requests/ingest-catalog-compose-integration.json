@@ -1,0 +1,5 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-catalog-compose-production-integration-20260908.json",
+  "inspectionNote": "Inspected all eight Compose/resource/platform entry-point changes: they remain inside the registered assignment, wire real Android/iOS production roots, resolve starter and UI strings through Compose Resources, implement catalog list/editor/dialog states, follow the system theme, and compile in current Android and Kotlin/Native receipts without blockers."
+}

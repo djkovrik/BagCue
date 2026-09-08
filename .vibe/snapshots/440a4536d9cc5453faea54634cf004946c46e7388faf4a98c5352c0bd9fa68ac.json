@@ -1,0 +1,18 @@
+{
+  "algorithm": "sha256",
+  "digest": "1a74edc851e94ad637f60fe8829d8ad5e95fa59362f52f4f0c2ae8cea3e80805",
+  "files": [
+    {
+      "path": "androidApp/build.gradle.kts",
+      "sha256": "ed1d719f044400f709e11bbd720365c605d2d454885d593228659b55a264eac9"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "sha256": "0945d7fbf62fcfb850936ef53fe2b20b7c0236e25e64b7704feffbbefb6b1ca1"
+    }
+  ],
+  "patterns": [
+    "androidApp/build.gradle.kts",
+    "gradle/libs.versions.toml"
+  ]
+}

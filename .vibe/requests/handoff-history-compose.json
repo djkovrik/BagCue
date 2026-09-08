@@ -1,0 +1,30 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-history-compose-production-integration-20260908",
+  "assignmentId": "history-compose-production-integration",
+  "productionEvidence": [
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt", "symbol": "is RootComponent.Child.History -> HistoryScreen(child.component)", "surface": "production-root-ui"},
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryScreen.kt", "symbol": "fun HistoryScreen(component: HistoryComponent)", "surface": "history-ui"},
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryResources.kt", "symbol": "internal fun HistoryComponent.UserText.resolve()", "surface": "localized-history-boundary"},
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt", "symbol": "onOpenHistory: () -> Unit", "surface": "today-history-entry"},
+    {"path": "shared/compose/src/commonMain/composeResources/values/strings.xml", "symbol": "history_planned", "surface": "english-resources"},
+    {"path": "shared/compose/src/commonMain/composeResources/values-ru/strings.xml", "symbol": "history_planned", "surface": "russian-resources"}
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {"argv": ["lazyweb", "search", "mobile completed task history list undo delete"], "exitCode": 0, "details": "History sections, concise status metadata, named destructive confirmation, and immediate undo were grounded in returned productivity references."}
+  ],
+  "requestedCommands": [{
+    "argv": ["gradlew.bat", ":shared:domain:allTests", ":shared:data:testAndroidHostTest", ":shared:component:history:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug", ":shared:data:compileKotlinIosSimulatorArm64", ":shared:component:history:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+    "tasks": [":shared:domain:allTests", ":shared:data:testAndroidHostTest", ":shared:component:history:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug", ":shared:data:compileKotlinIosSimulatorArm64", ":shared:component:history:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+    "coveredObligations": [
+      {"obligationId": "AC-026", "surfaces": ["production-ui"]},
+      {"obligationId": "AC-027", "surfaces": ["production-ui"]},
+      {"obligationId": "AC-028", "surfaces": ["production-ui"]},
+      {"obligationId": "AC-029", "surfaces": ["production-ui"]},
+      {"obligationId": "AC-030", "surfaces": ["production-ui"]}
+    ],
+    "receiptRef": ".vibe/receipts/RECEIPT-05e20fbd-746e-4da4-8e27-02dcf186be13.json"
+  }],
+  "blockers": []
+}

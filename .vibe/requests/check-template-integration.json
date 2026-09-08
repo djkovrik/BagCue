@@ -1,0 +1,29 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "integration",
+  "tasks": [
+    ":shared:domain:allTests",
+    ":shared:data:testAndroidHostTest",
+    ":shared:component:catalog:testAndroidHostTest",
+    ":shared:component:templates:testAndroidHostTest",
+    ":shared:root:compileAndroidMain",
+    ":shared:compose:compileAndroidMain",
+    ":androidApp:assembleDebug",
+    ":shared:data:compileKotlinIosSimulatorArm64",
+    ":shared:component:catalog:compileKotlinIosSimulatorArm64",
+    ":shared:component:templates:compileKotlinIosSimulatorArm64",
+    ":shared:root:compileKotlinIosSimulatorArm64",
+    ":shared:compose:compileKotlinIosSimulatorArm64"
+  ],
+  "coveredObligations": [
+    {"obligationId": "AC-006", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-007", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-008", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-009", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-010", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-011", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]}
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "All four frozen template-management handoffs were inspected against their non-overlapping registered boundaries; this integration run validates the combined production graph across both current capability packages and both target platforms."
+}

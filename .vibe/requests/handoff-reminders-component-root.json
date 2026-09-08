@@ -1,0 +1,46 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-reminders-component-root-20260908",
+  "assignmentId": "reminders-component-root",
+  "productionEvidence": [
+    {"path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/SettingsComponent.kt", "symbol": "SettingsComponent", "surface": "public-component-contract"},
+    {"path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManager.kt", "symbol": "SettingsManager", "surface": "manager-result-boundary"},
+    {"path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStore.kt", "symbol": "SettingsStore", "surface": "mvikotlin-store-contract"},
+    {"path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStoreProvider.kt", "symbol": "SettingsStoreProvider", "surface": "reminder-state-machine"},
+    {"path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/integration/SettingsComponentDefault.kt", "symbol": "SettingsComponentDefault", "surface": "decompose-production-component"},
+    {"path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/integration/SettingsComponentPreview.kt", "symbol": "SettingsComponentPreview", "surface": "preview-component"},
+    {"path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/integration/Mappers.kt", "symbol": "toComponentModel", "surface": "store-state-to-component-model"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt", "symbol": "showSettings", "surface": "root-component-contract"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "Config.Settings", "surface": "production-navigation"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt", "symbol": "RootComponentFactory", "surface": "production-composition-factory"}
+  ],
+  "testEvidence": [
+    {"path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt", "testName": "defaultsAreDisabledWithSuggestedLocalTimes", "surface": "component-test"},
+    {"path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt", "testName": "sessionFallsBackThenCreatesItsOwnOverride", "surface": "component-test"},
+    {"path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt", "testName": "saveReschedulesFutureOccurrencesWithStableIds", "surface": "component-test"},
+    {"path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt", "testName": "deniedPermissionIsSuccessfulNonBlockingState", "surface": "component-test"},
+    {"path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt", "testName": "appResumeConsumesPendingRescheduleReasonsWithoutDuplicateIds", "surface": "component-test"},
+    {"path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/integration/SettingsModelMapperTest.kt", "testName": "mapsGlobalDefaultsAndPermissionDenialAsExplanatoryState", "surface": "component-test"},
+    {"path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/integration/SettingsModelMapperTest.kt", "testName": "mapsPerSessionOverrideSource", "surface": "component-test"},
+    {"path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStoreTest.kt", "testName": "immediateSaveKeepsCoreSettingsAvailableWhenPermissionIsDenied", "surface": "component-test"},
+    {"path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt", "testName": "sessionIsInitialAndDestinationClicksDoNotDuplicateConfigs", "surface": "component-test"}
+  ],
+  "nonGradleChecks": [
+    {"argv": ["git", "diff", "--check", "--", "shared/component/settings/src", "shared/root/src"], "exitCode": 0}
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:domain:allTests", ":shared:data:allTests", ":shared:platform:allTests", ":shared:component:settings:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug", ":shared:data:compileKotlinIosSimulatorArm64", ":shared:platform:compileKotlinIosSimulatorArm64", ":shared:component:settings:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "tasks": [":shared:domain:allTests", ":shared:data:allTests", ":shared:platform:allTests", ":shared:component:settings:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug", ":shared:data:compileKotlinIosSimulatorArm64", ":shared:platform:compileKotlinIosSimulatorArm64", ":shared:component:settings:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "coveredObligations": [
+        {"obligationId": "AC-031", "surfaces": ["component-test"]},
+        {"obligationId": "AC-032", "surfaces": ["component-test"]},
+        {"obligationId": "AC-033", "surfaces": ["component-test"]},
+        {"obligationId": "AC-034", "surfaces": ["component-test"]},
+        {"obligationId": "AC-035", "surfaces": ["component-test"]}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-290830ad-32a3-4c7b-86b6-9721b90291c1.json"
+    }
+  ],
+  "blockers": []
+}

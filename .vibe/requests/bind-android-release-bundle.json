@@ -1,0 +1,5 @@
+{
+  "action": "bind",
+  "receiptRef": ".vibe/receipts/RECEIPT-5d57e435-5c3e-464c-ba4a-bfc1ba2b9fdd.json",
+  "reconcileDrift": "Bind the immutable green release AAB receipt after the known automatic post-check binding stall; the Gradle execution completed with exit code 0."
+}

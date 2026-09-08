@@ -1,0 +1,33 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-session-domain-persistence-20260908",
+  "assignmentId": "session-domain-persistence",
+  "productionEvidence": [
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionModels.kt", "symbol": "PackingSession", "surface": "domain-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionModels.kt", "symbol": "SessionPackingItem", "surface": "snapshot-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionModels.kt", "symbol": "SessionBagAssignment", "surface": "bag-conflict-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionRules.kt", "symbol": "mergeSessionItems", "surface": "domain-rule"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionRules.kt", "symbol": "reapplySessionTemplates", "surface": "domain-rule"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionRules.kt", "symbol": "completeWithSkipped", "surface": "completion-rule"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/PackingSessionRepository.kt", "symbol": "PackingSessionRepository", "surface": "manager-persistence-contract"},
+    {"path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Session.sq", "symbol": "insertPackingSessionItem", "surface": "generated-schema"},
+    {"path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Session.sq", "symbol": "updateTemplatePositionFromSession", "surface": "transaction-boundary"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/session/SqlDelightPackingSessionRepository.kt", "symbol": "SqlDelightPackingSessionRepository", "surface": "persistence-implementation"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt", "symbol": "packingSessionRepository", "surface": "composition-module"}
+  ],
+  "testEvidence": [
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt", "testName": "mergeUsesStableItemIdentityMaximumQuantityAndTypedBagConflict", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt", "testName": "reapplyPreservesMatchingProgressBagAndSupportsWholeUndoSnapshot", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt", "testName": "completionRejectsEmptyConflictsAndWrongSkippedConfirmation", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt", "testName": "fullAndSkippedCompletionProduceExplicitDurableOutcomes", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt", "testName": "localDateValidationUsesTheSuppliedLocalDateDirectly", "surface": "domain-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "testName": "exactlyOneSessionPerLocalDateReturnsTheExistingSnapshot", "surface": "persistence-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "testName": "exactSnapshotRestartsWithTemplatesBagsHintsConflictsAndPackedState", "surface": "restart-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "testName": "reapplyRemoveUndoAndOneOffFailureAreAtomic", "surface": "transaction-rollback-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "testName": "packEditAndBothCompletionModesRoundTrip", "surface": "persistence-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "testName": "savingSessionItemToSelectedTemplatesDoesNotCoupleOrRewriteSession", "surface": "cross-aggregate-integration-test"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

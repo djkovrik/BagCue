@@ -1,0 +1,5 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-template-component-root-20260908.json",
+  "inspectionNote": "Inspected the frozen component/root handoff: TemplateComponent, Store, Manager, mapper, default/preview implementations and real RootComponent navigation are confined to the registered boundary; exact tests cover independent duplication, aggregate-only deletion, cancellation propagation, localized selection, and catalog-location fallback."
+}

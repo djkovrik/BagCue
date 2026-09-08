@@ -1,0 +1,27 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:domain:allTests",
+    ":shared:data:testAndroidHostTest",
+    ":shared:component:templates:testAndroidHostTest",
+    ":shared:root:compileAndroidMain",
+    ":shared:compose:compileAndroidMain",
+    ":androidApp:assembleDebug",
+    ":shared:component:templates:compileKotlinIosSimulatorArm64",
+    ":shared:root:compileKotlinIosSimulatorArm64",
+    ":shared:compose:compileKotlinIosSimulatorArm64"
+  ],
+  "coveredObligations": [
+    {"obligationId": "AC-006", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-007", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-008", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-009", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-010", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-011", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]}
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Inspected active template-management assignment changes across registered build, domain/data, component/root, and Compose/entry-point boundaries; convergence compile follows successful isolated persistence receipt."
+}

@@ -1,0 +1,15 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": ["detekt"],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-001",
+      "surfaces": ["strict-detekt-gate"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Validate the narrow semantic policy against Detekt 2.0.0-alpha.6 with config validation and warnings-as-errors enabled."
+}

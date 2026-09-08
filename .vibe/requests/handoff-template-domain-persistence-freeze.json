@@ -1,0 +1,28 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-template-domain-persistence-20260908",
+  "assignmentId": "template-domain-persistence",
+  "productionEvidence": [
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/template/TemplateModels.kt", "symbol": "KitTemplate", "surface": "domain-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/template/TemplateModels.kt", "symbol": "TemplatePosition", "surface": "domain-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/template/TemplateModels.kt", "symbol": "PositionQuantity", "surface": "domain-invariant"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/template/TemplateModels.kt", "symbol": "DefaultStarterKitTemplates", "surface": "localized-seed-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/template/KitTemplateRepository.kt", "symbol": "KitTemplateRepository", "surface": "manager-persistence-contract"},
+    {"path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Template.sq", "symbol": "insertKitTemplatePosition", "surface": "generated-schema"},
+    {"path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Template.sq", "symbol": "upsertTemplateSeedOverride", "surface": "seed-override-persistence"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/template/SqlDelightKitTemplateRepository.kt", "symbol": "SqlDelightKitTemplateRepository", "surface": "persistence-implementation"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt", "symbol": "kitTemplateRepository", "surface": "composition-module"}
+  ],
+  "testEvidence": [
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/template/TemplateRulesTest.kt", "testName": "quantityAcceptsOnlyInclusiveOneThroughNinetyNine", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/template/TemplateRulesTest.kt", "testName": "templateRejectsDuplicateItemMembershipEvenWithDifferentPositionIds", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/template/TemplateRulesTest.kt", "testName": "starterTemplatesUseStableIdsKeysBagsAndUnitQuantities", "surface": "localization-contract-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/template/KitTemplatePersistenceTest.kt", "testName": "independentEmptyCrudDuplicateAndDeleteUseStableAggregateIds", "surface": "persistence-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/template/KitTemplatePersistenceTest.kt", "testName": "updateAndDeleteNeverMutateAnExistingSessionSnapshot", "surface": "session-snapshot-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/template/KitTemplatePersistenceTest.kt", "testName": "officeModificationAndPoolDeletionSurviveRestartAndReconciliation", "surface": "restart-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/template/KitTemplatePersistenceTest.kt", "testName": "invalidChildReferenceRollsBackNewTemplateParent", "surface": "transaction-rollback-test"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

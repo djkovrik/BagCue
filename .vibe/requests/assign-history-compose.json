@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "history-compose-production-integration",
+  "owner": "vibe-developer-product-designer-compose-expert",
+  "acceptanceScenarioIds": ["AC-026", "AC-027", "AC-028", "AC-029", "AC-030"],
+  "qualityGateIds": [],
+  "allowedFiles": ["shared/compose/src/**", "androidApp/src/**", "iosApp/iosApp/**"],
+  "inputScopeId": "catalog-core-v1"
+}

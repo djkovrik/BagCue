@@ -1,0 +1,36 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-reminders-domain-data-platform-20260908",
+  "assignmentId": "reminders-domain-data-platform",
+  "productionEvidence": [
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderModels.kt", "symbol": "ReminderPreferences", "surface": "domain-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderModels.kt", "symbol": "SessionReminderPreferences", "surface": "session-override-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderModels.kt", "symbol": "ReminderScheduleResult", "surface": "permission-result-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderContracts.kt", "symbol": "ReminderPreferencesRepository", "surface": "settings-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderContracts.kt", "symbol": "ReminderNotificationScheduler", "surface": "platform-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRules.kt", "symbol": "calculateReminderOccurrences", "surface": "scheduling-rule"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRules.kt", "symbol": "stableReminderNotificationId", "surface": "stable-id-rule"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/reminder/SettingsReminderPreferencesRepository.kt", "symbol": "SettingsReminderPreferencesRepository", "surface": "settings-implementation"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/reminder/ReminderDataModule.kt", "symbol": "ReminderDataModule", "surface": "composition-module"},
+    {"path": "shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderPlatformIds.kt", "symbol": "reminderScheduleDelta", "surface": "platform-rule"},
+    {"path": "shared/platform/src/androidMain/kotlin/com/sedsoftware/bagcue/platform/reminder/AndroidReminderNotificationScheduler.kt", "symbol": "AndroidReminderNotificationScheduler", "surface": "android-platform-implementation"},
+    {"path": "shared/platform/src/androidMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderNotificationReceiver.kt", "symbol": "ReminderNotificationReceiver", "surface": "android-notification-delivery"},
+    {"path": "shared/platform/src/androidMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderRescheduleReceiver.kt", "symbol": "ReminderRescheduleReceiver", "surface": "android-lifecycle-recovery"},
+    {"path": "shared/platform/src/iosMain/kotlin/com/sedsoftware/bagcue/platform/reminder/IosReminderNotificationScheduler.kt", "symbol": "IosReminderNotificationScheduler", "surface": "ios-platform-implementation"},
+    {"path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt", "symbol": "AppActivity", "surface": "android-entry-point"}
+  ],
+  "testEvidence": [
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRulesTest.kt", "testName": "defaultsAreDisabledWithSuggestedLocalTimes", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRulesTest.kt", "testName": "occurrencesUsePreviousEveningAndSessionMorningInTheCurrentZone", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRulesTest.kt", "testName": "zoneChangeRecomputesInstantsButRetainsStableNotificationIdsAndWallTimes", "surface": "timezone-domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRulesTest.kt", "testName": "pastOccurrencesAreSkippedWithoutDisablingFutureOnes", "surface": "domain-test"},
+    {"path": "shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/reminder/ReminderPreferencesSettingsTest.kt", "testName": "missingSettingsUseDisabledEveningAndMorningDefaults", "surface": "settings-integration-test"},
+    {"path": "shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/reminder/ReminderPreferencesSettingsTest.kt", "testName": "sessionCopiesGlobalValuesThenOverridesIndependentlyAcrossRestart", "surface": "settings-restart-test"},
+    {"path": "shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/reminder/ReminderPreferencesSettingsTest.kt", "testName": "malformedPayloadFallsBackWithoutInventingAnEnabledReminder", "surface": "settings-fallback-test"},
+    {"path": "shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderPlatformIdsTest.kt", "testName": "requestCodeIsStableForTheSameLanguageNeutralNotificationId", "surface": "platform-test"},
+    {"path": "shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderPlatformIdsTest.kt", "testName": "synchronizationReplacesRegisteredIdsSkipsPastAndDeduplicatesRequests", "surface": "platform-test"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

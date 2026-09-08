@@ -1,0 +1,159 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:domain:allTests :shared:data:testAndroidHostTest :shared:component:catalog:testAndroidHostTest :shared:root:compileAndroidMain :shared:compose:compileAndroidMain :androidApp:assembleDebug
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Task :shared:compose:generateUmbrellaPackageIdentifierBasedResolutionForDefault SKIPPED
+> Task :shared:domain:generateSyntheticLinkageSwiftPMImportProjectForCinteropsAndLdDump SKIPPED
+> Task :shared:domain:computeLocalPackageDependencyInputFiles SKIPPED
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :shared:domain:iosSimulatorArm64ProcessResources NO-SOURCE
+> Task :shared:data:androidPreBuild UP-TO-DATE
+> Task :shared:domain:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:domain:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:data:preAndroidMainBuild UP-TO-DATE
+> Task :shared:data:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:fetchUmbrellaPackageIdentifierForDefault SKIPPED
+> Task :shared:data:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:domain:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:data:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:data:androidJar UP-TO-DATE
+> Task :shared:component:catalog:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:syncPersistedPackageResolvedToSynthetic SKIPPED
+> Task :shared:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:root:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:catalog:androidPreBuild UP-TO-DATE
+> Task :shared:compose:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:catalog:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:catalog:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:compose:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:domain:fetchSyntheticImportProjectPackages SKIPPED
+> Task :shared:component:catalog:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:androidPreBuild UP-TO-DATE
+> Task :shared:domain:androidJar UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:catalog:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:preAndroidMainBuild UP-TO-DATE
+> Task :shared:domain:convertSyntheticImportProjectIntoDefFileIphonesimulator SKIPPED
+> Task :androidApp:preBuild UP-TO-DATE
+> Task :shared:compose:generateAndroidMainAssets UP-TO-DATE
+> Task :shared:root:androidPreBuild UP-TO-DATE
+> Task :androidApp:generateDebugAssets UP-TO-DATE
+> Task :androidApp:preDebugBuild UP-TO-DATE
+> Task :shared:root:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:catalog:androidJar
+> Task :androidApp:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :shared:compose:generateAndroidMainEmptyResourceFiles
+> Task :shared:compose:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :shared:compose:generateResourceAccessorsForAndroidMain NO-SOURCE
+> Task :shared:data:generateAndroidMainEmptyResourceFiles
+> Task :shared:root:generateAndroidMainEmptyResourceFiles
+> Task :shared:component:catalog:generateAndroidMainEmptyResourceFiles
+> Task :shared:domain:generateAndroidMainEmptyResourceFiles
+> Task :androidApp:generateDebugResources
+> Task :shared:component:catalog:writeAndroidMainAarMetadata
+> Task :shared:data:writeAndroidMainAarMetadata
+> Task :shared:root:writeAndroidMainAarMetadata
+> Task :shared:compose:writeAndroidMainAarMetadata
+> Task :shared:domain:writeAndroidMainAarMetadata
+> Task :androidApp:javaPreCompileDebug
+> Task :shared:compose:convertXmlValueResourcesForCommonMain
+> Task :androidApp:mapDebugSourceSetPaths
+> Task :shared:compose:copyNonXmlValueResourcesForCommonMain
+> Task :shared:compose:prepareComposeResourcesTaskForCommonMain
+> Task :shared:compose:generateExpectResourceCollectorsForCommonMain
+> Task :shared:compose:generateComposeResClass
+> Task :androidApp:extractDeepLinksDebug
+> Task :shared:compose:mapAndroidMainSourceSetPaths
+> Task :shared:compose:copyAndroidMainComposeResourcesToAndroidAssets
+> Task :androidApp:createDebugCompatibleScreenManifests
+> Task :shared:compose:generateResourceAccessorsForCommonMain
+> Task :shared:compose:generateActualResourceCollectorsForAndroidMain
+> Task :androidApp:mergeDebugJniLibFolders
+> Task :shared:compose:packageAndroidMainResources
+> Task :shared:compose:mergeAndroidMainJniLibFolders
+> Task :androidApp:packageDebugResources
+> Task :shared:compose:mergeAndroidMainAssets
+> Task :shared:domain:processAndroidMainManifest
+> Task :shared:compose:processAndroidMainManifest
+> Task :shared:data:processAndroidMainManifest
+> Task :shared:root:processAndroidMainManifest
+> Task :shared:component:catalog:processAndroidMainManifest
+> Task :shared:compose:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:data:mergeAndroidMainJniLibFolders
+> Task :shared:root:mergeAndroidMainJniLibFolders
+> Task :shared:root:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:data:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:domain:mergeAndroidMainJniLibFolders
+> Task :shared:domain:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:root:copyAndroidMainJniLibsProjectOnly
+> Task :shared:data:copyAndroidMainJniLibsProjectOnly
+> Task :shared:compose:copyAndroidMainJniLibsProjectOnly
+> Task :shared:domain:copyAndroidMainJniLibsProjectOnly
+> Task :shared:compose:parseAndroidMainLocalResources
+> Task :androidApp:writeDebugAppMetadata
+> Task :shared:component:catalog:mergeAndroidMainJniLibFolders
+> Task :shared:component:catalog:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:catalog:copyAndroidMainJniLibsProjectOnly
+> Task :androidApp:validateSigningDebug
+> Task :shared:compose:generateAndroidMainRFile
+> Task :shared:compose:compileAndroidMainLibraryResources
+> Task :androidApp:writeDebugSigningConfigVersions
+
+> Task :shared:data:generateCommonMainBagCueDatabaseInterface FAILED
+
+> Task :shared:domain:compileAndroidMain
+> Task :shared:domain:compileKotlinIosSimulatorArm64
+> Task :androidApp:processDebugNavigationResources
+> Task :androidApp:desugarDebugFileDependencies
+> Task :androidApp:checkDebugAarMetadata
+> Task :androidApp:checkDebugDuplicateClasses
+> Task :androidApp:mergeDebugAssets
+> Task :androidApp:mergeDebugNativeLibs
+> Task :androidApp:processDebugMainManifest
+> Task :androidApp:mergeDebugResources
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+69 actionable tasks: 66 executed, 3 up-to-date
+Configuration cache entry stored.
+
+Compiling with dialect app.cash.sqldelight.dialects.sqlite_3_18.SqliteDialect
+
+D:/Sources/Android/BagCue/shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq:78:0 <binary like operator real>, <compound operator real>, BETWEEN, GROUP, HAVING, IN, LIMIT or ORDER expected, got 'ON'
+73    INSERT INTO packing_item(id, seed_resource_key, user_name_override, usual_location, created_order, updated_at)
+74    SELECT ?, ?, NULL, NULL, ?, ?
+75    WHERE NOT EXISTS (
+76      SELECT 1 FROM seed_override WHERE seed_id = ? AND seed_kind = 'item'
+77    )
+78    ON CONFLICT(id) DO UPDATE SET
+      ^^
+79      seed_resource_key = excluded.seed_resource_key,
+80      created_order = excluded.created_order,
+81      updated_at = excluded.updated_at
+82    WHERE packing_item.user_name_override IS NULL
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':shared:data:generateCommonMainBagCueDatabaseInterface' (registered by plugin 'app.cash.sqldelight').
+> A failure occurred while executing app.cash.sqldelight.gradle.SqlDelightTask$GenerateInterfaces
+   > Generation failed; see the generator error output for details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 34s

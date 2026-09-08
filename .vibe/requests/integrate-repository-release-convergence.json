@@ -1,0 +1,11 @@
+{
+  "action": "integrate",
+  "packageId": "repository-release-convergence",
+  "receiptRef": ".vibe/receipts/RECEIPT-1ee83b0b-4136-4d1e-b584-ab037509ddde.json",
+  "integrationEvidence": [
+    {"path":"androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt","symbol":"RootComponentFactory(","role":"entry-point"},
+    {"path":"shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt","symbol":"childStack(","role":"navigation"},
+    {"path":"shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt","symbol":"exactSnapshotRestartsWithTemplatesBagsHintsConflictsAndPackedState","role":"restart"}
+  ],
+  "nextAction": "Close locally evidenced acceptance and quality-gate statuses, retain externally owned release blockers, validate the ledger, and launch a fresh isolated acceptance audit."
+}

@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-full-local-regression-fix-20260908.json",
+  "expectedLedgerDigest": "a1faf23ddf22499ae9d2de3d24e8d2a4a1a8620551c009eee55005dbe803eedf",
+  "inspectionNote": "Inspected the immutable two-file regression handoff and green Compose compile/Paparazzi receipt. The invalid explicit RowScope weight import was removed and mergeDebugAssets now has a lazy configuration-cache-safe dependency on the production Compose Resources asset producer."
+}

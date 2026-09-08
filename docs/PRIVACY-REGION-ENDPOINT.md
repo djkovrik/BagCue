@@ -99,7 +99,11 @@ The app privacy policy must disclose that an initial service request determines 
 6. When the policy version changes, treat any prior choice made for an older version as unresolved and show the consent screen again for a protected-region response.
 7. A user in a protected region may withdraw consent in Settings. Immediately pass the changed value to Yandex, stop new ad requests and do not initialize a new SDK instance until a later eligible choice/lifecycle. Ignore accept/decline calls when `consentRequired=false`.
 
-The shared `network` module owns `PrivacyRegionApi` and `KtorPrivacyRegionApi`, strict JSON/schema/status validation, redirects disabled, a 4 KiB response bound, and 5-second request/connect/socket timeouts. Android uses the Ktor OkHttp engine; iOS uses Darwin. Transport, HTTP, content-type, JSON, schema and expiry failures all converge to the same fail-closed advertising state without affecting the product.
+The shared `network` module owns `PrivacyRegionApi` and `KtorPrivacyRegionApi`, strict JSON/schema/status validation, redirects disabled, an exact `application/json` Content-Type requirement, a streaming 4 KiB response bound enforced even without `Content-Length`, strict UTF-8 decoding, and 5-second request/connect/socket timeouts. Android uses the Ktor OkHttp engine; iOS uses Darwin. Transport, HTTP, content-type, JSON, schema and expiry failures all converge to the same fail-closed advertising state without affecting the product.
+
+### Observed public-route evidence
+
+One read-only request on 2026-09-08 at 14:20:46 GMT returned HTTP 200, `application/json`, `Content-Length: 132`, `Cache-Control: no-store`, HSTS, `nosniff`, `DENY`, `no-referrer`, and a schema-1 non-protected response expiring within 72 hours. This is reachability evidence only. It does not close the backend tests below: controlled protected/non-protected/unknown routes, spoof resistance, GeoIP freshness, raw-IP/header redaction across logs and traces, ownership, and legal review remain external release blockers.
 
 The endpoint does not itself guarantee non-personalized advertising. Before release, verify in the exact Yandex SDK version that the decline path and removal of `AD_ID` produce the intended ad behavior. Yandex's published API describes a consent boolean, not a product-level guarantee that every ad after a decline is non-personalized. Keep the conservative release fallback: if that behavior cannot be demonstrated and approved, do not show ads after a decline.
 

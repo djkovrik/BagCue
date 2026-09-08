@@ -1,0 +1,357 @@
+Reusing configuration cache.
+> Task :shared:compose:generateUmbrellaPackageIdentifierBasedResolutionForDefault SKIPPED
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :shared:domain:computeLocalPackageDependencyInputFiles SKIPPED
+> Task :shared:domain:generateSyntheticLinkageSwiftPMImportProjectForCinteropsAndLdDump SKIPPED
+> Task :shared:domain:iosSimulatorArm64ProcessResources NO-SOURCE
+> Task :shared:domain:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:compose:fetchUmbrellaPackageIdentifierForDefault SKIPPED
+> Task :shared:domain:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:domain:androidJar UP-TO-DATE
+> Task :shared:data:generateSyntheticLinkageSwiftPMImportProjectForCinteropsAndLdDump SKIPPED
+> Task :shared:domain:syncPersistedPackageResolvedToSynthetic SKIPPED
+> Task :shared:domain:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:data:iosSimulatorArm64ProcessResources NO-SOURCE
+> Task :shared:data:generateCommonMainBagCueDatabaseInterface UP-TO-DATE
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:data:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:data:syncPersistedPackageResolvedToSynthetic SKIPPED
+> Task :shared:data:androidPreBuild UP-TO-DATE
+> Task :shared:data:computeLocalPackageDependencyInputFiles SKIPPED
+> Task :shared:domain:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:domain:fetchSyntheticImportProjectPackages SKIPPED
+> Task :shared:data:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:data:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:data:fetchSyntheticImportProjectPackages SKIPPED
+> Task :shared:data:preAndroidMainBuild UP-TO-DATE
+> Task :shared:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:data:convertSyntheticImportProjectIntoDefFileIphonesimulator SKIPPED
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:generateSyntheticLinkageSwiftPMImportProjectForCinteropsAndLdDump SKIPPED
+> Task :shared:platform:computeLocalPackageDependencyInputFiles SKIPPED
+> Task :shared:platform:syncPersistedPackageResolvedToSynthetic SKIPPED
+> Task :shared:platform:androidPreBuild UP-TO-DATE
+> Task :shared:component:settings:androidPreBuild UP-TO-DATE
+> Task :shared:domain:convertSyntheticImportProjectIntoDefFileIphonesimulator SKIPPED
+> Task :shared:data:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:platform:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:platform:iosSimulatorArm64ProcessResources NO-SOURCE
+> Task :shared:component:settings:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:platform:androidJar UP-TO-DATE
+> Task :shared:data:androidJar UP-TO-DATE
+> Task :shared:component:settings:preAndroidMainBuild UP-TO-DATE
+> Task :shared:platform:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:settings:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:platform:fetchSyntheticImportProjectPackages SKIPPED
+> Task :shared:platform:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:settings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:component:catalog:androidPreBuild UP-TO-DATE
+> Task :shared:component:catalog:preAndroidMainBuild UP-TO-DATE
+> Task :shared:platform:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:history:androidPreBuild UP-TO-DATE
+> Task :shared:platform:convertSyntheticImportProjectIntoDefFileIphonesimulator SKIPPED
+> Task :shared:component:settings:androidJar UP-TO-DATE
+> Task :shared:root:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:settings:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:root:androidPreBuild UP-TO-DATE
+> Task :shared:root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:component:session:androidPreBuild UP-TO-DATE
+> Task :shared:platform:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:root:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:session:preAndroidMainBuild UP-TO-DATE
+> Task :shared:root:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:component:templates:androidPreBuild UP-TO-DATE
+> Task :shared:component:catalog:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:history:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:catalog:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:templates:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:root:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:component:history:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:androidPreBuild UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:component:session:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:templates:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:generateComposeResClass UP-TO-DATE
+> Task :shared:component:session:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :shared:platform:packageAndroidMainResources UP-TO-DATE
+> Task :shared:data:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:compose:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:domain:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :shared:component:catalog:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:root:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:history:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:generateAndroidMainAssets UP-TO-DATE
+> Task :shared:component:history:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:session:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:root:androidJar UP-TO-DATE
+> Task :shared:platform:generateAndroidMainAssets UP-TO-DATE
+> Task :shared:component:templates:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:parseAndroidMainLocalResources UP-TO-DATE
+> Task :androidApp:preBuild UP-TO-DATE
+> Task :androidApp:generateDebugAssets UP-TO-DATE
+> Task :shared:platform:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:settings:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:templates:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:compose:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:platform:mergeAndroidMainAssets UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForAndroidMain NO-SOURCE
+> Task :shared:data:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:domain:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:catalog:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:settings:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:root:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:history:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :androidApp:preDebugBuild UP-TO-DATE
+> Task :shared:component:templates:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:compose:processAndroidMainManifest UP-TO-DATE
+> Task :shared:platform:generateAndroidMainRFile UP-TO-DATE
+> Task :androidApp:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :shared:component:session:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :androidApp:mapDebugSourceSetPaths UP-TO-DATE
+> Task :androidApp:generateDebugResources UP-TO-DATE
+> Task :shared:domain:processAndroidMainManifest UP-TO-DATE
+> Task :androidApp:javaPreCompileDebug UP-TO-DATE
+> Task :shared:data:processAndroidMainManifest UP-TO-DATE
+> Task :shared:platform:processAndroidMainManifest UP-TO-DATE
+> Task :androidApp:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :shared:root:processAndroidMainManifest UP-TO-DATE
+> Task :androidApp:extractDeepLinksDebug UP-TO-DATE
+> Task :shared:component:settings:processAndroidMainManifest UP-TO-DATE
+> Task :shared:component:catalog:processAndroidMainManifest UP-TO-DATE
+> Task :shared:compose:mapAndroidMainSourceSetPaths UP-TO-DATE
+> Task :shared:platform:mapAndroidMainSourceSetPaths UP-TO-DATE
+> Task :androidApp:packageDebugResources UP-TO-DATE
+> Task :shared:component:history:processAndroidMainManifest UP-TO-DATE
+> Task :shared:component:session:processAndroidMainManifest UP-TO-DATE
+> Task :androidApp:mergeDebugJniLibFolders UP-TO-DATE
+> Task :shared:domain:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:platform:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:compose:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:component:catalog:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:platform:compileAndroidMainLibraryResources UP-TO-DATE
+> Task :shared:data:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:domain:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:history:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:component:catalog:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:session:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:data:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:data:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:root:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:platform:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:domain:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:catalog:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:history:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:platform:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:history:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:settings:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:compose:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :androidApp:validateSigningDebug UP-TO-DATE
+> Task :shared:root:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :androidApp:writeDebugAppMetadata UP-TO-DATE
+> Task :shared:component:settings:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:session:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:templates:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:compose:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :androidApp:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :shared:component:session:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:templates:processAndroidMainManifest UP-TO-DATE
+> Task :shared:component:settings:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:templates:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:root:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:platform:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:component:catalog:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:component:templates:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:history:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:component:session:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:component:settings:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:component:settings:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:component:catalog:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :androidApp:checkDebugAarMetadata UP-TO-DATE
+> Task :shared:component:history:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:compose:checkIosSimulatorArm64MainComposeLibrariesCompatibility
+> Task :shared:compose:copyNonXmlValueResourcesForAppleMain NO-SOURCE
+> Task :shared:compose:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :shared:component:templates:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForIosSimulatorArm64Main NO-SOURCE
+> Task :shared:compose:copyNonXmlValueResourcesForIosMain NO-SOURCE
+> Task :shared:compose:convertXmlValueResourcesForAppleMain NO-SOURCE
+> Task :shared:compose:convertXmlValueResourcesForIosMain NO-SOURCE
+> Task :shared:compose:copyNonXmlValueResourcesForIosSimulatorArm64Main NO-SOURCE
+> Task :shared:compose:copyAndroidMainComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForIosSimulatorArm64Main NO-SOURCE
+> Task :shared:compose:prepareComposeResourcesTaskForAppleMain NO-SOURCE
+> Task :shared:compose:generateResourceAccessorsForAppleMain NO-SOURCE
+> Task :shared:compose:mergeAndroidMainAssets UP-TO-DATE
+> Task :androidApp:desugarDebugFileDependencies UP-TO-DATE
+> Task :shared:compose:generateActualResourceCollectorsForAndroidMain UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForIosMain NO-SOURCE
+> Task :shared:compose:generateResourceAccessorsForIosSimulatorArm64Main NO-SOURCE
+> Task :androidApp:checkDebugDuplicateClasses UP-TO-DATE
+> Task :shared:compose:packageAndroidMainResources UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForNativeMain NO-SOURCE
+> Task :shared:compose:generateResourceAccessorsForIosMain NO-SOURCE
+> Task :shared:data:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForNativeMain NO-SOURCE
+> Task :shared:root:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:compose:compileAndroidMainLibraryResources UP-TO-DATE
+> Task :shared:compose:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForNativeMain NO-SOURCE
+> Task :shared:domain:compileAndroidMain UP-TO-DATE
+> Task :androidApp:processDebugNavigationResources UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForNativeMain NO-SOURCE
+> Task :shared:compose:generateAndroidMainRFile UP-TO-DATE
+> Task :shared:compose:generateActualResourceCollectorsForIosSimulatorArm64Main UP-TO-DATE
+> Task :androidApp:mergeDebugNativeLibs UP-TO-DATE
+> Task :androidApp:mergeDebugAssets UP-TO-DATE
+> Task :androidApp:mergeDebugResources UP-TO-DATE
+> Task :androidApp:processDebugMainManifest UP-TO-DATE
+> Task :shared:root:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:component:session:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:component:templates:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:compose:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:domain:processAndroidMainJavaRes
+> Task :androidApp:parseDebugLocalResources
+> Task :androidApp:compileDebugNavigationResources
+
+> Task :androidApp:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :androidApp:generateDebugRFile
+> Task :androidApp:compressDebugAssets
+> Task :shared:domain:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:domain:bundleAndroidMainClassesToCompileJar
+> Task :androidApp:processDebugManifest
+> Task :shared:domain:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :shared:domain:iosSimulatorArm64MainKlibrary UP-TO-DATE
+> Task :shared:domain:compileTestKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :shared:domain:linkDebugTestIosSimulatorArm64 SKIPPED
+> Task :shared:domain:iosSimulatorArm64Test SKIPPED
+> Task :shared:data:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :shared:data:iosSimulatorArm64MainKlibrary UP-TO-DATE
+> Task :shared:data:compileTestKotlinIosSimulatorArm64
+> Task :shared:data:linkDebugTestIosSimulatorArm64 SKIPPED
+> Task :shared:data:iosSimulatorArm64Test SKIPPED
+> Task :shared:platform:compileKotlinIosSimulatorArm64
+> Task :shared:platform:iosSimulatorArm64MainKlibrary
+
+> Task :shared:domain:compileAndroidHostTest
+w: file:///D:/Sources/Android/BagCue/shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRulesTest.kt:35:13 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRulesTest.kt:39:39 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRulesTest.kt:50:19 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRulesTest.kt:68:13 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+
+> Task :shared:platform:compileTestKotlinIosSimulatorArm64
+> Task :shared:platform:linkDebugTestIosSimulatorArm64 SKIPPED
+> Task :shared:platform:iosSimulatorArm64Test SKIPPED
+> Task :shared:component:settings:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :shared:component:catalog:compileKotlinIosSimulatorArm64 UP-TO-DATE
+
+> Task :shared:component:settings:compileAndroidMain
+w: file:///D:/Sources/Android/BagCue/shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManager.kt:36:28 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/integration/SettingsComponentDefault.kt:30:16 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+
+> Task :shared:platform:compileAndroidMain
+> Task :shared:component:catalog:compileAndroidMain
+> Task :shared:platform:processAndroidMainJavaRes
+> Task :shared:component:templates:compileAndroidMain
+> Task :androidApp:processDebugManifestForPackage
+> Task :shared:component:templates:bundleAndroidMainClassesToCompileJar
+> Task :shared:component:catalog:bundleAndroidMainClassesToCompileJar
+> Task :shared:component:settings:processAndroidMainJavaRes
+> Task :shared:data:compileAndroidMain
+> Task :shared:component:catalog:processAndroidMainJavaRes
+> Task :shared:platform:bundleAndroidMainClassesToCompileJar
+> Task :shared:component:catalog:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:data:processAndroidMainJavaRes
+> Task :shared:component:templates:processAndroidMainJavaRes
+> Task :shared:platform:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:component:settings:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:data:bundleAndroidMainClassesToCompileJar
+> Task :shared:component:history:compileKotlinIosSimulatorArm64
+> Task :shared:component:session:compileKotlinIosSimulatorArm64
+> Task :shared:component:settings:bundleAndroidMainClassesToCompileJar
+> Task :shared:platform:compileAndroidHostTest
+> Task :shared:component:templates:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:component:history:compileAndroidMain
+> Task :shared:component:history:processAndroidMainJavaRes
+> Task :shared:component:history:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:domain:testAndroidHostTest
+> Task :shared:domain:allTests
+
+> Task :shared:component:settings:compileAndroidHostTest
+w: file:///D:/Sources/Android/BagCue/shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt:21:117 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStoreTest.kt:29:155 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+
+> Task :shared:component:history:bundleAndroidMainClassesToCompileJar
+> Task :shared:data:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:component:templates:compileKotlinIosSimulatorArm64
+> Task :shared:data:compileAndroidHostTest
+> Task :shared:platform:testAndroidHostTest
+> Task :shared:platform:allTests
+> Task :shared:component:session:compileAndroidMain
+> Task :shared:component:session:processAndroidMainJavaRes
+> Task :shared:component:session:bundleAndroidMainClassesToCompileJar
+
+> Task :shared:root:compileKotlinIosSimulatorArm64
+
+> Task :androidApp:mergeExtDexDebug
+
+> Task :shared:root:compileAndroidMain
+w: file:///D:/Sources/Android/BagCue/shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt:46:28 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt:34:28 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+
+> Task :shared:root:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:root:bundleAndroidMainClassesToCompileJar
+> Task :shared:root:processAndroidMainJavaRes
+> Task :androidApp:processDebugResources
+> Task :shared:component:session:bundleAndroidMainClassesToRuntimeJar
+
+> Task :shared:root:compileAndroidHostTest
+w: file:///D:/Sources/Android/BagCue/shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt:83:21 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+
+> Task :shared:component:settings:testAndroidHostTest
+> Task :shared:root:testAndroidHostTest
+> Task :shared:data:testAndroidHostTest
+> Task :shared:data:allTests
+
+> Task :shared:compose:compileAndroidMain
+w: file:///D:/Sources/Android/BagCue/shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryScreen.kt:130:94 Redundant call of conversion method.
+
+> Task :shared:compose:processAndroidMainJavaRes
+> Task :shared:compose:bundleAndroidMainClassesToCompileJar
+> Task :shared:compose:bundleAndroidMainClassesToRuntimeJar
+
+> Task :shared:compose:compileKotlinIosSimulatorArm64
+
+> Task :androidApp:compileDebugKotlin
+> Task :androidApp:compileDebugJavaWithJavac NO-SOURCE
+> Task :androidApp:processDebugJavaRes
+> Task :androidApp:dexBuilderDebug
+> Task :androidApp:mergeLibDexDebug
+> Task :androidApp:mergeProjectDexDebug
+> Task :androidApp:mergeDebugGlobalSynthetics
+> Task :androidApp:mergeDebugJavaResource
+> Task :androidApp:packageDebug
+> Task :androidApp:assembleDebug
+> Task :androidApp:createDebugApkListingFileRedirect
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 55s
+209 actionable tasks: 89 executed, 120 up-to-date
+Configuration cache entry reused.
+w: file:///D:/Sources/Android/BagCue/shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt:46:28 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt:34:28 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryScreen.kt:130:94 Redundant call of conversion method.

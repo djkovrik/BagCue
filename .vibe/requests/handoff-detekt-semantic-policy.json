@@ -1,0 +1,14 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-detekt-semantic-policy-20260908",
+  "assignmentId": "detekt-semantic-policy",
+  "productionEvidence": [
+    {"path": "detekt/base-config.yml", "symbol": "complexity.TooManyFunctions", "surface": "override-private-annotated-function-policy"},
+    {"path": "detekt/base-config.yml", "symbol": "exceptions.TooGenericExceptionCaught", "surface": "fault-containment-catch-name-policy"},
+    {"path": "detekt/base-config.yml", "symbol": "naming.FunctionNaming", "surface": "compose-native-platform-naming-policy"}
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

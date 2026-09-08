@@ -1,0 +1,23 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    "detekt",
+    "koverXmlReport",
+    "printKoverLineCoverage"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-001",
+      "surfaces": ["strict-detekt", "complete-generated-config"]
+    },
+    {
+      "obligationId": "QG-002",
+      "surfaces": ["merged-kover-xml", "numeric-line-baseline"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Measure the real production domain/component Kover line baseline with the temporary zero floor and prove the strict generated Detekt configuration before committing the derived threshold."
+}

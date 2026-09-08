@@ -1,0 +1,37 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-analytics-event-continuation-components-20260908",
+  "assignmentId": "analytics-event-continuation-components",
+  "productionEvidence": [
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManager.kt", "symbol": "recordSafely(AnalyticsEventName.TemplateCreated)", "surface": "analytics-event-contract"},
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/integration/TemplateComponentDefault.kt", "symbol": "analyticsController = analyticsController", "surface": "production-component-injection"},
+    {"path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManager.kt", "symbol": "recordSafely(AnalyticsEventName.PackingSessionReopened)", "surface": "analytics-event-contract"},
+    {"path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/integration/HistoryComponentDefault.kt", "symbol": "HistoryManager(repository, analyticsController)", "surface": "production-component-injection"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "analyticsController = analyticsController", "surface": "production-root-injection"},
+    {"path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt", "symbol": "analyticsController = apaPlatform.analyticsController", "surface": "android-entry-point"},
+    {"path": "shared/compose/src/iosMain/kotlin/main.kt", "symbol": "analyticsController = IosAnalyticsController()", "surface": "ios-entry-point"}
+  ],
+  "testEvidence": [
+    {"path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt", "testName": "successfulTemplateCreationsRecordOnlyContentFreeTemplateCreatedEvents", "surface": "analytics-event-contract-test"},
+    {"path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt", "testName": "updatedTemplateDoesNotRecordTemplateCreatedEvent", "surface": "analytics-event-contract-test"},
+    {"path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt", "testName": "failedTemplateCreationDoesNotRecordAnalyticsEvent", "surface": "analytics-event-contract-test"},
+    {"path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt", "testName": "cancelledTemplateCreationDoesNotRecordAnalyticsEvent", "surface": "analytics-event-contract-test"},
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt", "testName": "successfulReopenRecordsOnlyContentFreePackingSessionReopenedEvent", "surface": "analytics-event-contract-test"},
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt", "testName": "failedReopenDoesNotRecordAnalyticsEvent", "surface": "analytics-event-contract-test"},
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt", "testName": "cancelledReopenDoesNotRecordAnalyticsEvent", "surface": "analytics-event-contract-test"}
+  ],
+  "nonGradleChecks": [
+    {"argv": ["git", "diff", "--check", "--", "shared/component/templates/src", "shared/component/history/src", "shared/root/src"], "exitCode": 0},
+    {"argv": ["rg", "-n", "record\\(AnalyticsEvent\\(|AnalyticsEventName\\.(TemplateCreated|PackingSessionReopened)", "shared/component/templates/src", "shared/component/history/src"], "exitCode": 0}
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:component:templates:testAndroidHostTest", ":shared:component:history:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":androidApp:assembleDebug", ":shared:component:templates:compileKotlinIosSimulatorArm64", ":shared:component:history:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "tasks": [":shared:component:templates:testAndroidHostTest", ":shared:component:history:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":androidApp:assembleDebug", ":shared:component:templates:compileKotlinIosSimulatorArm64", ":shared:component:history:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "coveredObligations": [
+        {"obligationId": "AC-039", "surfaces": ["analytics-event-contract-test"]}
+      ]
+    }
+  ],
+  "blockers": []
+}

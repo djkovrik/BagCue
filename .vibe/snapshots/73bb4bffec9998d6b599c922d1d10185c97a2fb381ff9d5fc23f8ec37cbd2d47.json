@@ -1,0 +1,22 @@
+{
+  "algorithm": "sha256",
+  "digest": "dad5e3c7702fd80f65252d2e53dd471d89aa81875659881e2120accc71a82096",
+  "files": [
+    {
+      "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt",
+      "sha256": "70c51961740cbc90c9fcb20e07c2a8cb899f5071ad426a8a334cfd57cbbe1a7e"
+    },
+    {
+      "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt",
+      "sha256": "13261ad17324746dde62c8b6305e905d21e59f62d66e5d7f451ce91f669ad5de"
+    },
+    {
+      "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt",
+      "sha256": "c00d0002f6b71352bacad1588db480d9ea92c720b2eb7433ddaf537a1b630692"
+    }
+  ],
+  "patterns": [
+    "shared/component/session/src/**",
+    "shared/root/src/**"
+  ]
+}

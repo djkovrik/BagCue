@@ -1,0 +1,5 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-catalog-domain-persistence-freeze-20260908.json",
+  "inspectionNote": "Inspected frozen assignment summary and changed-file inventory: nine domain/data files remain within registered boundaries and implement stable IDs, normalized duplicate semantics, SQLDelight CRUD, seed overrides, atomic dependency deletion, platform drivers, and restart tests; no blockers remain and both Android tests and iOS compilation are current."
+}

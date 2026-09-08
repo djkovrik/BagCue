@@ -1,0 +1,19 @@
+{
+  "action":"handoff","handoffId":"HANDOFF-apa-component-root-20260908","assignmentId":"apa-component-root",
+  "productionEvidence":[
+    {"path":"shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/SettingsComponent.kt","symbol":"setAnalyticsEnabled","surface":"component-contract"},
+    {"path":"shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManager.kt","symbol":"setAnalyticsEnabled","surface":"settings-integration"},
+    {"path":"shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/domain/ResultAdvertisingManager.kt","symbol":"ResultAdvertisingManager","surface":"result-ad-manager"},
+    {"path":"shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/SessionComponent.kt","symbol":"chooseResultAdvertisingConsent","surface":"component-contract"},
+    {"path":"shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt","symbol":"inlineAdController","surface":"production-root"}
+  ],
+  "testEvidence":[
+    {"path":"shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt","testName":"analyticsDefaultsDisabledAndResetFailureDoesNotReenableCollection","surface":"settings-integration-test"},
+    {"path":"shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt","testName":"protectedPrivacyChoiceIsVersionBoundAndDeclineRemainsIneligible","surface":"settings-integration-test"},
+    {"path":"shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/ResultAdvertisingManagerTest.kt","testName":"iosAndSkippedResultsSuppressBeforePrivacyOrSdkWork","surface":"ad-lifecycle-test"},
+    {"path":"shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/store/SessionStoreTest.kt","testName":"completedResultRequestsAtMostOnceAndHidesOnExit","surface":"component-test"},
+    {"path":"shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt","testName":"successfulSessionActionsRecordOnlyApprovedContentFreeEvents","surface":"analytics-event-contract-test"}
+  ],
+  "nonGradleChecks":[],"requestedCommands":[{"argv":["gradlew.bat",":shared:component:settings:testAndroidHostTest",":shared:component:session:testAndroidHostTest",":shared:root:testAndroidHostTest"],"tasks":[":shared:component:settings:testAndroidHostTest",":shared:component:session:testAndroidHostTest",":shared:root:testAndroidHostTest"],"coveredObligations":[{"obligationId":"AC-037","surfaces":["component-test","settings-integration-test"]},{"obligationId":"AC-038","surfaces":["component-test","settings-integration-test"]},{"obligationId":"AC-039","surfaces":["analytics-event-contract-test"]},{"obligationId":"AC-042","surfaces":["component-test","settings-integration-test","ad-lifecycle-test"]},{"obligationId":"AC-043","surfaces":["settings-integration-test","ad-lifecycle-test"]},{"obligationId":"AC-044","surfaces":["component-test","ad-lifecycle-test"]},{"obligationId":"AC-045","surfaces":["component-test","ad-lifecycle-test"]},{"obligationId":"AC-046","surfaces":["component-test","ad-lifecycle-test"]}],"receiptRef":".vibe/receipts/RECEIPT-969f1f57-ccf6-4861-a7e5-ec2bed420644.json"}],
+  "blockers":["AC-039 TemplateCreated and PackingSessionReopened production success hooks require a continuation package because their component paths are outside this immutable assignment boundary."]
+}

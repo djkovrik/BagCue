@@ -1,0 +1,6 @@
+{
+  "action":"assign","assignmentId":"assets-production-inventory","owner":"vibe-assets-creator",
+  "acceptanceScenarioIds":["AC-045","AC-047","AC-048","AC-049"],"qualityGateIds":["QG-006"],
+  "allowedFiles":["shared/compose/src/commonMain/composeResources/drawable/**","shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/**","androidApp/src/main/res/**","iosApp/iosApp/Assets.xcassets/**","docs/assets/**"],
+  "inputScopeId":"catalog-core-v1"
+}

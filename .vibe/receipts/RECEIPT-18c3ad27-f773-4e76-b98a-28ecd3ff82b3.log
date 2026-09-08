@@ -1,0 +1,95 @@
+Calculating task graph as configuration cache cannot be reused because file 'settings.gradle.kts' has changed.
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :shared:domain:computeLocalPackageDependencyInputFiles SKIPPED
+> Task :shared:compose:generateUmbrellaPackageIdentifierBasedResolutionForDefault SKIPPED
+> Task :shared:data:androidPreBuild UP-TO-DATE
+> Task :shared:domain:generateSyntheticLinkageSwiftPMImportProjectForCinteropsAndLdDump SKIPPED
+> Task :shared:data:preAndroidMainBuild UP-TO-DATE
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:fetchUmbrellaPackageIdentifierForDefault SKIPPED
+> Task :shared:domain:iosSimulatorArm64ProcessResources NO-SOURCE
+> Task :shared:data:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:domain:syncPersistedPackageResolvedToSynthetic SKIPPED
+> Task :shared:domain:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:domain:fetchSyntheticImportProjectPackages SKIPPED
+> Task :shared:domain:convertSyntheticImportProjectIntoDefFileIphonesimulator SKIPPED
+> Task :shared:domain:androidJar UP-TO-DATE
+> Task :shared:domain:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:domain:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:data:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:data:androidJar UP-TO-DATE
+> Task :shared:data:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:domain:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:data:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:domain:compileAndroidMain
+> Task :shared:domain:processAndroidMainJavaRes
+> Task :shared:domain:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:domain:bundleAndroidMainClassesToCompileJar
+> Task :shared:data:generateCommonMainBagCueDatabaseInterface
+> Task :shared:domain:compileAndroidHostTest
+> Task :shared:domain:compileKotlinIosSimulatorArm64
+> Task :shared:domain:iosSimulatorArm64MainKlibrary
+> Task :shared:domain:testAndroidHostTest
+> Task :shared:domain:compileTestKotlinIosSimulatorArm64
+> Task :shared:domain:linkDebugTestIosSimulatorArm64 SKIPPED
+> Task :shared:domain:iosSimulatorArm64Test SKIPPED
+> Task :shared:domain:allTests
+
+> Task :shared:data:compileAndroidMain FAILED
+
+> Task :shared:data:compileKotlinIosSimulatorArm64 FAILED
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+19 actionable tasks: 14 executed, 5 up-to-date
+Configuration cache entry stored.
+e: file:///D:/Sources/Android/BagCue/shared/data/build/generated/sqldelight/code/BagCueDatabase/commonMain/com/sedsoftware/bagcue/data/db/CatalogQueries.kt:3:8 Unresolved reference 'Boolean'.
+e: file:///D:/Sources/Android/BagCue/shared/data/build/generated/sqldelight/code/BagCueDatabase/commonMain/com/sedsoftware/bagcue/data/db/SessionQueries.kt:3:8 Unresolved reference 'Boolean'.
+e: file:///D:/Sources/Android/BagCue/shared/data/build/generated/sqldelight/code/BagCueDatabase/commonMain/com/sedsoftware/bagcue/data/db/Session_packing_item.kt:3:8 Unresolved reference 'Boolean'.
+e: file:///D:/Sources/Android/BagCue/shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt:35:24 No value passed for parameter 'session_packing_itemAdapter'.
+e: file:///D:/Sources/Android/BagCue/shared/data/build/generated/sqldelight/code/BagCueDatabase/commonMain/com/sedsoftware/bagcue/data/db/CatalogQueries.kt:3:8 Unresolved reference 'Boolean'.
+e: file:///D:/Sources/Android/BagCue/shared/data/build/generated/sqldelight/code/BagCueDatabase/commonMain/com/sedsoftware/bagcue/data/db/SessionQueries.kt:3:8 Unresolved reference 'Boolean'.
+e: file:///D:/Sources/Android/BagCue/shared/data/build/generated/sqldelight/code/BagCueDatabase/commonMain/com/sedsoftware/bagcue/data/db/Session_packing_item.kt:3:8 Unresolved reference 'Boolean'.
+e: file:///D:/Sources/Android/BagCue/shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt:35:24 No value passed for parameter 'session_packing_itemAdapter'.
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':shared:data:compileAndroidMain' (registered by plugin 'com.android.internal.kotlin.multiplatform.library').
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.btapi.BuildToolsApiCompilationWork
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':shared:data:compileKotlinIosSimulatorArm64' (registered in build file 'shared\data\build.gradle.kts').
+> Compilation finished with errors
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+BUILD FAILED in 12s

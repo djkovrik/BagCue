@@ -1,0 +1,33 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-alr-domain-data-components-20260908",
+  "assignmentId": "alr-domain-data-components",
+  "productionEvidence": [
+    {"path":"shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/template/SqlDelightKitTemplateRepository.kt","symbol":"deleteTemplate","surface":"persistence-integration-test","receiptRef":".vibe/receipts/RECEIPT-b08b437c-933e-4cfa-a251-b1de19e3bf4e.json","receiptSha256":"e291ca5295ad11dad2d7ce3d933c7adc9bf7331f8564694f60b2fa6bbe99f4b1"},
+    {"path":"shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/session/SqlDelightPackingSessionRepository.kt","symbol":"deleteSession","surface":"persistence-integration-test","receiptRef":".vibe/receipts/RECEIPT-b08b437c-933e-4cfa-a251-b1de19e3bf4e.json","receiptSha256":"e291ca5295ad11dad2d7ce3d933c7adc9bf7331f8564694f60b2fa6bbe99f4b1"},
+    {"path":"shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/template/SqlDelightKitTemplateRepository.kt","symbol":"toDomain","surface":"localization-contract-test","receiptRef":".vibe/receipts/RECEIPT-b08b437c-933e-4cfa-a251-b1de19e3bf4e.json","receiptSha256":"e291ca5295ad11dad2d7ce3d933c7adc9bf7331f8564694f60b2fa6bbe99f4b1"},
+    {"path":"shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/session/SqlDelightPackingSessionRepository.kt","symbol":"toDomain","surface":"localization-contract-test","receiptRef":".vibe/receipts/RECEIPT-b08b437c-933e-4cfa-a251-b1de19e3bf4e.json","receiptSha256":"e291ca5295ad11dad2d7ce3d933c7adc9bf7331f8564694f60b2fa6bbe99f4b1"},
+    {"path":"shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStoreProvider.kt","symbol":"PreferencesDrafted","surface":"component-test","receiptRef":".vibe/receipts/RECEIPT-b08b437c-933e-4cfa-a251-b1de19e3bf4e.json","receiptSha256":"e291ca5295ad11dad2d7ce3d933c7adc9bf7331f8564694f60b2fa6bbe99f4b1"}
+  ],
+  "testEvidence": [
+    {"path":"shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/template/KitTemplatePersistenceTest.kt","testName":"forcedChildCascadeFailureRollsBackTemplateParentPositionsAndSeedOverride","surface":"persistence-integration-test"},
+    {"path":"shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt","testName":"forcedItemCascadeFailureLeavesTheCompleteSessionAggregateUnchanged","surface":"persistence-integration-test"},
+    {"path":"shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/template/KitTemplatePersistenceTest.kt","testName":"starterKeysAndUserAuthoredTemplateTextRoundTripWithoutResolutionOrNormalization","surface":"localization-contract-test"},
+    {"path":"shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt","testName":"sessionSnapshotsKeepStarterKeysAndUserAuthoredTextVerbatim","surface":"localization-contract-test"},
+    {"path":"shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/store/CatalogStoreTest.kt","testName":"failedSaveRetainsVerbatimDraftAndRetryCommitsTheSameInput","surface":"component-test"},
+    {"path":"shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/store/TemplateStoreTest.kt","testName":"failedSaveRetainsVerbatimTemplateDraftAndRetryCommitsIt","surface":"component-test"},
+    {"path":"shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/store/SessionStoreTest.kt","testName":"failedOneOffSaveRetainsVerbatimDraftAndRetryCommitsTheSameInput","surface":"component-test"},
+    {"path":"shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStoreTest.kt","testName":"failedSaveKeepsRequestedSettingVisibleWhileDurableValueStaysAuthoritativeAndRetryCommits","surface":"component-test"},
+    {"path":"shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManagerTest.kt","testName":"updatePreservesVerbatimAuthoredTextAndOriginalFailureCause","surface":"component-test"},
+    {"path":"shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManagerTest.kt","testName":"updateCancellationFromRepositoryResultIsRethrown","surface":"component-test"},
+    {"path":"shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt","testName":"failedUpdatePreservesOriginalCauseAndPriorDurableTemplate","surface":"component-test"},
+    {"path":"shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt","testName":"updateCancellationFromRepositoryResultIsRethrown","surface":"component-test"},
+    {"path":"shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt","testName":"failedOneOffSavePreservesOriginalCauseAndPriorDurableSession","surface":"component-test"},
+    {"path":"shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt","testName":"oneOffSaveCancellationFromRepositoryResultIsRethrown","surface":"component-test"},
+    {"path":"shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt","testName":"reminderSaveFailurePreservesOriginalCauseAndPriorDurablePreference","surface":"component-test"},
+    {"path":"shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt","testName":"reminderSaveCancellationFromRepositoryResultIsRethrown","surface":"component-test"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

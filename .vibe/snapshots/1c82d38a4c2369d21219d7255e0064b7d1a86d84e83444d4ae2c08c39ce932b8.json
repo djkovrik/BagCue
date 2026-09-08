@@ -1,0 +1,85 @@
+{
+  "algorithm": "sha256",
+  "digest": "89f55f5ab933c8b2b6b703f0787ee1eb49debb3cf8c314414331d198caeeaca7",
+  "files": [
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_cyclone.xml",
+      "sha256": "7f53513fe352f0fe5bd4fbd161326a3d2d702524c53c2a9df9c340ec7688867d"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_dark_mode.xml",
+      "sha256": "cdc9a08b6654ceb82e6cc4088301df78ff9ea19994496b96e60c810c797dcd88"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_light_mode.xml",
+      "sha256": "6de9720e76a88f26d6f479e3213c427c4e82679142e5582cd72025f3a44f7405"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_rotate_right.xml",
+      "sha256": "a9456e3f9f4d3bc9fb6adcb9c642eecac0867447c9dfc486ddd1a9a1e10209da"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/font/IndieFlower-Regular.ttf",
+      "sha256": "e6a139213baa54b2ff51d300f98cc1c16d690b5046a4b0e42435cbf791767853"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/values-ru/strings.xml",
+      "sha256": "80fb7b156b40679d3f81bd05b0a3fa2e1f1914bc4521a623fb45e12c125c9b0d"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/values/strings.xml",
+      "sha256": "495e5626c049bb2bebfb0e78941cf3f1c7cd27acadedfa893d56b801dfaa11bd"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+      "sha256": "4f2728880e2a2b7bf4ad4e6bbfb65857f33a5bb2a7c00781c36683d25639c636"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogResources.kt",
+      "sha256": "4bef3792b46eb68cc3a9858f4721e90bc4de4ca06c913c7ed5c479de86c9a3ba"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt",
+      "sha256": "ba9535108a3d4b0db502b8ba7a2a37648e5093ade1bc8262d94a6bd9198d9c73"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryResources.kt",
+      "sha256": "98623d61eef75a64b0aea1f0d9444b51c54baf3f811f41f96b74693414084252"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryScreen.kt",
+      "sha256": "8f2baa0da12a3f05f49b39299c066f4e503c2de1f55a8811a2cb44859248c422"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionResources.kt",
+      "sha256": "bb4b67897c237a4c7672eb159d26a331c608f9e77a6df204cbe6955a1ae6e9d7"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt",
+      "sha256": "eb9c14e5b32dc1ed73b35dd177f058f174eb7f2b6e49da3c8f891ae6b333a082"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateResources.kt",
+      "sha256": "1a038002eb211b587310a74535b5a30257cdae98e49271d59788b14f93978aef"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateScreen.kt",
+      "sha256": "60d595fa0256b36ea3a6a53985b2a6753cd0c7e4151baf0f0431c957152b9db9"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/Color.kt",
+      "sha256": "6897e5aa760e356ff6be51f7ec5ab50785aa348795a1cb748c84ae59bfe71594"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/Theme.kt",
+      "sha256": "1a200fe1b2b982119af2ce8b9f98052782936b59df6f9ca18e320afdc85474c3"
+    },
+    {
+      "path": "shared/compose/src/iosMain/kotlin/main.kt",
+      "sha256": "9ee76c02584985c4fc34f2ea25f608579cbc94cceed0d389260f2456e34190a7"
+    }
+  ],
+  "patterns": [
+    "shared/compose/src/**"
+  ]
+}

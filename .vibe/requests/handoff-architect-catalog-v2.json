@@ -1,0 +1,92 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-catalog-build-architecture-20260908-v2",
+  "assignmentId": "catalog-build-architecture",
+  "supersedes": [
+    ".vibe/handoffs/HANDOFF-catalog-build-architecture-20260908.json"
+  ],
+  "productionEvidence": [
+    {
+      "path": "settings.gradle.kts",
+      "symbol": ":shared:domain/:shared:data/:shared:component:catalog/:shared:root includes",
+      "surface": "module-graph"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "symbol": "SQLDelight/Decompose/Essenty/MVIKotlin catalog entries",
+      "surface": "dependency-catalog"
+    },
+    {
+      "path": "shared/domain/build.gradle.kts",
+      "symbol": "domain KMP targets and Android host-test surface",
+      "surface": "domain-test-wiring"
+    },
+    {
+      "path": "shared/data/build.gradle.kts",
+      "symbol": "BagCueDatabase SQLDelight database, platform drivers, and Android host-test driver",
+      "surface": "persistence-runtime-wiring"
+    },
+    {
+      "path": "shared/component/catalog/build.gradle.kts",
+      "symbol": "catalog Decompose/MVIKotlin dependencies and Android host-test surface",
+      "surface": "component-runtime-wiring"
+    },
+    {
+      "path": "shared/root/build.gradle.kts",
+      "symbol": "contract-only root composition dependencies",
+      "surface": "production-root-wiring"
+    },
+    {
+      "path": "shared/compose/build.gradle.kts",
+      "symbol": "Compose root/catalog wiring and iOS data/MVIKotlin composition dependencies",
+      "surface": "compose-integration-wiring"
+    },
+    {
+      "path": "androidApp/build.gradle.kts",
+      "symbol": "Android data/root/Decompose/MVIKotlin composition dependencies",
+      "surface": "android-build-wiring"
+    }
+  ],
+  "testEvidence": [
+    {
+      "path": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json",
+      "testName": "Windows domain/data/catalog host tests, shared Android compilation, and Android debug assembly",
+      "surface": "orchestrator-gradle-receipt"
+    },
+    {
+      "path": ".vibe/receipts/RECEIPT-45cb3d09-cea6-400a-b2a2-54548e55ace7.json",
+      "testName": "iOS simulator-arm64 shared module compilation",
+      "surface": "orchestrator-gradle-receipt"
+    }
+  ],
+  "nonGradleChecks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "settings.gradle.kts",
+        "build.gradle.kts",
+        "gradle/libs.versions.toml",
+        "shared/domain/build.gradle.kts",
+        "shared/data/build.gradle.kts",
+        "shared/component/catalog/build.gradle.kts",
+        "shared/root/build.gradle.kts",
+        "shared/compose/build.gradle.kts",
+        "androidApp/build.gradle.kts"
+      ],
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "python",
+        "-c",
+        "import tomllib, pathlib; tomllib.loads(pathlib.Path(r'gradle/libs.versions.toml').read_text(encoding='utf-8'))"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "requestedCommands": [],
+  "blockers": []
+}

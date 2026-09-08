@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "session-compose-production-integration",
+  "owner": "vibe-developer-product-designer-compose-expert",
+  "acceptanceScenarioIds": ["AC-012","AC-013","AC-014","AC-015","AC-016","AC-017","AC-018","AC-019","AC-020","AC-021","AC-022","AC-023","AC-024","AC-025"],
+  "qualityGateIds": [],
+  "allowedFiles": ["shared/compose/src/**", "androidApp/src/**", "iosApp/iosApp/**"],
+  "inputScopeId": "catalog-core-v1"
+}

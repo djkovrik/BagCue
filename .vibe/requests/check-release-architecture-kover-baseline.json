@@ -1,0 +1,18 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    "koverXmlReport",
+    "printKoverLineCoverage"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-002",
+      "surfaces": ["merged-kover-xml", "numeric-line-baseline"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Measure the real filtered production domain/component Kover line baseline with the temporary zero floor."
+}

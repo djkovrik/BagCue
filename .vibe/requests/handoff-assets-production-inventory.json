@@ -1,0 +1,77 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-assets-production-inventory-20260908",
+  "assignmentId": "assets-production-inventory",
+  "productionEvidence": [
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml",
+      "symbol": "android:pathData=\"M10,15C10,11.69",
+      "surface": "original-portable-brand-vector"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+      "symbol": "object BagCueAssets",
+      "surface": "typed-compose-resource-inventory"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt",
+      "symbol": "BagCueBrandMark(Modifier.height(48.dp))",
+      "surface": "production-brand-result-usage"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt",
+      "symbol": "BagCueIcon(BagCueAssets.Notifications, null)",
+      "surface": "production-settings-icon-usage"
+    },
+    {
+      "path": "docs/assets/asset-manifest.json",
+      "symbol": "\"schemaVersion\": \"1.0\"",
+      "surface": "asset-hashes-provenance-and-usage-manifest"
+    },
+    {
+      "path": "docs/assets/ASSET-001-generation-record.json",
+      "symbol": "\"method\": \"create-vector\"",
+      "surface": "original-artwork-generation-record"
+    },
+    {
+      "path": "docs/assets/visual-review.md",
+      "symbol": "All sixteen action/navigation silhouettes remain recognizable, centered, unclipped",
+      "surface": "actual-size-light-dark-review"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {
+      "argv": ["python", "C:/Users/Sergey/.codex/skills/vibe-assets-creator/scripts/validate-assets.py", "--app-spec-root", "spec/app-spec"],
+      "exitCode": 0,
+      "details": "Frozen ASSET-001..017 requirement inventory is valid with no errors or warnings."
+    },
+    {
+      "argv": ["python", "docs/assets/validate-adapted-assets.py"],
+      "exitCode": 0,
+      "details": "All 17 actual shared/compose portable vectors, manifest hashes/usages/evidence, Android launcher dimensions/alpha, and iOS catalog dimensions/opacity validated."
+    },
+    {
+      "argv": ["python", "C:/Users/Sergey/.codex/skills/vibe-assets-creator/scripts/validate-assets.py", "--app-spec-root", "spec/app-spec", "--repository", "."],
+      "exitCode": 1,
+      "details": "Expected contract blocker: the validator reports only 17 output-variant mismatches because frozen variants name nonexistent composeApp while the repository resource owner is shared/compose; actual adapted delivery separately passes."
+    }
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:compose:generateComposeResClass", ":shared:compose:compileAndroidMain", ":shared:compose:compileKotlinIosSimulatorArm64", ":androidApp:assembleDebug"],
+      "tasks": [":shared:compose:generateComposeResClass", ":shared:compose:compileAndroidMain", ":shared:compose:compileKotlinIosSimulatorArm64", ":androidApp:assembleDebug"],
+      "coveredObligations": [
+        {"obligationId": "QG-006", "surfaces": ["asset-check"]},
+        {"obligationId": "AC-045", "surfaces": ["golden-test"]},
+        {"obligationId": "AC-047", "surfaces": ["golden-test"]},
+        {"obligationId": "AC-048", "surfaces": ["golden-test"]},
+        {"obligationId": "AC-049", "surfaces": ["golden-test"]}
+      ]
+    }
+  ],
+  "blockers": [
+    "QG-006 canonical delivery validation cannot pass until the orchestrator reconciles the frozen composeApp variant paths to BagCue's real shared/compose resource module; the validator has no path-adaptation field despite the skill requiring actual-path adaptation to be documented.",
+    "Resource compilation and production preview/golden verification remain requested orchestration checks; this specialist assignment does not run Gradle or own the golden infrastructure."
+  ]
+}

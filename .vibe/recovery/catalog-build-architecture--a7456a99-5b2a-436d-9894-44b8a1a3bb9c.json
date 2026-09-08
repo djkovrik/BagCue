@@ -1,0 +1,208 @@
+{
+  "assignmentId": "catalog-build-architecture",
+  "blockers": [],
+  "createdAt": "2026-09-08T08:23:29.206261Z",
+  "fileBoundaries": [
+    "settings.gradle.kts",
+    "build.gradle.kts",
+    "gradle/**",
+    "shared/domain/build.gradle.kts",
+    "shared/data/build.gradle.kts",
+    "shared/component/catalog/build.gradle.kts",
+    "shared/root/build.gradle.kts",
+    "shared/compose/build.gradle.kts",
+    "androidApp/build.gradle.kts"
+  ],
+  "nextAction": "Orchestrator should inspect and ingest .vibe/handoffs/HANDOFF-catalog-build-architecture-20260908.json, then rerun requested Gradle tasks after source-owner fixes",
+  "obligationIds": [
+    "AC-001",
+    "AC-002",
+    "AC-003",
+    "AC-004",
+    "AC-005"
+  ],
+  "owner": "vibe-project-architect",
+  "pendingChecks": [
+    "Orchestrator must run requested Gradle compilation and tests"
+  ],
+  "previousPacketDigest": "64410d8d24d9d14d4e4fa83fda886337df8c9cb37aa06c7bded6c574b64dac3b",
+  "requiredReadHashes": [
+    {
+      "path": ".vibe/requests/assign-architect-catalog.json",
+      "sha256": "04c5e9c680823988fca7f55e440d6c62b9ef2506852482eca9e66213245497eb"
+    },
+    {
+      "path": "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+      "sha256": "ddf5d641c5e4d5b2f4078b125ff701ce03ef89987f24422f4bd1b11a171493f6"
+    },
+    {
+      "path": "spec/app-spec/app-spec.json",
+      "sha256": "a0879cb7c296f1e13cd21ad0b762b9eec14fb9b62e6157d5b509f19f965397fc"
+    }
+  ],
+  "requiredReads": [
+    ".vibe/requests/assign-architect-catalog.json",
+    "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+    "spec/app-spec/app-spec.json"
+  ],
+  "resolutions": {
+    "blockers": [],
+    "pendingChecks": [],
+    "reason": null
+  },
+  "schemaVersion": "2.0",
+  "scopedInstructions": [],
+  "status": "returned",
+  "workspaceFingerprint": {
+    "algorithm": "sha256",
+    "binaryDiffSha256": "353eeba0938c2a3e017927739b4b7d79414a20efdcd8926a1ce89c2f1f521cf8",
+    "digest": "8e15261a64cfd2dc32233b0d6df1ac4e4eca84577006a0f4eae51c27d052c412",
+    "gitHead": "fdea4c1a871e2d3952a930b8d7bf9e780851dcc7",
+    "workingFiles": [
+      {
+        "path": "androidApp/build.gradle.kts",
+        "sha256": "6bb004d15af0f706beacb32fdaddb6faeca3d187020b06c1bd067eae3bb4db50"
+      },
+      {
+        "path": "build.gradle.kts",
+        "sha256": "0c490642761dab6bded7fed150cfd067ed2eef04fc94e64d9b304d427a48a788"
+      },
+      {
+        "path": "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+        "sha256": "ddf5d641c5e4d5b2f4078b125ff701ce03ef89987f24422f4bd1b11a171493f6"
+      },
+      {
+        "path": "docs/decisions/DEC-YANDEX-PRODUCTION-AD-UNIT.json",
+        "sha256": "d28c03639f6ea3b30744f7f5162a2f96af88011785fa50b6c018517de579bf8f"
+      },
+      {
+        "path": "gradle/libs.versions.toml",
+        "sha256": "69bdda18c94dcedb545c9fd1c66f88b30f5c371be887e5583213292821880d23"
+      },
+      {
+        "path": "settings.gradle.kts",
+        "sha256": "82520962b28de73df60b4e6b82ad1ba2c2efbf80bd0b3bf1ddbd40d758ba2e1d"
+      },
+      {
+        "path": "shared/component/catalog/build.gradle.kts",
+        "sha256": "5328b45fd8046dbf23f7489968512384089edaa316a85075fc747cc83efb1076"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/CatalogComponent.kt",
+        "sha256": "f25a133b8a2e2309941b571dfe26640fa4cd59cc5e79e1dc66b8df72702bf8a4"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManager.kt",
+        "sha256": "9f52d37e96e24536f6679fb1ae7976c2686d8d6217517cb93007086433312dfd"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogComponentDefault.kt",
+        "sha256": "31cd406911db98e67c98439e06151a03daf01dcc601f9f7ccac94a3692bffa6b"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogComponentPreview.kt",
+        "sha256": "f0ba75eab73decfb1427c2ae3bbccdca523bfde1c7c406270727e16061a32fb8"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/Mappers.kt",
+        "sha256": "7a8a58e1e5355f346293cc3dde561dafbef73499fb37ba175a6fcbbcc06d61eb"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/StoreValue.kt",
+        "sha256": "1700fd2231605aea6e516641d3bef8014e582aa2760d0675a4080d5feab621a3"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/store/CatalogStore.kt",
+        "sha256": "f20691679083202ef8f160ef80979e797928a99edbbc2cca3f80a54ce12c0b3b"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/store/CatalogStoreProvider.kt",
+        "sha256": "dbb7c7e5cf401c314111a6eab45e11ddd10ef0c64257b79f0d8c18a9e69a6cdf"
+      },
+      {
+        "path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManagerTest.kt",
+        "sha256": "7114fc706691cc9ea06c2521ff6bf478864bec030d1e6930d1be2435f1125d5e"
+      },
+      {
+        "path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogModelMapperTest.kt",
+        "sha256": "d1c14314a20d9f1909d3f5ec49a1865de91997b19ac30d423762a26a18cffbbe"
+      },
+      {
+        "path": "shared/compose/build.gradle.kts",
+        "sha256": "82fc8f2939522fcc8b5a5bbb5e7a81d8ba43513f6c9735494f6940290c5f54f9"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/values-ru/strings.xml",
+        "sha256": "e20dec00a4584b8ee968e37c4bfc327c7f2d9f65be19ef0bc75604a3720d366e"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/values/strings.xml",
+        "sha256": "2176e18548e1a323bad89ea16913605c43ee4d95af3321ae44c8fd811fa83ad2"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/Theme.kt",
+        "sha256": "1a200fe1b2b982119af2ce8b9f98052782936b59df6f9ca18e320afdc85474c3"
+      },
+      {
+        "path": "shared/data/build.gradle.kts",
+        "sha256": "790dd2a256d129ee4d69c9a3de0bc616e5181de43c6ef9eb128fc9b05d37e01f"
+      },
+      {
+        "path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt",
+        "sha256": "ffb518b741f983453a38379b0310880eed610d473bcd0aeb91b0f95dabae2627"
+      },
+      {
+        "path": "shared/data/src/androidMain/kotlin/com/sedsoftware/bagcue/data/catalog/AndroidCatalogDatabaseDriverFactory.kt",
+        "sha256": "02bbafc59639db7047352f855ab8a217d65ada8eba1f16317fe1ad71e4fddd55"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt",
+        "sha256": "f55425a88021c1f6a657ca6f23524c940df93a1698378da4042217211f1855c6"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/SqlDelightCatalogRepository.kt",
+        "sha256": "fc6b7725e4f3977e5d453f8bf6e6ac87e8efaaf5823bff567b8679dd7042645a"
+      },
+      {
+        "path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq",
+        "sha256": "46746635255e54ae2e8f607460cfe71bd9c84e5da39f0d015b3321d1e0002b01"
+      },
+      {
+        "path": "shared/data/src/iosMain/kotlin/com/sedsoftware/bagcue/data/catalog/IosCatalogDatabaseDriverFactory.kt",
+        "sha256": "ecfe59c28c128e6fb4a3dad14d4890328ad246e387a15a271d6e8de872353927"
+      },
+      {
+        "path": "shared/domain/build.gradle.kts",
+        "sha256": "19942fa29413c3fe71895a86029f443b858fd269b765bf837b2f67952603dd7d"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt",
+        "sha256": "3500235ae8d87c69f3121bb7c12d479ea4c00a0be1ab6ff11ca87929b46c5a48"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRepository.kt",
+        "sha256": "0d8c2b11f6c7e8c01e1202dea7f1816196d68468ddc5e98b32c63c641d56e2f9"
+      },
+      {
+        "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRulesTest.kt",
+        "sha256": "a61e1924b8755e6c7c7bcaf507a50fafbe1024458d6b917ea2b8c3717935fc39"
+      },
+      {
+        "path": "shared/root/build.gradle.kts",
+        "sha256": "3503ef679002afedcb3ae0f3777182fad0f3e244283e9a382a8e34bab53473a6"
+      },
+      {
+        "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt",
+        "sha256": "be274aafff39af4943c2510030d5c9eb3cc85ebaba97e49c053bd4ba34f38d21"
+      },
+      {
+        "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt",
+        "sha256": "f023a75ae7930e25a99e7c117eeff91feae2a24f4c5fa576d4a089eabb441d32"
+      },
+      {
+        "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt",
+        "sha256": "3932f6f927f53f2a1eee0a2b0422614cdb32bd9eabc75db71ab5c5fb86a16110"
+      }
+    ]
+  }
+}

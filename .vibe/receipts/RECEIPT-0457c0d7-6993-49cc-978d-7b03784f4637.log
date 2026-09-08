@@ -1,0 +1,289 @@
+Calculating task graph as no cached configuration is available for tasks: detekt :shared:domain:compileAndroidMain :shared:data:compileAndroidMain :shared:network:compileAndroidMain :shared:platform:compileAndroidMain :shared:component:catalog:compileAndroidMain :shared:component:history:compileAndroidMain :shared:component:settings:compileAndroidMain :shared:component:templates:compileAndroidMain :shared:component:session:compileAndroidMain :shared:compose:compileAndroidMain
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Configure project :shared:platform
+w: [33m[1mUnsupported Operating System[0m[0m
+Kotlin CocoaPods Plugin is fully supported on MacOS machines only. Gradle tasks that can not run on non-mac hosts will be skipped.
+[32m[1mSolution:[0m[0m
+[32m[3mRun the build on a MacOS machine[0m[0m
+
+w: [33m[1mCross Compilation with Cinterop Not Supported in Project 'platform'[0m[0m
+In project 'platform', cross compilation to target 'iosArm64' has been disabled because it contains cinterops: 'FirebaseAnalytics' which cannot be processed on host 'mingw_x64'.
+Cinterop libraries require platform-specific native toolchains that aren't available on the current host system.
+[32m[1mSolutions:[0m[0m
+[32m * [3mRemove the cinterop dependencies 'FirebaseAnalytics' from target 'iosArm64'[0m[0m
+[32m * [3mBuild on a compatible host platform for this target/cinterop combination[0m[0m
+[32m * [3mTo disable klib cross compilation entirely, add 'kotlin.native.enableKlibsCrossCompilation=false' to your Gradle properties[0m[0m
+
+w: [33m[1mCross Compilation with Cinterop Not Supported in Project 'platform'[0m[0m
+In project 'platform', cross compilation to target 'iosSimulatorArm64' has been disabled because it contains cinterops: 'FirebaseAnalytics' which cannot be processed on host 'mingw_x64'.
+Cinterop libraries require platform-specific native toolchains that aren't available on the current host system.
+[32m[1mSolutions:[0m[0m
+[32m * [3mRemove the cinterop dependencies 'FirebaseAnalytics' from target 'iosSimulatorArm64'[0m[0m
+[32m * [3mBuild on a compatible host platform for this target/cinterop combination[0m[0m
+[32m * [3mTo disable klib cross compilation entirely, add 'kotlin.native.enableKlibsCrossCompilation=false' to your Gradle properties[0m[0m
+
+w: [33m[1mDisabled Kotlin/Native Targets[0m[0m
+The following Kotlin/Native targets cannot be built on this machine and are disabled:
+iosArm64, iosSimulatorArm64
+[32m[1mSolution:[0m[0m
+[32m[3mTo hide this message, add 'kotlin.native.ignoreDisabledTargets=true' to the Gradle properties.[0m[0m
+
+
+> Configure project :shared:compose:visual-test
+w: file:///D:/Sources/Android/BagCue/shared/compose/visual-test/build.gradle.kts:100:41: 'fun srcDir(srcDir: Any): Any' is deprecated. Use `directories` mutable set instead.
+
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :shared:platform:androidPreBuild UP-TO-DATE
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:platform:preAndroidMainBuild UP-TO-DATE
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:data:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:platform:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:data:generateCommonMainBagCueDatabaseInterface UP-TO-DATE
+> Task :shared:platform:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:catalog:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:platform:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:network:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:androidPreBuild UP-TO-DATE
+> Task :shared:network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:packageAndroidMainResources UP-TO-DATE
+> Task :shared:component:history:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:catalog:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:history:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:generateComposeResClass UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:component:settings:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :shared:component:catalog:androidPreBuild UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:compose:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:catalog:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:history:androidPreBuild UP-TO-DATE
+> Task :shared:component:settings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:session:androidPreBuild UP-TO-DATE
+> Task :shared:component:templates:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:settings:androidPreBuild UP-TO-DATE
+> Task :shared:component:templates:androidPreBuild UP-TO-DATE
+> Task :shared:component:history:preAndroidMainBuild UP-TO-DATE
+> Task :shared:root:androidPreBuild UP-TO-DATE
+> Task :shared:compose:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:templates:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:component:session:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:settings:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :shared:component:session:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:session:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:templates:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:root:preAndroidMainBuild UP-TO-DATE
+> Task :shared:root:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:generateResourceAccessorsForAndroidMain NO-SOURCE
+> Task :shared:platform:generateAndroidMainRFile UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :shared:compose:copyAndroidMainComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :shared:compose:generateActualResourceCollectorsForAndroidMain UP-TO-DATE
+> Task :shared:compose:packageAndroidMainResources UP-TO-DATE
+> Task :shared:compose:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:compose:generateAndroidMainRFile UP-TO-DATE
+
+> Task :shared:domain:compileAndroidMain
+w: file:///D:/Sources/Android/BagCue/shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRules.kt:17:10 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRules.kt:50:10 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+
+> Task :shared:domain:bundleAndroidMainClassesToCompileJar
+
+> Task :detekt
+Successfully generated markdown at file:///D:/Sources/Android/BagCue/build/reports/detekt/detekt.md
+Successfully generated html at file:///D:/Sources/Android/BagCue/build/reports/detekt/detekt.html
+Successfully generated sarif at file:///D:/Sources/Android/BagCue/build/reports/detekt/detekt.sarif
+Successfully generated checkstyle at file:///D:/Sources/Android/BagCue/build/reports/detekt/detekt.xml
+e: D:\Sources\Android\BagCue\androidApp\src\main\kotlin\com\sedsoftware\bagcue\AppActivity.kt:158:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\component\catalog\src\commonMain\kotlin\com\sedsoftware\bagcue\catalog\domain\CatalogManager.kt:100:10 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\component\history\src\commonMain\kotlin\com\sedsoftware\bagcue\history\domain\HistoryManager.kt:57:10 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\component\session\src\commonMain\kotlin\com\sedsoftware\bagcue\session\SessionComponent.kt:10:11 Interface 'SessionComponent' with '38' functions detected. The maximum allowed functions per interface is set to '15' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\component\session\src\commonMain\kotlin\com\sedsoftware\bagcue\session\domain\ResultAdvertisingManager.kt:89:10 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\component\session\src\commonMain\kotlin\com\sedsoftware\bagcue\session\domain\SessionManager.kt:50:16 Class 'SessionManager' with '22' functions detected. The maximum allowed functions per class is set to '15' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\component\session\src\commonMain\kotlin\com\sedsoftware\bagcue\session\domain\SessionManager.kt:252:10 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\component\session\src\commonMain\kotlin\com\sedsoftware\bagcue\session\integration\SessionComponentDefault.kt:33:7 Class 'SessionComponentDefault' with '39' functions detected. The maximum allowed functions per class is set to '15' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\component\session\src\commonMain\kotlin\com\sedsoftware\bagcue\session\integration\SessionComponentPreview.kt:12:7 Class 'SessionComponentPreview' with '38' functions detected. The maximum allowed functions per class is set to '15' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\component\session\src\commonMain\kotlin\com\sedsoftware\bagcue\session\store\SessionStoreProvider.kt:87:22 The function executeIntent appears to be too complex based on Cyclomatic Complexity (complexity: 38). The maximum allowed complexity for methods is set to '25' [CyclomaticComplexMethod]
+e: D:\Sources\Android\BagCue\shared\component\session\src\commonMain\kotlin\com\sedsoftware\bagcue\session\store\SessionStoreProvider.kt:74:19 Class 'ExecutorImpl' with '32' functions detected. The maximum allowed functions per class is set to '15' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\component\settings\src\commonMain\kotlin\com\sedsoftware\bagcue\settings\domain\SettingsManager.kt:192:10 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\component\templates\src\commonMain\kotlin\com\sedsoftware\bagcue\templates\TemplateComponent.kt:8:11 Interface 'TemplateComponent' with '24' functions detected. The maximum allowed functions per interface is set to '15' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\component\templates\src\commonMain\kotlin\com\sedsoftware\bagcue\templates\domain\TemplateManager.kt:105:10 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\component\templates\src\commonMain\kotlin\com\sedsoftware\bagcue\templates\integration\TemplateComponentDefault.kt:23:7 Class 'TemplateComponentDefault' with '24' functions detected. The maximum allowed functions per class is set to '15' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\component\templates\src\commonMain\kotlin\com\sedsoftware\bagcue\templates\integration\TemplateComponentPreview.kt:10:7 Class 'TemplateComponentPreview' with '24' functions detected. The maximum allowed functions per class is set to '15' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\component\templates\src\commonMain\kotlin\com\sedsoftware\bagcue\templates\store\TemplateStoreProvider.kt:286:42 The function reduce appears to be too complex based on Cyclomatic Complexity (complexity: 32). The maximum allowed complexity for methods is set to '25' [CyclomaticComplexMethod]
+e: D:\Sources\Android\BagCue\shared\component\templates\src\commonMain\kotlin\com\sedsoftware\bagcue\templates\store\TemplateStoreProvider.kt:387:10 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\App.kt:55:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\App.kt:80:14 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\App.kt:112:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\App.kt:142:22 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\App.kt:165:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\assets\BagCueAssets.kt:50:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\assets\BagCueAssets.kt:63:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:80:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:96:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:153:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:195:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:207:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:272:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:289:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:318:22 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:332:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\catalog\CatalogScreen.kt:159:43 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\history\HistoryScreen.kt:70:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\history\HistoryScreen.kt:141:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\history\HistoryScreen.kt:152:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\history\HistoryScreen.kt:183:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\history\HistoryScreen.kt:189:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\history\HistoryScreen.kt:196:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:63:122 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:64:118 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:284:35 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:289:35 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:290:18 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:316:13 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:323:13 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:103:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:263:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:322:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewFixtures.kt:337:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:3:1 File 'BagCuePreviewMatrix.kt' with '61' functions detected. The maximum allowed functions per file is set to '25' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:64:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:70:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:73:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:81:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:88:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:106:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:115:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:126:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:130:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:134:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:149:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:153:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:157:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:171:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:179:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:197:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:202:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:216:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:220:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:239:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:249:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:255:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:264:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:269:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:273:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:279:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:289:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:293:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:297:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\preview\BagCuePreviewMatrix.kt:302:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:130:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:155:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:183:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:242:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:312:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:359:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:383:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:407:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:430:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:439:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:328:47 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:318:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\session\SessionScreen.kt:420:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:78:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:145:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:172:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:202:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:210:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:277:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:259:73 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:266:72 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:288:41 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:288:53 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:111:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\settings\SettingsScreen.kt:134:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:97:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:120:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:176:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:194:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:227:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:277:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:309:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:338:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:379:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:395:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:284:47 This expression contains a magic number. Consider defining it to a well named constant. [MagicNumber]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\templates\TemplateScreen.kt:231:1 Line detected, which is longer than the defined maximum line length in the code style. [MaxLineLength]
+e: D:\Sources\Android\BagCue\shared\compose\src\commonMain\kotlin\com\sedsoftware\bagcue\compose\theme\Theme.kt:87:14 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\iosMain\kotlin\main.kt:45:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\compose\src\iosMain\kotlin\main.kt:109:13 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\data\src\commonMain\kotlin\com\sedsoftware\bagcue\data\apa\SettingsAdvertisingPrivacyRepository.kt:79:18 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\data\src\commonMain\kotlin\com\sedsoftware\bagcue\data\apa\SettingsAnalyticsPreferenceRepository.kt:34:18 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\data\src\commonMain\kotlin\com\sedsoftware\bagcue\data\catalog\SqlDelightCatalogRepository.kt:146:18 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\data\src\commonMain\kotlin\com\sedsoftware\bagcue\data\reminder\SettingsReminderPreferencesRepository.kt:88:18 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\data\src\commonMain\kotlin\com\sedsoftware\bagcue\data\session\SqlDelightPackingSessionRepository.kt:58:7 Class 'SqlDelightPackingSessionRepository' with '28' functions detected. The maximum allowed functions per class is set to '15' [TooManyFunctions]
+e: D:\Sources\Android\BagCue\shared\data\src\commonMain\kotlin\com\sedsoftware\bagcue\data\session\SqlDelightPackingSessionRepository.kt:403:18 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\data\src\commonMain\kotlin\com\sedsoftware\bagcue\data\template\SqlDelightKitTemplateRepository.kt:171:18 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\network\src\androidMain\kotlin\com\sedsoftware\bagcue\network\privacy\AndroidPrivacyRegionApi.kt:5:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\network\src\commonMain\kotlin\com\sedsoftware\bagcue\network\privacy\KtorPrivacyRegionApi.kt:72:14 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\network\src\iosMain\kotlin\com\sedsoftware\bagcue\network\privacy\IosPrivacyRegionApi.kt:5:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\platform\src\androidMain\kotlin\com\sedsoftware\bagcue\platform\reminder\AndroidReminderNotificationScheduler.kt:107:14 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\platform\src\commonMain\kotlin\com\sedsoftware\bagcue\platform\apa\PrivacyFirstInlineAdController.kt:46:14 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\platform\src\commonMain\kotlin\com\sedsoftware\bagcue\platform\apa\SafeAnalyticsController.kt:41:14 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+e: D:\Sources\Android\BagCue\shared\platform\src\iosMain\kotlin\com\sedsoftware\bagcue\platform\apa\IosApaPlatform.kt:10:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\platform\src\iosMain\kotlin\com\sedsoftware\bagcue\platform\apa\IosApaPlatform.kt:15:5 Function names should match the pattern: [a-z][a-zA-Z0-9]* [FunctionNaming]
+e: D:\Sources\Android\BagCue\shared\platform\src\iosMain\kotlin\com\sedsoftware\bagcue\platform\reminder\IosReminderNotificationScheduler.kt:118:14 The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled. [TooGenericExceptionCaught]
+
+
+> Task :detekt FAILED
+> Task :shared:component:catalog:compileAndroidMain
+
+> Task :shared:component:settings:compileAndroidMain
+w: file:///D:/Sources/Android/BagCue/shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManager.kt:63:28 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+w: file:///D:/Sources/Android/BagCue/shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/integration/SettingsComponentDefault.kt:41:16 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+
+> Task :shared:network:compileAndroidMain
+w: file:///D:/Sources/Android/BagCue/shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApi.kt:58:43 'typealias Instant = Instant' is deprecated. This type is deprecated in favor of `kotlin.time.Instant`.
+
+> Task :shared:platform:compileAndroidMain
+> Task :shared:component:history:compileAndroidMain
+> Task :shared:component:templates:compileAndroidMain
+> Task :shared:component:session:compileAndroidMain
+> Task :shared:data:compileAndroidMain
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+39 actionable tasks: 22 executed, 17 up-to-date
+Configuration cache entry stored.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':detekt'.
+> Analysis failed with 139 issues.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 13s

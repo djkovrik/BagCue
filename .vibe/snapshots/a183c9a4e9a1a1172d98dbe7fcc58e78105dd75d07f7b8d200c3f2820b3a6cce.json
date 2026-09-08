@@ -1,0 +1,46 @@
+{
+  "algorithm": "sha256",
+  "digest": "91501fd200b924586d913222b0a063c172a81c9229efbbc2d379c1c817600681",
+  "files": [
+    {
+      "path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt",
+      "sha256": "ffb518b741f983453a38379b0310880eed610d473bcd0aeb91b0f95dabae2627"
+    },
+    {
+      "path": "shared/data/src/androidMain/kotlin/com/sedsoftware/bagcue/data/catalog/AndroidCatalogDatabaseDriverFactory.kt",
+      "sha256": "02bbafc59639db7047352f855ab8a217d65ada8eba1f16317fe1ad71e4fddd55"
+    },
+    {
+      "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt",
+      "sha256": "f55425a88021c1f6a657ca6f23524c940df93a1698378da4042217211f1855c6"
+    },
+    {
+      "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/SqlDelightCatalogRepository.kt",
+      "sha256": "3fe97992b3c3d0d4c3997b38d17868263da9e27e8b551fb16a493161f3a6e491"
+    },
+    {
+      "path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq",
+      "sha256": "645ab524516befc9a741d935a6f6d19d9640068f7100301eaadb38cb3d938096"
+    },
+    {
+      "path": "shared/data/src/iosMain/kotlin/com/sedsoftware/bagcue/data/catalog/IosCatalogDatabaseDriverFactory.kt",
+      "sha256": "ecfe59c28c128e6fb4a3dad14d4890328ad246e387a15a271d6e8de872353927"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt",
+      "sha256": "7e7c2de3f82c7e7b6d0cd0ce88a6784aa62d38fcebdb670ad924e80049e18781"
+    },
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRepository.kt",
+      "sha256": "0d8c2b11f6c7e8c01e1202dea7f1816196d68468ddc5e98b32c63c641d56e2f9"
+    },
+    {
+      "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRulesTest.kt",
+      "sha256": "a61e1924b8755e6c7c7bcaf507a50fafbe1024458d6b917ea2b8c3717935fc39"
+    }
+  ],
+  "patterns": [
+    "shared/data/src/**",
+    "shared/domain/src/**"
+  ]
+}

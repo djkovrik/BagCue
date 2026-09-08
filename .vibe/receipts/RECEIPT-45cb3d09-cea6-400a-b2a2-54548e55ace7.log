@@ -1,0 +1,54 @@
+Reusing configuration cache.
+> Task :shared:compose:copyNonXmlValueResourcesForAppleMain NO-SOURCE
+> Task :shared:domain:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:component:catalog:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:data:generateCommonMainBagCueDatabaseInterface UP-TO-DATE
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:convertXmlValueResourcesForAppleMain NO-SOURCE
+> Task :shared:root:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:data:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:catalog:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:checkIosSimulatorArm64MainComposeLibrariesCompatibility
+> Task :shared:compose:convertXmlValueResourcesForIosMain NO-SOURCE
+> Task :shared:root:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:convertXmlValueResourcesForNativeMain NO-SOURCE
+> Task :shared:compose:convertXmlValueResourcesForIosSimulatorArm64Main NO-SOURCE
+> Task :shared:component:catalog:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:copyNonXmlValueResourcesForIosMain NO-SOURCE
+> Task :shared:compose:prepareComposeResourcesTaskForAppleMain NO-SOURCE
+> Task :shared:root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:catalog:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:root:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForNativeMain NO-SOURCE
+> Task :shared:compose:copyNonXmlValueResourcesForIosSimulatorArm64Main NO-SOURCE
+> Task :shared:compose:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :shared:compose:generateComposeResClass UP-TO-DATE
+> Task :shared:data:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:domain:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForIosMain NO-SOURCE
+> Task :shared:compose:convertXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForAppleMain NO-SOURCE
+> Task :shared:compose:prepareComposeResourcesTaskForNativeMain NO-SOURCE
+> Task :shared:compose:generateResourceAccessorsForIosMain NO-SOURCE
+> Task :shared:compose:prepareComposeResourcesTaskForIosSimulatorArm64Main NO-SOURCE
+> Task :shared:compose:generateResourceAccessorsForNativeMain NO-SOURCE
+> Task :shared:compose:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForIosSimulatorArm64Main NO-SOURCE
+> Task :shared:data:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :shared:compose:generateActualResourceCollectorsForIosSimulatorArm64Main UP-TO-DATE
+> Task :shared:domain:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :shared:component:catalog:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :shared:data:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :shared:root:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :shared:compose:compileKotlinIosSimulatorArm64
+
+BUILD SUCCESSFUL in 4s
+28 actionable tasks: 7 executed, 21 up-to-date
+Configuration cache entry reused.

@@ -1,0 +1,23 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:compose:compileAndroidMain",
+    ":shared:compose:visual-test:generateBagCuePreviewTests",
+    ":shared:compose:visual-test:testDebugUnitTest"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": [
+        "preview-compile",
+        "scanner-generation",
+        "paparazzi-smoke"
+      ]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "After two recorded failures established that Paparazzi cannot host tests in the Android-KMP Compose module, the screenshot harness was moved to a conventional Android library module while production previews remained in shared Compose code."
+}

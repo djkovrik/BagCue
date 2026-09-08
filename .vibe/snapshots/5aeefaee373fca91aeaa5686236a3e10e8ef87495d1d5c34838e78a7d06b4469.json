@@ -1,0 +1,9 @@
+{
+  "algorithm": "sha256",
+  "digest": "1928c97731c94a01a5b188c3c13018accdd07ff1bcf3c732fa721fb81ccbaeab",
+  "files": [],
+  "patterns": [
+    "shared/data/src/**",
+    "shared/domain/src/**"
+  ]
+}

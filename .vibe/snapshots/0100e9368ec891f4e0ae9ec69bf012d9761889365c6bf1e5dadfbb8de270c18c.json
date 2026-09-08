@@ -1,0 +1,53 @@
+{
+  "algorithm": "sha256",
+  "digest": "3fe91d912cd7bfe280becae33302cfe97ab9a0904aeef4fe3190c7a14075e35a",
+  "files": [
+    {
+      "path": "androidApp/build.gradle.kts",
+      "sha256": "568a60637b5ad0979e04e97852a358573938a00d262c8960cfb0e9c5fce2fcd4"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "sha256": "55671be5f47789c103b43eed07bd896ac5104d6fcdbbf9dfd1683edd543ee317"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "sha256": "2448c355d0bd7f30a59b1bf3648c27c460273b824c09805c30da9dfdd4cc9071"
+    },
+    {
+      "path": "shared/component/session/build.gradle.kts",
+      "sha256": "e0dac0ac42dadc6a9fedc2e369cdfe849043d9ec863deb836d97b5fcd97c8b8e"
+    },
+    {
+      "path": "shared/component/settings/build.gradle.kts",
+      "sha256": "0f3d41fcac13387f6cfdb9fc77120efe22dfca940d27cf6ba93b7b44a1a8c9f5"
+    },
+    {
+      "path": "shared/compose/build.gradle.kts",
+      "sha256": "6d90c400eab13e8f813c2593bf5eae85fa8a4ee070f7ce925f9cac42d94fae15"
+    },
+    {
+      "path": "shared/network/build.gradle.kts",
+      "sha256": null
+    },
+    {
+      "path": "shared/platform/build.gradle.kts",
+      "sha256": "9afd2c3e8f502fd878ccf6309e3ea6b474d5574fd22ee8a6922dd411baeb389b"
+    },
+    {
+      "path": "shared/root/build.gradle.kts",
+      "sha256": "70453918f2cc99c8373909d63d070bb921ad199213f506d3326c4e6c03ced5b0"
+    }
+  ],
+  "patterns": [
+    "androidApp/build.gradle.kts",
+    "gradle/libs.versions.toml",
+    "settings.gradle.kts",
+    "shared/component/session/build.gradle.kts",
+    "shared/component/settings/build.gradle.kts",
+    "shared/compose/build.gradle.kts",
+    "shared/network/build.gradle.kts",
+    "shared/platform/build.gradle.kts",
+    "shared/root/build.gradle.kts"
+  ]
+}

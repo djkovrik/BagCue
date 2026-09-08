@@ -1,0 +1,33 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-alr-root-navigation-20260908-v2",
+  "assignmentId": "alr-root-navigation",
+  "productionEvidence": [
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt", "symbol": "PrimaryDestination", "surface": "public-navigation-contract"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt", "symbol": "selectedPrimaryDestination", "surface": "public-navigation-contract"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "selectPrimaryDestination", "surface": "production-navigation"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "showCatalog", "surface": "nested-navigation"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentPreview.kt", "symbol": "RootComponentPreview", "surface": "preview-component"}
+  ],
+  "testEvidence": [
+    {"path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt", "testName": "primaryDestinationsExposeStableSelectionWithoutDuplicateConfigs", "surface": "component-test"},
+    {"path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt", "testName": "catalogRemainsNestedUnderTemplatesAndBackReturnsToTemplates", "surface": "component-test"},
+    {"path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt", "testName": "backReturnsToImmediatelyPreviousPrimaryDestination", "surface": "component-test"},
+    {"path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt", "testName": "selectedPrimaryDestinationRestoresWithSerializedStack", "surface": "component-test"}
+  ],
+  "nonGradleChecks": [
+    {"argv": ["rg", "-n", "enum class PrimaryDestination|selectedPrimaryDestination|fun selectPrimaryDestination|fun primaryDestinationsExposeStableSelectionWithoutDuplicateConfigs|fun catalogRemainsNestedUnderTemplatesAndBackReturnsToTemplates|fun backReturnsToImmediatelyPreviousPrimaryDestination|fun selectedPrimaryDestinationRestoresWithSerializedStack", "shared/root/src"], "exitCode": 0}
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:root:compileKotlinIosSimulatorArm64"],
+      "tasks": [":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:root:compileKotlinIosSimulatorArm64"],
+      "coveredObligations": [
+        {"obligationId": "AC-047", "surfaces": ["component-test"]}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-b08b437c-933e-4cfa-a251-b1de19e3bf4e.json"
+    }
+  ],
+  "blockers": [],
+  "supersedes": [".vibe/handoffs/HANDOFF-alr-root-navigation-20260908.json"]
+}

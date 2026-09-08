@@ -1,0 +1,21 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-detekt-production-remediation-20260908",
+  "assignmentId": "detekt-production-remediation",
+  "productionEvidence": [
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionMergeInput.kt", "symbol": "SessionMergeInput", "surface": "matching-declaration-name-remediation"},
+    {"path": "shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderScheduleDelta.kt", "symbol": "ReminderScheduleDelta", "surface": "matching-declaration-name-remediation"},
+    {"path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/SessionComponent.kt", "symbol": "SessionNavigationActions", "surface": "component-capability-boundary"},
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/TemplateComponent.kt", "symbol": "TemplateLifecycleActions", "surface": "component-capability-boundary"},
+    {"path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/store/SessionStoreProvider.kt", "symbol": "executePackingIntent", "surface": "complexity-remediation"},
+    {"path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/store/TemplateStoreProvider.kt", "symbol": "reduceEditorMessage", "surface": "complexity-remediation"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderModels.kt", "symbol": "HOURS_PER_DAY", "surface": "magic-number-remediation"},
+    {"path": "shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/PrivacyRegionHttpClient.kt", "symbol": "REQUEST_TIMEOUT_MILLIS", "surface": "magic-number-remediation"}
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": [
+    "Strict Detekt receipt RECEIPT-20aeace2-c667-4734-a871-28cccc6afef1.json is red only for 82 semantic-policy findings: 56 FunctionNaming on idiomatic Compose/Objective-C/platform factory APIs, 18 TooGenericExceptionCaught for deliberately handled boundary failures, and 8 TooManyFunctions on override/private/annotated infrastructure. All requested Android production compile tasks completed successfully. Detekt policy requires a separately scoped detekt/** assignment; source APIs must not be contorted or suppressed."
+  ]
+}

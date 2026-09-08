@@ -1,0 +1,22 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "integration",
+  "tasks": [
+    ":shared:domain:allTests",
+    ":shared:data:testAndroidHostTest",
+    ":shared:component:catalog:testAndroidHostTest",
+    ":shared:root:compileAndroidMain",
+    ":shared:compose:compileAndroidMain",
+    ":shared:compose:compileKotlinIosSimulatorArm64",
+    ":androidApp:assembleDebug"
+  ],
+  "coveredObligations": [
+    {"obligationId": "AC-001", "surfaces": ["component-test", "persistence-integration-test"]},
+    {"obligationId": "AC-002", "surfaces": ["component-test", "persistence-integration-test"]},
+    {"obligationId": "AC-003", "surfaces": ["component-test", "persistence-integration-test"]},
+    {"obligationId": "AC-004", "surfaces": ["component-test", "persistence-integration-test"]},
+    {"obligationId": "AC-005", "surfaces": ["domain-test", "component-test"]}
+  ],
+  "timeoutSeconds": 1800
+}

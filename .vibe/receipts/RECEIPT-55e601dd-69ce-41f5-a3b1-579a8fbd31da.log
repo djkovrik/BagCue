@@ -1,0 +1,26 @@
+Calculating task graph as no cached configuration is available for tasks: detektGenerateConfig tasks
+
+> Configure project :
+Configuration cache entry stored.
+e: file:///D:/Sources/Android/BagCue/build.gradle.kts:51:9: Unresolved reference 'md'.
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'D:\Sources\Android\BagCue\build.gradle.kts' line: 51
+
+* What went wrong:
+Script compilation error:
+
+  Line 51:         md.required.set(true)
+                   ^ Unresolved reference 'md'.
+
+1 error
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 14s

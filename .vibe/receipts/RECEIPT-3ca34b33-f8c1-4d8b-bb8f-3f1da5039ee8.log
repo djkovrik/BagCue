@@ -1,0 +1,37 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:domain:allTests :shared:data:testAndroidHostTest
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Configure project :shared:data
+SQLDelight Gradle plugin was applied but there are no databases set up.
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+Configuration cache entry stored.
+e: file:///D:/Sources/Android/BagCue/shared/data/build.gradle.kts:38:9: Unresolved reference 'androidHostTest'.
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'D:\Sources\Android\BagCue\shared\data\build.gradle.kts' line: 38
+
+* What went wrong:
+Script compilation error:
+
+  Line 38:         androidHostTest.dependencies {
+                   ^ Unresolved reference 'androidHostTest'.
+
+1 error
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 10s

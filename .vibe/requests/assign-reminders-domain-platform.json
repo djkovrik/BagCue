@@ -1,0 +1,1 @@
+{"action":"assign","assignmentId":"reminders-domain-data-platform","owner":"vibe-domain-persistence-platform-engineer","acceptanceScenarioIds":["AC-031","AC-032","AC-033","AC-034","AC-035"],"qualityGateIds":[],"allowedFiles":["shared/domain/src/**","shared/data/src/**","shared/platform/src/**","androidApp/src/**","iosApp/iosApp/Info.plist"],"inputScopeId":"catalog-core-v1"}

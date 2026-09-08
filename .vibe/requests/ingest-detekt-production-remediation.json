@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-detekt-production-remediation-20260908.json",
+  "expectedLedgerDigest": "d4c3e66316c8deaf48e1583ed779d8cfbf3dc36fe11462dcf86b8e26c35bee9c",
+  "inspectionNote": "Inspected the immutable Detekt source-remediation handoff and successive strict receipts. All true wildcard import, file/declaration naming, ReturnCount, MaxLineLength, and semantic MagicNumber findings were removed with production modules compiling; the remaining 82 findings are exactly Compose/native FunctionNaming, cancellation-preserving fault-boundary catches, and framework/preview overridden or private function counts requiring a separate policy configuration pass."
+}

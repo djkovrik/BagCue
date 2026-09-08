@@ -1,0 +1,24 @@
+{
+  "action":"handoff","handoffId":"HANDOFF-apa-domain-platform-20260908","assignmentId":"apa-domain-data-network-platform",
+  "productionEvidence":[
+    {"path":"shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/apa/AnalyticsContracts.kt","symbol":"AnalyticsEventName","surface":"analytics-contract"},
+    {"path":"shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/apa/AdvertisingPrivacyContracts.kt","symbol":"resolveAdvertisingPrivacy","surface":"privacy-rule"},
+    {"path":"shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/apa/AdvertisingContracts.kt","symbol":"evaluateAdEligibility","surface":"ad-rule"},
+    {"path":"shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/apa/SettingsAdvertisingPrivacyRepository.kt","symbol":"SettingsAdvertisingPrivacyRepository","surface":"privacy-persistence"},
+    {"path":"shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApi.kt","symbol":"KtorPrivacyRegionApi","surface":"protected-network"},
+    {"path":"shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/apa/SafeAnalyticsController.kt","symbol":"SafeAnalyticsController","surface":"analytics-adapter"},
+    {"path":"shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/apa/PrivacyFirstInlineAdController.kt","symbol":"PrivacyFirstInlineAdController","surface":"ad-lifecycle"},
+    {"path":"androidApp/src/main/kotlin/com/sedsoftware/bagcue/apa/AndroidApaPlatform.kt","symbol":"AndroidYandexInlineAdGateway","surface":"android-platform"},
+    {"path":"androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt","symbol":"BuildConfig.YANDEX_AD_UNIT_ID.takeIf(String::isNotBlank)","surface":"production-entry-point"}
+  ],
+  "testEvidence":[
+    {"path":"shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/apa/ApaRulesTest.kt","testName":"analyticsContractContainsExactlySixContentFreeEventNames","surface":"analytics-event-contract-test"},
+    {"path":"shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/apa/ApaRulesTest.kt","testName":"privacyIsFailClosedForMissingExpiredDeclinedAndPolicyMismatchStates","surface":"ad-lifecycle-test"},
+    {"path":"shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/apa/ApaSettingsTest.kt","testName":"privacyCacheClampsFreshnessAndInvalidatesChoiceOnPolicyChange","surface":"settings-integration-test"},
+    {"path":"shared/network/src/commonTest/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApiTest.kt","testName":"validMinimalResponseUsesExactHttpsContractAndHeader","surface":"network-mock-test"},
+    {"path":"shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/apa/ApaPlatformContractTest.kt","testName":"privacyConsentIsAppliedBeforeSdkInitializationAndEveryAdRequest","surface":"ad-lifecycle-test"},
+    {"path":"shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/apa/ApaPlatformContractTest.kt","testName":"nullIosConfigurationNeverInitializesOrRequestsTheSdk","surface":"ad-lifecycle-test"}
+  ],
+  "nonGradleChecks":[],"requestedCommands":[{"argv":["gradlew.bat",":shared:domain:allTests",":shared:data:testAndroidHostTest",":shared:network:allTests",":shared:platform:allTests",":androidApp:assembleRelease"],"tasks":[":shared:domain:allTests",":shared:data:testAndroidHostTest",":shared:network:allTests",":shared:platform:allTests",":androidApp:assembleRelease"],"coveredObligations":[{"obligationId":"AC-036","surfaces":["settings-integration-test"]},{"obligationId":"AC-039","surfaces":["analytics-event-contract-test"]},{"obligationId":"AC-040","surfaces":["network-mock-test","settings-integration-test"]},{"obligationId":"AC-041","surfaces":["network-mock-test","settings-integration-test"]},{"obligationId":"AC-042","surfaces":["ad-lifecycle-test"]},{"obligationId":"AC-043","surfaces":["network-mock-test","ad-lifecycle-test"]},{"obligationId":"AC-044","surfaces":["ad-lifecycle-test","network-mock-test"]},{"obligationId":"AC-045","surfaces":["ad-lifecycle-test"]},{"obligationId":"AC-046","surfaces":["ad-lifecycle-test","privacy-static-check"]}],"receiptRef":".vibe/receipts/RECEIPT-969f1f57-ccf6-4861-a7e5-ec2bed420644.json"}],
+  "blockers":[]
+}

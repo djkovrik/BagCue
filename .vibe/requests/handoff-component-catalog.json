@@ -1,0 +1,39 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-catalog-component-root-20260908",
+  "assignmentId": "catalog-component-root",
+  "productionEvidence": [
+    {"path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/CatalogComponent.kt", "symbol": "CatalogComponent and immutable locale-neutral Model", "surface": "public-component-contract"},
+    {"path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManager.kt", "symbol": "CatalogManager", "surface": "manager-result-boundary"},
+    {"path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/store/CatalogStore.kt", "symbol": "CatalogStore Intent/State", "surface": "mvikotlin-store-contract"},
+    {"path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/store/CatalogStoreProvider.kt", "symbol": "CatalogStoreProvider", "surface": "create-edit-delete-duplicate-state-machine"},
+    {"path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogComponentDefault.kt", "symbol": "CatalogComponentDefault retained Store wiring", "surface": "decompose-production-component"},
+    {"path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogComponentPreview.kt", "symbol": "CatalogComponentPreview", "surface": "preview-component"},
+    {"path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/Mappers.kt", "symbol": "toComponentModel", "surface": "store-state-to-component-model"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt", "symbol": "RootComponent and Child.Catalog", "surface": "root-component-contract"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "RootComponentDefault catalog ChildStack factory", "surface": "production-navigation"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt", "symbol": "RootComponentFactory", "surface": "production-composition-factory"}
+  ],
+  "testEvidence": [
+    {"path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManagerTest.kt", "testName": "normalizedMatchRequiresExplicitCreateAnother", "surface": "component-test"},
+    {"path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManagerTest.kt", "testName": "locationOnlyUpdatePreservesSeedIdentity", "surface": "component-test"},
+    {"path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManagerTest.kt", "testName": "cancellationIsNotConvertedToFailure", "surface": "component-test"},
+    {"path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogModelMapperTest.kt", "testName": "mapsLocaleNeutralStarterAndDependencyKeys", "surface": "component-test"},
+    {"path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogModelMapperTest.kt", "testName": "mapsUserTextAndRecoverableErrorWithoutResolvingResources", "surface": "component-test"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:component:catalog:testAndroidHostTest", ":shared:root:compileAndroidMain", ":androidApp:assembleDebug"],
+      "tasks": [":shared:component:catalog:testAndroidHostTest", ":shared:root:compileAndroidMain", ":androidApp:assembleDebug"],
+      "coveredObligations": [
+        {"obligationId": "AC-001", "surfaces": ["component-test"]},
+        {"obligationId": "AC-002", "surfaces": ["component-test"]},
+        {"obligationId": "AC-003", "surfaces": ["component-test"]},
+        {"obligationId": "AC-004", "surfaces": ["component-test"]},
+        {"obligationId": "AC-005", "surfaces": ["component-test"]}
+      ]
+    }
+  ],
+  "blockers": []
+}

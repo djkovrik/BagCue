@@ -1,0 +1,23 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:domain:allTests",
+    ":shared:data:testAndroidHostTest",
+    ":shared:component:catalog:testAndroidHostTest",
+    ":shared:root:compileAndroidMain",
+    ":shared:compose:compileAndroidMain",
+    ":androidApp:assembleDebug"
+  ],
+  "coveredObligations": [
+    {"obligationId": "AC-001", "surfaces": ["component-test", "persistence-integration-test"]},
+    {"obligationId": "AC-002", "surfaces": ["component-test", "persistence-integration-test"]},
+    {"obligationId": "AC-003", "surfaces": ["component-test", "persistence-integration-test"]},
+    {"obligationId": "AC-004", "surfaces": ["component-test", "persistence-integration-test"]},
+    {"obligationId": "AC-005", "surfaces": ["domain-test", "component-test"]}
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Inspected convergence changes: all implementation paths belong to active registered catalog-core assignments and main composition integration; compile is the next required verification step."
+}

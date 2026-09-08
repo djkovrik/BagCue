@@ -1,0 +1,76 @@
+{
+  "argv": [
+    "C:\\Users\\Sergey\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "C:\\Users\\Sergey\\.codex\\skills\\vibe-assets-creator\\scripts\\validate-assets.py",
+    "--app-spec-root",
+    "spec/app-spec",
+    "--repository",
+    "."
+  ],
+  "completedAt": "2026-09-08T19:44:17.176447Z",
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": [
+        "asset-check"
+      ]
+    }
+  ],
+  "executionStatus": "completed",
+  "exitCode": 0,
+  "kind": "integration",
+  "log": {
+    "path": ".vibe/receipts/RECEIPT-da23f9e9-3843-47cf-83e6-f43daabed08a.log",
+    "sha256": "611dc410420b6964a0ed2b58005a75fc5d0ac2fcc3906c9c904ac4ddb01a1519"
+  },
+  "receiptId": "RECEIPT-da23f9e9-3843-47cf-83e6-f43daabed08a",
+  "schemaVersion": "2.0",
+  "startWorkspaceFingerprint": {
+    "algorithm": "sha256",
+    "binaryDiffSha256": "d18d32aba7e485b0f962693a2b8df78c56b49f3f12899f09b51d92d34a0b3e81",
+    "digest": "c1b435366d4212d97e11755007d73662c69b1445aa941f16667ac9528b5b0e6c",
+    "gitHead": "edf754dbdaec3831178fb1e877a7ea9e757b42f0",
+    "workingFiles": [
+      {
+        "path": "docs/decisions/DEC-APPSPEC-ASSET-MODULE-PATH-QG006-user.txt",
+        "sha256": "e2038a403f7f243d681cea4373d8655eb4cf120a0f320870f3d3b9b844fbf597"
+      },
+      {
+        "path": "docs/decisions/DEC-APPSPEC-ASSET-MODULE-PATH-QG006.json",
+        "sha256": "76a5a67fd7d6cd164e6cea22592609f934674cedb5243413808371ca6bac9f79"
+      },
+      {
+        "path": "spec/app-spec/app-spec.json",
+        "sha256": "19db9c689e402f8c43b922b1d7c9cf5296ecce7b630e322ab4220f42bd26cbe7"
+      }
+    ]
+  },
+  "startedAt": "2026-09-08T19:44:16.807710Z",
+  "tasks": [
+    "C:\\Users\\Sergey\\.codex\\skills\\vibe-assets-creator\\scripts\\validate-assets.py",
+    "--app-spec-root",
+    "spec/app-spec",
+    "--repository",
+    "."
+  ],
+  "workspaceFingerprint": {
+    "algorithm": "sha256",
+    "binaryDiffSha256": "d18d32aba7e485b0f962693a2b8df78c56b49f3f12899f09b51d92d34a0b3e81",
+    "digest": "c1b435366d4212d97e11755007d73662c69b1445aa941f16667ac9528b5b0e6c",
+    "gitHead": "edf754dbdaec3831178fb1e877a7ea9e757b42f0",
+    "workingFiles": [
+      {
+        "path": "docs/decisions/DEC-APPSPEC-ASSET-MODULE-PATH-QG006-user.txt",
+        "sha256": "e2038a403f7f243d681cea4373d8655eb4cf120a0f320870f3d3b9b844fbf597"
+      },
+      {
+        "path": "docs/decisions/DEC-APPSPEC-ASSET-MODULE-PATH-QG006.json",
+        "sha256": "76a5a67fd7d6cd164e6cea22592609f934674cedb5243413808371ca6bac9f79"
+      },
+      {
+        "path": "spec/app-spec/app-spec.json",
+        "sha256": "19db9c689e402f8c43b922b1d7c9cf5296ecce7b630e322ab4220f42bd26cbe7"
+      }
+    ]
+  }
+}

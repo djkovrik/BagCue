@@ -1,0 +1,58 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-release-architecture-convergence-v3-20260908",
+  "assignmentId": "release-architecture-convergence-v3",
+  "productionEvidence": [
+    {"path":"build.gradle.kts","symbol":"abstract class PrintKoverLineCoverage","surface":"strict-detekt-and-merged-kover-gates"},
+    {"path":"gradle/libs.versions.toml","symbol":"detekt = \"2.0.0-alpha.6\"","surface":"current-compatible-toolchain-and-mobile-sdks"},
+    {"path":"gradle.properties","symbol":"bagcue.kover.minimum=72","surface":"measured-coverage-floor"},
+    {"path":"detekt/base-config.yml","symbol":"warningsAsErrors: true","surface":"complete-current-detekt-config"},
+    {"path":"androidApp/build.gradle.kts","symbol":"abstract class VerifyAndroidReleaseConfiguration","surface":"release-signing-r8-firebase-yandex-invariants"},
+    {"path":"androidApp/proguard-rules.pro","symbol":"-keepattributes SourceFile,LineNumberTable","surface":"release-r8-rules"},
+    {"path":"shared/platform/build.gradle.kts","symbol":"pod(\"FirebaseAnalytics\")","surface":"kotlin-native-firebase-yandex-cinterop"},
+    {"path":"iosApp/Podfile","symbol":"pod 'FirebaseAnalytics', '12.18.0'","surface":"ios-native-linkage-contract"},
+    {"path":".github/workflows/AnalysisAndTest.yml","symbol":"Test and link iOS","surface":"linux-and-macos-quality-workflow"},
+    {"path":".github/workflows/MeasureTestCoverage.yml","symbol":"changed_line_coverage.py","surface":"overall-and-changed-line-coverage"},
+    {"path":".github/workflows/CodeCoverageBadge.yml","symbol":"bagcue-coverage.json","surface":"numeric-coverage-badge-publication"},
+    {"path":".github/workflows/CreateAndroidRelease.yml","symbol":"Create Android release","surface":"authorized-semver-prerelease"},
+    {"path":".github/workflows/PublishAndroidRelease.yml","symbol":"google-play-publishing","surface":"protected-internal-track-publication"},
+    {"path":".github/workflows/scripts/validate_repository.py","symbol":"def main","surface":"repository-release-invariants"},
+    {"path":".github/workflows/scripts/validate_release_artifacts.py","symbol":"def main","surface":"release-artifact-validation"},
+    {"path":"docs/CI-RELEASE-SETUP.md","symbol":"Current external blockers","surface":"github-firebase-play-cloud-setup"},
+    {"path":"docs/IOS-RELEASE-SETUP.md","symbol":"Windows handoff and current blocker","surface":"project-specific-macos-cocoapods-xcode-guide"},
+    {"path":"README.md","symbol":"Code coverage","surface":"coverage-workflow-badge"}
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {"argv":["python",".github/workflows/scripts/validate_repository.py"],"exitCode":0,"details":"Repository release contracts OK after the frozen edits."},
+    {"argv":["python","-m","py_compile",".github/workflows/scripts/validate_repository.py",".github/workflows/scripts/changed_line_coverage.py",".github/workflows/scripts/validate_release_artifacts.py"],"exitCode":0,"details":"All three repository validator scripts compile."},
+    {"argv":["npx","--yes","prettier@3.6.2","--check",".github/workflows/*.yml"],"exitCode":0,"details":"All five exact workflow files parse and match pinned Prettier formatting."},
+    {"argv":["git","diff","--check","--","assignment-local files"],"exitCode":0,"details":"No whitespace errors; only line-ending normalization warnings."}
+  ],
+  "requestedCommands": [
+    {
+      "argv":["gradlew.bat","koverXmlReport","printKoverLineCoverage"],
+      "tasks":["koverXmlReport","printKoverLineCoverage"],
+      "coveredObligations":[{"obligationId":"QG-002","surfaces":["real-baseline-measurement","numeric-output"]}],
+      "receiptRef":".vibe/receipts/RECEIPT-42f42111-8475-42ae-96f4-fffeb6eeb780.json"
+    },
+    {
+      "argv":["gradlew.bat","koverVerify","koverXmlReport","printKoverLineCoverage"],
+      "tasks":["koverVerify","koverXmlReport","printKoverLineCoverage"],
+      "coveredObligations":[{"obligationId":"QG-002","surfaces":["committed-72-percent-floor","merged-xml","numeric-output"]}],
+      "receiptRef":".vibe/receipts/RECEIPT-3fdfbd8b-96d5-4af7-9599-86db7bd1d235.json"
+    },
+    {
+      "argv":["gradlew.bat","detekt","koverXmlReport","printKoverLineCoverage"],
+      "tasks":["detekt","koverXmlReport","printKoverLineCoverage"],
+      "coveredObligations":[{"obligationId":"QG-001","surfaces":["strict-detekt-gate"]}],
+      "receiptRef":".vibe/receipts/RECEIPT-ba088154-e35b-4f9b-ab77-032d72527bc1.json"
+    }
+  ],
+  "blockers": [
+    "QG-001 is RED, not waived: strict Detekt 2.0.0-alpha.6 reports 253 production findings (123 MaxLineLength above the mandated 140 limit, 56 FunctionNaming, 34 MagicNumber, 18 TooGenericExceptionCaught, 10 TooManyFunctions, 5 WildcardImport, 2 CyclomaticComplexMethod, 2 TopLevelPropertyNaming, 2 MatchingDeclarationName, 1 ReturnCount). Production Kotlin remediation is outside this assignment; receipt RECEIPT-ba088154-e35b-4f9b-ab77-032d72527bc1.json.",
+    "The frozen cross-package Android integration check is RED because privacy-owned KtorPrivacyRegionApi.kt references unavailable readRemaining; receipt RECEIPT-09606996-52f6-496a-ab2c-90b4be2152be.json. The same run also exposed the now-fixed configuration-cache capture in verifyAndroidReleaseConfiguration, which was not rerun before freeze.",
+    "QG-003 is NOT RUN on Windows: pod install, Kotlin/Native cinterop/framework linkage, iOS simulator tests, and xcodebuild require the documented macOS Xcode/CocoaPods continuation. Podfile.lock/workspace output was deliberately not fabricated.",
+    "QG-005 and external parts of QG-004/QG-006 are NOT RUN until real GitHub environment/secrets/branch protection, Firebase registrations/config files, Yandex console ownership/device diagnostics, Android upload key, Google Cloud service account, Play Console listing/Data safety/Internal publication, and public badge gist are configured and verified. Automation never publishes to Production."
+  ]
+}

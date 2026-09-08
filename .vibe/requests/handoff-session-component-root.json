@@ -1,0 +1,51 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-session-component-root-20260908",
+  "assignmentId": "session-component-root",
+  "productionEvidence": [
+    {"path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/SessionComponent.kt", "symbol": "SessionComponent", "surface": "public-component-contract"},
+    {"path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/domain/SessionManager.kt", "symbol": "SessionManager", "surface": "manager-result-boundary"},
+    {"path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/store/SessionStore.kt", "symbol": "SessionStore", "surface": "mvikotlin-store-contract"},
+    {"path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/store/SessionStoreProvider.kt", "symbol": "SessionStoreProvider", "surface": "session-state-machine"},
+    {"path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/integration/SessionComponentDefault.kt", "symbol": "SessionComponentDefault", "surface": "decompose-production-component"},
+    {"path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/integration/SessionComponentPreview.kt", "symbol": "SessionComponentPreview", "surface": "preview-component"},
+    {"path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/integration/Mappers.kt", "symbol": "toComponentModel", "surface": "store-state-to-component-model"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt", "symbol": "RootComponent", "surface": "root-component-contract"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "RootComponentDefault", "surface": "production-navigation"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt", "symbol": "RootComponentFactory", "surface": "production-composition-factory"}
+  ],
+  "testEvidence": [
+    {"path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt", "testName": "createProducesOneMergedPersistedSnapshotForDate", "surface": "component-test"},
+    {"path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt", "testName": "occupiedDateReturnsExistingWithoutReplacingIt", "surface": "component-test"},
+    {"path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt", "testName": "replacementPreservesPackedIdentityAndProvidesWholeUndo", "surface": "component-test"},
+    {"path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt", "testName": "oneOffThenRemoveAndUndoRestoresExactSnapshot", "surface": "component-test"},
+    {"path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/store/SessionStoreTest.kt", "testName": "createAndFullRowTogglePersistThroughStore", "surface": "component-test"},
+    {"path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/integration/SessionModelMapperTest.kt", "testName": "activeChecklistGroupsConflictsFirstAndHidesPackedMoveHint", "surface": "component-test"},
+    {"path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/integration/SessionModelMapperTest.kt", "testName": "completedSkippedSnapshotMapsToHonestResult", "surface": "component-test"},
+    {"path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt", "testName": "sessionIsInitialAndDestinationClicksDoNotDuplicateConfigs", "surface": "component-test"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:component:session:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":androidApp:assembleDebug"],
+      "tasks": [":shared:component:session:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":androidApp:assembleDebug"],
+      "coveredObligations": [
+        {"obligationId": "AC-012", "surfaces": ["component-test"]},
+        {"obligationId": "AC-013", "surfaces": ["component-test"]},
+        {"obligationId": "AC-014", "surfaces": ["component-test"]},
+        {"obligationId": "AC-015", "surfaces": ["component-test"]},
+        {"obligationId": "AC-016", "surfaces": ["component-test"]},
+        {"obligationId": "AC-017", "surfaces": ["component-test"]},
+        {"obligationId": "AC-018", "surfaces": ["component-test"]},
+        {"obligationId": "AC-019", "surfaces": ["component-test"]},
+        {"obligationId": "AC-020", "surfaces": ["component-test"]},
+        {"obligationId": "AC-021", "surfaces": ["component-test"]},
+        {"obligationId": "AC-022", "surfaces": ["component-test"]},
+        {"obligationId": "AC-023", "surfaces": ["component-test"]},
+        {"obligationId": "AC-024", "surfaces": ["component-test"]},
+        {"obligationId": "AC-025", "surfaces": ["component-test"]}
+      ]
+    }
+  ],
+  "blockers": []
+}

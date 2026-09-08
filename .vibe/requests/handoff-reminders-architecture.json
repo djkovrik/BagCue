@@ -1,0 +1,46 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-reminders-build-architecture-20260908",
+  "assignmentId": "reminders-build-architecture",
+  "productionEvidence": [
+    {"path":"settings.gradle.kts","symbol":"include(\":shared:platform\")","surface":"module-graph"},
+    {"path":"settings.gradle.kts","symbol":"include(\":shared:component:settings\")","surface":"module-graph"},
+    {"path":"shared/platform/build.gradle.kts","symbol":"namespace = \"com.sedsoftware.bagcue.platform\"","surface":"platform-module-wiring"},
+    {"path":"shared/platform/build.gradle.kts","symbol":"androidResources.enable = true","surface":"android-resource-wiring"},
+    {"path":"shared/platform/build.gradle.kts","symbol":"withHostTest {}","surface":"platform-test-wiring"},
+    {"path":"shared/component/settings/build.gradle.kts","symbol":"namespace = \"com.sedsoftware.bagcue.component.settings\"","surface":"component-module-wiring"},
+    {"path":"shared/component/settings/build.gradle.kts","symbol":"api(libs.kotlinx.datetime)","surface":"public-date-contract-wiring"},
+    {"path":"shared/component/settings/build.gradle.kts","symbol":"implementation(libs.mvikotlin.extensions.coroutines)","surface":"store-runtime-wiring"},
+    {"path":"gradle/libs.versions.toml","symbol":"multiplatformSettingsTest = { module = \"com.russhwolf:multiplatform-settings-test\", version.ref = \"multiplatformSettings\" }","surface":"settings-test-catalog"},
+    {"path":"shared/root/build.gradle.kts","symbol":"api(project(\":shared:platform\"))","surface":"android-composition-export"},
+    {"path":"shared/root/build.gradle.kts","symbol":"api(project(\":shared:component:settings\"))","surface":"production-root-wiring"},
+    {"path":"shared/compose/build.gradle.kts","symbol":"implementation(project(\":shared:component:settings\"))","surface":"compose-integration-wiring"},
+    {"path":"shared/compose/build.gradle.kts","symbol":"implementation(project(\":shared:platform\"))","surface":"ios-composition-wiring"}
+  ],
+  "testEvidence": [
+    {"path":"shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderPlatformIdsTest.kt","testName":"requestCodeIsStableForTheSameLanguageNeutralNotificationId","surface":"platform-test"},
+    {"path":"shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderPlatformIdsTest.kt","testName":"synchronizationReplacesRegisteredIdsSkipsPastAndDeduplicatesRequests","surface":"platform-test"},
+    {"path":"shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt","testName":"defaultsAreDisabledWithSuggestedLocalTimes","surface":"component-test"},
+    {"path":"shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt","testName":"saveReschedulesFutureOccurrencesWithStableIds","surface":"component-test"},
+    {"path":"shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt","testName":"deniedPermissionIsSuccessfulNonBlockingState","surface":"component-test"},
+    {"path":"shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStoreTest.kt","testName":"immediateSaveKeepsCoreSettingsAvailableWhenPermissionIsDenied","surface":"component-test"},
+    {"path":"shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt","testName":"sessionIsInitialAndDestinationClicksDoNotDuplicateConfigs","surface":"component-test"}
+  ],
+  "nonGradleChecks": [
+    {"argv":["git","diff","--check","--","settings.gradle.kts","gradle/libs.versions.toml","shared/platform/build.gradle.kts","shared/component/settings/build.gradle.kts","shared/root/build.gradle.kts","shared/compose/build.gradle.kts"],"exitCode":0}
+  ],
+  "requestedCommands": [
+    {
+      "argv":["gradlew.bat",":shared:domain:allTests",":shared:data:allTests",":shared:platform:allTests",":shared:component:settings:testAndroidHostTest",":shared:root:testAndroidHostTest",":shared:root:compileAndroidMain",":shared:compose:compileAndroidMain",":androidApp:assembleDebug",":shared:data:compileKotlinIosSimulatorArm64",":shared:platform:compileKotlinIosSimulatorArm64",":shared:component:settings:compileKotlinIosSimulatorArm64",":shared:root:compileKotlinIosSimulatorArm64",":shared:compose:compileKotlinIosSimulatorArm64"],
+      "tasks":[":shared:domain:allTests",":shared:data:allTests",":shared:platform:allTests",":shared:component:settings:testAndroidHostTest",":shared:root:testAndroidHostTest",":shared:root:compileAndroidMain",":shared:compose:compileAndroidMain",":androidApp:assembleDebug",":shared:data:compileKotlinIosSimulatorArm64",":shared:platform:compileKotlinIosSimulatorArm64",":shared:component:settings:compileKotlinIosSimulatorArm64",":shared:root:compileKotlinIosSimulatorArm64",":shared:compose:compileKotlinIosSimulatorArm64"],
+      "coveredObligations":[
+        {"obligationId":"AC-031","surfaces":["settings-integration-test","component-test","production-ui"]},
+        {"obligationId":"AC-032","surfaces":["settings-integration-test","component-test","production-ui"]},
+        {"obligationId":"AC-033","surfaces":["settings-integration-test","component-test","platform-test","production-ui"]},
+        {"obligationId":"AC-034","surfaces":["component-test","platform-test","production-ui"]},
+        {"obligationId":"AC-035","surfaces":["domain-test","platform-test"]}
+      ]
+    }
+  ],
+  "blockers": []
+}

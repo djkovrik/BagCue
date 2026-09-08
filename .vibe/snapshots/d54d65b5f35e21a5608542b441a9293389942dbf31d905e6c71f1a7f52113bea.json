@@ -1,0 +1,18 @@
+{
+  "algorithm": "sha256",
+  "digest": "17cf416c77744cdd3cdde0ad0b3e19bdb47980fd4f4ccb41489a5b5293d3f5e1",
+  "files": [
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt",
+      "sha256": "e44cd42fb3381cf928fb293d323385bf359c28c134fe41fbab3676403022eaf3"
+    },
+    {
+      "path": "shared/compose/visual-test/build.gradle.kts",
+      "sha256": "5efaa51f20ab0c1643eb27f44f746b507b3a1fdc3e79d0e26c78dc7612369d48"
+    }
+  ],
+  "patterns": [
+    "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt",
+    "shared/compose/visual-test/build.gradle.kts"
+  ]
+}

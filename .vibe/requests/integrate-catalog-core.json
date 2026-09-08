@@ -1,0 +1,11 @@
+{
+  "action": "integrate",
+  "packageId": "catalog-core",
+  "receiptRef": ".vibe/receipts/RECEIPT-0ea7d6a1-49ac-4244-baa4-8197a7bf20da.json",
+  "integrationEvidence": [
+    {"path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt", "symbol": "RootComponentFactory", "role": "entry-point"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "childStack", "role": "navigation"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "symbol": "starterRenameAndDeleteOverridesSurviveARealDriverRestart", "role": "restart"}
+  ],
+  "nextAction": "Mark AC-001 through AC-005 verified from current handoffs and receipts, then select the next dependency-ready capability package."
+}

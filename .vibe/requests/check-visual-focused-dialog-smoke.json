@@ -1,0 +1,24 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:compose:visual-test:testDebugUnitTest",
+    "--tests",
+    "com.sedsoftware.bagcue.compose.visual.generated.BagCuePreviewDiscoveryTest",
+    "--tests",
+    "com.sedsoftware.bagcue.compose.visual.BagCuePaparazziDialogSmokeTest"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": [
+        "preview-discovery-contract",
+        "paparazzi-dialog-smoke"
+      ]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Exercise one real production consent dialog after adding the shared Compose module to the conventional host main variant resource graph so Paparazzi can resolve transitive Material dialog styles."
+}

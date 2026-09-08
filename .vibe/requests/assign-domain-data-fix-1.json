@@ -1,0 +1,12 @@
+{
+  "action": "assign",
+  "assignmentId": "catalog-domain-persistence-fix-1",
+  "owner": "vibe-domain-and-persistence-engineer",
+  "acceptanceScenarioIds": ["AC-001", "AC-002", "AC-003", "AC-004", "AC-005"],
+  "qualityGateIds": [],
+  "allowedFiles": [
+    "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt",
+    "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq"
+  ],
+  "inputScopeId": "catalog-domain-data-v2"
+}

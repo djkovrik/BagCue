@@ -1,0 +1,1576 @@
+{
+  "assignmentId": "full-local-regression-fix",
+  "blockers": [],
+  "createdAt": "2026-09-08T16:10:34.571939Z",
+  "fileBoundaries": [
+    "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt",
+    "shared/compose/visual-test/build.gradle.kts"
+  ],
+  "nextAction": "Orchestrator should ingest HANDOFF-full-local-regression-fix-20260908",
+  "obligationIds": [
+    "QG-001",
+    "QG-006"
+  ],
+  "owner": "vibe-project-architect-regression-fix",
+  "pendingChecks": [],
+  "previousPacketDigest": "c0d396f41cd40dd51e601d194a492d5c6b24f7c70ba89253af946041c4c72c08",
+  "requiredReadHashes": [
+    {
+      "path": ".vibe/requests/assign-full-local-regression-fix.json",
+      "sha256": "f13e74770f9b61b8b92a647c97cc2a53f9c04cf68d9d5e938f73d6e99c4ddcb9"
+    }
+  ],
+  "requiredReads": [
+    ".vibe/requests/assign-full-local-regression-fix.json"
+  ],
+  "resolutions": {
+    "blockers": [],
+    "pendingChecks": [
+      "Run narrow Compose compile and verifyPaparazzi through delivery-work.py"
+    ],
+    "reason": "Receipt RECEIPT-b51b068d-ed6a-4925-bee9-9bedc5836cac is green for Compose compile and verifyPaparazziDebug; mergeDebugAssets executed successfully"
+  },
+  "schemaVersion": "2.0",
+  "scopedInstructions": [],
+  "status": "returned",
+  "workspaceFingerprint": {
+    "algorithm": "sha256",
+    "binaryDiffSha256": "836e81bca499f47f7c8bcf5b9b0773892e5cbd21869dd8d873d977185b70616a",
+    "digest": "d66cb6f1f3e5c5f4d4a61589af116f7bb57f901ac8c125092f7fd20fbb315d93",
+    "gitHead": "fdea4c1a871e2d3952a930b8d7bf9e780851dcc7",
+    "workingFiles": [
+      {
+        "path": ".gitattributes",
+        "sha256": "6d8ef6a7d20c33bd81f4b45e2fc2192bb73d5069bf670e841fef2531bf8f7380"
+      },
+      {
+        "path": ".github/workflows/AnalysisAndTest.yml",
+        "sha256": "fa944e2eb520140a3eb5fc80dc8bcbe70eb7f92ac834efec59f1fb1b7788eaaa"
+      },
+      {
+        "path": ".github/workflows/CodeCoverageBadge.yml",
+        "sha256": "c01426327e819f4189bf0a369f74f984685d786d82d54cd226356afc09493ab9"
+      },
+      {
+        "path": ".github/workflows/CreateAndroidRelease.yml",
+        "sha256": "10242c365349c4c5247472b1875e82df8358ba2dd950ac913af145ace958aabc"
+      },
+      {
+        "path": ".github/workflows/MeasureTestCoverage.yml",
+        "sha256": "0b342bddec0260795b4d341a54107ffdf41f3f2a0b2a8b5efa4876d12c66aebf"
+      },
+      {
+        "path": ".github/workflows/PublishAndroidRelease.yml",
+        "sha256": "aa7ec8ca1be83acd2d1832340b9ccf0589a2fc36d8e45812faee885f267078fd"
+      },
+      {
+        "path": ".github/workflows/scripts/changed_line_coverage.py",
+        "sha256": "824a68150a86e405f7858d4d1ac4a95721691be590501a656a4dd575e30e2358"
+      },
+      {
+        "path": ".github/workflows/scripts/validate_release_artifacts.py",
+        "sha256": "e4376ef3b0ba7505f1ba6b61a915bd7dbafcce240fcc7b8e45e861f5a690665a"
+      },
+      {
+        "path": ".github/workflows/scripts/validate_repository.py",
+        "sha256": "8c511bc46474514fd18fd535b8394c8bbedc47f8376a5bc77b08c266c1ccb59f"
+      },
+      {
+        "path": "androidApp/build.gradle.kts",
+        "sha256": "ed1d719f044400f709e11bbd720365c605d2d454885d593228659b55a264eac9"
+      },
+      {
+        "path": "androidApp/proguard-rules.pro",
+        "sha256": "3890f14c35105a988c9a2c92faaca0abb4b94b5eb66a8458aadc484d58343ada"
+      },
+      {
+        "path": "androidApp/src/main/AndroidManifest.xml",
+        "sha256": "3145d1a5c11f8ee8866339f61eab4b3f46b6524c29ac6c3e5d656d4abff62192"
+      },
+      {
+        "path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/apa/AndroidApaPlatform.kt",
+        "sha256": "987a3fc347ae1190abcc79077c22b0a87edc17ce8e740f6302c363b7c0f1a265"
+      },
+      {
+        "path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt",
+        "sha256": "6c3c7b7652498db6ba1c50e3c46ce071ee52686c945784ec0204f3cd2186b530"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "sha256": "4f74dde282a9a88f41e150601e3e7703d20701c33d3a676909777b75c3fbe7e2"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_background.png",
+        "sha256": "4f74dde282a9a88f41e150601e3e7703d20701c33d3a676909777b75c3fbe7e2"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+        "sha256": "89163ed84b1f3f64b0379c09ef367fd95511e714380629bc3d74df82413a96b5"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_monochrome.png",
+        "sha256": "1efc629f023a440120590cfec734d090f14d44fcd4a989c1ed77da660fb7adf1"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "sha256": "561cfe755c31de3844d1d9dc3eff35dd6eca952babed8f15ad63420c348f73b9"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_background.png",
+        "sha256": "561cfe755c31de3844d1d9dc3eff35dd6eca952babed8f15ad63420c348f73b9"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+        "sha256": "c88d5132325bf54e408bb30653c717294f8b40da178028936e2189ed19a029db"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_monochrome.png",
+        "sha256": "16a5124677273cef5d7cdec5980dad069892b1dfa8fab9c53621a7140aa7dfd1"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "sha256": "65a61851afcdaedcb62568e70fcbef91a187776882bbeac46fcb002095bd9e5d"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_background.png",
+        "sha256": "65a61851afcdaedcb62568e70fcbef91a187776882bbeac46fcb002095bd9e5d"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+        "sha256": "6e2840206048a696553ee4b221997b9d9cd87f75c7ec4cec0823fa61b0abe9e7"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_monochrome.png",
+        "sha256": "c6f580082a04c89456f2fa8cdae23705ef5a94cc3404f14c1ab7c71abfd0e32e"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "sha256": "70c45d500a64531ae75e29fca2d7d1d7629373a832e1495fafe2a2bf39d49044"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_background.png",
+        "sha256": "70c45d500a64531ae75e29fca2d7d1d7629373a832e1495fafe2a2bf39d49044"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+        "sha256": "9a44670d5acb25e904f20bb09314584ea2b89b450714b283eb01c4874ac84056"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_monochrome.png",
+        "sha256": "f2cebc2c68b455132f3d48f3527143de325c737729f7cbb40a16fdbc03c79253"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "sha256": "e786fd40168a1ef057993b07ebf0109e4b45651af75e44b58513214020e3e130"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png",
+        "sha256": "e786fd40168a1ef057993b07ebf0109e4b45651af75e44b58513214020e3e130"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+        "sha256": "bae3690216f5aa1278d7b46dcc8294c1b58adf2ac2bf7e1b381444db8d0016d9"
+      },
+      {
+        "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_monochrome.png",
+        "sha256": "2ea30126f724481dca802af6fe03df3f5b4eee93cfedd0f20692bbd34a41de02"
+      },
+      {
+        "path": "build.gradle.kts",
+        "sha256": "40e041af05e80ada6412ab8acac8313625d0c7fd3310c4ad7260efcf684d9c63"
+      },
+      {
+        "path": "detekt/base-config.yml",
+        "sha256": "d2afff7944821cfce432cded3fde5e6eae8f8e0cf25e19c45dc83de1f63abc1e"
+      },
+      {
+        "path": "docs/APA-EXTERNAL-SETUP.md",
+        "sha256": "e5f4301f874752ac2665487ba3efc32016e7a16da43a79a7b6bcbb5744eb9653"
+      },
+      {
+        "path": "docs/assets/ASSET-001-generation-record.json",
+        "sha256": "6a6b5c29bb9d2451645b0d0d6ddc39461dd32e95b8d9682e9f5d94efe75ea8db"
+      },
+      {
+        "path": "docs/assets/asset-contact-sheet.png",
+        "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+      },
+      {
+        "path": "docs/assets/asset-manifest.json",
+        "sha256": "577e0661e4b0644e723513eabf993ef360af8b8fb473ea53497b3c3580c0d600"
+      },
+      {
+        "path": "docs/assets/build-asset-manifest.cjs",
+        "sha256": "7737fe4de5370c73433e24ca214242b451cc9e7f0d3595d688d37830020d213f"
+      },
+      {
+        "path": "docs/assets/generate-assets.cjs",
+        "sha256": "f92a3e74bfba6e25eee776e20e265ef8ef123f27fd40c40a9136c8b544bfa8a7"
+      },
+      {
+        "path": "docs/assets/validate-adapted-assets.py",
+        "sha256": "87a491ef9d42cc49ee9e8725a04e66902a10b3cbf49ab1e93f0e8669792a515d"
+      },
+      {
+        "path": "docs/assets/visual-review.md",
+        "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+      },
+      {
+        "path": "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+        "sha256": "ddf5d641c5e4d5b2f4078b125ff701ce03ef89987f24422f4bd1b11a171493f6"
+      },
+      {
+        "path": "docs/bagcue-policy.html",
+        "sha256": "3bace33ed5b83c21c0901d20f6fca23c622fb9d7f5402f498209b5e119566e7a"
+      },
+      {
+        "path": "docs/CI-RELEASE-SETUP.md",
+        "sha256": "da6b217ce5ac85b7d32a7fc14a68533ca8d1194f3c9c8bd928fc7046c4528a95"
+      },
+      {
+        "path": "docs/decisions/DEC-YANDEX-PRODUCTION-AD-UNIT.json",
+        "sha256": "d28c03639f6ea3b30744f7f5162a2f96af88011785fa50b6c018517de579bf8f"
+      },
+      {
+        "path": "docs/design/visual-review/index.json",
+        "sha256": "a4d9e75b9c9a8915106f787305abbec806af05087121cb66e162a15aff1cc2c6"
+      },
+      {
+        "path": "docs/design/visual-review/review-log.md",
+        "sha256": "58947ab29fed164596c4bf72ac28b5aa2d2482cc27f6b5ea273f4a82dc6b6754"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-001-contact-sheet.png",
+        "sha256": "536b107c56f37fa96adee8fb43db6241aae223470719d9f7097ce93801e66535"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-002-contact-sheet.png",
+        "sha256": "12b79ba4d45cc360c24a7011648a328aa6517d8cf481b787e5b42477dd64474f"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-003-contact-sheet.png",
+        "sha256": "850ef9dc230d83f265b2c029d5be14e78567e8e6567dad7af943116b6e4fb114"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-004-contact-sheet.png",
+        "sha256": "3056d88bcf1d37fbd398615105d026a637e8e5b8ba875d1024cbaa810bc61d9f"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-005-contact-sheet.png",
+        "sha256": "04a3b34f9e346155a5dfd6cc02c18952a34225caa432c1d8653a6c1bc86ffe12"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-006-contact-sheet.png",
+        "sha256": "7bcc3eec4a44e6936a50ed9f6dfdb54a43e56a55493fd97a4b8f0e9267cd1562"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-007-contact-sheet.png",
+        "sha256": "c0f01c66edbf3bbe318d7d34c3e97f79a9a75fa9f2ba1a08fbcffb0ce78ae0cd"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-008-contact-sheet.png",
+        "sha256": "a38001d4f99c68a44564225bcd94a34a842f24b541f0b602cbfc81088d644c55"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-009-contact-sheet.png",
+        "sha256": "351bdd294c9c9971652f1d5942ed3a8db621accb8b3b4816f05cdc0521adc5fe"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-010-contact-sheet.png",
+        "sha256": "31486a1c5293fc9a8514443cbc39abdc915a25fb2c61c33d7169ba4aed476ac9"
+      },
+      {
+        "path": "docs/design/visual-review/screens/SCREEN-011-contact-sheet.png",
+        "sha256": "90a5ab538a411195316ed56067d22d6cb3b2b71a5058250906909e1431e733ea"
+      },
+      {
+        "path": "docs/design/visual-test-contract.md",
+        "sha256": "3dd8f83f03277c7f1bd942d5331749000d61fb22f582a5e1515dd30706d83a6c"
+      },
+      {
+        "path": "docs/IOS-RELEASE-SETUP.md",
+        "sha256": "62bcd3c49d84ff9aa9a1a4338e2184be8e5a370b9421e33e1478e39da28d8473"
+      },
+      {
+        "path": "docs/PLAY-DATA-SAFETY.md",
+        "sha256": "0ddba1f1add6b7355b8e73a5a4b03af7a2f470467775b06653a67781b0d36506"
+      },
+      {
+        "path": "docs/PRIVACY-POLICY.md",
+        "sha256": "c6053c6356dc9dddb392a3d7085a2b066fc487f6627b99811017c2e6d0ff8467"
+      },
+      {
+        "path": "docs/PRIVACY-REGION-ENDPOINT.md",
+        "sha256": "7912bc87a40b900d3a68907919d992526062c66e6c433c2633e2e6b0cc122c2b"
+      },
+      {
+        "path": "gradle.properties",
+        "sha256": "0ddb011979a141d88519ae7d43143d9d5cc4724c70ad4785cba8a3b9042b5a40"
+      },
+      {
+        "path": "gradle/libs.versions.toml",
+        "sha256": "0945d7fbf62fcfb850936ef53fe2b20b7c0236e25e64b7704feffbbefb6b1ca1"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x.png",
+        "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x~ipad.png",
+        "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@3x.png",
+        "sha256": "676bf73cc48267ed461e93ce93bc4e274cf3b65e12997abe0bafd38ad0564c08"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20~ipad.png",
+        "sha256": "cad51e4c6d9815fde41c75cddc79781abeb05e3fdf234ed6e57ba8b3a80fff85"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29.png",
+        "sha256": "dc9d8f245b87f92a8242da8a121a28541e0e3c9e9fc31289a289c79b632c85a0"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x.png",
+        "sha256": "ff7ab16d16bf2b2b981b123399381bf15864adeab6f9452b23e0870f22e2e23d"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x~ipad.png",
+        "sha256": "ff7ab16d16bf2b2b981b123399381bf15864adeab6f9452b23e0870f22e2e23d"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@3x.png",
+        "sha256": "e15392ba2c07aa9d48e6f55b317b8a4fb47c7c8450e2a5d9f5d049df14c33e39"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29~ipad.png",
+        "sha256": "dc9d8f245b87f92a8242da8a121a28541e0e3c9e9fc31289a289c79b632c85a0"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x.png",
+        "sha256": "457117fd700ffd152c30f05e76e43be15a97a100763615334373787ec6f17b39"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x~ipad.png",
+        "sha256": "457117fd700ffd152c30f05e76e43be15a97a100763615334373787ec6f17b39"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@3x.png",
+        "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40~ipad.png",
+        "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@2x~car.png",
+        "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@3x~car.png",
+        "sha256": "d2b1b6b2744efd1588ce472f17caba2ab208be7cd06205f2f7f3471f7b0756dd"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-83.5@2x~ipad.png",
+        "sha256": "6d2c72b7d6cec918fddde2ad2cef337b72855886e673e4ca018a6a9a45f8f27b"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x.png",
+        "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x~ipad.png",
+        "sha256": "ebdba8a4cef9278bbbf6ddff453319c96ea20d98126b8d7eca581ff6ca4c9d63"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@3x.png",
+        "sha256": "d2b1b6b2744efd1588ce472f17caba2ab208be7cd06205f2f7f3471f7b0756dd"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png",
+        "sha256": "b5052c794cf106a08dda8053f7870d6d50f1b374e132bdd03d614759bcc11bfc"
+      },
+      {
+        "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ipad.png",
+        "sha256": "6c7355da8be12c03ede80c4b5246948c58b73ea06199885570b453fcb20a2ebc"
+      },
+      {
+        "path": "iosApp/iosApp/Info.plist",
+        "sha256": "8c4a66fc8e386d15a7a8096c21e9cd0b8435c0c4c9dbe60c83c47e32540e91aa"
+      },
+      {
+        "path": "iosApp/Podfile",
+        "sha256": "4740617066b74452fa374b2fdb6f383df7a83e7110a37bbfb69bd25069e0ec52"
+      },
+      {
+        "path": "README.md",
+        "sha256": "2e292b7b3401ecc93a28489a7b53c5737de4d05d20dfc93152a0d863f858ee7e"
+      },
+      {
+        "path": "settings.gradle.kts",
+        "sha256": "ef3b9efaa0e816b11487128e2ce779212008b12867db84e9202ac645f3a26558"
+      },
+      {
+        "path": "shared/component/catalog/build.gradle.kts",
+        "sha256": "a5cbbb8b88a60674bb897d966a580706ff0eeb6a06c11899c158f0e31a902486"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/CatalogComponent.kt",
+        "sha256": "f25a133b8a2e2309941b571dfe26640fa4cd59cc5e79e1dc66b8df72702bf8a4"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManager.kt",
+        "sha256": "7caa51aa5730a378eb7d8373eeea8a191253874455ef5edba2b170f50132f330"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogComponentDefault.kt",
+        "sha256": "3d548c0490622c40e0f7eff634c36b65b6da00729eef86a90c349bbd7e5acef6"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogComponentPreview.kt",
+        "sha256": "f0ba75eab73decfb1427c2ae3bbccdca523bfde1c7c406270727e16061a32fb8"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/Mappers.kt",
+        "sha256": "7a8a58e1e5355f346293cc3dde561dafbef73499fb37ba175a6fcbbcc06d61eb"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/integration/StoreValue.kt",
+        "sha256": "fd2ea6af7cd49bf5b4e4c3c9c70d193f7a214c651eb8f760284c539609c266cb"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/store/CatalogStore.kt",
+        "sha256": "f20691679083202ef8f160ef80979e797928a99edbbc2cca3f80a54ce12c0b3b"
+      },
+      {
+        "path": "shared/component/catalog/src/commonMain/kotlin/com/sedsoftware/bagcue/catalog/store/CatalogStoreProvider.kt",
+        "sha256": "78d9d4de8a4a75286e1d7d8567c3ee0e208e2c9912a0fe4e0eb6499137b7a837"
+      },
+      {
+        "path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/domain/CatalogManagerTest.kt",
+        "sha256": "f7d254a32d44fad58d00341c68253761281ba368df8442b58e258211d869f97d"
+      },
+      {
+        "path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/integration/CatalogModelMapperTest.kt",
+        "sha256": "d1c14314a20d9f1909d3f5ec49a1865de91997b19ac30d423762a26a18cffbbe"
+      },
+      {
+        "path": "shared/component/catalog/src/commonTest/kotlin/com/sedsoftware/bagcue/catalog/store/CatalogStoreTest.kt",
+        "sha256": "44dc119d7db74d8bfe462302e1a1a12526891301988697c05e09313461578881"
+      },
+      {
+        "path": "shared/component/history/build.gradle.kts",
+        "sha256": "35be28225d3bb3c62aa95f2d026e2f26b586c36bb3899de535498a3bbab130de"
+      },
+      {
+        "path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManager.kt",
+        "sha256": "43d1798d1e128f6c76434560da48a8dda404e60be028f8854ad49ebe8557e0c2"
+      },
+      {
+        "path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/HistoryComponent.kt",
+        "sha256": "44f0a32462abc5bdd9000854b8a97aa012454f418e3a7529bb51de6a702e8010"
+      },
+      {
+        "path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/integration/HistoryComponentDefault.kt",
+        "sha256": "f6bb1cca9397d958a08548fbbdee26fc24078a5cd3cffd51afc2ba6838cd9d11"
+      },
+      {
+        "path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/integration/HistoryComponentPreview.kt",
+        "sha256": "d1e0e22bed2b5414562adb510a56a10d591d28c2216dee58afffb7c4409e72f5"
+      },
+      {
+        "path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/integration/Mappers.kt",
+        "sha256": "21e97031a84ec63bfe8df422f8e3788c51f7d07ceaa5d3ee2bede1813ad54a54"
+      },
+      {
+        "path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/integration/StoreValue.kt",
+        "sha256": "a65a0ec93c352d427cfa12f87d616301f64c051c15b8b556953e3b78f5a6a4b7"
+      },
+      {
+        "path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/store/HistoryStore.kt",
+        "sha256": "a22a2073a721d78c0eec4fecc10f9a4a9e05bb235c224258123f0512d03ed848"
+      },
+      {
+        "path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/store/HistoryStoreProvider.kt",
+        "sha256": "3a27d8e81dd1d7c4350f52e97f937644e377fa1297d48ce16e7993a858c610b6"
+      },
+      {
+        "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt",
+        "sha256": "4192a98494a9ed7e0aedd9f9eccd4ee2b2e67caa36b140040e9110fa76599eff"
+      },
+      {
+        "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/HistoryFakes.kt",
+        "sha256": "ee847e99455070a18812aa08e45fb64fabbf28463e4b5b6a7d78c8bbcef6f6d2"
+      },
+      {
+        "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/integration/HistoryModelMapperTest.kt",
+        "sha256": "17b701c2cc65308bed08e7d496143ede10d89cbe510030d60b0b6a484c47eaad"
+      },
+      {
+        "path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/store/HistoryStoreTest.kt",
+        "sha256": "c6199800e2a931c217e9a761283b2faf2293a1e5e02940b74c4bf535b325ad1b"
+      },
+      {
+        "path": "shared/component/session/build.gradle.kts",
+        "sha256": "bb7448f91312c94cc4efb75d06ae8109eaea00e9888bf9423c78e70612c6558b"
+      },
+      {
+        "path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/domain/ResultAdvertisingManager.kt",
+        "sha256": "4adc0b49a435ad60e9fc993ec234bcc0a8db9b5a09fa6b7dddb66ce66eededc4"
+      },
+      {
+        "path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/domain/SessionManager.kt",
+        "sha256": "992538591b6099276cb7821118ae0caa3ca20e448155cd2f3ce25a6d960ba498"
+      },
+      {
+        "path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/integration/Mappers.kt",
+        "sha256": "56eda04d45b6a3c9be901709c88ce89c7bea101143ff0f2a1cca3a9e6a6dfc04"
+      },
+      {
+        "path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/integration/SessionComponentDefault.kt",
+        "sha256": "4dd1fc1b351b543b45824f43d7ca97cb48b1b8fcb483d1882543f4f7e0a4c1be"
+      },
+      {
+        "path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/integration/SessionComponentPreview.kt",
+        "sha256": "d6dbc5c628edf924b1c64efcc0fa5c06ff30c17b95bce16dbb653a49c51a7bc7"
+      },
+      {
+        "path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/integration/StoreValue.kt",
+        "sha256": "581b6b4784ff55917b807a18d86b2cf8c4645430a14fd1f779d528773a15153a"
+      },
+      {
+        "path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/SessionComponent.kt",
+        "sha256": "e7110620ea1fcdf5995f1d720b5f7221433f52067fb781def0fecc3d3cca5dcf"
+      },
+      {
+        "path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/store/SessionStore.kt",
+        "sha256": "b9cde6395bbe0c8116d5edf0f451f36dd6c88a2cc6731cda204ddcdcc63e1a00"
+      },
+      {
+        "path": "shared/component/session/src/commonMain/kotlin/com/sedsoftware/bagcue/session/store/SessionStoreProvider.kt",
+        "sha256": "45cc263803afc289df76e1fbffaea0377ee99ed95233c6c002ff7b804ee86b88"
+      },
+      {
+        "path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/ResultAdvertisingManagerTest.kt",
+        "sha256": "69a2bff5415a73d6b569c027b89557f794a49f68b57b530c25c23aecba7422f4"
+      },
+      {
+        "path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/domain/SessionManagerTest.kt",
+        "sha256": "9b350b0db7501223f08902e5cd4cfe714b3a68827fa43679672e64fb12348390"
+      },
+      {
+        "path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/integration/SessionModelMapperTest.kt",
+        "sha256": "3f2fb9463aa16a8cb4cf1e86402be5c776c2f2feb95cd1cf8db2263aff1cae11"
+      },
+      {
+        "path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/SessionFakes.kt",
+        "sha256": "11921ab7111f3de9fd6d1c0e5ef7308763d8425da158f3412087b84a876221c3"
+      },
+      {
+        "path": "shared/component/session/src/commonTest/kotlin/com/sedsoftware/bagcue/session/store/SessionStoreTest.kt",
+        "sha256": "4ee930614369f387fd725ec626cbcf7174717917944db2085ea61ed666f8b236"
+      },
+      {
+        "path": "shared/component/settings/build.gradle.kts",
+        "sha256": "62bb02823a2f8ad1f8192b598caf1e2e258497ec90d41105fe873289ece11f3f"
+      },
+      {
+        "path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManager.kt",
+        "sha256": "50348ed48fc2e9bd4f6b395a1f8b0f2d966f83e67b115fe19718d7971e2f695a"
+      },
+      {
+        "path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/integration/Mappers.kt",
+        "sha256": "f939fd0eb8c469d989d21201d91d9215627bb343d706ab4e42523acf5704a757"
+      },
+      {
+        "path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/integration/SettingsComponentDefault.kt",
+        "sha256": "e5154f4b9c427f4959e2dddb167958e86a20ebe91817422ab1ac573843ddca18"
+      },
+      {
+        "path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/integration/SettingsComponentPreview.kt",
+        "sha256": "44bd5ba8e20252230632d8d8f268fbbb0630ab6faaefa3fcf03d6cdf4a45a234"
+      },
+      {
+        "path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/integration/StoreValue.kt",
+        "sha256": "c76b5c9e14502c6ab6907db05a26431710f7d6a6b03b390a075c014ea2e49255"
+      },
+      {
+        "path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/SettingsComponent.kt",
+        "sha256": "2347e3e146de5d0ed42567ae46d8987f6e56d306c48b003d4b9ba001f9a69024"
+      },
+      {
+        "path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStore.kt",
+        "sha256": "66a656b8c59ad13c2fe76049ee96c8d900098202fbe79b990c07e8ab5caa8227"
+      },
+      {
+        "path": "shared/component/settings/src/commonMain/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStoreProvider.kt",
+        "sha256": "66f9101673c86b6231ab049fde73bec9b2fc4bfdc00dba1b7a105130711adcff"
+      },
+      {
+        "path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/domain/SettingsManagerTest.kt",
+        "sha256": "f085030e38cbca49017069a19cd34b1ba555faa233c4bacc6c2c699ae9fb73b0"
+      },
+      {
+        "path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/integration/SettingsModelMapperTest.kt",
+        "sha256": "90306a85828cecedfec13fa6f6830fff5c459e7404445264c19cf94b74f65aea"
+      },
+      {
+        "path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/SettingsFakes.kt",
+        "sha256": "b17d4238363cfa18cae0b2fb0cca9522d1b1b74d894c5b792e434d0794d9208f"
+      },
+      {
+        "path": "shared/component/settings/src/commonTest/kotlin/com/sedsoftware/bagcue/settings/store/SettingsStoreTest.kt",
+        "sha256": "f1f74130259cd9a5655359471d0825f8f0350cdd1b52e81fc0989c4572246393"
+      },
+      {
+        "path": "shared/component/templates/build.gradle.kts",
+        "sha256": "70ac3e3c9dcb8a54209c13829fca2550136ad832f8bc3cc3064c13dd35e590cd"
+      },
+      {
+        "path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManager.kt",
+        "sha256": "f90943936c5ee7c6282e8ad220b9d4754413216f2e46b52cb1ce8617f1a3c7ba"
+      },
+      {
+        "path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/integration/Mappers.kt",
+        "sha256": "34380c8470907104d3cafb46136823b44715320201d29e78f55819a88a8afba9"
+      },
+      {
+        "path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/integration/StoreValue.kt",
+        "sha256": "89b98eb6f4b9f6424e8d8797f6edd8e2029ee5f3a296ad50d556f67de7682f7d"
+      },
+      {
+        "path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/integration/TemplateComponentDefault.kt",
+        "sha256": "99f4d346e513793b190738d67103ee291977f0909fc7e72b9b594d9405eb7705"
+      },
+      {
+        "path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/integration/TemplateComponentPreview.kt",
+        "sha256": "19a15234a4e7bc86546dffcaa38dc76eee612d61c61196f7c668d2216e75606f"
+      },
+      {
+        "path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/store/TemplateStore.kt",
+        "sha256": "0531fd2b96d28262cc55ac1466eed4d7e4cc9a799be63f496386b1346a051717"
+      },
+      {
+        "path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/store/TemplateStoreProvider.kt",
+        "sha256": "d48d3569b70a41fbe431e069dbcb04daaaf1183b0e8022599f22731b10b498f5"
+      },
+      {
+        "path": "shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/TemplateComponent.kt",
+        "sha256": "f36a7b26c92feefc2b94bb3ad84a9f860481c781c1330ec19d9c9b27256aaf06"
+      },
+      {
+        "path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt",
+        "sha256": "4610ad266cf42afbcae1cd16175777eb1ffacc4c59cc35e7ee4cc5215a5739cf"
+      },
+      {
+        "path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/integration/TemplateModelMapperTest.kt",
+        "sha256": "9a53cb02eef11e6ec8d5ef4860eaeb8a7f56218af801e34bf8d126b29df80384"
+      },
+      {
+        "path": "shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/store/TemplateStoreTest.kt",
+        "sha256": "523cd21c674032129850cb439e13bf1857f75b6de41c211c4dd89a66e9990fc1"
+      },
+      {
+        "path": "shared/compose/build.gradle.kts",
+        "sha256": "81fa7195fbd4c6c093b58bd240ca22fd8ea142b0df616630d25b58619bbb69c9"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml",
+        "sha256": "4aba441a8f0d290bb272ee5622e391eb036d83350052838126b667acc7aff8d2"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_add.xml",
+        "sha256": "aa2bc151da1b2e8277fbedf6ebd7c5deb97f426bf76e76883010db7c1a1f94be"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_arrow_back.xml",
+        "sha256": "463bf340532697b4378fa4b9e3ebbadd5fd0f042cc831752ae865fdbaed0743e"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_bag.xml",
+        "sha256": "ea398efb55a3542b9b528cda3866fa42b529bb6e1d797f1fb70a746aea7dde4c"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_calendar.xml",
+        "sha256": "3d26dbf9c5b784fdcea7ed3c6f55244c4a6b197c62b40b207e7f4da7f1f8fbf2"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_check.xml",
+        "sha256": "8f907261934604e536a05ab1e4c0424459aa8f6f7ba5db236cbbf5893b82f0df"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_delete.xml",
+        "sha256": "644a3a2b690318949bafc8bf20e900642ce9ef35959e6deaf1650226525f9d6b"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_duplicate.xml",
+        "sha256": "ae8ae4ee001b4dadbe901c56af7d0a110e9e6185a8f4f12ab9f56a4d0ae97b06"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_edit.xml",
+        "sha256": "ba7570802e9f33518642ef6b8eda4590e184cce562217fe7ed889a24edc3f331"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_more.xml",
+        "sha256": "b2e1a278a0e522067c4ce5dbc4f3b97a50de2797a0f6077defdbae85a416bc9c"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_notifications.xml",
+        "sha256": "665293ab072f71bf738609af4782af91a3d20a5ee7dcdcee5d8137b710b73484"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_privacy.xml",
+        "sha256": "acfb976d689965b2b4edc9162a08fdf33c3d9ec1e4bf5a78afb6a28c6e487afd"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_search.xml",
+        "sha256": "81d5ddc1234d74cccf084b6b82bfb663008202581e8a8823c9657bffcbb4d351"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_sessions.xml",
+        "sha256": "40ac649bd29fe5c727abf4c1974a5f99a9e2cb3a94e7e37f0155de9ac3d397d0"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_settings.xml",
+        "sha256": "350e8d7e69a4699f7842b35fc5ac8e53630c191bb6c2c4f1975ce6c52a02c096"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_templates.xml",
+        "sha256": "8407451bffa7f3020582cd54c17a6011ffb22f5bfd43989ba63d160cc9ebf8dd"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/drawable/ic_today.xml",
+        "sha256": "a17734ca3d10163b2f800a9bbc95ac81df661ce6fd109c62bb475211c6c0571a"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/values-ru/strings.xml",
+        "sha256": "dc26bd24ac79fa7bb9367cc21dbee0d6710f9db6a593a578e5b8d8a7798e590a"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/values/strings.xml",
+        "sha256": "b85afeeaa309337e9d8f944ac5646e0e6fae45c7229c2842bc071c3f26a2d4ab"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+        "sha256": "ce4b497d03b795865eb1ba14d3f363110b6f29b7f518b3a16597ba1e4a781cb7"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+        "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogResources.kt",
+        "sha256": "3a68648f97da3516c2d5ca943e49da88b6448b3c9183c14df839b7fa169116dd"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt",
+        "sha256": "32b973b7522b791f6cbb4bf90d34af898d79b576c05dec5e15390b65f5f3ff1b"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryResources.kt",
+        "sha256": "98623d61eef75a64b0aea1f0d9444b51c54baf3f811f41f96b74693414084252"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryScreen.kt",
+        "sha256": "f92e0cc795fd5818fb3174e96c7710cecafc808ec2c7dabc01c5059c0c25bb6c"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/preview/BagCuePreviewFixtures.kt",
+        "sha256": "501f63239b4403a1722c3c2baeb756912573ee08b121a0932d994c82c72768e6"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/preview/BagCuePreviewMatrix.kt",
+        "sha256": "d9505f2281ba72f671e60eef972d2592d92727ab92d99bdfe80f0233f80ec00d"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionResources.kt",
+        "sha256": "bb4b67897c237a4c7672eb159d26a331c608f9e77a6df204cbe6955a1ae6e9d7"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt",
+        "sha256": "2535bf41584dedca92cbffc8880eb871f4152fad264a45cf4b7d0aca58879285"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt",
+        "sha256": "b6f0db2df75d54329a6641da2620d09eab283f1eb44f7105ea27efe42f181f02"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateResources.kt",
+        "sha256": "1a038002eb211b587310a74535b5a30257cdae98e49271d59788b14f93978aef"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateScreen.kt",
+        "sha256": "6aa9ee3735620478249f0dc9679cefde147c707995c25478c86a77a0ee5741fb"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/Theme.kt",
+        "sha256": "1a200fe1b2b982119af2ce8b9f98052782936b59df6f9ca18e320afdc85474c3"
+      },
+      {
+        "path": "shared/compose/src/commonTest/kotlin/com/sedsoftware/bagcue/compose/ProductShellContractTest.kt",
+        "sha256": "d6b214d48abba425fda16760b9cf542adfad07c0c5a5cb4b79bf4a155317c9ad"
+      },
+      {
+        "path": "shared/compose/src/iosMain/kotlin/main.kt",
+        "sha256": "7e666b4e7d05cee93eea8c901845399c29b438c606aa7e3147d8776279c1e914"
+      },
+      {
+        "path": "shared/compose/visual-test/build.gradle.kts",
+        "sha256": "86ecdcb85f05094805f7d9a99d3d1d15fb1180b31ad8f97e135e6fbd062586f4"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/kotlin/com/sedsoftware/bagcue/compose/visual/BagCuePaparazzi.kt",
+        "sha256": "251f67d100b087bd3726fa85e4814871b2596ec658b4d539357494980d85d6b1"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/kotlin/com/sedsoftware/bagcue/compose/visual/BagCuePaparazziDialogSmokeTest.kt",
+        "sha256": "97d70d50d2faa6617355c1d5e12d4219d41b83dfe755975752481ec4e00ec19e"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/kotlin/com/sedsoftware/bagcue/compose/visual/BagCuePaparazziSmokeTest.kt",
+        "sha256": "ff0867286bdeeb250e8243272bd0cb33d438f0513e87fa1e1ed5cf2b5aa93eb4"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activeadaptive.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "c7fe4fc00823a2cb386f0168e69f0b6a01a218c9dd32cade5ae4fe470672d4f9"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activeadaptive.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "c8eb2c3586725b4113471b86699ee114a9b3b58d499f12ab390a56dc89fc8b8e"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activepartial.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "3966b8c8b143420e462dd4a36a30f44765aa3083135e8f28287faee7571d3541"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activepartial.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "86f8730a64b3eeb07f5e7c501bf45cc884f68a2e9f3db07b2483f327df220e97"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_firstrunstarter.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "26cea27566fa822f64572d7ed4b76c0f48c07c007a536a5e239b5b68e1f4b996"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_firstrunstarter.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "21bb35e090221c70da47a703c1a8723c9751fec0500aee0ee007b4cab9e98cf4"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_nocurrentnextfuture.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "26cea27566fa822f64572d7ed4b76c0f48c07c007a536a5e239b5b68e1f4b996"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_nocurrentnextfuture.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "21bb35e090221c70da47a703c1a8723c9751fec0500aee0ee007b4cab9e98cf4"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_readfailure_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "d7192b02ff0ecb9763fd53203afe783990f93f98a4968f89b8070b4c05073fd9"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_readfailure_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "4f32a2e3ce67fc72d41ef8fc7257d4e64419d2df5a70ae0a411ab440d874b3ae"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_defaultsoffreminders.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "c0971b7e6348f23181e09210fa83464649d67d98322db574a9780d4f7ecc8ade"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_defaultsoffreminders.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "88796dac687f638606bba01b40f755f4f833b34af77fb10bff7d4fbf432cd1ef"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_emptymerge.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "3937e6cb2f0b2433aa20b3a25e8ff13d04ca241300aa4382388f63d4a02bfff3"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_emptymerge.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "9233325295b1e9da5542fc6590f438e90038165243e08a6dfd82ba4cc7060ec9"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_existingdatechoice.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "95220cc739b11e7df0c90928b97141f99c9b50d6b166acb7efa7eb2618aa5c87"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_existingdatechoice.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "77d6083518e75260db2803bb2d7dccb126afe72bbe03607eea95b01e9cce5c51"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_saveerrorime_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "6f94008965549101ef4678a17dd8cae216da575bc96824b7c8500ff71444d74b"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_saveerrorime_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "d6533f8532d25c0874725c03e15ecb6253327595d5401743fe4355f80997e2c3"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_selectedkitslong_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "0e98a9721f4f940540d40d5e9dac061b3ea79dff1bebc79b1861096c96611cf7"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_selectedkitslong_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "0bb31beed59ae9d192f4245d4bbf6e686c13b2b155d7a63aae67344591441d61"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_supportingpane.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "83e7e6f13e730007b1a4c857656dc090db618ec578735783de40a4b7331029af"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_supportingpane.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "20daf590e87fb6d2201b1efe65fb76aeb2291a719847aa470dbb9170b5105305"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_allpacked.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "04721aa74567f6fa1ff7ec87e53de1507b8e47a871f7de3a599c2661d96ba510"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_allpacked.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "2dc90ed0c9fc56177d7cad529b4df24fc17af5f0610ca262cf231f4de00dac41"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_newofficepool.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "36d451dc6e3168be13773b759c3eb8b9c40d4c0c23d0973a2f266107b8017d6e"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_newofficepool.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "2f02e507801c55b883c4fa3b2b486fe4de34db6fa9d17bbcaa55c684b8b69cf0"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_partialsourcehints_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "e649f6dd7ad7788f13851ce10f8834716e04afcd4b928d5fc9fd2132162c78eb"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_partialsourcehints_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "f359084d7cf79dadced0aea9d7b8ff9f23ab67adfb62044fa9824cb5dd367d4f"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_removeundo_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "e649f6dd7ad7788f13851ce10f8834716e04afcd4b928d5fc9fd2132162c78eb"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_removeundo_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "f359084d7cf79dadced0aea9d7b8ff9f23ab67adfb62044fa9824cb5dd367d4f"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_saveerror.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "0f31f4e5bea278c223e0f6798e8637b7199148d98317487b7c3f20e79bd424c7"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_saveerror.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "82ade500d4e5d19a6833997cc8c72f7f62cd79e2afa14084e4c4cae750865cdb"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_supportingpane.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "d5ecec310be999616f8cc3ab9243a6349286a3c13982cb1625de5cb8fa220af4"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_supportingpane.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "4d514fa4c22c45eb83f44d5b64a69bbb610b2a84dd668f7240ec4450bad25550"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_unresolvedbagconflict.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "496db6516e1bdcf6d98f745229f68b56e08e18073860a25bf81ac99c8f1dd01e"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_unresolvedbagconflict.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "fbaad26f0d37449d172cde5b08540a2c9a7bfc11538877a21f9f262b806b6e3b"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_adfailurenogap.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "32141f41636f36f822dfd2046379652a3484ab90c8e1bb0e8c1fcca6104eb558"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_adfailurenogap.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "dbd73b31fa485216d32a6097f6f3e0e0521a4428a81b7f0227a8a3edd8dfc5fb"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_consentrequired.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "d3312809555203f24a974db5fae6c4ccdd1552b84ac758fb7d3ddc579758cba4"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_consentrequired.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "4d1f1fb5ce5872971de998c65cd76d10c25392b6ee26eca8c0ca98fee1c61f00"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadaptive.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "e7c814a22896f374452f092099d7bc9f35f7c38640084aec762445b74b7998ee"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadaptive.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "d71f52f3cd9de2e60f512f87bfc60259a0844081164e4803475ba89136c19983"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadhidden.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "32141f41636f36f822dfd2046379652a3484ab90c8e1bb0e8c1fcca6104eb558"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadhidden.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "dbd73b31fa485216d32a6097f6f3e0e0521a4428a81b7f0227a8a3edd8dfc5fb"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccesseligiblead_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "5a268a7a912602e3d212616f85ee6302953d56a9186dbe26b79cdae20a177448"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccesseligiblead_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "a3c73592d78eca023640d559a41209ce208e4f9eff84559b990a8c6dbf410c44"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_skippednoad_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "a4c3c60ce995c2bb15cb060dfbc765e47650438a5f60948aaac79151006da357"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_skippednoad_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "fb55c19b20bf15971dca0e30ff539adb76e1c747d48751477ef343bf7f7aff47"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_calendarexpandedfilter_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "085ece7cc84bdcfb1b73001b154eb40a17793159c6b4b6efa3026bd17d4e3120"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_calendarexpandedfilter_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "4c407842649ca6d06c71f0d0998f0262d182672db14ce906741e19af443930e5"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_deleteconfirmationundo_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "aeb270a84dd3921cf53ecf087b685000fdb39faa69ebdc2f258fee6fb6bdb4df"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_deleteconfirmationundo_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "de148975279ee236f2bcd817f334525b3bd1a34136ff794522bc32b6ed8256a5"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_emptyandfilteredempty.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "40dc787304d700655d3f36c80f3ac1adeac25aff33701c9bd3f265eb06826a37"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_emptyandfilteredempty.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "eac4dafa5045ab5c7fd01b6db1e22c7c250fbf024208a218d27b9a9448ff815b"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_listdetail.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "7ec216090bc3043817d20a4b74f6243630dff4efb1a6a72c202d317edc4d843c"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_listdetail.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "065b1a7d702094ebf0d8fb52bc82e39e14ec41db2f742e58ae97c85e4682f20b"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_mixedcalendarcollapsed.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "eedeeeea8420bcbb60193be328ff8ad79e02597e9f0695f86f84a2d395d7a359"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_mixedcalendarcollapsed.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "3371388954cd8ce9b9212d270cea26df28be475fdb590450456374d89bcdce8d"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_deleteduplicatefeedback_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "eced1931862029f5af242807f7a0c5cb4435675bb3539fa88669909f737f9e09"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_deleteduplicatefeedback_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "ce2fdfebcdd1df2d1e6ca1d1e1645bcb1ab4264783cb3f22054333a1a309adce"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_empty.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "c2bd7cda8149229ea0936275e3ecb0bef53a4e9e56d1f01a6f86753926df64b7"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_empty.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "7489649fdd5e8a9c284a6409d1e3c6fda4fa0da32c84b7288e57fedc2cb01427"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_listdetail.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "28368fdc3cd7867f1e65c83cd413a23fa3c4aafb4a99a7197c6e97bd35576cc8"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_listdetail.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "c4bb14dfa065e5aa6f346edbf7405edb38d675a5732fa1c816dffce6bd7c6f93"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_longcustomtemplates_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "662800366e48ed57f1c1104ee1e4d78587f0a9c00e84d0313e9e2c3706a411e3"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_longcustomtemplates_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "efd91a9f82174be8edaf6984cfa0f3576497047217c4db9443ae9cd7e1e261fa"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_startercontent.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "78950d09b1a444429651d5dc977d7ce78f5f2da6502df182efb860db55630345"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_startercontent.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "13ba6fa645350b68ec1259fa8c4e89bdefc9745c1f5fc92e2db49e50c34a1e09"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_detailpane.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "dc81354cf42b909c62ad6e4a5c374d3e2f414d3bf9cd33740f6fe2a38cfb9e9a"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_detailpane.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "8358a0d2b1927ddbe4230a7cd233c67a9467343fbbec93a7a9fac8e517d41eb6"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_longcustomime_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "4c8170eba759a9d368f065d78a679983ea4795a36600bff254afe27cb3579ef9"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_longcustomime_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "6d6d1044eeb82949374bd17e773ef149733b742d082909722bff4aa1c4346888"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_newempty.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "45001aad0c2d25197c09a765362a6a9a99ea340572229a53b61d3cb6f76877d5"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_newempty.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "5234218a02a25e0868965841782eb6b20eaade437aebac810bf478e3da6f2d4b"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_savefailure.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "00716b3e9d1650c12841674d49ca352a9a06d7563de7e45663b978d2a4a8d688"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_savefailure.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "45811ba78f9236d024b786cb96f9c9970bb31ef4730292ab92770f9d44f1d611"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_starteroffice.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "3078ff8f0d3461d5cdb957ebb34909e10abfcb76ecf0e256f7ae0fd32b494e82"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_starteroffice.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "8443fa6a3a5088657e5996c17c4abcf44a6b36747caadd49563c2c3ca061b932"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_dependencydeletion.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "78950d09b1a444429651d5dc977d7ce78f5f2da6502df182efb860db55630345"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_dependencydeletion.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "13ba6fa645350b68ec1259fa8c4e89bdefc9745c1f5fc92e2db49e50c34a1e09"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_emptyerror_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "88133c49f7049f5ac5a287aa36c55e49598569b2a886a8e4bf605b86cc00dc70"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_emptyerror_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "8afc7ee7180c22bd439b67362e5945ac641580ffb5cdf4929eb6a0ac02fefde7"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_listdetail.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "28368fdc3cd7867f1e65c83cd413a23fa3c4aafb4a99a7197c6e97bd35576cc8"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_listdetail.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "c4bb14dfa065e5aa6f346edbf7405edb38d675a5732fa1c816dffce6bd7c6f93"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_searchmatchsuggestion_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "88133c49f7049f5ac5a287aa36c55e49598569b2a886a8e4bf605b86cc00dc70"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_searchmatchsuggestion_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "8afc7ee7180c22bd439b67362e5945ac641580ffb5cdf4929eb6a0ac02fefde7"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_startercatalog.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "78950d09b1a444429651d5dc977d7ce78f5f2da6502df182efb860db55630345"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_startercatalog.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "13ba6fa645350b68ec1259fa8c4e89bdefc9745c1f5fc92e2db49e50c34a1e09"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_detailpane.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "28368fdc3cd7867f1e65c83cd413a23fa3c4aafb4a99a7197c6e97bd35576cc8"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_detailpane.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "c4bb14dfa065e5aa6f346edbf7405edb38d675a5732fa1c816dffce6bd7c6f93"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_newcatalogitem.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "78950d09b1a444429651d5dc977d7ce78f5f2da6502df182efb860db55630345"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_newcatalogitem.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "13ba6fa645350b68ec1259fa8c4e89bdefc9745c1f5fc92e2db49e50c34a1e09"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_seedoverridematch_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "88133c49f7049f5ac5a287aa36c55e49598569b2a886a8e4bf605b86cc00dc70"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_seedoverridematch_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "8afc7ee7180c22bd439b67362e5945ac641580ffb5cdf4929eb6a0ac02fefde7"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_sessionposition.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "36d451dc6e3168be13773b759c3eb8b9c40d4c0c23d0973a2f266107b8017d6e"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_sessionposition.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "2f02e507801c55b883c4fa3b2b486fe4de34db6fa9d17bbcaa55c684b8b69cf0"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_validationsaveerrorime_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "88133c49f7049f5ac5a287aa36c55e49598569b2a886a8e4bf605b86cc00dc70"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_validationsaveerrorime_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "8afc7ee7180c22bd439b67362e5945ac641580ffb5cdf4929eb6a0ac02fefde7"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_adaptivegroups.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "6691d901e86441268347c9224393705e77387df1810ab12768b6f0873d586f71"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_adaptivegroups.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "aa356528a40629a90c544b643f9e42679ccebf23eef00272a1a837797e01bd16"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_alldefaultsoff.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "b16e9bfd7fc16115a926afd4a130fce4ba694455f84fcd8b375109833de9c422"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_alldefaultsoff.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "c8fccafacdd222f078176d1e7483a90e37722c316eac7482d001fa1051c1a374"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_analyticsonoff.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "f762b7411a363bc9cb997b996aedb00399b4b7c29d2353583ea9d6a8919f5180"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_analyticsonoff.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "fb4e8b1671a0b2010ab96f9e709bf85279b89c50fdb75b4b9aea812a5ca10877"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_endpointunresolved.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "b16e9bfd7fc16115a926afd4a130fce4ba694455f84fcd8b375109833de9c422"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_endpointunresolved.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "c8fccafacdd222f078176d1e7483a90e37722c316eac7482d001fa1051c1a374"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_protectedprivacychoice_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "722b68f302921202f428d9254a42807146bd86943e86e70d393f10d88949b768"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_protectedprivacychoice_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "ac752c11be33d9d5f629250c81bd7ef3c0d5831f69532ea12a700fe0162d2c85"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_remindersonpermissiondenied_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "359b65cfc008c17461a31570c8a83fb8ef48aec38a58d3d0081469e04591f8a4"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_remindersonpermissiondenied_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "97012364003fb449a65a34b08b5a4447230107650049d46b4ec061c7dbbdc0d2"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_boundedmodal.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "sha256": "ae689ed81c610117f7c488912676d41c3c70ee171eed14374b60bdad090acb2d"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_boundedmodal.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "sha256": "9a643a8a0aa0f3e6d477a62bee342131e2f9660e2f431c5e609d2a2831b6e572"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_requiredchoice.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "d3312809555203f24a974db5fae6c4ccdd1552b84ac758fb7d3ddc579758cba4"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_requiredchoice.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "4d1f1fb5ce5872971de998c65cd76d10c25392b6ee26eca8c0ca98fee1c61f00"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_savefailure.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "sha256": "a42137f7cf7f0093a114ecc6fd32a49ef17a1cdd7419de9d39905bf933023579"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_savefailure.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "sha256": "6cfca5df87e33e8587341352dd45966769159f3915ba0e0ee4d75749a1f8a290"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_textstress_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "sha256": "5d17c9b8c7e9662bc06dc6dc3e86596de66ef255ee632c51a73d59f0fa48a937"
+      },
+      {
+        "path": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_textstress_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "sha256": "1421f3d7e0ba3e93cb3b8b31d5a1a134c41bfa8e2c4e47c5c6f8cd348d957818"
+      },
+      {
+        "path": "shared/compose/visual-test/tools/build_contact_sheets.py",
+        "sha256": "4f1b0ee07bce4fe93716ccac7971c885d7aeb392d2f71c084dd1ad418b70a544"
+      },
+      {
+        "path": "shared/data/build.gradle.kts",
+        "sha256": "c57bff1c8c7388be8110323bd6d4abc4d1074988b4af93698a9e05109baf1d0e"
+      },
+      {
+        "path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt",
+        "sha256": "ffb518b741f983453a38379b0310880eed610d473bcd0aeb91b0f95dabae2627"
+      },
+      {
+        "path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt",
+        "sha256": "231ee82e9e2b284c5e549dbeb38eed01a0bcb015f139dea48c64c2769079d2e2"
+      },
+      {
+        "path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/template/KitTemplatePersistenceTest.kt",
+        "sha256": "50c30396e418d0cbc5275d58e1ea98d07cde02edfc7310494e0b30e090360187"
+      },
+      {
+        "path": "shared/data/src/androidMain/kotlin/com/sedsoftware/bagcue/data/catalog/AndroidCatalogDatabaseDriverFactory.kt",
+        "sha256": "02bbafc59639db7047352f855ab8a217d65ada8eba1f16317fe1ad71e4fddd55"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/apa/ApaDataModule.kt",
+        "sha256": "2df7de7fb339ae886b19d3f6fd9c4f53ef3fafa4c16c0c8dbddd7e5e2b14e4ee"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/apa/SettingsAdvertisingPrivacyRepository.kt",
+        "sha256": "1904a9ea5f0effe48a283f52662c8354fa5a33cc26683fdaea91c96b9632b788"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/apa/SettingsAnalyticsPreferenceRepository.kt",
+        "sha256": "f14bc7c06efd9ea5e9c1ec16d44a16203bf541347dd02bf20035e88fce3125e1"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt",
+        "sha256": "5200dc3ac6b82fb988b419d5ea0ccf2ffee3a12505c63ac588117444fe409158"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/SqlDelightCatalogRepository.kt",
+        "sha256": "b25f19f6e4dbea7e548010d78b898a785542188e470a20e1a33fbe0986196b46"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/reminder/ReminderDataModule.kt",
+        "sha256": "385d7231f6138da0b1900583e1da7b37f3fb2be91a1d9b0519a897f3130da549"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/reminder/SettingsReminderPreferencesRepository.kt",
+        "sha256": "12c1bffff6cd95604d8d88a83ede9ce4d03b1186584551fefdd0a0677923e83d"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/session/SqlDelightPackingSessionRepository.kt",
+        "sha256": "65ad688d9c90f190bc75fa3edb103bbdbc9a5da73bd105413acc3ff98e4aaa42"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/template/SqlDelightKitTemplateRepository.kt",
+        "sha256": "3a9bee59703e9670eeb4a7659be56b56759c5ecce4752246dc8e427295e27609"
+      },
+      {
+        "path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq",
+        "sha256": "a71c720313abb32fefc955027cd3a3658c6e1d789b5413d7e883424744b57451"
+      },
+      {
+        "path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Session.sq",
+        "sha256": "3e944b21767486fc1411764b0540defac8952eabac3c05cb52c63fdc80c37c3d"
+      },
+      {
+        "path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Template.sq",
+        "sha256": "303bf4827f8581ceb95747bcb40b613f5c8381e7057134d16a60be182ca8f8d6"
+      },
+      {
+        "path": "shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/apa/ApaSettingsTest.kt",
+        "sha256": "b2085cecf2a04a2cc558827bb4c699d9950c5a425994659b9d0bcae2fe4254ee"
+      },
+      {
+        "path": "shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/reminder/ReminderPreferencesSettingsTest.kt",
+        "sha256": "62f377352a814528969df6db62ce4f4ddacce2f1c523a400364255c6e12a101b"
+      },
+      {
+        "path": "shared/data/src/iosMain/kotlin/com/sedsoftware/bagcue/data/catalog/IosCatalogDatabaseDriverFactory.kt",
+        "sha256": "ecfe59c28c128e6fb4a3dad14d4890328ad246e387a15a271d6e8de872353927"
+      },
+      {
+        "path": "shared/domain/build.gradle.kts",
+        "sha256": "d2fe52334d344338b3f41874fb688e0888ce8b9225fcf37f17162fc2c1759c5d"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/apa/AdvertisingContracts.kt",
+        "sha256": "85bfbfc50a557a14502ecda6de824b6ceabc57561ce9d4b3db71bdcea18b1c8e"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/apa/AdvertisingPrivacyContracts.kt",
+        "sha256": "98c0c18b57d11980c442d69e44c8b4b4ffd5f59e874f92365aa923e87a547f2a"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/apa/AnalyticsContracts.kt",
+        "sha256": "1778b2a8b51a2184717e08d9eaabba1687d2ca6f5b211d367ba0e8cf1f63102a"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt",
+        "sha256": "7e7c2de3f82c7e7b6d0cd0ce88a6784aa62d38fcebdb670ad924e80049e18781"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRepository.kt",
+        "sha256": "0d8c2b11f6c7e8c01e1202dea7f1816196d68468ddc5e98b32c63c641d56e2f9"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderContracts.kt",
+        "sha256": "353d6e541863e120603084433761d9d16d7e44641e10af160a9e1a09e0951acf"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderModels.kt",
+        "sha256": "55c8afb669c026f9d6a6370dbe3d785937875342cf3ddc3ad7e6eb056c577b13"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRules.kt",
+        "sha256": "36ad075c418d03f20859b87f427a97c290aebe94ba271bd0369b2ae16e78e7d5"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/PackingSessionRepository.kt",
+        "sha256": "4a1d6adaeb7b48ed0ca979ee5516d59dd71f8796ea3afa3cead60cccdf2aaf71"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionHistoryRepository.kt",
+        "sha256": "70c87c552745e84d58c6ef0cdb102075fcafbcbf7ddc9ee27e08e3247d308728"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionMergeInput.kt",
+        "sha256": "14a7047a7fed336ff99ee3dc12254829e07fd9ac6724e49fc32ec7baafad00a2"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionModels.kt",
+        "sha256": "ebdd41b993a1f9d4fc72ff1b9301931492afa117fdec9db8391a7221bdfe7be0"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/template/KitTemplateRepository.kt",
+        "sha256": "229670deb793f929913450658a4ae64fb7c34fa5e686bcc28fae31e7c6d9e735"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/template/TemplateModels.kt",
+        "sha256": "154912509f459ec72b551ffc94e9d9a81c963e3ffb2fb34c780c84df1f307ed9"
+      },
+      {
+        "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/apa/ApaRulesTest.kt",
+        "sha256": "d4b8609e0b10025918ed7e66226292a8b70ba78f0f0085626c2591bf97371465"
+      },
+      {
+        "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRulesTest.kt",
+        "sha256": "a61e1924b8755e6c7c7bcaf507a50fafbe1024458d6b917ea2b8c3717935fc39"
+      },
+      {
+        "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/reminder/ReminderRulesTest.kt",
+        "sha256": "a61151a9f936cf9b3e8b3c70ac39b4aed45feb6af26f8de57bdb826e17f17c66"
+      },
+      {
+        "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt",
+        "sha256": "c624336cd39832071436f2c130b9da272248e8cf92ee7010b4f5fd82773b509a"
+      },
+      {
+        "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/template/TemplateRulesTest.kt",
+        "sha256": "8837a1f8de1ff80457096b98f89fc79832158add865cf5fa92224712e48c4119"
+      },
+      {
+        "path": "shared/network/build.gradle.kts",
+        "sha256": "62eef8ee50cbb85af4577265d2ffa3f72328a9260046fa11559b861c6d9222a9"
+      },
+      {
+        "path": "shared/network/src/androidMain/kotlin/com/sedsoftware/bagcue/network/privacy/AndroidPrivacyRegionApi.kt",
+        "sha256": "39ab58755884425175746cb70e59964d4d5d0abe20477f2f058ada8ca7408b67"
+      },
+      {
+        "path": "shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApi.kt",
+        "sha256": "1d4afdf4e08508b8fd834b5e2e8230c1c7079bd481fe00feddad737f5a0d0cc9"
+      },
+      {
+        "path": "shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/PrivacyRegionHttpClient.kt",
+        "sha256": "ef940a46f6873f5842fdfe674ad2bdd8da10650cee9245749e15a4ac616f75af"
+      },
+      {
+        "path": "shared/network/src/commonTest/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApiTest.kt",
+        "sha256": "d4a8606cc9efd594270e5923165385a99fe2b492e6c8e40b0e5aea7f23dfc8e4"
+      },
+      {
+        "path": "shared/network/src/iosMain/kotlin/com/sedsoftware/bagcue/network/privacy/IosPrivacyRegionApi.kt",
+        "sha256": "db7565a0cabf86076b83b3d8e3618179fb3dfff30daf054f4c36166352f8d5d2"
+      },
+      {
+        "path": "shared/platform/build.gradle.kts",
+        "sha256": "dd33740f17f79ef249d7c1be678502ff25485d7cc510d30947aa963c890ad89d"
+      },
+      {
+        "path": "shared/platform/src/androidMain/AndroidManifest.xml",
+        "sha256": "ed2e5e94fc41a274d535ad151f03a62f91aaddcd78d4861f7ff06bec4f546635"
+      },
+      {
+        "path": "shared/platform/src/androidMain/kotlin/com/sedsoftware/bagcue/platform/reminder/AndroidReminderNotificationScheduler.kt",
+        "sha256": "996f91ab639989d9eec09e758bda31736a5c419f27d558421d0befc4dfa3b4a5"
+      },
+      {
+        "path": "shared/platform/src/androidMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderNotificationReceiver.kt",
+        "sha256": "e0387128225a99364519511eb8ad086238f6f3518d4cd1cfeabd87e1bfbc2b31"
+      },
+      {
+        "path": "shared/platform/src/androidMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderRescheduleReceiver.kt",
+        "sha256": "f46464985ad5762d45f3d306792c19119c87fd3dd4e54d9130e8cb0a7098b3bf"
+      },
+      {
+        "path": "shared/platform/src/androidMain/res/values-ru/strings.xml",
+        "sha256": "12400b0fa3347bbf73f2ebba94f12b61791ba68b94016f49d0387bfb818bdcdb"
+      },
+      {
+        "path": "shared/platform/src/androidMain/res/values/strings.xml",
+        "sha256": "ad5c686bef5e14d22b161f67204d52bba8f10537d39e146687e5b4f633008879"
+      },
+      {
+        "path": "shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/apa/PrivacyFirstInlineAdController.kt",
+        "sha256": "217662a7eefed7ee0e73499182ea3664e8825caaa949e3b00df04291c01d311f"
+      },
+      {
+        "path": "shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/apa/SafeAnalyticsController.kt",
+        "sha256": "7a73d69f808e0e291043c9efe3b806c8e7ec5d44747ae03b1b6ce0bff477a5bb"
+      },
+      {
+        "path": "shared/platform/src/commonMain/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderScheduleDelta.kt",
+        "sha256": "2c05920b691ded51b36ee93361d6268b87f1d59662fbe49fbe8e945a0ae5d8f0"
+      },
+      {
+        "path": "shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/apa/ApaPlatformContractTest.kt",
+        "sha256": "f78bc6082eed4f5fe547d3777bb02603c99df3b436a6f5ceca1ce23d8ab2d219"
+      },
+      {
+        "path": "shared/platform/src/commonTest/kotlin/com/sedsoftware/bagcue/platform/reminder/ReminderPlatformIdsTest.kt",
+        "sha256": "7b5b539feddb592e6e3803d6a9ac8f8b95cfb5e265a6a1557f33720499f749dd"
+      },
+      {
+        "path": "shared/platform/src/iosMain/kotlin/com/sedsoftware/bagcue/platform/apa/IosApaPlatform.kt",
+        "sha256": "2f54700edf1788dd557ca1bce2fc7eaf764eb6e7124c10f5c8cea069a1a2d1f1"
+      },
+      {
+        "path": "shared/platform/src/iosMain/kotlin/com/sedsoftware/bagcue/platform/reminder/IosReminderNotificationScheduler.kt",
+        "sha256": "1cc9e4218ff495909be5dc5c1d98011a74fa3985ef0cdfd4b595e76ee6e671dd"
+      },
+      {
+        "path": "shared/root/build.gradle.kts",
+        "sha256": "c9d58a96d5d46443c9566b330eb37c38fa8a1a7bd7007a1b227f6c4cfac219d8"
+      },
+      {
+        "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt",
+        "sha256": "812eaeaeec1ebd2b01207f36e927103c5827241391b71e927f8bd5a4a7cb84fa"
+      },
+      {
+        "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt",
+        "sha256": "1be49e1f33193662de148db9d76da914ea6d11eccfbd89b1552c1d5d534d41a8"
+      },
+      {
+        "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentPreview.kt",
+        "sha256": "56fbd681164728abf5e58dc5a11ffbd2a8904b9e2bb97ff679b14989c3ad7136"
+      },
+      {
+        "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt",
+        "sha256": "dfbb680476d1b39c5520759a3e2a3eb41cd0c8ef84c1b47e3c0250a4d19b3c10"
+      },
+      {
+        "path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt",
+        "sha256": "049277898e4949f9a99024a098ce37c48c65df3895a494167daca59ca85f0a1b"
+      }
+    ]
+  }
+}

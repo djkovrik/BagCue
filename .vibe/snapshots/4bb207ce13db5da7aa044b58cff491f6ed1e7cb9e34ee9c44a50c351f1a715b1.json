@@ -1,0 +1,13 @@
+{
+  "algorithm": "sha256",
+  "digest": "b32db2d90a02a41d5f9d8e7138a5b36433b0f5df839c656623c65e3d957b8ac0",
+  "files": [
+    {
+      "path": ".github/workflows/scripts/validate_release_artifacts.py",
+      "sha256": "e4376ef3b0ba7505f1ba6b61a915bd7dbafcce240fcc7b8e45e861f5a690665a"
+    }
+  ],
+  "patterns": [
+    ".github/workflows/scripts/validate_release_artifacts.py"
+  ]
+}

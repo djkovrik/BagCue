@@ -1,0 +1,1 @@
+{"action":"assign","assignmentId":"alr-compose-localization","owner":"vibe-product-designer-compose-expert","acceptanceScenarioIds":["AC-047","AC-048","AC-049","AC-050"],"qualityGateIds":[],"allowedFiles":["shared/compose/src/**","androidApp/src/main/AndroidManifest.xml"],"inputScopeId":"catalog-core-v1"}

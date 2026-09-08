@@ -1,0 +1,42 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:compose:generateBagCuePreviewTests :shared:compose:compileAndroidMain :shared:compose:testAndroidHostTest
+
+> Configure project :shared:compose
+w: file:///D:/Sources/Android/BagCue/shared/compose/build.gradle.kts:147:13: Experimental API in the Kotlin Gradle Plugin: No stability guarantees can be provided. The API could get removed in the future without replacement
+w: file:///D:/Sources/Android/BagCue/shared/compose/build.gradle.kts:148:17: Experimental API in the Kotlin Gradle Plugin: No stability guarantees can be provided. The API could get removed in the future without replacement
+w: file:///D:/Sources/Android/BagCue/shared/compose/build.gradle.kts:149:17: Experimental API in the Kotlin Gradle Plugin: No stability guarantees can be provided. The API could get removed in the future without replacement
+Configuration cache entry stored.
+e: file:///D:/Sources/Android/BagCue/shared/compose/build.gradle.kts:145:9: Unresolved reference 'androidHostTest'.
+e: file:///D:/Sources/Android/BagCue/shared/compose/build.gradle.kts:146:20: Unresolved reference 'srcDir'.
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'D:\Sources\Android\BagCue\shared\compose\build.gradle.kts' line: 145
+
+* What went wrong:
+Script compilation errors:
+
+  Line 145:         androidHostTest {
+                    ^ Unresolved reference 'androidHostTest'.
+
+  Line 146:             kotlin.srcDir(previewGeneratedSource)
+                               ^ Unresolved reference 'srcDir'.
+
+  Line 147:             dependencies {
+                        ^ Experimental API in the Kotlin Gradle Plugin: No stability guarantees can be provided. The API could get removed in the future without replacement
+
+  Line 148:                 implementation(libs.test.junit4)
+                            ^ Experimental API in the Kotlin Gradle Plugin: No stability guarantees can be provided. The API could get removed in the future without replacement
+
+  Line 149:                 implementation(libs.test.composable.preview.scanner.android)
+                            ^ Experimental API in the Kotlin Gradle Plugin: No stability guarantees can be provided. The API could get removed in the future without replacement
+
+5 errors
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 25s

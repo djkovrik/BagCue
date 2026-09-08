@@ -1,0 +1,5 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-release-artifact-validator-20260908.json",
+  "inspectionNote": "Inspected the one-line immutable validator diff and generated AAB contents. Android App Bundles contain BundleConfig.pb, not BundleConfig.pb.json; the corrected validator passes against the generated APK, AAB, and R8 mapping and adds no weakening."
+}

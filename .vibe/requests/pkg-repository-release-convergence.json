@@ -1,0 +1,10 @@
+{
+  "action": "package",
+  "packageId": "repository-release-convergence",
+  "owner": "vibe-developer",
+  "acceptanceScenarioIds": ["AC-036", "AC-037", "AC-038", "AC-039", "AC-040", "AC-041", "AC-042", "AC-043", "AC-044", "AC-045", "AC-046"],
+  "qualityGateIds": ["QG-001", "QG-002", "QG-003", "QG-004", "QG-005", "QG-006", "QG-007", "QG-008", "QG-009", "QG-010", "QG-011", "QG-012"],
+  "fileBoundaries": ["build.gradle.kts", "settings.gradle.kts", "gradle/**", "gradle.properties", "androidApp/**", "shared/**", "iosApp/**", ".github/workflows/**", "README.md", "docs/**", "detekt/**"],
+  "integrationGoal": "Converge BagCue on strict Detekt/Kover and five-workflow CI, reproducible Android release configuration, iOS native linkage contracts, real consent-gated analytics and ads adapters, bounded privacy-region transport, and evidence-backed release documentation without fabricating externally owned credentials or console state.",
+  "nextAction": "Register two non-overlapping architecture and privacy/platform assignments, implement their handoffs, then run the complete local verification matrix."
+}

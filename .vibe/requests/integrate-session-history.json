@@ -1,0 +1,9 @@
+{
+  "action":"integrate","packageId":"session-history","receiptRef":".vibe/receipts/RECEIPT-2937c70c-485c-4100-95b0-ed24856e5e8a.json",
+  "integrationEvidence":[
+    {"path":"androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt","symbol":"packingSessionRepository","role":"entry-point"},
+    {"path":"shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt","symbol":"RootComponent.Child.History","role":"navigation"},
+    {"path":"shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt","symbol":"historyIsChronologicalFilterableAndSurvivesRestartWithTheSameLocalDate","role":"restart"}
+  ],
+  "nextAction":"Verify AC-026 through AC-030 and register the reminders package."
+}

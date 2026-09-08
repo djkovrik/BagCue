@@ -1,0 +1,13 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-full-local-regression-fix-20260908",
+  "assignmentId": "full-local-regression-fix",
+  "productionEvidence": [
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt", "symbol": "CatalogRow", "surface": "rowscope-weight-member-usage"},
+    {"path": "shared/compose/visual-test/build.gradle.kts", "symbol": "mergeDebugAssets", "surface": "compose-resource-asset-producer-dependency"}
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

@@ -1,0 +1,13 @@
+{
+  "algorithm": "sha256",
+  "digest": "2abccb20eaa5919683a862b52078c779be7cbd8b82cdef37f3c6036727890d56",
+  "files": [
+    {
+      "path": "shared/data/build.gradle.kts",
+      "sha256": "790dd2a256d129ee4d69c9a3de0bc616e5181de43c6ef9eb128fc9b05d37e01f"
+    }
+  ],
+  "patterns": [
+    "shared/data/build.gradle.kts"
+  ]
+}

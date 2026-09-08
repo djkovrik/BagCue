@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "full-local-regression-fix",
+  "owner": "vibe-project-architect-regression-fix",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-001", "QG-006"],
+  "allowedFiles": ["shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt", "shared/compose/visual-test/build.gradle.kts"],
+  "inputScopeId": "catalog-core-v1"
+}

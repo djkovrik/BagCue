@@ -1,0 +1,7 @@
+{
+  "action":"package","packageId":"analytics-event-continuation","owner":"vibe-developer",
+  "acceptanceScenarioIds":["AC-036","AC-037","AC-038","AC-039"],"qualityGateIds":[],
+  "fileBoundaries":["shared/component/templates/**","shared/component/history/**","shared/root/**","androidApp/**","shared/compose/src/iosMain/**"],
+  "integrationGoal":"Complete the local analytics integration contract and record TemplateCreated and PackingSessionReopened only after their exact production success points, using the existing content-free six-event adapter and production root injection on Android and iOS.",
+  "nextAction":"Add controller dependencies at the two component manager success boundaries, inject them through the root, and verify exact event emission without user text or entity identifiers."
+}

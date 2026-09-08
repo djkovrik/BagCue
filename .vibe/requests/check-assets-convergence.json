@@ -1,0 +1,7 @@
+{
+  "action":"check","runner":"gradle","kind":"targeted","inputScopeId":"catalog-core-v1",
+  "tasks":[":shared:compose:generateComposeResClass",":shared:compose:compileAndroidMain",":shared:compose:compileKotlinIosSimulatorArm64",":androidApp:assembleDebug"],
+  "coveredObligations":[{"obligationId":"QG-006","surfaces":["resource-compilation"]}],
+  "timeoutSeconds":1800,
+  "reconcileDrift":"Inspected all 17 vectors, regenerated Android/iOS derivatives, actual-path manifest, deterministic generation scripts, and the light/dark 24dp contact sheet. Canonical frozen-path mismatch is documented as composeApp-to-shared/compose adaptation; repository validator passes exact adapted ownership."
+}

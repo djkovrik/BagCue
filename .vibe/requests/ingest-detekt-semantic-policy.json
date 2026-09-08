@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-detekt-semantic-policy-20260908.json",
+  "expectedLedgerDigest": "ee4467912cc057d417597a0a3e436971af59753d30ebce1e2b5e9a5ea3966451",
+  "inspectionNote": "Inspected the immutable Detekt semantic-policy handoff and strict green receipt. The complete generated current-schema configuration preserves lower-camel naming by default with an exact allowlist for current Compose/native factories because alpha.6 has no annotation-aware key, ignores only private/overridden/Composable/Preview function counts, and permits only underscore or expectedFailure names at deliberate cancellation-preserving generic catch boundaries. No baseline, suppression, disabled failure, or broad wildcard exception was added."
+}

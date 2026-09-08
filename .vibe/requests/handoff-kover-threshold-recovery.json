@@ -1,0 +1,39 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-kover-threshold-recovery-20260908",
+  "assignmentId": "kover-threshold-recovery",
+  "productionEvidence": [
+    {
+      "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/apa/AdvertisingPrivacyContracts.kt",
+      "symbol": "resolveAdvertisingPrivacy",
+      "surface": "fail-closed-privacy-decision"
+    }
+  ],
+  "testEvidence": [
+    {
+      "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/apa/ApaRulesTest.kt",
+      "testName": "privacyIsFailClosedForMissingExpiredDeclinedAndPolicyMismatchStates",
+      "surface": "domain-test"
+    }
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:domain:testAndroidHostTest"],
+      "tasks": [":shared:domain:testAndroidHostTest"],
+      "coveredObligations": [
+        {"obligationId": "QG-001", "surfaces": ["domain-test"]}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-78e8d49c-e6c5-4a69-b33b-467b20bd265a.json"
+    },
+    {
+      "argv": ["gradlew.bat", "koverVerify", "koverXmlReport", "printKoverLineCoverage"],
+      "tasks": ["koverVerify", "koverXmlReport", "printKoverLineCoverage"],
+      "coveredObligations": [
+        {"obligationId": "QG-001", "surfaces": ["repository-check", "domain-test"]}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-fc53ee99-d42c-407f-97c9-9633d3e66f40.json"
+    }
+  ],
+  "blockers": []
+}

@@ -1,0 +1,13 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:component:catalog:compileAndroidMain",
+    ":shared:component:catalog:compileAndroidHostTest"
+  ],
+  "coveredObligations": [],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Inspected persistence repair drift inside the active catalog-domain-persistence assignment; isolated component compile does not depend on SQLDelight generation."
+}

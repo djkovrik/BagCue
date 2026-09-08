@@ -1,0 +1,125 @@
+name: Analysis and test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: analysis-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  repository:
+    name: Repository quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          lfs: true
+      - uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
+      - name: Static repository contracts
+        run: python .github/workflows/scripts/validate_repository.py
+      - name: Strict analysis, tests, coverage, resources, goldens and Android debug
+        run: >-
+          ./gradlew detekt koverVerify koverXmlReport
+          :shared:domain:allTests
+          :shared:data:testAndroidHostTest
+          :shared:network:allTests
+          :shared:platform:testAndroidHostTest
+          :shared:component:catalog:testAndroidHostTest
+          :shared:component:templates:testAndroidHostTest
+          :shared:component:session:testAndroidHostTest
+          :shared:component:history:testAndroidHostTest
+          :shared:component:settings:testAndroidHostTest
+          :shared:root:testAndroidHostTest
+          :shared:compose:testAndroidHostTest
+          :shared:data:verifySqlDelightMigration
+          :shared:compose:generateComposeResClass
+          :shared:compose:visual-test:verifyPaparazziDebug
+          :androidApp:verifyAndroidReleaseConfiguration
+          :androidApp:assembleDebug
+      - name: Upload quality reports
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: bagcue-quality-reports
+          if-no-files-found: warn
+          path: |
+            build/reports/detekt/**
+            build/reports/kover/**
+            **/build/reports/tests/**
+            **/build/reports/problems/**
+      - name: Upload Paparazzi failures
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: bagcue-paparazzi-failures
+          if-no-files-found: warn
+          path: |
+            shared/compose/visual-test/build/paparazzi/failures/**
+            shared/compose/visual-test/build/reports/paparazzi/**
+
+  ios:
+    name: Test and link iOS
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
+      - name: Select Xcode and install CocoaPods
+        run: |
+          sudo xcode-select --switch /Applications/Xcode.app
+          gem install cocoapods --version 1.16.2 --no-document
+          pod --version
+          xcodebuild -version
+      - name: Resolve native dependencies
+        run: pod install --project-directory=iosApp --repo-update
+      - name: Test and link shared iOS targets
+        run: >-
+          ./gradlew
+          :shared:domain:iosSimulatorArm64Test
+          :shared:data:iosSimulatorArm64Test
+          :shared:network:iosSimulatorArm64Test
+          :shared:platform:iosSimulatorArm64Test
+          :shared:component:catalog:iosSimulatorArm64Test
+          :shared:component:templates:iosSimulatorArm64Test
+          :shared:component:session:iosSimulatorArm64Test
+          :shared:component:history:iosSimulatorArm64Test
+          :shared:component:settings:iosSimulatorArm64Test
+          :shared:root:iosSimulatorArm64Test
+          :shared:compose:linkDebugFrameworkIosSimulatorArm64
+      - name: Build CocoaPods workspace without signing
+        run: >-
+          xcodebuild -workspace iosApp/iosApp.xcworkspace -scheme iosApp
+          -sdk iphonesimulator -configuration Debug
+          -destination 'generic/platform=iOS Simulator'
+          CODE_SIGNING_ALLOWED=NO build
+      - name: Verify iOS identifiers and nullable advertising
+        run: python .github/workflows/scripts/validate_repository.py
+      - name: Upload Xcode and native reports
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: bagcue-ios-reports
+          if-no-files-found: warn
+          path: |
+            **/build/test-results/**
+            iosApp/Podfile.lock

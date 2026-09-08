@@ -1,0 +1,575 @@
+Calculating task graph as no cached configuration is available for tasks: detekt koverXmlReport printKoverLineCoverage
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Configure project :shared:platform
+w: [33m[1mUnsupported Operating System[0m[0m
+Kotlin CocoaPods Plugin is fully supported on MacOS machines only. Gradle tasks that can not run on non-mac hosts will be skipped.
+[32m[1mSolution:[0m[0m
+[32m[3mRun the build on a MacOS machine[0m[0m
+
+w: [33m[1mCross Compilation with Cinterop Not Supported in Project 'platform'[0m[0m
+In project 'platform', cross compilation to target 'iosArm64' has been disabled because it contains cinterops: 'FirebaseAnalytics' which cannot be processed on host 'mingw_x64'.
+Cinterop libraries require platform-specific native toolchains that aren't available on the current host system.
+[32m[1mSolutions:[0m[0m
+[32m * [3mRemove the cinterop dependencies 'FirebaseAnalytics' from target 'iosArm64'[0m[0m
+[32m * [3mBuild on a compatible host platform for this target/cinterop combination[0m[0m
+[32m * [3mTo disable klib cross compilation entirely, add 'kotlin.native.enableKlibsCrossCompilation=false' to your Gradle properties[0m[0m
+
+w: [33m[1mCross Compilation with Cinterop Not Supported in Project 'platform'[0m[0m
+In project 'platform', cross compilation to target 'iosSimulatorArm64' has been disabled because it contains cinterops: 'FirebaseAnalytics' which cannot be processed on host 'mingw_x64'.
+Cinterop libraries require platform-specific native toolchains that aren't available on the current host system.
+[32m[1mSolutions:[0m[0m
+[32m * [3mRemove the cinterop dependencies 'FirebaseAnalytics' from target 'iosSimulatorArm64'[0m[0m
+[32m * [3mBuild on a compatible host platform for this target/cinterop combination[0m[0m
+[32m * [3mTo disable klib cross compilation entirely, add 'kotlin.native.enableKlibsCrossCompilation=false' to your Gradle properties[0m[0m
+
+w: [33m[1mDisabled Kotlin/Native Targets[0m[0m
+The following Kotlin/Native targets cannot be built on this machine and are disabled:
+iosArm64, iosSimulatorArm64
+[32m[1mSolution:[0m[0m
+[32m[3mTo hide this message, add 'kotlin.native.ignoreDisabledTargets=true' to the Gradle properties.[0m[0m
+
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+Configuration cache entry stored.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not determine the dependencies of task ':koverXmlReport'.
+> Could not resolve all dependencies for configuration ':koverExternalArtifacts'.
+   > Could not resolve project :shared:domain.
+     Required by:
+         root project 'BagCue'
+      > No matching variant of project :shared:domain was found. The consumer was configured to find attribute 'kotlinx.kover.variant.name' with value '', attribute 'kotlinx.kover.variant.origin' with value 'TOTAL', attribute 'org.gradle.usage' with value 'kover' but:
+          - Variant 'androidApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidRuntimeElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'swiftPMDependenciesMetadataElementsForLockFiles':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'swiftPMDependenciesMetadataForLockFiles' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+   > Could not resolve project :shared:component:catalog.
+     Required by:
+         root project 'BagCue'
+      > No matching variant of project :shared:component:catalog was found. The consumer was configured to find attribute 'kotlinx.kover.variant.name' with value '', attribute 'kotlinx.kover.variant.origin' with value 'TOTAL', attribute 'org.gradle.usage' with value 'kover' but:
+          - Variant 'androidApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidRuntimeElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'swiftPMDependenciesMetadataElementsForLockFiles':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'swiftPMDependenciesMetadataForLockFiles' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+   > Could not resolve project :shared:component:templates.
+     Required by:
+         root project 'BagCue'
+      > No matching variant of project :shared:component:templates was found. The consumer was configured to find attribute 'kotlinx.kover.variant.name' with value '', attribute 'kotlinx.kover.variant.origin' with value 'TOTAL', attribute 'org.gradle.usage' with value 'kover' but:
+          - Variant 'androidApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidRuntimeElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'swiftPMDependenciesMetadataElementsForLockFiles':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'swiftPMDependenciesMetadataForLockFiles' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+   > Could not resolve project :shared:component:session.
+     Required by:
+         root project 'BagCue'
+      > No matching variant of project :shared:component:session was found. The consumer was configured to find attribute 'kotlinx.kover.variant.name' with value '', attribute 'kotlinx.kover.variant.origin' with value 'TOTAL', attribute 'org.gradle.usage' with value 'kover' but:
+          - Variant 'androidApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidRuntimeElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'swiftPMDependenciesMetadataElementsForLockFiles':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'swiftPMDependenciesMetadataForLockFiles' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+   > Could not resolve project :shared:component:history.
+     Required by:
+         root project 'BagCue'
+      > No matching variant of project :shared:component:history was found. The consumer was configured to find attribute 'kotlinx.kover.variant.name' with value '', attribute 'kotlinx.kover.variant.origin' with value 'TOTAL', attribute 'org.gradle.usage' with value 'kover' but:
+          - Variant 'androidApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidRuntimeElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'swiftPMDependenciesMetadataElementsForLockFiles':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'swiftPMDependenciesMetadataForLockFiles' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+   > Could not resolve project :shared:component:settings.
+     Required by:
+         root project 'BagCue'
+      > No matching variant of project :shared:component:settings was found. The consumer was configured to find attribute 'kotlinx.kover.variant.name' with value '', attribute 'kotlinx.kover.variant.origin' with value 'TOTAL', attribute 'org.gradle.usage' with value 'kover' but:
+          - Variant 'androidApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidRuntimeElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'swiftPMDependenciesMetadataElementsForLockFiles':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'swiftPMDependenciesMetadataForLockFiles' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+   > Could not resolve project :shared:root.
+     Required by:
+         root project 'BagCue'
+      > No matching variant of project :shared:root was found. The consumer was configured to find attribute 'kotlinx.kover.variant.name' with value '', attribute 'kotlinx.kover.variant.origin' with value 'TOTAL', attribute 'org.gradle.usage' with value 'kover' but:
+          - Variant 'androidApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidRuntimeElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'androidSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'java-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64ApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-api' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64CInteropApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-cinterop' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64MetadataElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'iosSimulatorArm64SourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataApiElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-metadata' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'metadataSourcesElements':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'kotlin-runtime' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+          - Variant 'swiftPMDependenciesMetadataElementsForLockFiles':
+              - Incompatible because this component declares attribute 'org.gradle.usage' with value 'swiftPMDependenciesMetadataForLockFiles' and the consumer needed attribute 'org.gradle.usage' with value 'kover'
+              - Other compatible attributes:
+                  - Doesn't say anything about kotlinx.kover.variant.name (required '')
+                  - Doesn't say anything about kotlinx.kover.variant.origin (required 'TOTAL')
+
+* Try:
+> No matching variant errors are explained in more detail at https://docs.gradle.org/9.5.1/userguide/variant_model.html#sub:variant-no-match.
+> Review the variant matching algorithm at https://docs.gradle.org/9.5.1/userguide/variant_attributes.html#sec:abm_algorithm.
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 3s

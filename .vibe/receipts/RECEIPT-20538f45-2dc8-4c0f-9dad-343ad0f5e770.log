@@ -1,0 +1,264 @@
+Calculating task graph as no cached configuration is available for tasks: detektGenerateConfig tasks
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Configure project :shared:platform
+w: [33m[1mUnsupported Operating System[0m[0m
+Kotlin CocoaPods Plugin is fully supported on MacOS machines only. Gradle tasks that can not run on non-mac hosts will be skipped.
+[32m[1mSolution:[0m[0m
+[32m[3mRun the build on a MacOS machine[0m[0m
+
+w: [33m[1mCross Compilation with Cinterop Not Supported in Project 'platform'[0m[0m
+In project 'platform', cross compilation to target 'iosArm64' has been disabled because it contains cinterops: 'FirebaseAnalytics' which cannot be processed on host 'mingw_x64'.
+Cinterop libraries require platform-specific native toolchains that aren't available on the current host system.
+[32m[1mSolutions:[0m[0m
+[32m * [3mRemove the cinterop dependencies 'FirebaseAnalytics' from target 'iosArm64'[0m[0m
+[32m * [3mBuild on a compatible host platform for this target/cinterop combination[0m[0m
+[32m * [3mTo disable klib cross compilation entirely, add 'kotlin.native.enableKlibsCrossCompilation=false' to your Gradle properties[0m[0m
+
+w: [33m[1mCross Compilation with Cinterop Not Supported in Project 'platform'[0m[0m
+In project 'platform', cross compilation to target 'iosSimulatorArm64' has been disabled because it contains cinterops: 'FirebaseAnalytics' which cannot be processed on host 'mingw_x64'.
+Cinterop libraries require platform-specific native toolchains that aren't available on the current host system.
+[32m[1mSolutions:[0m[0m
+[32m * [3mRemove the cinterop dependencies 'FirebaseAnalytics' from target 'iosSimulatorArm64'[0m[0m
+[32m * [3mBuild on a compatible host platform for this target/cinterop combination[0m[0m
+[32m * [3mTo disable klib cross compilation entirely, add 'kotlin.native.enableKlibsCrossCompilation=false' to your Gradle properties[0m[0m
+
+w: [33m[1mDisabled Kotlin/Native Targets[0m[0m
+The following Kotlin/Native targets cannot be built on this machine and are disabled:
+iosArm64, iosSimulatorArm64
+[32m[1mSolution:[0m[0m
+[32m[3mTo hide this message, add 'kotlin.native.ignoreDisabledTargets=true' to the Gradle properties.[0m[0m
+
+
+> Configure project :shared:compose:visual-test
+w: file:///D:/Sources/Android/BagCue/shared/compose/visual-test/build.gradle.kts:100:41: 'fun srcDir(srcDir: Any): Any' is deprecated. Use `directories` mutable set instead.
+
+> Task :tasks
+
+------------------------------------------------------------
+Tasks runnable from root project 'BagCue'
+------------------------------------------------------------
+
+Android tasks
+-------------
+signingReport - Displays the signing info for the base and test modules
+
+Build tasks
+-----------
+allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+androidSourcesJar - Assembles a jar archive containing the sources of target 'android'.
+assemble - Assembles the outputs of this project.
+assembleAndroidTest - Assembles all the Test applications.
+assembleUnitTest - Assembles all the unit test applications.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+buildNeeded - Assembles and tests this project and all projects it depends on.
+bundle - Assemble bundles for all the variants.
+clean - Deletes the build directory.
+cleanAllTests - Deletes all the test results.
+compileAndroidHostTestSources
+compileAppleMainKotlinMetadata - Compiles a klibrary from the 'appleMain' compilation in target 'metadata'.
+compileDebugAndroidTestSources
+compileDebugSources
+compileDebugUnitTestSources
+compileIosMainKotlinMetadata - Compiles a klibrary from the 'iosMain' compilation in target 'metadata'.
+compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation in target 'iosArm64'.
+compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation in target 'iosSimulatorArm64'.
+compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation in target 'metadata'.
+compileReleaseSources
+compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation in target 'iosArm64'.
+compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation in target 'iosSimulatorArm64'.
+embedAndSignAppleFrameworkForXcode - Embed and sign  framework as requested by Xcode's environment variables
+embedAndSignPodAppleFrameworkForXcode - Embed and sign pod framework as requested by Xcode's environment variables
+embedSwiftExportForXcode - Embed swift export library as requested by Xcode's environment variables
+extractAndroidMainAnnotations - Extracts Android annotations for the androidMain variant into the archive file
+extractDebugAnnotations - Extracts Android annotations for the debug variant into the archive file
+extractReleaseAnnotations - Extracts Android annotations for the release variant into the archive file
+iosArm64Binaries - Assembles outputs for target 'iosArm64'.
+iosArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosArm64'.
+iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+iosArm64MetadataElements - Assembles Kotlin metadata of target 'iosArm64'.
+iosArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosArm64'.
+iosArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosArm64'.
+iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+iosSimulatorArm64Binaries - Assembles outputs for target 'iosSimulatorArm64'.
+iosSimulatorArm64MainBinaries - Links all binaries for compilation 'main' of target 'iosSimulatorArm64'.
+iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+iosSimulatorArm64MetadataElements - Assembles Kotlin metadata of target 'iosSimulatorArm64'.
+iosSimulatorArm64SourcesJar - Assembles a jar archive containing the sources of target 'iosSimulatorArm64'.
+iosSimulatorArm64TestBinaries - Links all binaries for compilation 'test' of target 'iosSimulatorArm64'.
+iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+linkDebugFrameworkIosArm64 - Links a framework 'debugFramework' for a target 'iosArm64'.
+linkDebugFrameworkIosSimulatorArm64 - Links a framework 'debugFramework' for a target 'iosSimulatorArm64'.
+linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+linkIosArm64 - Links all binaries for target 'iosArm64'.
+linkIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+linkPodDebugFrameworkIosArm64 - Links a framework 'podDebugFramework' for a target 'iosArm64'.
+linkPodDebugFrameworkIosSimulatorArm64 - Links a framework 'podDebugFramework' for a target 'iosSimulatorArm64'.
+linkPodIosArm64 - Links all binaries for target 'iosArm64'.
+linkPodIosSimulatorArm64 - Links all binaries for target 'iosSimulatorArm64'.
+linkPodReleaseFrameworkIosArm64 - Links a framework 'podReleaseFramework' for a target 'iosArm64'.
+linkPodReleaseFrameworkIosSimulatorArm64 - Links a framework 'podReleaseFramework' for a target 'iosSimulatorArm64'.
+linkReleaseFrameworkIosArm64 - Links a framework 'releaseFramework' for a target 'iosArm64'.
+linkReleaseFrameworkIosSimulatorArm64 - Links a framework 'releaseFramework' for a target 'iosSimulatorArm64'.
+metadataAppleMainClasses - Assembles outputs for compilation 'appleMain' of target 'metadata'
+metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+metadataIosMainClasses - Assembles outputs for compilation 'iosMain' of target 'metadata'
+metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+metadataSourcesJar - Assembles a jar archive containing the sources of target 'metadata'.
+sourcesJar - Assembles a jar archive containing the sources of target 'kotlin'.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+updateDaemonJvm - Generates or updates the Gradle Daemon JVM criteria.
+wrapper - Generates Gradle wrapper files.
+
+CocoaPods tasks
+---------------
+podBuildFirebaseAnalyticsIos - Calls `xcodebuild` on xcworkspace for the pod scheme
+podBuildFirebaseAnalyticsIosSimulator - Calls `xcodebuild` on xcworkspace for the pod scheme
+podBuildYandexMobileAdsIos - Calls `xcodebuild` on xcworkspace for the pod scheme
+podBuildYandexMobileAdsIosSimulator - Calls `xcodebuild` on xcworkspace for the pod scheme
+podImport - Called on Gradle sync, depends on Cinterop tasks for every used pod
+podInstall - Invokes `pod install` call within Podfile location directory
+podPublishDebugXCFramework - Produces Debug XCFramework for all requested targets
+podPublishReleaseXCFramework - Produces Release XCFramework for all requested targets
+podPublishXCFramework - Produces Release and Debug XCFrameworks with respective podspecs
+podSetupBuildFirebaseAnalyticsIos - Collect environment variables from .xcworkspace file
+podSetupBuildFirebaseAnalyticsIosSimulator - Collect environment variables from .xcworkspace file
+podSetupBuildYandexMobileAdsIos - Collect environment variables from .xcworkspace file
+podSetupBuildYandexMobileAdsIosSimulator - Collect environment variables from .xcworkspace file
+podspec - Generates a podspec file for CocoaPods import
+
+Compose tasks
+-------------
+composeCompatibilityBrowserDistribution - This task combines both js and wasm distributions into one so that wasm application fallback to js target if modern wasm feature are not supported
+
+Help tasks
+----------
+artifactTransforms - Displays the Artifact Transforms that can be executed in root project 'BagCue'.
+buildEnvironment - Displays all buildscript dependencies declared in root project 'BagCue'.
+dependencies - Displays all dependencies declared in root project 'BagCue'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'BagCue'.
+help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+outgoingVariants - Displays the outgoing variants of root project 'BagCue'.
+projects - Displays the sub-projects of root project 'BagCue'.
+properties - Displays the properties of root project 'BagCue'.
+resolvableConfigurations - Displays the configurations that can be resolved in root project 'BagCue'.
+tasks - Displays the tasks runnable from root project 'BagCue' (some of the displayed tasks may belong to subprojects).
+
+Ide tasks
+---------
+resolveIdeDependencies - Debugging/Diagnosing task that will resolve dependencies for the IDE
+
+Install tasks
+-------------
+androidUninstallAll - Uninstall all applications.
+installDebug - Installs the Debug build.
+installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+uninstallAll - Uninstall all applications.
+uninstallDebug - Uninstalls the Debug build.
+uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+uninstallRelease - Uninstalls the Release build.
+
+Interop tasks
+-------------
+cinteropFirebaseAnalyticsIosArm64 - Generates Kotlin/Native interop library 'FirebaseAnalytics' for compilation 'main'of target 'ios_arm64'.
+cinteropFirebaseAnalyticsIosSimulatorArm64 - Generates Kotlin/Native interop library 'FirebaseAnalytics' for compilation 'main'of target 'ios_simulator_arm64'.
+cinteropYandexMobileAdsIosArm64 - Generates Kotlin/Native interop library 'YandexMobileAds' for compilation 'main'of target 'ios_arm64'.
+cinteropYandexMobileAdsIosSimulatorArm64 - Generates Kotlin/Native interop library 'YandexMobileAds' for compilation 'main'of target 'ios_simulator_arm64'.
+cleanNativeDistributionCommonization - Deletes all previously commonized klib's from the Kotlin/Native distribution
+commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
+commonizeCInterop - Invokes the commonizer on c-interop bindings of the project
+commonizeNativeDistribution - Invokes the commonizer on platform libraries provided by the Kotlin/Native distribution
+copyCommonizeCInteropForIde - Copies the output of commonizeCInterop into the root projects .gradle folder for the IDE
+runCommonizer - [Deprecated: Use 'commonize' instead]
+
+Sqldelight tasks
+----------------
+generateCommonMainBagCueDatabaseInterface - Generate commonMain Kotlin interface for BagCueDatabase
+generateSqlDelightInterface - Aggregation task which runs every interface generation task for every given source
+verifyCommonMainBagCueDatabaseMigration - Verify commonMain BagCueDatabase migrations and CREATE statements match.
+verifySqlDelightMigration - Aggregation task which runs every migration task for every given source
+
+Verification tasks
+------------------
+allTests - Runs the tests for all targets and create aggregated report
+androidConnectedCheck - Runs all device checks on currently connected devices.
+androidDeviceCheck - Runs all device checks using Device Providers and Test Servers.
+check - Runs all checks.
+checkJetifier - Checks whether Jetifier is needed for the current project
+checkKotlinGradlePluginConfigurationErrors - Checks that Kotlin Gradle Plugin hasn't reported project configuration errors, failing otherwise. This task always runs before compileKotlin* or similar tasks.
+cleanRecordPaparazzi - Clean and record golden images for all variants
+cleanRecordPaparazziDebug - Clean and record golden images for variant 'debug'
+connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+connectedCheck - Runs all device checks on currently connected devices.
+connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+deleteDebugPaparazziSnapshots - Delete all golden images for variant 'Debug'
+deletePaparazziSnapshots - Delete all golden images
+detekt
+detektBaseline - Creates a detekt baseline on the given --baseline path.
+detektGenerateConfig - Generate a detekt configuration file inside your project.
+deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+deviceCheck - Runs all device checks using Device Providers and Test Servers.
+generateBagCuePreviewTests
+iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+koverBinaryReport - Task to generate binary coverage report in IntelliJ format for all code.
+koverCachedVerify - Cacheable task for performing verification for all code.
+koverHtmlReport - Task to generate HTML coverage report for all code.
+koverLog - Task to print coverage to log for all code.
+koverVerify
+koverXmlReport - Task to generate XML coverage report for all code.
+lint - Runs lint on the default variant.
+lintDebug - Print text output from the corresponding lint report task
+lintFix - Runs lint on the default variant and applies any safe suggestions to the source code.
+lintRelease - Print text output from the corresponding lint report task
+lintVitalRelease - Print text output from the corresponding lint report task
+printKoverLineCoverage - Prints only the filtered total line coverage percentage.
+recordPaparazzi - Record golden images for all variants
+recordPaparazziDebug - Record golden images for variant 'debug'
+test - Run unit tests for all variants.
+testAndroid - Run unit tests for all variants.
+testAndroidHostTest - Run unit tests for the androidMain build.
+testDebugUnitTest - Run unit tests for the debug build.
+updateLintBaseline - Updates the lint baseline using the default variant.
+verifyAndroidReleaseConfiguration - Checks BagCue release-only monetization and version invariants.
+verifyPaparazzi - Run screenshot tests for all variants
+verifyPaparazziDebug - Run screenshot tests for variant 'debug'
+verifyReleaseSigningInputs - Fails clearly unless all upload-key inputs are present.
+
+Xcode tasks
+-----------
+checkXcodeProjectConfiguration - Checks for configuration mismatches between Xcode and Kotlin Gradle project
+convertPbxprojToJson - Converts .pbxproj file to JSON for inspection
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+
+To see all tasks and more detail, run gradlew tasks --all
+
+To see more detail about a task, run gradlew help --task <task>
+
+> Task :detektGenerateConfig
+Successfully copied default config to D:\Sources\Android\BagCue\detekt\base-config.yml
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 32s
+2 actionable tasks: 2 executed
+Configuration cache entry stored.

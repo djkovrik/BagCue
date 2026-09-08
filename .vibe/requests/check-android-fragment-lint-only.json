@@ -1,0 +1,14 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [":androidApp:lintRelease"],
+  "coveredObligations": [
+    {"obligationId":"QG-001","surfaces":["android-release-compilation"]},
+    {"obligationId":"QG-002","surfaces":["android-release-dependency-resolution"]},
+    {"obligationId":"QG-004","surfaces":["android-release-lint"]}
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Prove release lint is green after adding the explicit stable AndroidX Fragment 1.9.0 dependency, independently of unavailable external release-signing secrets."
+}

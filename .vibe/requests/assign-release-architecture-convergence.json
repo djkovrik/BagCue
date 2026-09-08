@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "release-architecture-convergence",
+  "owner": "vibe-project-architect",
+  "acceptanceScenarioIds": ["AC-036", "AC-037", "AC-038", "AC-039", "AC-040", "AC-041", "AC-042", "AC-043", "AC-044", "AC-045", "AC-046"],
+  "qualityGateIds": ["QG-001", "QG-002", "QG-003", "QG-004", "QG-005", "QG-006"],
+  "allowedFiles": ["build.gradle.kts", "settings.gradle.kts", "gradle/**", "gradle.properties", "androidApp/build.gradle.kts", "shared/*/build.gradle.kts", "shared/compose/visual-test/build.gradle.kts", "detekt/**", ".github/workflows/**", "README.md", "docs/CI-RELEASE-SETUP.md", "docs/IOS-RELEASE-SETUP.md", "iosApp/Podfile", "iosApp/Podfile.lock", "iosApp/iosApp.xcodeproj/**", "iosApp/iosApp.xcworkspace/**"],
+  "inputScopeId": "catalog-core-v1"
+}

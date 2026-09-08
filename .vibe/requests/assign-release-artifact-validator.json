@@ -1,0 +1,8 @@
+{
+  "action": "assign",
+  "assignmentId": "release-artifact-validator",
+  "owner": "vibe-project-architect-release-validator",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-004"],
+  "allowedFiles": [".github/workflows/scripts/validate_release_artifacts.py"]
+}

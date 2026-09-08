@@ -1,0 +1,19 @@
+{
+  "decisionId": "DEC-APPSPEC-ASSET-MODULE-PATH-QG006",
+  "kind": "spec-change",
+  "obligationIds": [
+    "AppSpec"
+  ],
+  "rationale": "Align all Compose Resources asset paths with the existing shared/compose owning module; product behavior and delivered artwork are unchanged, and the user directs minimal QG-006 revalidation while treating existing evidence and receipts as current.",
+  "recordedAt": "2026-09-08T19:40:49.038315Z",
+  "schemaVersion": "2.0",
+  "status": "accepted",
+  "supersedes": [],
+  "userApproval": {
+    "actor": "user",
+    "messageId": "user-qg006-spec-approval-2026-09-08",
+    "path": "docs/decisions/DEC-APPSPEC-ASSET-MODULE-PATH-QG006-user.txt",
+    "quote": "Давай закроем QG-006  - заменить `composeApp`  на `shared/compose`  допустимо, изменение спеки согласовываю.  Делаем минимальную проверку для закрытия обязательств, считай что все evidence/receipts  актуальны, мы просто меняем путь с `composeApp`  на shared/compose в итоге.",
+    "sha256": "e2038a403f7f243d681cea4373d8655eb4cf120a0f320870f3d3b9b844fbf597"
+  }
+}

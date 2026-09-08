@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="reminder_channel_name">Packing reminders</string>
+    <string name="reminder_notification_title">BagCue</string>
+    <string name="reminder_evening_body">Prepare your packing checklist for tomorrow.</string>
+    <string name="reminder_morning_body">Review your packing checklist before you leave.</string>
+</resources>

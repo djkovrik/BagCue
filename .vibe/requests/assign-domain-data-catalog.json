@@ -1,0 +1,12 @@
+{
+  "action": "assign",
+  "assignmentId": "catalog-domain-persistence",
+  "owner": "vibe-domain-and-persistence-engineer",
+  "acceptanceScenarioIds": ["AC-001", "AC-002", "AC-003", "AC-004", "AC-005"],
+  "qualityGateIds": [],
+  "allowedFiles": [
+    "shared/domain/src/**",
+    "shared/data/src/**"
+  ],
+  "inputScopeId": "catalog-core-v1"
+}

@@ -1,0 +1,39 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-catalog-domain-persistence-20260908",
+  "assignmentId": "catalog-domain-persistence",
+  "productionEvidence": [
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt", "symbol": "PackingItem and stable identity/resource-key value objects", "surface": "domain-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt", "symbol": "normalizeCatalogName and findNormalizedNameMatch", "surface": "domain-rule"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRepository.kt", "symbol": "CatalogRepository", "surface": "manager-persistence-contract"},
+    {"path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq", "symbol": "packing_item, seed_override, dependency tables and atomic-delete queries", "surface": "generated-schema"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/SqlDelightCatalogRepository.kt", "symbol": "SqlDelightCatalogRepository", "surface": "persistence-implementation"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt", "symbol": "CatalogDataModule and CatalogDataModuleDependencies", "surface": "composition-module"},
+    {"path": "shared/data/src/androidMain/kotlin/com/sedsoftware/bagcue/data/catalog/AndroidCatalogDatabaseDriverFactory.kt", "symbol": "AndroidCatalogDatabaseDriverFactory", "surface": "android-driver"},
+    {"path": "shared/data/src/iosMain/kotlin/com/sedsoftware/bagcue/data/catalog/IosCatalogDatabaseDriverFactory.kt", "symbol": "IosCatalogDatabaseDriverFactory", "surface": "ios-driver"}
+  ],
+  "testEvidence": [
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRulesTest.kt", "testName": "normalizationTrimsCollapsesWhitespaceAndCaseFolds", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRulesTest.kt", "testName": "duplicateMatchReturnsOriginalStableIdentity", "surface": "domain-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "generatedSchemaSupportsCreateReadUpdateDeleteAndLocalizationKeyRoundTrip", "surface": "persistence-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "starterRenameAndDeleteOverridesSurviveARealDriverRestart", "surface": "restart-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "untouchedStarterDefinitionRefreshesButFirstCustomizationFreezesItsIdentity", "surface": "seed-override-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "dependencyDeleteIsAtomicAndCompletedHistoryRetainsItsSnapshot", "surface": "transaction-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "dependencyDeleteFailureRollsBackEveryEarlierMutation", "surface": "transaction-rollback-test"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:domain:allTests", ":shared:data:testAndroidHostTest"],
+      "tasks": [":shared:domain:allTests", ":shared:data:testAndroidHostTest"],
+      "coveredObligations": [
+        {"obligationId": "AC-001", "surfaces": ["domain-test", "persistence-integration-test", "restart-integration-test"]},
+        {"obligationId": "AC-002", "surfaces": ["domain-test", "persistence-integration-test"]},
+        {"obligationId": "AC-003", "surfaces": ["persistence-integration-test", "restart-integration-test"]},
+        {"obligationId": "AC-004", "surfaces": ["transaction-integration-test", "transaction-rollback-test", "restart-integration-test"]},
+        {"obligationId": "AC-005", "surfaces": ["domain-test"]}
+      ]
+    }
+  ],
+  "blockers": []
+}

@@ -1,0 +1,274 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:network:testAndroidHostTest :shared:platform:testAndroidHostTest :androidApp:assembleDebug :androidApp:processReleaseMainManifest :androidApp:verifyAndroidReleaseConfiguration
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Configure project :shared:platform
+w: [33m[1mUnsupported Operating System[0m[0m
+Kotlin CocoaPods Plugin is fully supported on MacOS machines only. Gradle tasks that can not run on non-mac hosts will be skipped.
+[32m[1mSolution:[0m[0m
+[32m[3mRun the build on a MacOS machine[0m[0m
+
+w: [33m[1mCross Compilation with Cinterop Not Supported in Project 'platform'[0m[0m
+In project 'platform', cross compilation to target 'iosArm64' has been disabled because it contains cinterops: 'FirebaseAnalytics' which cannot be processed on host 'mingw_x64'.
+Cinterop libraries require platform-specific native toolchains that aren't available on the current host system.
+[32m[1mSolutions:[0m[0m
+[32m * [3mRemove the cinterop dependencies 'FirebaseAnalytics' from target 'iosArm64'[0m[0m
+[32m * [3mBuild on a compatible host platform for this target/cinterop combination[0m[0m
+[32m * [3mTo disable klib cross compilation entirely, add 'kotlin.native.enableKlibsCrossCompilation=false' to your Gradle properties[0m[0m
+
+w: [33m[1mCross Compilation with Cinterop Not Supported in Project 'platform'[0m[0m
+In project 'platform', cross compilation to target 'iosSimulatorArm64' has been disabled because it contains cinterops: 'FirebaseAnalytics' which cannot be processed on host 'mingw_x64'.
+Cinterop libraries require platform-specific native toolchains that aren't available on the current host system.
+[32m[1mSolutions:[0m[0m
+[32m * [3mRemove the cinterop dependencies 'FirebaseAnalytics' from target 'iosSimulatorArm64'[0m[0m
+[32m * [3mBuild on a compatible host platform for this target/cinterop combination[0m[0m
+[32m * [3mTo disable klib cross compilation entirely, add 'kotlin.native.enableKlibsCrossCompilation=false' to your Gradle properties[0m[0m
+
+w: [33m[1mDisabled Kotlin/Native Targets[0m[0m
+The following Kotlin/Native targets cannot be built on this machine and are disabled:
+iosArm64, iosSimulatorArm64
+[32m[1mSolution:[0m[0m
+[32m[3mTo hide this message, add 'kotlin.native.ignoreDisabledTargets=true' to the Gradle properties.[0m[0m
+
+
+> Task :shared:network:androidPreBuild UP-TO-DATE
+> Task :androidApp:preBuild UP-TO-DATE
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :androidApp:preDebugBuild UP-TO-DATE
+> Task :shared:data:androidPreBuild UP-TO-DATE
+> Task :shared:compose:androidPreBuild UP-TO-DATE
+> Task :shared:component:catalog:androidPreBuild UP-TO-DATE
+> Task :shared:platform:androidPreBuild UP-TO-DATE
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:root:androidPreBuild UP-TO-DATE
+> Task :shared:network:preAndroidMainBuild UP-TO-DATE
+> Task :shared:platform:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:network:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:platform:preAndroidMainBuild UP-TO-DATE
+> Task :shared:network:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:component:history:androidPreBuild UP-TO-DATE
+> Task :shared:platform:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:network:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:preAndroidMainBuild UP-TO-DATE
+> Task :shared:data:preAndroidMainBuild UP-TO-DATE
+> Task :shared:platform:kmpPartiallyResolvedDependenciesChecker
+> Task :androidApp:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :shared:network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:network:androidJar UP-TO-DATE
+> Task :shared:platform:androidJar UP-TO-DATE
+> Task :androidApp:generateDebugBuildConfig UP-TO-DATE
+> Task :shared:platform:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:platform:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:root:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:catalog:preAndroidMainBuild UP-TO-DATE
+> Task :shared:domain:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:data:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:network:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :androidApp:generateDebugResources UP-TO-DATE
+> Task :shared:platform:packageAndroidMainResources UP-TO-DATE
+> Task :shared:component:settings:androidPreBuild UP-TO-DATE
+> Task :shared:component:templates:androidPreBuild UP-TO-DATE
+> Task :shared:component:session:androidPreBuild UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:component:settings:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:session:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:generateComposeResClass UP-TO-DATE
+> Task :shared:component:history:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:compose:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:catalog:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:root:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:settings:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:component:history:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :shared:component:catalog:kmpPartiallyResolvedDependenciesChecker
+> Task :androidApp:packageDebugResources UP-TO-DATE
+> Task :shared:component:session:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:root:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:templates:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:catalog:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:history:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:platform:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:component:session:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :shared:component:settings:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:templates:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:data:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:session:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:settings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:generateAndroidMainAssets UP-TO-DATE
+> Task :shared:platform:generateAndroidMainAssets UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForAndroidMain NO-SOURCE
+> Task :shared:component:templates:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:data:generateCommonMainBagCueDatabaseInterface UP-TO-DATE
+> Task :shared:component:templates:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :androidApp:generateDebugAssets UP-TO-DATE
+> Task :shared:platform:generateAndroidMainRFile UP-TO-DATE
+> Task :shared:data:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:history:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:domain:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:root:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:platform:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:network:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:history:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:catalog:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:platform:mergeAndroidMainAssets UP-TO-DATE
+> Task :shared:component:session:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:templates:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:settings:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:data:processAndroidMainManifest UP-TO-DATE
+> Task :shared:domain:processAndroidMainManifest UP-TO-DATE
+> Task :shared:root:processAndroidMainManifest UP-TO-DATE
+> Task :shared:component:catalog:processAndroidMainManifest UP-TO-DATE
+> Task :shared:platform:processAndroidMainManifest UP-TO-DATE
+> Task :shared:component:history:processAndroidMainManifest UP-TO-DATE
+> Task :shared:platform:mapAndroidMainSourceSetPaths UP-TO-DATE
+> Task :shared:component:templates:processAndroidMainManifest UP-TO-DATE
+> Task :androidApp:mapDebugSourceSetPaths
+> Task :shared:platform:compileAndroidMainLibraryResources UP-TO-DATE
+> Task :shared:component:session:processAndroidMainManifest UP-TO-DATE
+> Task :androidApp:createDebugCompatibleScreenManifests
+> Task :shared:data:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:domain:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:component:settings:processAndroidMainManifest UP-TO-DATE
+> Task :shared:data:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:domain:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:network:processAndroidMainManifest UP-TO-DATE
+> Task :shared:domain:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:data:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:network:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:platform:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:compose:writeAndroidMainAarMetadata
+> Task :shared:root:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:component:catalog:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:platform:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:compose:mergeAndroidMainJniLibFolders
+> Task :shared:network:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:root:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:catalog:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:compose:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:network:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:platform:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:root:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:catalog:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:history:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:component:session:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:component:settings:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:component:history:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:templates:mergeAndroidMainJniLibFolders UP-TO-DATE
+> Task :shared:component:session:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:history:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:settings:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:templates:mergeAndroidMainNativeLibs NO-SOURCE
+> Task :shared:component:session:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:settings:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:component:templates:copyAndroidMainJniLibsProjectOnly UP-TO-DATE
+> Task :shared:compose:mapAndroidMainSourceSetPaths
+> Task :androidApp:preReleaseBuild UP-TO-DATE
+> Task :androidApp:verifyAndroidReleaseConfiguration
+> Task :shared:compose:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :shared:domain:compileAndroidMain UP-TO-DATE
+> Task :androidApp:writeDebugAppMetadata
+> Task :shared:domain:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:domain:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:domain:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :shared:compose:copyAndroidMainComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :shared:compose:generateActualResourceCollectorsForAndroidMain UP-TO-DATE
+> Task :shared:compose:packageAndroidMainResources UP-TO-DATE
+> Task :shared:compose:copyAndroidMainJniLibsProjectOnly
+> Task :androidApp:extractDeepLinksDebug
+> Task :shared:compose:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:compose:generateAndroidMainRFile UP-TO-DATE
+> Task :androidApp:extractDeepLinksRelease
+> Task :shared:platform:compileAndroidMain UP-TO-DATE
+> Task :shared:component:history:compileAndroidMain UP-TO-DATE
+> Task :shared:component:catalog:compileAndroidMain UP-TO-DATE
+> Task :shared:platform:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:platform:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:component:catalog:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:history:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:platform:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:settings:compileAndroidMain UP-TO-DATE
+> Task :shared:compose:mergeAndroidMainAssets UP-TO-DATE
+> Task :shared:component:settings:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:catalog:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:component:history:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:component:settings:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:compose:processAndroidMainManifest
+> Task :shared:component:session:compileAndroidMain UP-TO-DATE
+> Task :shared:component:session:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:component:session:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:platform:compileAndroidHostTest UP-TO-DATE
+> Task :androidApp:processDebugNavigationResources UP-TO-DATE
+> Task :shared:platform:testAndroidHostTest UP-TO-DATE
+> Task :shared:component:templates:compileAndroidMain UP-TO-DATE
+> Task :shared:component:templates:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :androidApp:parseDebugLocalResources
+> Task :shared:component:templates:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :shared:root:compileAndroidMain UP-TO-DATE
+> Task :shared:root:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :androidApp:writeDebugSigningConfigVersions
+> Task :shared:root:bundleAndroidMainClassesToRuntimeJar UP-TO-DATE
+> Task :androidApp:javaPreCompileDebug
+> Task :shared:compose:compileAndroidMain UP-TO-DATE
+> Task :androidApp:validateSigningDebug
+> Task :androidApp:compileDebugNavigationResources
+> Task :androidApp:generateDebugRFile
+> Task :shared:root:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:catalog:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:history:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:session:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:settings:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:component:templates:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:compose:processAndroidMainJavaRes
+> Task :shared:compose:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:compose:bundleAndroidMainClassesToCompileJar
+> Task :shared:compose:compileAndroidMainLibraryResources
+> Task :androidApp:mergeDebugJniLibFolders
+
+> Task :shared:network:compileAndroidMain FAILED
+
+> Task :androidApp:desugarDebugFileDependencies
+> Task :shared:data:compileAndroidMain
+> Task :androidApp:checkDebugDuplicateClasses
+> Task :androidApp:checkDebugAarMetadata
+> Task :androidApp:mergeDebugAssets
+> Task :androidApp:mergeDebugNativeLibs
+> Task :androidApp:processReleaseMainManifest
+> Task :androidApp:processDebugMainManifest
+> Task :androidApp:mergeDebugResources
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+154 actionable tasks: 43 executed, 111 up-to-date
+Configuration cache entry stored.
+e: file:///D:/Sources/Android/BagCue/shared/network/src/commonMain/kotlin/com/sedsoftware/bagcue/network/privacy/KtorPrivacyRegionApi.kt:49:50 Unresolved reference 'readRemaining'.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':shared:network:compileAndroidMain' (registered by plugin 'com.android.internal.kotlin.multiplatform.library').
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.btapi.BuildToolsApiCompilationWork
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 18s

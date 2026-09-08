@@ -1,0 +1,16 @@
+{
+  "action":"handoff","handoffId":"HANDOFF-analytics-event-continuation-20260908","assignmentId":"analytics-event-continuation-components",
+  "productionEvidence":[
+    {"path":"shared/component/templates/src/commonMain/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManager.kt","symbol":"recordSafely(AnalyticsEventName.TemplateCreated)","surface":"analytics-event-production"},
+    {"path":"shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManager.kt","symbol":"recordSafely(AnalyticsEventName.PackingSessionReopened)","surface":"analytics-event-production"},
+    {"path":"shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt","symbol":"analyticsController = analyticsController","surface":"production-root-injection"}
+  ],
+  "testEvidence":[
+    {"path":"shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt","testName":"successfulTemplateCreationsRecordOnlyContentFreeTemplateCreatedEvents","surface":"analytics-event-contract-test"},
+    {"path":"shared/component/templates/src/commonTest/kotlin/com/sedsoftware/bagcue/templates/domain/TemplateManagerTest.kt","testName":"failedTemplateCreationDoesNotRecordAnalyticsEvent","surface":"analytics-event-contract-test"},
+    {"path":"shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt","testName":"successfulReopenRecordsOnlyContentFreePackingSessionReopenedEvent","surface":"analytics-event-contract-test"},
+    {"path":"shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt","testName":"cancelledReopenDoesNotRecordAnalyticsEvent","surface":"analytics-event-contract-test"}
+  ],
+  "nonGradleChecks":[],"requestedCommands":[{"argv":["gradlew.bat",":shared:component:templates:testAndroidHostTest",":shared:component:history:testAndroidHostTest",":shared:root:testAndroidHostTest",":androidApp:assembleDebug"],"tasks":[":shared:component:templates:testAndroidHostTest",":shared:component:history:testAndroidHostTest",":shared:root:testAndroidHostTest",":androidApp:assembleDebug"],"coveredObligations":[{"obligationId":"AC-039","surfaces":["analytics-event-contract-test","privacy-static-check"]}],"receiptRef":".vibe/receipts/RECEIPT-f6abe5dd-7bdc-4402-aa6c-11691279e202.json"}],
+  "blockers":["Firebase project configuration and console policy remain external; the local adapter contract and all six exact production events are implemented and verified."]
+}

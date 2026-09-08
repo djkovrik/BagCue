@@ -1,0 +1,15 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [":shared:domain:allTests", ":shared:data:testAndroidHostTest", ":shared:data:compileKotlinIosSimulatorArm64"],
+  "coveredObligations": [
+    {"obligationId": "AC-026", "surfaces": ["domain-test", "persistence-integration-test"]},
+    {"obligationId": "AC-027", "surfaces": ["domain-test", "persistence-integration-test"]},
+    {"obligationId": "AC-028", "surfaces": ["domain-test", "persistence-integration-test"]},
+    {"obligationId": "AC-029", "surfaces": ["domain-test", "persistence-integration-test"]},
+    {"obligationId": "AC-030", "surfaces": ["domain-test", "persistence-integration-test"]}
+  ],
+  "timeoutSeconds": 1800
+}

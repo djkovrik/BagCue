@@ -1,0 +1,57 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-template-build-architecture-20260908",
+  "assignmentId": "template-build-architecture",
+  "productionEvidence": [
+    {
+      "path": "settings.gradle.kts",
+      "symbol": "include(\":shared:component:templates\")",
+      "surface": "module-graph"
+    },
+    {
+      "path": "shared/component/templates/build.gradle.kts",
+      "symbol": "namespace = \"com.sedsoftware.bagcue.component.templates\"",
+      "surface": "component-module-wiring"
+    },
+    {
+      "path": "shared/component/templates/build.gradle.kts",
+      "symbol": "withHostTest {}",
+      "surface": "component-test-wiring"
+    },
+    {
+      "path": "shared/component/templates/build.gradle.kts",
+      "symbol": "implementation(libs.mvikotlin.extensions.coroutines)",
+      "surface": "component-runtime-wiring"
+    },
+    {
+      "path": "shared/root/build.gradle.kts",
+      "symbol": "api(project(\":shared:component:templates\"))",
+      "surface": "production-root-wiring"
+    },
+    {
+      "path": "shared/compose/build.gradle.kts",
+      "symbol": "implementation(project(\":shared:component:templates\"))",
+      "surface": "compose-integration-wiring"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "settings.gradle.kts",
+        "gradle",
+        "shared/component/templates/build.gradle.kts",
+        "shared/root/build.gradle.kts",
+        "shared/compose/build.gradle.kts",
+        "androidApp/build.gradle.kts"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "requestedCommands": [],
+  "blockers": []
+}

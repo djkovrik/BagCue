@@ -1,0 +1,42 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-session-compose-production-integration-20260908",
+  "assignmentId": "session-compose-production-integration",
+  "productionEvidence": [
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt", "symbol": "is RootComponent.Child.Session -> SessionScreen(child.component)", "surface": "production-root-ui"},
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt", "symbol": "fun SessionScreen(component: SessionComponent)", "surface": "session-checklist-ui"},
+    {"path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionResources.kt", "symbol": "internal fun SessionComponent.UserText.resolve()", "surface": "localized-session-boundary"},
+    {"path": "androidApp/src/main/kotlin/com/sedsoftware/bagcue/AppActivity.kt", "symbol": "class AppActivity : ComponentActivity()", "surface": "android-composition-root"},
+    {"path": "shared/compose/src/iosMain/kotlin/main.kt", "symbol": "fun MainViewController(): UIViewController", "surface": "ios-composition-root"},
+    {"path": "shared/compose/src/commonMain/composeResources/values/strings.xml", "symbol": "session_today_title", "surface": "english-resources"},
+    {"path": "shared/compose/src/commonMain/composeResources/values-ru/strings.xml", "symbol": "session_today_title", "surface": "russian-resources"}
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {"argv": ["lazyweb", "agentic-search", "d8209edf-fb81-4161-be7f-5cd164245af6"], "exitCode": 0, "details": "Session checklist hierarchy was grounded in finalized task-list and grouped-list references."}
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:domain:allTests", ":shared:data:testAndroidHostTest", ":shared:component:session:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug", ":shared:data:compileKotlinIosSimulatorArm64", ":shared:component:session:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "tasks": [":shared:domain:allTests", ":shared:data:testAndroidHostTest", ":shared:component:session:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug", ":shared:data:compileKotlinIosSimulatorArm64", ":shared:component:session:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "coveredObligations": [
+        {"obligationId": "AC-012", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-013", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-014", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-015", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-016", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-017", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-018", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-019", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-020", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-021", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-022", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-023", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-024", "surfaces": ["production-ui"]},
+        {"obligationId": "AC-025", "surfaces": ["production-ui"]}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-df13f869-90a8-4026-862d-d44149334f86.json"
+    }
+  ],
+  "blockers": []
+}

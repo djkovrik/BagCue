@@ -1,0 +1,84 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:domain:allTests :shared:data:testAndroidHostTest
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :shared:compose:generateUmbrellaPackageIdentifierBasedResolutionForDefault SKIPPED
+> Task :shared:domain:generateSyntheticLinkageSwiftPMImportProjectForCinteropsAndLdDump SKIPPED
+> Task :shared:data:androidPreBuild UP-TO-DATE
+> Task :shared:domain:computeLocalPackageDependencyInputFiles SKIPPED
+> Task :shared:data:preAndroidMainBuild UP-TO-DATE
+> Task :shared:data:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:domain:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:compose:fetchUmbrellaPackageIdentifierForDefault SKIPPED
+> Task :shared:domain:syncPersistedPackageResolvedToSynthetic SKIPPED
+> Task :shared:domain:fetchSyntheticImportProjectPackages SKIPPED
+> Task :shared:domain:convertSyntheticImportProjectIntoDefFileIphonesimulator SKIPPED
+> Task :shared:data:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:data:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:domain:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:domain:iosSimulatorArm64ProcessResources NO-SOURCE
+> Task :shared:domain:downloadKotlinNativeDistribution
+> Task :shared:domain:androidJar UP-TO-DATE
+> Task :shared:data:androidJar
+
+> Task :shared:data:generateCommonMainBagCueDatabaseInterface FAILED
+
+> Task :shared:domain:compileAndroidMain
+
+> Task :shared:domain:compileKotlinIosSimulatorArm64 FAILED
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+8 actionable tasks: 7 executed, 1 up-to-date
+Configuration cache entry stored.
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+Compiling with dialect app.cash.sqldelight.dialects.sqlite_3_18.SqliteDialect
+
+D:/Sources/Android/BagCue/shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq:1:22 <pragma value real> expected, got 'ON'
+1    PRAGMA foreign_keys = ON
+                           ^^
+
+e: file:///D:/Sources/Android/BagCue/shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt:3:2 Unresolved reference 'JvmInline'.
+e: file:///D:/Sources/Android/BagCue/shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt:14:2 Unresolved reference 'JvmInline'.
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':shared:data:generateCommonMainBagCueDatabaseInterface' (registered by plugin 'app.cash.sqldelight').
+> A failure occurred while executing app.cash.sqldelight.gradle.SqlDelightTask$GenerateInterfaces
+   > Generation failed; see the generator error output for details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':shared:domain:compileKotlinIosSimulatorArm64' (registered in build file 'shared\domain\build.gradle.kts').
+> Compilation finished with errors
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+BUILD FAILED in 24s

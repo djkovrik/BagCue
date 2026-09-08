@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "template-build-architecture",
+  "owner": "vibe-project-architect",
+  "acceptanceScenarioIds": ["AC-006", "AC-007", "AC-008", "AC-009", "AC-010", "AC-011"],
+  "qualityGateIds": [],
+  "allowedFiles": ["settings.gradle.kts", "gradle/**", "shared/component/templates/build.gradle.kts", "shared/root/build.gradle.kts", "shared/compose/build.gradle.kts", "androidApp/build.gradle.kts"],
+  "inputScopeId": "catalog-core-v1"
+}

@@ -1,0 +1,7 @@
+{
+  "action":"check","runner":"gradle","kind":"targeted","inputScopeId":"catalog-core-v1",
+  "tasks":[":shared:compose:generateBagCuePreviewTests",":shared:compose:compileAndroidMain",":shared:compose:testAndroidHostTest"],
+  "coveredObligations":[{"obligationId":"QG-006","surfaces":["preview-compile","scanner-generation","paparazzi-smoke"]}],
+  "timeoutSeconds":1800,
+  "reconcileDrift":"Inspected the newly scaffolded Paparazzi/ComposablePreviewScanner harness and single SCREEN-001 production RootComponentPreview-backed smoke case before matrix expansion; this early run validates plugin compatibility and generated host-test compilation."
+}

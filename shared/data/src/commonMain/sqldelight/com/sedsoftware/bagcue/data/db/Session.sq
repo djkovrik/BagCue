@@ -1,0 +1,66 @@
+selectSessionByStableId:
+SELECT * FROM packing_session WHERE id = ?;
+
+selectSessionByLocalDate:
+SELECT * FROM packing_session WHERE local_date = ?;
+
+selectAllSessionsForHistory:
+SELECT * FROM packing_session ORDER BY local_date, created_at, id;
+
+selectSessionsForHistoryByLocalDate:
+SELECT * FROM packing_session WHERE local_date = ? ORDER BY created_at, id;
+
+selectTemplateSnapshotsBySession:
+SELECT * FROM session_template_snapshot WHERE session_id = ? ORDER BY sort_order, template_id;
+
+selectSessionItemsBySession:
+SELECT * FROM session_packing_item WHERE session_id = ? ORDER BY sort_order, id;
+
+selectBagCandidatesByItem:
+SELECT * FROM session_item_bag_candidate WHERE session_item_id = ? ORDER BY sort_order;
+
+insertPackingSession:
+INSERT INTO packing_session(
+  id, local_date, status, completion_mode, created_at, completed_at, revision,
+  display_seed_resource_key, display_user_name
+)
+VALUES (?, ?, ?, ?, ?, ?, ?, NULL, NULL);
+
+updatePackingSession:
+UPDATE packing_session
+SET local_date = ?, status = ?, completion_mode = ?, completed_at = ?, revision = ?
+WHERE id = ?;
+
+deleteTemplateSnapshotsBySession:
+DELETE FROM session_template_snapshot WHERE session_id = ?;
+
+deleteSessionItemsBySession:
+DELETE FROM session_packing_item WHERE session_id = ?;
+
+deletePackingSessionByStableId:
+DELETE FROM packing_session WHERE id = ?;
+
+insertSessionTemplateSnapshot:
+INSERT INTO session_template_snapshot(
+  session_id, template_id, display_seed_resource_key, display_user_name, sort_order
+)
+VALUES (?, ?, ?, ?, ?);
+
+insertPackingSessionItem:
+INSERT INTO session_packing_item(
+  id, session_id, catalog_item_id, display_seed_resource_key, display_user_name, quantity,
+  bag_kind, bag_seed_resource_key, bag_user_text, source_hint, item_state, skipped, sort_order
+)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+insertSessionBagCandidate:
+INSERT INTO session_item_bag_candidate(session_item_id, seed_resource_key, user_text, sort_order)
+VALUES (?, ?, ?, ?);
+
+selectTemplatePositionForItem:
+SELECT * FROM template_position WHERE template_id = ? AND item_id = ?;
+
+updateTemplatePositionFromSession:
+UPDATE template_position
+SET quantity = ?, seed_bag_resource_key = ?, user_bag_label = ?, source_hint_override = ?
+WHERE template_id = ? AND item_id = ?;

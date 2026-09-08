@@ -1,0 +1,74 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-visual-responsive-production-20260908",
+  "assignmentId": "visual-preview-golden-matrix",
+  "productionEvidence": [
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+      "symbol": "private fun RowScope.PrimaryNavigationBarItem",
+      "surface": "font-scale-aware-labeled-primary-navigation"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt",
+      "symbol": "private fun AnalyticsRow",
+      "surface": "scroll-safe-adaptive-settings-controls"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateScreen.kt",
+      "symbol": "private fun TemplateActions",
+      "surface": "whole-action-template-reflow"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt",
+      "symbol": "private fun CatalogRow",
+      "surface": "whole-action-catalog-reflow"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt",
+      "symbol": "private fun ChecklistRow",
+      "surface": "whole-action-session-reflow"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt",
+      "symbol": "private fun ResultScreen",
+      "surface": "separated-result-ctas-and-full-width-privacy-action"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {
+      "argv": ["lazyweb", "search-screens", "mobile responsive settings list"],
+      "exitCode": 0,
+      "details": "Real product references supported persistent labeled bottom navigation, scrollable full-row settings controls, and separating the primary completion CTA from supporting actions."
+    },
+    {
+      "argv": ["git", "diff", "--check", "--", "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt", "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt", "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateScreen.kt", "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt", "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt"],
+      "exitCode": 0,
+      "details": "Scoped production UI patch has no whitespace errors."
+    }
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:compose:compileAndroidMain", ":shared:compose:visual-test:generateBagCuePreviewTests"],
+      "tasks": [":shared:compose:compileAndroidMain", ":shared:compose:visual-test:generateBagCuePreviewTests"],
+      "coveredObligations": [
+        {
+          "obligationId": "QG-006",
+          "surfaces": ["responsive-production-compile", "preview-discovery-generation"]
+        }
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-afc75c99-b820-43ca-9978-694928256ae6.json"
+    },
+    {
+      "argv": ["gradlew.bat", ":shared:compose:visual-test:recordPaparazziDebug", ":shared:compose:visual-test:verifyPaparazziDebug"],
+      "tasks": [":shared:compose:visual-test:recordPaparazziDebug", ":shared:compose:visual-test:verifyPaparazziDebug"],
+      "coveredObligations": [
+        {
+          "obligationId": "QG-006",
+          "surfaces": ["post-repair-full-record", "human-inspection", "golden-verify"]
+        }
+      ]
+    }
+  ],
+  "blockers": []
+}

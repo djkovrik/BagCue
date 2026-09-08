@@ -1,0 +1,43 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:compose:visual-test:recordPaparazziDebug"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": [
+        "preview-discovery",
+        "golden-record",
+        "localization-visual",
+        "adaptive-visual",
+        "asset-visual"
+      ]
+    },
+    {
+      "obligationId": "AC-045",
+      "surfaces": ["golden-test"]
+    },
+    {
+      "obligationId": "AC-047",
+      "surfaces": ["golden-test"]
+    },
+    {
+      "obligationId": "AC-048",
+      "surfaces": ["golden-test"]
+    },
+    {
+      "obligationId": "AC-049",
+      "surfaces": ["golden-test"]
+    },
+    {
+      "obligationId": "AC-050",
+      "surfaces": ["golden-test"]
+    }
+  ],
+  "timeoutSeconds": 3600,
+  "reconcileDrift": "Record the exact scanner-owned 118-preview production matrix in a conventional Android Paparazzi host while resolving the shared Compose production bytecode and generated Compose Resources assets directly from their producer tasks."
+}

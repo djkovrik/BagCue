@@ -1,0 +1,13 @@
+{
+  "action":"handoff","handoffId":"HANDOFF-apa-architecture-20260908","assignmentId":"apa-build-architecture",
+  "productionEvidence":[
+    {"path":"settings.gradle.kts","symbol":"include(\":shared:network\")","surface":"module-graph"},
+    {"path":"shared/network/build.gradle.kts","symbol":"namespace = \"com.sedsoftware.bagcue.network\"","surface":"network-module"},
+    {"path":"androidApp/build.gradle.kts","symbol":"implementation(libs.yandex.mobileads)","surface":"android-only-sdk"},
+    {"path":"androidApp/build.gradle.kts","symbol":"buildConfigField(\"String\", \"YANDEX_AD_UNIT_ID\"","surface":"release-configuration"},
+    {"path":"gradle/libs.versions.toml","symbol":"yandexMobileAds = \"8.2.0\"","surface":"version-catalog"}
+  ],
+  "testEvidence":[],"nonGradleChecks":[{"argv":["git","diff","--check"],"exitCode":0}],
+  "requestedCommands":[{"argv":["gradlew.bat",":androidApp:assembleDebug",":androidApp:assembleRelease",":shared:network:compileKotlinIosSimulatorArm64"],"tasks":[":androidApp:assembleDebug",":androidApp:assembleRelease",":shared:network:compileKotlinIosSimulatorArm64"],"coveredObligations":[{"obligationId":"AC-040","surfaces":["network-mock-test"]},{"obligationId":"AC-045","surfaces":["ad-lifecycle-test"]},{"obligationId":"AC-046","surfaces":["privacy-static-check"]}],"receiptRef":".vibe/receipts/RECEIPT-969f1f57-ccf6-4861-a7e5-ec2bed420644.json"}],
+  "blockers":[]
+}

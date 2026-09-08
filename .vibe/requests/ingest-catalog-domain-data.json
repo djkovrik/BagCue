@@ -1,0 +1,5 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-catalog-domain-persistence-20260908.json",
+  "inspectionNote": "Inspected all nine assignment-local changed files: they stay within shared/domain/src and shared/data/src, implement stable resource-key catalog identities, SQLDelight CRUD/seed-override/atomic-delete behavior and real-driver tests; no ledger/build/UI files are included. Early Gradle failure was solely in the architect-owned data build script before Kotlin/SQL compilation, so requested behavioral checks remain pending."
+}

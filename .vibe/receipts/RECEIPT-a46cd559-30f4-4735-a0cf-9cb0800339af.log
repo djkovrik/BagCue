@@ -1,0 +1,207 @@
+Calculating task graph as no cached configuration is available for tasks: :shared:compose:visual-test:testDebugUnitTest --tests com.sedsoftware.bagcue.compose.visual.generated.BagCuePreviewDiscoveryTest --tests com.sedsoftware.bagcue.compose.visual.BagCuePaparazziSmokeTest
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Configure project :shared:compose:visual-test
+w: file:///D:/Sources/Android/BagCue/shared/compose/visual-test/build.gradle.kts:97:41: 'fun srcDir(srcDir: Any): Any' is deprecated. Use `directories` mutable set instead.
+
+> Task :shared:platform:androidPreBuild UP-TO-DATE
+> Task :shared:compose:visual-test:preBuild UP-TO-DATE
+> Task :shared:component:catalog:androidPreBuild UP-TO-DATE
+> Task :shared:compose:visual-test:preDebugBuild UP-TO-DATE
+> Task :shared:platform:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :shared:compose:androidPreBuild UP-TO-DATE
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :shared:compose:visual-test:generateDebugResources UP-TO-DATE
+> Task :shared:compose:visual-test:javaPreCompileDebug UP-TO-DATE
+> Task :shared:compose:visual-test:processDebugNavigationResources UP-TO-DATE
+> Task :shared:component:catalog:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:history:androidPreBuild UP-TO-DATE
+> Task :shared:component:history:preAndroidMainBuild UP-TO-DATE
+> Task :shared:compose:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:catalog:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:platform:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:catalog:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:root:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:compose:generateResourceAccessorsForAndroidMain NO-SOURCE
+> Task :shared:component:history:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:platform:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:session:androidPreBuild UP-TO-DATE
+> Task :shared:component:session:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:settings:androidPreBuild UP-TO-DATE
+> Task :shared:component:templates:androidPreBuild UP-TO-DATE
+> Task :shared:component:history:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:settings:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:templates:preAndroidMainBuild UP-TO-DATE
+> Task :shared:root:androidPreBuild UP-TO-DATE
+> Task :shared:component:session:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:root:preAndroidMainBuild UP-TO-DATE
+> Task :shared:component:session:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:generateAndroidMainAssets UP-TO-DATE
+> Task :shared:platform:generateAndroidMainAssets UP-TO-DATE
+> Task :shared:compose:visual-test:generateDebugUnitTestAssets UP-TO-DATE
+> Task :shared:compose:visual-test:generateDebugAssets UP-TO-DATE
+> Task :shared:compose:visual-test:preDebugUnitTestBuild UP-TO-DATE
+> Task :shared:component:templates:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:settings:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:component:templates:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:component:settings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:compose:mapAndroidMainSourceSetPaths UP-TO-DATE
+> Task :shared:platform:mapAndroidMainSourceSetPaths UP-TO-DATE
+> Task :shared:compose:visual-test:mergeDebugAssets UP-TO-DATE
+> Task :shared:compose:visual-test:packageDebugResources UP-TO-DATE
+> Task :shared:domain:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:root:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:platform:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:session:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:history:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:catalog:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:component:settings:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:compose:visual-test:writeDebugAarMetadata UP-TO-DATE
+> Task :shared:component:templates:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:compose:writeAndroidMainAarMetadata UP-TO-DATE
+> Task :shared:compose:visual-test:mapDebugSourceSetPaths UP-TO-DATE
+> Task :shared:compose:visual-test:mapDebugUnitTestSourceSetPaths UP-TO-DATE
+> Task :shared:compose:visual-test:generateBagCuePreviewTests
+> Task :shared:compose:visual-test:compileDebugLibraryResources UP-TO-DATE
+> Task :shared:compose:visual-test:parseDebugLocalResources UP-TO-DATE
+> Task :shared:compose:visual-test:generateDebugRFile UP-TO-DATE
+> Task :shared:root:generateAndroidMainEmptyResourceFiles
+> Task :shared:platform:generateAndroidMainEmptyResourceFiles
+> Task :shared:component:history:generateAndroidMainEmptyResourceFiles
+> Task :shared:component:catalog:generateAndroidMainEmptyResourceFiles
+> Task :shared:compose:generateAndroidMainEmptyResourceFiles
+> Task :shared:domain:generateAndroidMainEmptyResourceFiles
+> Task :shared:compose:visual-test:generateDebugUnitTestResources UP-TO-DATE
+> Task :shared:platform:processAndroidMainManifest UP-TO-DATE
+> Task :shared:compose:processAndroidMainManifest UP-TO-DATE
+> Task :shared:domain:processAndroidMainManifest UP-TO-DATE
+> Task :shared:component:session:generateAndroidMainEmptyResourceFiles
+> Task :shared:root:processAndroidMainManifest UP-TO-DATE
+> Task :shared:component:catalog:processAndroidMainManifest UP-TO-DATE
+> Task :shared:compose:visual-test:compileDebugKotlin NO-SOURCE
+> Task :shared:component:session:processAndroidMainManifest UP-TO-DATE
+> Task :shared:component:history:processAndroidMainManifest UP-TO-DATE
+> Task :shared:component:settings:processAndroidMainManifest UP-TO-DATE
+> Task :shared:compose:visual-test:extractDeepLinksDebug UP-TO-DATE
+> Task :shared:component:templates:processAndroidMainManifest UP-TO-DATE
+> Task :shared:compose:visual-test:preparePaparazziDebugResources UP-TO-DATE
+> Task :shared:compose:visual-test:processDebugManifest UP-TO-DATE
+> Task :shared:compose:visual-test:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :shared:compose:visual-test:compileDebugJavaWithJavac NO-SOURCE
+> Task :shared:component:templates:generateAndroidMainEmptyResourceFiles
+> Task :shared:compose:visual-test:processDebugJavaRes NO-SOURCE
+> Task :shared:compose:visual-test:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :shared:component:settings:generateAndroidMainEmptyResourceFiles
+> Task :shared:compose:visual-test:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :shared:platform:packageAndroidMainResources FROM-CACHE
+> Task :shared:platform:compileAndroidMainLibraryResources UP-TO-DATE
+> Task :shared:platform:parseAndroidMainLocalResources FROM-CACHE
+> Task :shared:platform:generateAndroidMainRFile FROM-CACHE
+> Task :shared:compose:convertXmlValueResourcesForCommonMain
+> Task :shared:compose:visual-test:checkDebugUnitTestAarMetadata UP-TO-DATE
+> Task :shared:compose:copyNonXmlValueResourcesForCommonMain
+> Task :shared:compose:prepareComposeResourcesTaskForCommonMain
+> Task :shared:platform:mergeAndroidMainAssets
+> Task :shared:compose:visual-test:processDebugUnitTestManifest UP-TO-DATE
+> Task :shared:compose:copyAndroidMainComposeResourcesToAndroidAssets
+> Task :shared:compose:mergeAndroidMainAssets UP-TO-DATE
+> Task :shared:compose:packageAndroidMainResources FROM-CACHE
+> Task :shared:compose:parseAndroidMainLocalResources FROM-CACHE
+> Task :shared:compose:compileAndroidMainLibraryResources UP-TO-DATE
+> Task :shared:compose:generateAndroidMainRFile FROM-CACHE
+> Task :shared:compose:visual-test:mergeDebugUnitTestAssets UP-TO-DATE
+> Task :shared:compose:generateExpectResourceCollectorsForCommonMain
+> Task :shared:compose:generateComposeResClass
+> Task :shared:compose:visual-test:mergeDebugUnitTestResources UP-TO-DATE
+> Task :shared:compose:visual-test:processDebugUnitTestResources UP-TO-DATE
+> Task :shared:compose:visual-test:packageDebugUnitTestForUnitTest UP-TO-DATE
+> Task :shared:compose:visual-test:generateDebugUnitTestConfig UP-TO-DATE
+> Task :shared:compose:generateResourceAccessorsForCommonMain
+> Task :shared:compose:generateActualResourceCollectorsForAndroidMain
+> Task :shared:domain:compileAndroidMain FROM-CACHE
+> Task :shared:domain:processAndroidMainJavaRes
+> Task :shared:domain:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:domain:bundleAndroidMainClassesToCompileJar
+> Task :shared:platform:compileAndroidMain FROM-CACHE
+> Task :shared:platform:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:platform:processAndroidMainJavaRes
+> Task :shared:platform:bundleAndroidMainClassesToCompileJar
+> Task :shared:component:history:compileAndroidMain FROM-CACHE
+> Task :shared:component:catalog:compileAndroidMain FROM-CACHE
+> Task :shared:component:settings:compileAndroidMain FROM-CACHE
+> Task :shared:component:history:processAndroidMainJavaRes
+> Task :shared:component:catalog:processAndroidMainJavaRes
+> Task :shared:component:settings:processAndroidMainJavaRes
+> Task :shared:component:history:bundleAndroidMainClassesToCompileJar
+> Task :shared:component:history:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:component:catalog:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:component:catalog:bundleAndroidMainClassesToCompileJar
+> Task :shared:component:templates:compileAndroidMain FROM-CACHE
+> Task :shared:component:settings:bundleAndroidMainClassesToCompileJar
+> Task :shared:component:settings:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:component:templates:processAndroidMainJavaRes
+> Task :shared:component:templates:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:component:templates:bundleAndroidMainClassesToCompileJar
+> Task :shared:component:session:compileAndroidMain FROM-CACHE
+> Task :shared:component:session:processAndroidMainJavaRes
+> Task :shared:component:session:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:component:session:bundleAndroidMainClassesToCompileJar
+> Task :shared:root:compileAndroidMain FROM-CACHE
+> Task :shared:root:processAndroidMainJavaRes
+> Task :shared:root:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:root:bundleAndroidMainClassesToCompileJar
+
+> Task :shared:compose:compileAndroidMain
+w: file:///D:/Sources/Android/BagCue/shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryScreen.kt:132:94 Redundant call of conversion method.
+
+> Task :shared:compose:processAndroidMainJavaRes
+> Task :shared:compose:bundleAndroidMainClassesToCompileJar
+> Task :shared:compose:bundleAndroidMainClassesToRuntimeJar
+
+> Task :shared:compose:visual-test:compileDebugUnitTestKotlin
+w: file:///D:/Sources/Android/BagCue/shared/compose/visual-test/src/test/kotlin/com/sedsoftware/bagcue/compose/visual/BagCuePaparazzi.kt:95:30 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+
+> Task :shared:compose:visual-test:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :shared:compose:visual-test:processDebugUnitTestJavaRes
+> Task :shared:compose:visual-test:transformDebugUnitTestClassesWithAsm
+
+> Task :shared:compose:visual-test:testDebugUnitTest
+
+BagCuePaparazziSmokeTest > rendersProductionTodayFirstRun FAILED
+    app.cash.paparazzi.internal.PaparazziLogger$MultipleFailuresException at PaparazziLogger.kt:80
+
+> Task :shared:compose:visual-test:testDebugUnitTest FAILED
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+122 actionable tasks: 60 executed, 14 from cache, 48 up-to-date
+Configuration cache entry stored.
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+2 tests completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':shared:compose:visual-test:testDebugUnitTest'.
+> There were failing tests. See the results at: file:///D:/Sources/Android/BagCue/shared/compose/visual-test/build/test-results/testDebugUnitTest/
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 59s

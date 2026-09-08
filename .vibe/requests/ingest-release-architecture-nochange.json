@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-release-architecture-nochange-20260908.json",
+  "expectedLedgerDigest": "3643869428b84f9f93eb4df3df82d205637b59d2bd9a2746d5951346a2780937",
+  "inspectionNote": "Inspected the immutable no-change architecture handoff. It returns the overly broad shared build-script wildcard without edits so ownership can be re-registered as individually enumerated non-overlapping files."
+}

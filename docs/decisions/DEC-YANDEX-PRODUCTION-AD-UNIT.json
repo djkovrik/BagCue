@@ -1,0 +1,19 @@
+{
+  "decisionId": "DEC-YANDEX-PRODUCTION-AD-UNIT",
+  "kind": "steering",
+  "obligationIds": [
+    "QG-009"
+  ],
+  "rationale": "Bind the user-provided Android production Yandex adaptive inline banner unit to release-only configuration and validation.",
+  "recordedAt": "2026-09-08T07:58:31.598614Z",
+  "schemaVersion": "2.0",
+  "status": "accepted",
+  "supersedes": [],
+  "userApproval": {
+    "actor": "user",
+    "messageId": "user-request-2026-09-08-flow-packages",
+    "path": "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+    "quote": "Production ad unit ID: `R-M-19857241-1`.",
+    "sha256": "ddf5d641c5e4d5b2f4078b125ff701ce03ef89987f24422f4bd1b11a171493f6"
+  }
+}

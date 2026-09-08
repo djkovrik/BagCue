@@ -1,0 +1,39 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-android-fragment-lint-20260908",
+  "assignmentId": "android-fragment-lint",
+  "productionEvidence": [
+    {"path":"gradle/libs.versions.toml","symbol":"androidx-fragment = \"1.9.0\"","surface":"explicit-stable-fragment-version"},
+    {"path":"gradle/libs.versions.toml","symbol":"androidx-fragment-ktx","surface":"fragment-version-catalog-alias"},
+    {"path":"androidApp/build.gradle.kts","symbol":"implementation(libs.androidx.fragment.ktx)","surface":"android-release-fragment-runtime-compatibility"}
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {"argv":["git","diff","--check","--","gradle/libs.versions.toml","androidApp/build.gradle.kts"],"exitCode":0,"details":"No whitespace errors; only line-ending normalization warnings."},
+    {"argv":["rg","-n","fragment|baseline|suppress","gradle/libs.versions.toml","androidApp/build.gradle.kts"],"exitCode":0,"details":"Fragment 1.9.0 catalog/dependency wiring is present; no lint baseline or suppression was added."}
+  ],
+  "requestedCommands": [
+    {
+      "argv":["gradlew.bat",":androidApp:lintRelease"],
+      "tasks":[":androidApp:lintRelease"],
+      "coveredObligations":[
+        {"obligationId":"QG-001","surfaces":["android-release-compilation"]},
+        {"obligationId":"QG-002","surfaces":["android-release-dependency-resolution"]},
+        {"obligationId":"QG-004","surfaces":["android-release-lint"]}
+      ],
+      "receiptRef":".vibe/receipts/RECEIPT-530d3fba-94d4-45f9-9480-2b503e1a0bcd.json"
+    },
+    {
+      "argv":["gradlew.bat",":androidApp:assembleRelease",":androidApp:lintRelease"],
+      "tasks":[":androidApp:assembleRelease",":androidApp:lintRelease"],
+      "coveredObligations":[
+        {"obligationId":"QG-001","surfaces":["release-compilation-and-r8"]},
+        {"obligationId":"QG-004","surfaces":["release-lint"]}
+      ],
+      "receiptRef":".vibe/receipts/RECEIPT-6a559cfd-0d28-4724-b9e2-a74d7bccc2bd.json"
+    }
+  ],
+  "blockers": [
+    "The combined release check compiled all release Kotlin/Java, completed lintRelease and R8, then packageRelease stopped only because the external release signing storeFile is intentionally unavailable in this workspace. Full signed assembleRelease remains NOT RUN until the documented upload-key secrets are supplied; receipt RECEIPT-6a559cfd-0d28-4724-b9e2-a74d7bccc2bd.json."
+  ]
+}

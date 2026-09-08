@@ -1,0 +1,21 @@
+{
+  "action": "package",
+  "packageId": "catalog-core",
+  "owner": "vibe-developer",
+  "acceptanceScenarioIds": ["AC-001", "AC-002", "AC-003", "AC-004", "AC-005"],
+  "qualityGateIds": [],
+  "fileBoundaries": [
+    "settings.gradle.kts",
+    "build.gradle.kts",
+    "gradle/**",
+    "shared/domain/**",
+    "shared/data/**",
+    "shared/component/catalog/**",
+    "shared/root/**",
+    "shared/compose/**",
+    "androidApp/**",
+    "iosApp/**"
+  ],
+  "integrationGoal": "Launch the real BagCue root, open the catalog, save a catalog item, read it, and restore it after process restart",
+  "nextAction": "Implement module wiring, catalog domain and SQLDelight persistence, Store-backed catalog component, production UI, and Android/iOS root integration"
+}

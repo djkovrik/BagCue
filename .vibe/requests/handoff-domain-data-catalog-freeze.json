@@ -1,0 +1,30 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-catalog-domain-persistence-freeze-20260908",
+  "assignmentId": "catalog-domain-persistence",
+  "supersedes": [
+    ".vibe/handoffs/HANDOFF-catalog-domain-persistence-20260908.json"
+  ],
+  "productionEvidence": [
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt", "symbol": "PackingItem and stable identity/resource-key value objects", "surface": "domain-contract", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt", "symbol": "normalizeCatalogName and findNormalizedNameMatch", "surface": "domain-rule", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRepository.kt", "symbol": "CatalogRepository", "surface": "manager-persistence-contract", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq", "symbol": "packing_item, seed_override, dependency tables and atomic-delete queries", "surface": "generated-schema", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/SqlDelightCatalogRepository.kt", "symbol": "SqlDelightCatalogRepository", "surface": "persistence-implementation", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt", "symbol": "CatalogDataModule and CatalogDataModuleDependencies", "surface": "composition-module", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/androidMain/kotlin/com/sedsoftware/bagcue/data/catalog/AndroidCatalogDatabaseDriverFactory.kt", "symbol": "AndroidCatalogDatabaseDriverFactory", "surface": "android-driver", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/iosMain/kotlin/com/sedsoftware/bagcue/data/catalog/IosCatalogDatabaseDriverFactory.kt", "symbol": "IosCatalogDatabaseDriverFactory", "surface": "ios-driver", "receiptRef": ".vibe/receipts/RECEIPT-45cb3d09-cea6-400a-b2a2-54548e55ace7.json", "receiptSha256": "805f6d58efa3da96a76628449346dfdd819e09293b937b2ce92bcdecc07854d6"}
+  ],
+  "testEvidence": [
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRulesTest.kt", "testName": "normalizationTrimsCollapsesWhitespaceAndCaseFolds", "surface": "domain-test", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRulesTest.kt", "testName": "duplicateMatchReturnsOriginalStableIdentity", "surface": "domain-test", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "generatedSchemaSupportsCreateReadUpdateDeleteAndLocalizationKeyRoundTrip", "surface": "persistence-integration-test", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "starterRenameAndDeleteOverridesSurviveARealDriverRestart", "surface": "restart-integration-test", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "untouchedStarterDefinitionRefreshesButFirstCustomizationFreezesItsIdentity", "surface": "seed-override-integration-test", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "dependencyDeleteIsAtomicAndCompletedHistoryRetainsItsSnapshot", "surface": "transaction-integration-test", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt", "testName": "dependencyDeleteFailureRollsBackEveryEarlierMutation", "surface": "transaction-rollback-test", "receiptRef": ".vibe/receipts/RECEIPT-77438859-07aa-4a09-bca1-11a6d5d1e521.json", "receiptSha256": "542d883072b45f5ec312aaedeadb51589172eb3437c31397d35a804f0e958ece"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

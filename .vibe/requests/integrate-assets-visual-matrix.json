@@ -1,0 +1,23 @@
+{
+  "action": "integrate",
+  "packageId": "assets-and-visual-matrix",
+  "receiptRef": ".vibe/receipts/RECEIPT-7dbe413e-0942-4bd2-b7ef-8b84eeb65c68.json",
+  "integrationEvidence": [
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/preview/BagCuePreviewMatrix.kt",
+      "symbol": "SCREEN_001_FirstRunStarter",
+      "role": "entry-point"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+      "symbol": "PrimaryNavigationBar",
+      "role": "navigation"
+    },
+    {
+      "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt",
+      "symbol": "serializer = Config.serializer()",
+      "role": "restart"
+    }
+  ],
+  "nextAction": "Register repository-release-convergence, complete strict build/CI/platform privacy integrations, and run an independent acceptance audit."
+}

@@ -1,0 +1,10 @@
+{
+  "action": "check",
+  "runner": "command",
+  "kind": "integration",
+  "argv": ["C:/Users/Sergey/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe", "docs/assets/validate-adapted-assets.py"],
+  "coveredObligations": [
+    {"obligationId":"QG-006","surfaces":["asset-manifest-validation"]}
+  ],
+  "timeoutSeconds": 300
+}

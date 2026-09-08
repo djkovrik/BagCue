@@ -1,0 +1,31 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-reminders-data-build-edge-20260908",
+  "assignmentId": "reminders-data-build-edge",
+  "productionEvidence": [
+    {"path":"shared/data/build.gradle.kts","symbol":"api(libs.multiplatformSettings)","surface":"settings-runtime-wiring"},
+    {"path":"shared/data/build.gradle.kts","symbol":"implementation(libs.multiplatformSettingsTest)","surface":"settings-test-wiring"}
+  ],
+  "testEvidence": [
+    {"path":"shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/reminder/ReminderPreferencesSettingsTest.kt","testName":"missingSettingsUseDisabledEveningAndMorningDefaults","surface":"settings-integration-test"},
+    {"path":"shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/reminder/ReminderPreferencesSettingsTest.kt","testName":"sessionCopiesGlobalValuesThenOverridesIndependentlyAcrossRestart","surface":"settings-integration-test"},
+    {"path":"shared/data/src/commonTest/kotlin/com/sedsoftware/bagcue/data/reminder/ReminderPreferencesSettingsTest.kt","testName":"malformedPayloadFallsBackWithoutInventingAnEnabledReminder","surface":"settings-integration-test"}
+  ],
+  "nonGradleChecks": [
+    {"argv":["git","diff","--check","--","shared/data/build.gradle.kts"],"exitCode":0}
+  ],
+  "requestedCommands": [
+    {
+      "argv":["gradlew.bat",":shared:domain:allTests",":shared:data:allTests",":shared:platform:allTests",":shared:component:settings:testAndroidHostTest",":shared:root:testAndroidHostTest",":shared:root:compileAndroidMain",":shared:compose:compileAndroidMain",":androidApp:assembleDebug",":shared:data:compileKotlinIosSimulatorArm64",":shared:platform:compileKotlinIosSimulatorArm64",":shared:component:settings:compileKotlinIosSimulatorArm64",":shared:root:compileKotlinIosSimulatorArm64",":shared:compose:compileKotlinIosSimulatorArm64"],
+      "tasks":[":shared:domain:allTests",":shared:data:allTests",":shared:platform:allTests",":shared:component:settings:testAndroidHostTest",":shared:root:testAndroidHostTest",":shared:root:compileAndroidMain",":shared:compose:compileAndroidMain",":androidApp:assembleDebug",":shared:data:compileKotlinIosSimulatorArm64",":shared:platform:compileKotlinIosSimulatorArm64",":shared:component:settings:compileKotlinIosSimulatorArm64",":shared:root:compileKotlinIosSimulatorArm64",":shared:compose:compileKotlinIosSimulatorArm64"],
+      "coveredObligations":[
+        {"obligationId":"AC-031","surfaces":["settings-integration-test"]},
+        {"obligationId":"AC-032","surfaces":["settings-integration-test"]},
+        {"obligationId":"AC-033","surfaces":["settings-integration-test"]},
+        {"obligationId":"AC-034","surfaces":["settings-integration-test"]},
+        {"obligationId":"AC-035","surfaces":["settings-integration-test"]}
+      ]
+    }
+  ],
+  "blockers": []
+}

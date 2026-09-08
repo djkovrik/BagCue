@@ -1,0 +1,26 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":androidApp:assembleRelease",
+    ":androidApp:lintRelease"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-001",
+      "surfaces": ["android-release-compilation"]
+    },
+    {
+      "obligationId": "QG-002",
+      "surfaces": ["android-release-dependency-resolution"]
+    },
+    {
+      "obligationId": "QG-004",
+      "surfaces": ["android-release-lint"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Verify the explicit AndroidX Fragment 1.9.0 compatibility dependency removes the sole release lint blocker without a baseline or suppression."
+}

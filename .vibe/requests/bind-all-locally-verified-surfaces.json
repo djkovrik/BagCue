@@ -1,0 +1,5 @@
+{
+  "action": "bind",
+  "receiptRef": ".vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json",
+  "reconcileDrift": "Bind the immutable green cached post-commit receipt covering every locally verified obligation/surface after the known automatic post-check ledger-binding stall."
+}

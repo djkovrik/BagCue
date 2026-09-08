@@ -1,0 +1,36 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:domain:allTests",
+    ":shared:data:testAndroidHostTest",
+    ":shared:component:session:testAndroidHostTest",
+    ":shared:root:compileAndroidMain",
+    ":shared:compose:compileAndroidMain",
+    ":androidApp:assembleDebug",
+    ":shared:data:compileKotlinIosSimulatorArm64",
+    ":shared:component:session:compileKotlinIosSimulatorArm64",
+    ":shared:root:compileKotlinIosSimulatorArm64",
+    ":shared:compose:compileKotlinIosSimulatorArm64"
+  ],
+  "coveredObligations": [
+    {"obligationId": "AC-012", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-013", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-014", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-015", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-016", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-017", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-018", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-019", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-020", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-021", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-022", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-023", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-024", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]},
+    {"obligationId": "AC-025", "surfaces": ["domain-test", "persistence-integration-test", "component-test"]}
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Inspected active non-overlapping session assignments and main Compose/entrypoint implementation after the successful isolated domain/data receipt; this convergence run validates their combined Android and iOS graph."
+}

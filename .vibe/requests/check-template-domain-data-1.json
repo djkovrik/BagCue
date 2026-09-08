@@ -1,0 +1,21 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:domain:allTests",
+    ":shared:data:testAndroidHostTest",
+    ":shared:data:compileKotlinIosSimulatorArm64"
+  ],
+  "coveredObligations": [
+    {"obligationId": "AC-006", "surfaces": ["domain-test", "persistence-integration-test"]},
+    {"obligationId": "AC-007", "surfaces": ["domain-test", "persistence-integration-test"]},
+    {"obligationId": "AC-008", "surfaces": ["domain-test", "persistence-integration-test"]},
+    {"obligationId": "AC-009", "surfaces": ["domain-test", "persistence-integration-test"]},
+    {"obligationId": "AC-010", "surfaces": ["domain-test", "persistence-integration-test"]},
+    {"obligationId": "AC-011", "surfaces": ["domain-test", "persistence-integration-test"]}
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Inspected active template assignments: domain/data schema and tests, templates module, and Compose resources/screens are all inside their registered non-overlapping boundaries."
+}

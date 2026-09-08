@@ -1,0 +1,5 @@
+{
+  "action": "bind",
+  "receiptRef": ".vibe/receipts/RECEIPT-1ee83b0b-4136-4d1e-b584-ab037509ddde.json",
+  "reconcileDrift": "Bind the immutable green post-commit full-local receipt after the known automatic post-check binding stall. The receipt completed with exit code 0 against commit edf754dbdaec3831178fb1e877a7ea9e757b42f0."
+}

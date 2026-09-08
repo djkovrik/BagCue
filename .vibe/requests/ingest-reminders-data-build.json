@@ -1,0 +1,1 @@
+{"action":"ingest","handoffRef":".vibe/handoffs/HANDOFF-reminders-data-build-edge-20260908.json","inspectionNote":"Inspected the narrow data-build handoff: its only changed file is the registered data build script; runtime Settings and test-only MapSettings dependencies match source imports and passed common, Android and iOS tests."}

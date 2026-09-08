@@ -1,0 +1,43 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:compose:visual-test:verifyPaparazziDebug"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": [
+        "preview-discovery",
+        "golden-test",
+        "localization-visual",
+        "adaptive-visual",
+        "asset-visual"
+      ]
+    },
+    {
+      "obligationId": "AC-045",
+      "surfaces": ["golden-test"]
+    },
+    {
+      "obligationId": "AC-047",
+      "surfaces": ["golden-test"]
+    },
+    {
+      "obligationId": "AC-048",
+      "surfaces": ["golden-test"]
+    },
+    {
+      "obligationId": "AC-049",
+      "surfaces": ["golden-test"]
+    },
+    {
+      "obligationId": "AC-050",
+      "surfaces": ["golden-test"]
+    }
+  ],
+  "timeoutSeconds": 3600,
+  "reconcileDrift": "Verify the exact scanner-owned 118-preview production matrix after the responsive RU/200% layout corrections and final Lazyweb re-review."
+}

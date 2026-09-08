@@ -1,0 +1,101 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-alr-compose-localization-20260908",
+  "assignmentId": "alr-compose-localization",
+  "productionEvidence": [
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+      "symbol": "internal fun ProductShell(",
+      "surface": "adaptive-product-shell"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+      "symbol": "NavigationBarItem(",
+      "surface": "compact-primary-navigation"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+      "symbol": "NavigationRailItem(",
+      "surface": "wide-primary-navigation"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+      "symbol": "inlineResultAd = inlineResultAd,",
+      "surface": "android-ad-slot-preservation"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt",
+      "symbol": ".toggleable(",
+      "surface": "accessible-full-row-switches"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt",
+      "symbol": ".verticalScroll(rememberScrollState())",
+      "surface": "text-scale-reflow"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/values/strings.xml",
+      "symbol": "common_name_quantity",
+      "surface": "english-base-resources"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/values-ru/strings.xml",
+      "symbol": "common_name_quantity",
+      "surface": "russian-resource-parity"
+    },
+    {
+      "path": "androidApp/src/main/AndroidManifest.xml",
+      "symbol": "android:windowSoftInputMode=\"adjustResize\"",
+      "surface": "ime-safe-android-window"
+    }
+  ],
+  "testEvidence": [
+    {
+      "path": "shared/compose/src/commonTest/kotlin/com/sedsoftware/bagcue/compose/ProductShellContractTest.kt",
+      "testName": "compactWidthsUseNavigationBar",
+      "surface": "adaptive-layout-contract-test"
+    },
+    {
+      "path": "shared/compose/src/commonTest/kotlin/com/sedsoftware/bagcue/compose/ProductShellContractTest.kt",
+      "testName": "mediumAndExpandedWidthsUseNavigationRail",
+      "surface": "adaptive-layout-contract-test"
+    }
+  ],
+  "nonGradleChecks": [
+    {
+      "argv": ["git", "diff", "--check"],
+      "exitCode": 0,
+      "details": "No whitespace errors; Git emitted only existing line-ending normalization warnings."
+    },
+    {
+      "argv": ["powershell", "Compare-Object EN/RU Compose resource keys"],
+      "exitCode": 0,
+      "details": "XML-parsed default and Russian resource sets have identical 217-key inventories."
+    },
+    {
+      "argv": ["rg", "-n", "Text\\(\\\"|contentDescription\\s*=\\s*\\\"", "shared/compose/src/commonMain/kotlin"],
+      "exitCode": 1,
+      "details": "Expected no-match result: no literal Text/contentDescription product copy remains in production commonMain Compose Kotlin."
+    },
+    {
+      "argv": ["lazyweb", "agentic-search", "add6619a-4738-4082-8242-55d9fa00e1ba"],
+      "exitCode": 0,
+      "details": "Used the AppSpec-recorded cross-screen Lazyweb evidence; Material 3/AppSpec remained normative."
+    }
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:compose:testAndroidHostTest", ":shared:compose:compileAndroidMain", ":shared:compose:compileKotlinIosSimulatorArm64", ":androidApp:assembleDebug"],
+      "tasks": [":shared:compose:testAndroidHostTest", ":shared:compose:compileAndroidMain", ":shared:compose:compileKotlinIosSimulatorArm64", ":androidApp:assembleDebug"],
+      "coveredObligations": [
+        {"obligationId": "AC-047", "surfaces": ["component-test", "accessibility-test"]},
+        {"obligationId": "AC-048", "surfaces": ["localization-contract-test", "component-test"]},
+        {"obligationId": "AC-049", "surfaces": ["accessibility-test"]}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-b08b437c-933e-4cfa-a251-b1de19e3bf4e.json"
+    }
+  ],
+  "blockers": [
+    "AC-047/AC-048/AC-049 golden-test and AC-049 manual visual review are intentionally deferred to the registered visual package; this assignment was explicitly scoped to compile-time/static checks."
+  ]
+}

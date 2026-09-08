@@ -1,0 +1,31 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-history-domain-persistence-20260908",
+  "assignmentId": "history-domain-persistence",
+  "productionEvidence": [
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionModels.kt", "symbol": "SessionHistory", "surface": "history-domain-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionModels.kt", "symbol": "RepeatSessionSelection", "surface": "repeat-selection-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionModels.kt", "symbol": "DeletedSessionUndo", "surface": "undo-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionModels.kt", "symbol": "SessionDeletion", "surface": "delete-contract"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionRules.kt", "symbol": "sessionHistory", "surface": "history-ordering-rule"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionRules.kt", "symbol": "reopenCompletedSession", "surface": "reopen-rule"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionRules.kt", "symbol": "repeatSessionSelection", "surface": "repeat-rule"},
+    {"path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/session/SessionHistoryRepository.kt", "symbol": "SessionHistoryRepository", "surface": "manager-persistence-contract"},
+    {"path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Session.sq", "symbol": "selectAllSessionsForHistory", "surface": "generated-schema"},
+    {"path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Session.sq", "symbol": "deletePackingSessionByStableId", "surface": "transaction-boundary"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/session/SqlDelightPackingSessionRepository.kt", "symbol": "SqlDelightPackingSessionRepository", "surface": "persistence-implementation"},
+    {"path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt", "symbol": "packingSessionRepository", "surface": "composition-module"}
+  ],
+  "testEvidence": [
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt", "testName": "historyPartitionsChronologicallyAndFiltersByExactLocalDate", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt", "testName": "reopenPreservesTheSameDatedSnapshotAndEveryRecordedItemState", "surface": "domain-test"},
+    {"path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/session/SessionRulesTest.kt", "testName": "repeatSelectionRetainsOnlyTheExactStableTemplateCombination", "surface": "domain-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "testName": "historyIsChronologicalFilterableAndSurvivesRestartWithTheSameLocalDate", "surface": "restart-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "testName": "completedSessionCanPrepareRepeatThenReopenWithoutLosingRecordedState", "surface": "persistence-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "testName": "deleteAndUndoRestoreTheWholeSessionWithoutChangingCatalogOrTemplates", "surface": "transaction-integration-test"},
+    {"path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/session/PackingSessionPersistenceTest.kt", "testName": "failedWholeSessionUndoRollsBackTheParentAndEverySnapshotRow", "surface": "transaction-rollback-test"}
+  ],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

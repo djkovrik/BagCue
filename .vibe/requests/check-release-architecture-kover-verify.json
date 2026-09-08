@@ -1,0 +1,19 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    "koverVerify",
+    "koverXmlReport",
+    "printKoverLineCoverage"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-002",
+      "surfaces": ["baseline-derived-verification", "merged-kover-xml", "numeric-line-output"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Verify the committed 72 percent floor against the measured 72.23 percent filtered production domain/component line coverage and emit XML plus numeric output."
+}

@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-release-architecture-convergence-v3-20260908.json",
+  "expectedLedgerDigest": "60cf84b17baa54deaf50a352e37ab7e9dbd4ab0775fc9d7c69367603a62326c5",
+  "inspectionNote": "Inspected the frozen architecture v3 handoff, five adapted workflows, strict Detekt contract, filtered Kover 72.23 percent measured baseline and committed 72 percent threshold, Android release configuration, iOS linkage/setup guides, green static validation, and literal red receipts for source-level Detekt debt plus the privacy-owned compile failure. No external macOS/Play/Firebase/RSYA success is claimed."
+}

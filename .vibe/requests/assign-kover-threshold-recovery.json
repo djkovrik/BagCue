@@ -1,0 +1,9 @@
+{
+  "action": "assign",
+  "assignmentId": "kover-threshold-recovery",
+  "owner": "vibe-test-engineer",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-001"],
+  "allowedFiles": ["shared/domain/src/commonTest/**", "shared/component/catalog/src/commonTest/**", "shared/component/templates/src/commonTest/**", "shared/component/session/src/commonTest/**", "shared/component/history/src/commonTest/**", "shared/component/settings/src/commonTest/**", "shared/root/src/commonTest/**"],
+  "inputScopeId": "catalog-core-v1"
+}

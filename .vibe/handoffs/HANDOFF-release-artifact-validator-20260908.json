@@ -1,0 +1,70 @@
+{
+  "acceptanceScenarioIds": [],
+  "allowedFiles": [
+    ".github/workflows/scripts/validate_release_artifacts.py"
+  ],
+  "assignmentBaselineRef": {
+    "path": ".vibe/snapshots/4bb207ce13db5da7aa044b58cff491f6ed1e7cb9e34ee9c44a50c351f1a715b1.json",
+    "sha256": "9bcf26bf8763f752eecb284649ae5fb9fb77ba2bb4e99f4a101a3ba8af33c529"
+  },
+  "assignmentId": "release-artifact-validator",
+  "blockers": [],
+  "changedFiles": [
+    ".github/workflows/scripts/validate_release_artifacts.py"
+  ],
+  "completedAt": "2026-09-08T18:59:57.835607Z",
+  "evidenceMode": "assignment",
+  "handoffId": "HANDOFF-release-artifact-validator-20260908",
+  "nonGradleChecks": [
+    {
+      "argv": [
+        "python",
+        ".github/workflows/scripts/validate_release_artifacts.py",
+        "androidApp/build/outputs/apk/release/androidApp-release.apk",
+        "androidApp/build/outputs/bundle/release/androidApp-release.aab",
+        "androidApp/build/outputs/mapping/release/mapping.txt"
+      ],
+      "details": "Generated APK, AAB, and R8 mapping are non-empty; APK/AAB are ZIP containers; AAB contains standard BundleConfig.pb and base manifest.",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "python",
+        "-m",
+        "py_compile",
+        ".github/workflows/scripts/validate_release_artifacts.py"
+      ],
+      "details": "Validator compiles after the exact structure correction.",
+      "exitCode": 0
+    }
+  ],
+  "owner": "vibe-project-architect-release-validator",
+  "productionEvidence": [
+    {
+      "path": ".github/workflows/scripts/validate_release_artifacts.py",
+      "surface": "standard-android-app-bundle-structure",
+      "symbol": "BundleConfig.pb"
+    }
+  ],
+  "qualityGateIds": [
+    "QG-004"
+  ],
+  "requestedCommands": [],
+  "resultScopeFingerprint": {
+    "algorithm": "sha256",
+    "digest": "b681adc864fa37c1c6829b20225e9e6dfddcdbf5ce3e1690f53c91b2fdad7bce",
+    "files": [
+      {
+        "path": ".github/workflows/scripts/validate_release_artifacts.py",
+        "sha256": "81cc739d3c3e58040eaa505cb84437ad2b4095ebafa3dfb6427632cf27122626"
+      }
+    ],
+    "patterns": [
+      ".github/workflows/scripts/validate_release_artifacts.py"
+    ]
+  },
+  "schemaVersion": "2.0",
+  "startedAt": "2026-09-08T18:59:05.694131Z",
+  "supersedes": [],
+  "testEvidence": []
+}

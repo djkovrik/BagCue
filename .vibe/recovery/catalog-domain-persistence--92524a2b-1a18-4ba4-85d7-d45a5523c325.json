@@ -1,0 +1,176 @@
+{
+  "assignmentId": "catalog-domain-persistence",
+  "blockers": [],
+  "createdAt": "2026-09-08T08:13:51.375932Z",
+  "fileBoundaries": [
+    "shared/domain/src/**",
+    "shared/data/src/**"
+  ],
+  "nextAction": "Inspect orchestrator Gradle feedback, repair source if needed, then generate assignment-local handoff",
+  "obligationIds": [
+    "AC-001",
+    "AC-002",
+    "AC-003",
+    "AC-004",
+    "AC-005"
+  ],
+  "owner": "vibe-domain-and-persistence-engineer",
+  "pendingChecks": [
+    "Run targeted domain and database compile/tests through orchestrator Gradle runner"
+  ],
+  "previousPacketDigest": "907f61adf4edfeee289b64eff85ee4b2c6eda89b08ba1848c14d041c9daabf77",
+  "requiredReadHashes": [
+    {
+      "path": ".vibe/requests/assign-domain-data-catalog.json",
+      "sha256": "b3c9b2f4aed433b26b4a7c42b6064f5da1739fac1e0d93767b4c62489371fc83"
+    },
+    {
+      "path": "spec/app-spec/data.md",
+      "sha256": "946d1286e2446778366aa9c2460ad2c85fc079d9a920607243229895e576abde"
+    },
+    {
+      "path": "spec/app-spec/domain.md",
+      "sha256": "5103f77eeb2a152d68427b73b983b195d7ea66647429cc8061c65ce0052e146c"
+    },
+    {
+      "path": "spec/app-spec/flows/FLOW-001.md",
+      "sha256": "d968d8d8dda19034968fe553b21fa0e871d848f6dd4ec0ae5b51ed17ac74fda5"
+    },
+    {
+      "path": "spec/app-spec/screens/SCREEN-008.md",
+      "sha256": "9b70df30cdc59263a9178a2887ed350f8bd7e7b64dfbf5605bc4b7be080b3689"
+    },
+    {
+      "path": "spec/app-spec/screens/SCREEN-009.md",
+      "sha256": "7e07a6a0da03496e53d45a53cb4e851c925dfd790aa012acbe278d77b4cbff0b"
+    }
+  ],
+  "requiredReads": [
+    ".vibe/requests/assign-domain-data-catalog.json",
+    "spec/app-spec/data.md",
+    "spec/app-spec/domain.md",
+    "spec/app-spec/flows/FLOW-001.md",
+    "spec/app-spec/screens/SCREEN-008.md",
+    "spec/app-spec/screens/SCREEN-009.md"
+  ],
+  "resolutions": {
+    "blockers": [],
+    "pendingChecks": [],
+    "reason": null
+  },
+  "schemaVersion": "2.0",
+  "scopedInstructions": [],
+  "status": "active",
+  "workspaceFingerprint": {
+    "algorithm": "sha256",
+    "binaryDiffSha256": "b1391fca44e1630134cbaf76be9da22e0c5a2c95229b6a0b43f1dceaab185bbd",
+    "digest": "409b653ec4a7a46f5c38badbfe1307358afabf60e0b11bd3c53950a6da64dbee",
+    "gitHead": "fdea4c1a871e2d3952a930b8d7bf9e780851dcc7",
+    "workingFiles": [
+      {
+        "path": "androidApp/build.gradle.kts",
+        "sha256": "6bb004d15af0f706beacb32fdaddb6faeca3d187020b06c1bd067eae3bb4db50"
+      },
+      {
+        "path": "build.gradle.kts",
+        "sha256": "0c490642761dab6bded7fed150cfd067ed2eef04fc94e64d9b304d427a48a788"
+      },
+      {
+        "path": "commonMain/com/arkivanov/decompose/value/operator/Map.kt",
+        "sha256": "b9091863613d472cbc38c02766f7fe22d052a8b7b5440c6c305db9655093b9e7"
+      },
+      {
+        "path": "commonMain/com/arkivanov/decompose/value/Value.kt",
+        "sha256": "47071c88c6544544f87b99c4671cc160e9d1e301453810e95c856d5b350dba2b"
+      },
+      {
+        "path": "commonMain/com/arkivanov/decompose/value/ValueExt.kt",
+        "sha256": "bf2d45965bf2b93976cf5d33e5c522a820b65663b0e457a474170960d3e9d2c7"
+      },
+      {
+        "path": "docs/assignments/REQUEST-2026-09-08-flow-packages.md",
+        "sha256": "ddf5d641c5e4d5b2f4078b125ff701ce03ef89987f24422f4bd1b11a171493f6"
+      },
+      {
+        "path": "docs/decisions/DEC-YANDEX-PRODUCTION-AD-UNIT.json",
+        "sha256": "d28c03639f6ea3b30744f7f5162a2f96af88011785fa50b6c018517de579bf8f"
+      },
+      {
+        "path": "gradle/libs.versions.toml",
+        "sha256": "5f0320f42445a0de2775d2fc6c57cd17f5852c972f015988f83eb6c0f43c205c"
+      },
+      {
+        "path": "settings.gradle.kts",
+        "sha256": "82520962b28de73df60b4e6b82ad1ba2c2efbf80bd0b3bf1ddbd40d758ba2e1d"
+      },
+      {
+        "path": "shared/component/catalog/build.gradle.kts",
+        "sha256": "40ce6e2eb15de971773e35bad319bf89930f08f2de203c7c42c8fcf8f7fcc526"
+      },
+      {
+        "path": "shared/compose/build.gradle.kts",
+        "sha256": "8edc18edad1b565bf40e3aee58b511a097cf78c7a9e58f78f5d35016545f1a0c"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/values-ru/strings.xml",
+        "sha256": "e20dec00a4584b8ee968e37c4bfc327c7f2d9f65be19ef0bc75604a3720d366e"
+      },
+      {
+        "path": "shared/compose/src/commonMain/composeResources/values/strings.xml",
+        "sha256": "2176e18548e1a323bad89ea16913605c43ee4d95af3321ae44c8fd811fa83ad2"
+      },
+      {
+        "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/Theme.kt",
+        "sha256": "1a200fe1b2b982119af2ce8b9f98052782936b59df6f9ca18e320afdc85474c3"
+      },
+      {
+        "path": "shared/data/build.gradle.kts",
+        "sha256": "3b0cbe924834afaaff328dc4dcdee1be6b34178233eee367443a1ea3260f4ded"
+      },
+      {
+        "path": "shared/data/src/androidHostTest/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogPersistenceTest.kt",
+        "sha256": "89e47da4423f5e8a27aa57de887cfe926b90780732e78c7e9c3221a49828b4ab"
+      },
+      {
+        "path": "shared/data/src/androidMain/kotlin/com/sedsoftware/bagcue/data/catalog/AndroidCatalogDatabaseDriverFactory.kt",
+        "sha256": "02bbafc59639db7047352f855ab8a217d65ada8eba1f16317fe1ad71e4fddd55"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/CatalogDataModule.kt",
+        "sha256": "f55425a88021c1f6a657ca6f23524c940df93a1698378da4042217211f1855c6"
+      },
+      {
+        "path": "shared/data/src/commonMain/kotlin/com/sedsoftware/bagcue/data/catalog/SqlDelightCatalogRepository.kt",
+        "sha256": "fc6b7725e4f3977e5d453f8bf6e6ac87e8efaaf5823bff567b8679dd7042645a"
+      },
+      {
+        "path": "shared/data/src/commonMain/sqldelight/com/sedsoftware/bagcue/data/db/Catalog.sq",
+        "sha256": "46746635255e54ae2e8f607460cfe71bd9c84e5da39f0d015b3321d1e0002b01"
+      },
+      {
+        "path": "shared/data/src/iosMain/kotlin/com/sedsoftware/bagcue/data/catalog/IosCatalogDatabaseDriverFactory.kt",
+        "sha256": "ecfe59c28c128e6fb4a3dad14d4890328ad246e387a15a271d6e8de872353927"
+      },
+      {
+        "path": "shared/domain/build.gradle.kts",
+        "sha256": "d904d65e12f5d5c2d59552c20e69d334954f02a1a2153745458487a787e67f69"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogModels.kt",
+        "sha256": "142f436fedbd83b8439e078e1532b51ca9d6880d843e527d3235ece93cf0893a"
+      },
+      {
+        "path": "shared/domain/src/commonMain/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRepository.kt",
+        "sha256": "0d8c2b11f6c7e8c01e1202dea7f1816196d68468ddc5e98b32c63c641d56e2f9"
+      },
+      {
+        "path": "shared/domain/src/commonTest/kotlin/com/sedsoftware/bagcue/domain/catalog/CatalogRulesTest.kt",
+        "sha256": "a61e1924b8755e6c7c7bcaf507a50fafbe1024458d6b917ea2b8c3717935fc39"
+      },
+      {
+        "path": "shared/root/build.gradle.kts",
+        "sha256": "ae078e90d151fd4466d1cf3d14c65decdf0875533114b9f967348f714301af46"
+      }
+    ]
+  }
+}

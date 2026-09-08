@@ -1,0 +1,25 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "catalog-core-v1",
+  "tasks": [
+    ":shared:compose:testAndroidHostTest",
+    "--tests",
+    "com.sedsoftware.bagcue.compose.visual.generated.BagCuePreviewDiscoveryTest",
+    "--tests",
+    "com.sedsoftware.bagcue.compose.visual.BagCuePaparazziSmokeTest"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": [
+        "scanner-generation",
+        "preview-discovery-contract",
+        "paparazzi-smoke"
+      ]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "The exact 118-preview discovery contract passed, while the full first render attempt exposed that Android-KMP R.jar was not on the concrete Test task classpath; this focused request validates the direct classpath repair with one production RootComponentPreview-backed render before another full matrix run."
+}

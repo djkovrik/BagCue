@@ -1,0 +1,46 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-history-component-root-20260908",
+  "assignmentId": "history-component-root",
+  "productionEvidence": [
+    {"path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/HistoryComponent.kt", "symbol": "HistoryComponent", "surface": "public-component-contract"},
+    {"path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManager.kt", "symbol": "HistoryManager", "surface": "manager-result-boundary"},
+    {"path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/store/HistoryStore.kt", "symbol": "HistoryStore", "surface": "mvikotlin-store-contract"},
+    {"path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/store/HistoryStoreProvider.kt", "symbol": "HistoryStoreProvider", "surface": "history-state-machine"},
+    {"path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/integration/HistoryComponentDefault.kt", "symbol": "HistoryComponentDefault", "surface": "decompose-production-component"},
+    {"path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/integration/HistoryComponentPreview.kt", "symbol": "HistoryComponentPreview", "surface": "preview-component"},
+    {"path": "shared/component/history/src/commonMain/kotlin/com/sedsoftware/bagcue/history/integration/Mappers.kt", "symbol": "toComponentModel", "surface": "store-state-to-component-model"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/RootComponent.kt", "symbol": "showHistory", "surface": "root-component-contract"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "openSessionFromHistory", "surface": "production-navigation"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentDefault.kt", "symbol": "repeatFromHistory", "surface": "production-navigation"},
+    {"path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentFactory.kt", "symbol": "RootComponentFactory", "surface": "production-composition-factory"}
+  ],
+  "testEvidence": [
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt", "testName": "browseAndFilterPreserveStoredLocalDatesAndSections", "surface": "component-test"},
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt", "testName": "reopenKeepsSameIdentityDateAndSnapshots", "surface": "component-test"},
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt", "testName": "repeatReturnsHistoricalStableTemplateIdsOnly", "surface": "component-test"},
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/domain/HistoryManagerTest.kt", "testName": "deleteAndUndoRestoreTheExactDatedAggregate", "surface": "component-test"},
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/store/HistoryStoreTest.kt", "testName": "filterReopenAndDeleteUndoAreStoreOwned", "surface": "component-test"},
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/integration/HistoryModelMapperTest.kt", "testName": "mapsPlannedCompletedAndLocaleNeutralTemplateNames", "surface": "component-test"},
+    {"path": "shared/component/history/src/commonTest/kotlin/com/sedsoftware/bagcue/history/integration/HistoryModelMapperTest.kt", "testName": "distinguishesGlobalEmptyFromFilteredEmptyAndMapsDeleteTarget", "surface": "component-test"},
+    {"path": "shared/root/src/commonTest/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentNavigationTest.kt", "testName": "sessionIsInitialAndDestinationClicksDoNotDuplicateConfigs", "surface": "component-test"}
+  ],
+  "nonGradleChecks": [
+    {"argv": ["git", "diff", "--check", "--", "shared/component/history/src", "shared/root/src"], "exitCode": 0}
+  ],
+  "requestedCommands": [
+    {
+      "argv": ["gradlew.bat", ":shared:domain:allTests", ":shared:data:testAndroidHostTest", ":shared:component:history:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug", ":shared:data:compileKotlinIosSimulatorArm64", ":shared:component:history:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "tasks": [":shared:domain:allTests", ":shared:data:testAndroidHostTest", ":shared:component:history:testAndroidHostTest", ":shared:root:testAndroidHostTest", ":shared:root:compileAndroidMain", ":shared:compose:compileAndroidMain", ":androidApp:assembleDebug", ":shared:data:compileKotlinIosSimulatorArm64", ":shared:component:history:compileKotlinIosSimulatorArm64", ":shared:root:compileKotlinIosSimulatorArm64", ":shared:compose:compileKotlinIosSimulatorArm64"],
+      "coveredObligations": [
+        {"obligationId": "AC-026", "surfaces": ["component-test"]},
+        {"obligationId": "AC-027", "surfaces": ["component-test"]},
+        {"obligationId": "AC-028", "surfaces": ["component-test"]},
+        {"obligationId": "AC-029", "surfaces": ["component-test"]},
+        {"obligationId": "AC-030", "surfaces": ["component-test"]}
+      ],
+      "receiptRef": ".vibe/receipts/RECEIPT-05e20fbd-746e-4da4-8e27-02dcf186be13.json"
+    }
+  ],
+  "blockers": []
+}

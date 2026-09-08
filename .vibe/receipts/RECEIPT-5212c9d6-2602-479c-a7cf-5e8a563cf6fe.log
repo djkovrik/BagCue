@@ -1,0 +1,61 @@
+Calculating task graph as configuration cache cannot be reused because file 'settings.gradle.kts' has changed.
+
+> Configure project :shared:compose
+w: [33m[1mNative task 'iosSimulatorArm64Test' is disabled[0m[0m
+Task 'iosSimulatorArm64Test' for target 'ios_simulator_arm64' cannot run on the current host (windows-x86_64).
+Reason: simulator tests require macOS
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Task :shared:compose:generateUmbrellaPackageIdentifierBasedResolutionForDefault SKIPPED
+> Task :shared:compose:fetchUmbrellaPackageIdentifierForDefault SKIPPED
+> Task :shared:data:androidPreBuild UP-TO-DATE
+> Task :shared:domain:androidPreBuild UP-TO-DATE
+> Task :shared:domain:generateSyntheticLinkageSwiftPMImportProjectForCinteropsAndLdDump SKIPPED
+> Task :shared:data:preAndroidMainBuild UP-TO-DATE
+> Task :shared:data:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:domain:computeLocalPackageDependencyInputFiles SKIPPED
+> Task :shared:domain:preAndroidMainBuild UP-TO-DATE
+> Task :shared:domain:syncPersistedPackageResolvedToSynthetic SKIPPED
+> Task :shared:domain:preAndroidHostTestBuild UP-TO-DATE
+> Task :shared:domain:fetchSyntheticImportProjectPackages SKIPPED
+> Task :shared:domain:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:domain:iosSimulatorArm64ProcessResources NO-SOURCE
+> Task :shared:data:processAndroidHostTestJavaRes NO-SOURCE
+> Task :shared:domain:exportCrossCompilationMetadataForIosSimulatorArm64ApiElements UP-TO-DATE
+> Task :shared:domain:androidJar UP-TO-DATE
+> Task :shared:domain:convertSyntheticImportProjectIntoDefFileIphonesimulator SKIPPED
+> Task :shared:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:data:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:data:androidJar UP-TO-DATE
+> Task :shared:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:domain:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:data:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :shared:domain:compileAndroidMain
+> Task :shared:domain:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:domain:bundleAndroidMainClassesToCompileJar
+> Task :shared:domain:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:domain:compileAndroidHostTest
+> Task :shared:data:generateCommonMainBagCueDatabaseInterface
+> Task :shared:domain:testAndroidHostTest
+> Task :shared:domain:compileKotlinIosSimulatorArm64
+> Task :shared:domain:iosSimulatorArm64MainKlibrary
+> Task :shared:domain:compileTestKotlinIosSimulatorArm64
+> Task :shared:domain:linkDebugTestIosSimulatorArm64 SKIPPED
+> Task :shared:domain:iosSimulatorArm64Test SKIPPED
+> Task :shared:domain:allTests
+> Task :shared:data:compileAndroidMain
+> Task :shared:data:processAndroidMainJavaRes UP-TO-DATE
+> Task :shared:data:bundleAndroidMainClassesToCompileJar
+> Task :shared:data:bundleAndroidMainClassesToRuntimeJar
+> Task :shared:data:compileAndroidHostTest
+> Task :shared:data:compileKotlinIosSimulatorArm64
+> Task :shared:data:testAndroidHostTest
+
+[Incubating] Problems report is available at: file:///D:/Sources/Android/BagCue/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 21s
+24 actionable tasks: 17 executed, 7 up-to-date
+Configuration cache entry stored.
