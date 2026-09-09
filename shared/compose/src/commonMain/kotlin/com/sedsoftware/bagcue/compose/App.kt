@@ -1,5 +1,8 @@
 package com.sedsoftware.bagcue.compose
 
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.snap
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -12,16 +15,24 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.NavigationRail
 import androidx.compose.material3.NavigationRailItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.MotionDurationScale
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
@@ -50,6 +61,11 @@ internal enum class ProductNavigationLayout { Bar, Rail }
 
 internal fun productNavigationLayout(width: androidx.compose.ui.unit.Dp): ProductNavigationLayout =
     if (width < EXPANDED_NAVIGATION_BREAKPOINT_DP.dp) ProductNavigationLayout.Bar else ProductNavigationLayout.Rail
+
+internal fun reduceNavigationMotion(durationScale: Float): Boolean = durationScale == 0f
+
+internal fun primaryNavigationRows(fontScale: Float): List<List<PrimaryDestinationUi>> =
+    if (fontScale >= 1.5f) primaryDestinations().chunked(2) else listOf(primaryDestinations())
 
 @Composable
 fun App(
@@ -109,21 +125,34 @@ internal fun ProductShell(
 }
 
 @Composable
-private fun PrimaryNavigationBar(
+internal fun PrimaryNavigationBar(
     selectedDestination: RootComponent.PrimaryDestination,
     onDestinationSelected: (RootComponent.PrimaryDestination) -> Unit,
 ) {
-    val useTwoRows = LocalDensity.current.fontScale >= 1.5f
-    NavigationBar(Modifier.semantics { testTag = "primary-navigation-bar" }) {
+    val navigationRows = primaryNavigationRows(LocalDensity.current.fontScale)
+    val useTwoRows = navigationRows.size > 1
+    val durationScale = rememberCoroutineScope().coroutineContext[MotionDurationScale]?.scaleFactor ?: 1f
+    val reduceMotion = reduceNavigationMotion(durationScale)
+    val dockShape = MaterialTheme.shapes.extraLarge
+    NavigationBar(
+        modifier = Modifier
+            .padding(horizontal = 12.dp, vertical = 8.dp)
+            .shadow(elevation = 3.dp, shape = dockShape)
+            .clip(dockShape)
+            .semantics { testTag = "primary-navigation-bar" },
+        containerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
+        tonalElevation = 0.dp,
+    ) {
         if (useTwoRows) {
-            Column(Modifier.fillMaxWidth()) {
-                primaryDestinations().chunked(2).forEach { destinations ->
+            Column(Modifier.fillMaxWidth().selectableGroup()) {
+                navigationRows.forEach { destinations ->
                     Row(Modifier.fillMaxWidth().heightIn(min = 80.dp)) {
                         destinations.forEach { destination ->
                             PrimaryNavigationBarItem(
                                 destination = destination,
                                 selectedDestination = selectedDestination,
                                 onDestinationSelected = onDestinationSelected,
+                                reduceMotion = reduceMotion,
                                 modifier = Modifier.weight(1f),
                             )
                         }
@@ -131,8 +160,13 @@ private fun PrimaryNavigationBar(
                 }
             }
         } else {
-            primaryDestinations().forEach { destination ->
-                PrimaryNavigationBarItem(destination, selectedDestination, onDestinationSelected)
+            navigationRows.single().forEach { destination ->
+                PrimaryNavigationBarItem(
+                    destination = destination,
+                    selectedDestination = selectedDestination,
+                    onDestinationSelected = onDestinationSelected,
+                    reduceMotion = reduceMotion,
+                )
             }
         }
     }
@@ -143,12 +177,34 @@ private fun RowScope.PrimaryNavigationBarItem(
     destination: PrimaryDestinationUi,
     selectedDestination: RootComponent.PrimaryDestination,
     onDestinationSelected: (RootComponent.PrimaryDestination) -> Unit,
+    reduceMotion: Boolean,
     modifier: Modifier = Modifier,
 ) {
+    val selected = destination.destination == selectedDestination
+    val iconScale by animateFloatAsState(
+        targetValue = if (selected) 1.08f else 1f,
+        animationSpec = if (reduceMotion) snap() else MaterialTheme.motionScheme.fastSpatialSpec(),
+        label = "primary-navigation-icon-scale",
+    )
+    val iconLift by animateDpAsState(
+        targetValue = if (selected) (-2).dp else 0.dp,
+        animationSpec = if (reduceMotion) snap() else MaterialTheme.motionScheme.fastSpatialSpec(),
+        label = "primary-navigation-icon-lift",
+    )
     NavigationBarItem(
-        selected = destination.destination == selectedDestination,
+        selected = selected,
         onClick = { onDestinationSelected(destination.destination) },
-        icon = { Icon(destination.icon(), contentDescription = null) },
+        icon = {
+            Icon(
+                painter = destination.icon(),
+                contentDescription = null,
+                modifier = Modifier.graphicsLayer {
+                    scaleX = iconScale
+                    scaleY = iconScale
+                    translationY = iconLift.toPx()
+                },
+            )
+        },
         label = {
             androidx.compose.material3.Text(
                 text = stringResource(destination.label),
@@ -157,6 +213,13 @@ private fun RowScope.PrimaryNavigationBarItem(
             )
         },
         alwaysShowLabel = true,
+        colors = NavigationBarItemDefaults.colors(
+            selectedIconColor = MaterialTheme.colorScheme.onPrimaryContainer,
+            selectedTextColor = MaterialTheme.colorScheme.primary,
+            indicatorColor = MaterialTheme.colorScheme.primaryContainer,
+            unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
+        ),
         modifier = modifier.semantics { testTag = destination.testTag },
     )
 }
@@ -180,14 +243,14 @@ private fun PrimaryNavigationRail(
     }
 }
 
-private data class PrimaryDestinationUi(
+internal data class PrimaryDestinationUi(
     val destination: RootComponent.PrimaryDestination,
     val label: StringResource,
     val icon: @Composable () -> Painter,
     val testTag: String,
 )
 
-private fun primaryDestinations(): List<PrimaryDestinationUi> = listOf(
+internal fun primaryDestinations(): List<PrimaryDestinationUi> = listOf(
     PrimaryDestinationUi(
         RootComponent.PrimaryDestination.Today,
         Res.string.session_today_title,

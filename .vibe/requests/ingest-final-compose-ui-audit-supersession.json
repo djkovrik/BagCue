@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-final-compose-ui-audit-supersede-20260909.json",
+  "expectedLedgerDigest": "55664c6dd23ce83491303d26de86cddfa4e9f2e9cad1a1ae272c457d11b0be74",
+  "inspectionNote": "Inspected both stale unimported attempts and the current replacement. The replacement preserves the same assignment-local audit document, current result and input fingerprints, exact QG-006 evidence, and explicitly supersedes only the two unimported stale attempts."
+}

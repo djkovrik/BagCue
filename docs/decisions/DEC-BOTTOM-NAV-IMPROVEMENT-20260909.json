@@ -1,0 +1,19 @@
+{
+  "decisionId": "DEC-BOTTOM-NAV-IMPROVEMENT-20260909",
+  "kind": "steering",
+  "obligationIds": [
+    "QG-006"
+  ],
+  "rationale": "User explicitly requested a Lazyweb-grounded refinement of the existing primary bottom navigation while preserving the established design system and conditionally using the asset workflow.",
+  "recordedAt": "2026-09-09T09:25:19.777886Z",
+  "schemaVersion": "2.0",
+  "status": "accepted",
+  "supersedes": [],
+  "userApproval": {
+    "actor": "user",
+    "messageId": "captured-user-message-2026-09-09-bottom-nav",
+    "path": "docs/assignments/REQUEST-2026-09-09-bottom-navigation-improvement.md",
+    "quote": "Давай улучшим дизайн нашей основной нижней панели навигации",
+    "sha256": "384a952cc31d5ba38cd970b88eb472672b0abcab33ef14e1cc493d933178e9d1"
+  }
+}

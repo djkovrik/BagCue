@@ -126,3 +126,12 @@ The report queue is numeric and strictly serial. A row is added only after the r
 ## Queue completion
 
 All eleven reports reached terminal `done` state in numeric order. None was degraded and none reported a generation-slot failure. Each terminal URL, submitted evidence hash, coverage and inspected disposition was recorded before the next report started.
+
+## Bottom navigation focused follow-up
+
+- Reference search: <https://www.lazyweb.com/agentic-search/0736c037-7430-404a-9258-48b63e6da3cf>.
+- Baseline improvement report: <https://www.lazyweb.com/report/lazyweb/d10a76e7-529a-418c-90c5-de780f9d10ff/?source=create>.
+- Post-golden report: <https://www.lazyweb.com/report/lazyweb/92c7359a-86cb-4763-963b-03606ffedadf/?source=create>.
+- Status: both focused reports reached terminal `done`; neither was degraded and neither reported a generation-slot failure.
+- Post-golden evidence: `SCREEN-001 activepartial.light_compact_en-100`, SHA-256 `856ed58a0da98eb25b8c1d7521858aa7084407abd89f971fb24ee6ad60003282`; refreshed `SCREEN-001-contact-sheet.png`, SHA-256 `d6c0a32549e87f306bdbaa88e4c8ff911a2e59983f0b91156a137d87e41d754d`.
+- Disposition: retain four peer destinations with persistent labels; retain canonical Material navigation semantics; use the rounded tonal dock, redundant active indicator, and restrained spring icon lift; reject a center FAB, icon-family replacement, and unrelated page-content changes.
