@@ -23,13 +23,16 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Snackbar
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -39,6 +42,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
 import androidx.compose.ui.unit.dp
@@ -69,6 +73,7 @@ import bagcue.shared.compose.generated.resources.session_date
 import bagcue.shared.compose.generated.resources.session_date_past
 import bagcue.shared.compose.generated.resources.session_done
 import bagcue.shared.compose.generated.resources.session_edit_item
+import bagcue.shared.compose.generated.resources.session_edit_item_named
 import bagcue.shared.compose.generated.resources.session_edit_title
 import bagcue.shared.compose.generated.resources.session_empty
 import bagcue.shared.compose.generated.resources.session_item_actions
@@ -90,6 +95,7 @@ import bagcue.shared.compose.generated.resources.session_plan
 import bagcue.shared.compose.generated.resources.session_progress
 import bagcue.shared.compose.generated.resources.session_remove_failed
 import bagcue.shared.compose.generated.resources.session_remove_today
+import bagcue.shared.compose.generated.resources.session_remove_today_named
 import bagcue.shared.compose.generated.resources.session_reopen
 import bagcue.shared.compose.generated.resources.session_replace
 import bagcue.shared.compose.generated.resources.session_replace_failed
@@ -160,16 +166,36 @@ private fun TodayScreen(screen: SessionComponent.Screen.Today, component: Sessio
             Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState()).padding(24.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            BagCueBrandMark(Modifier.height(48.dp))
-            Text(screen.date.toString(), style = MaterialTheme.typography.headlineMedium)
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                color = MaterialTheme.colorScheme.primaryContainer,
+                contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                shape = MaterialTheme.shapes.extraLarge,
+            ) {
+                Column(
+                    Modifier.padding(24.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    BagCueBrandMark(Modifier.height(48.dp))
+                    Text(
+                        screen.date.toString(),
+                        style = MaterialTheme.typography.headlineMedium,
+                        modifier = Modifier.semantics { heading() },
+                    )
+                    Text(
+                        screen.session?.let { session ->
+                            stringResource(Res.string.session_progress, session.packedCount, session.totalCount)
+                        } ?: stringResource(Res.string.session_no_plan),
+                        style = MaterialTheme.typography.bodyLarge,
+                    )
+                }
+            }
             screen.session?.let { session ->
-                Text(stringResource(Res.string.session_progress, session.packedCount, session.totalCount))
                 Button({ component.openSession(session.id) },
                      Modifier.fillMaxWidth()) { BagCueIcon(BagCueAssets.Check,
                          null);
                      Text(stringResource(Res.string.session_open)) }
             } ?: run {
-                Text(stringResource(Res.string.session_no_plan), style = MaterialTheme.typography.bodyLarge)
                 Button({ component.startCreate(screen.date) },
                      Modifier.fillMaxWidth()) { BagCueIcon(BagCueAssets.Add,
                          null);
@@ -185,9 +211,9 @@ private fun TodayScreen(screen: SessionComponent.Screen.Today, component: Sessio
 private fun CreateScreen(screen: SessionComponent.Screen.Create, component: SessionComponent) {
     Scaffold(
         topBar = { TopAppBar(title = { Text(stringResource(Res.string.session_create_title)) },
-                 navigationIcon = { TextButton(component::backToToday) { BagCueIcon(BagCueAssets.Back,
-                             null);
-                         Text(stringResource(Res.string.common_back)) } }) },
+                 navigationIcon = { IconButton(component::backToToday) {
+                     BagCueIcon(BagCueAssets.Back, stringResource(Res.string.common_back))
+                 } }) },
         bottomBar = {
             Button(component::createSession, enabled = !screen.isSaving, modifier = Modifier.fillMaxWidth().imePadding().padding(16.dp)) {
                 Text(stringResource(Res.string.session_create))
@@ -248,9 +274,9 @@ private fun ActiveScreen(screen: SessionComponent.Screen.Active, component: Sess
     for (name in screen.templateNames) resolvedTemplateNames += name.resolve()
     Scaffold(
         topBar = { TopAppBar(title = { Text(screen.date.toString()) },
-                 navigationIcon = { TextButton(component::backToToday) { BagCueIcon(BagCueAssets.Back,
-                             null);
-                         Text(stringResource(Res.string.common_back)) } }) },
+                 navigationIcon = { IconButton(component::backToToday) {
+                     BagCueIcon(BagCueAssets.Back, stringResource(Res.string.common_back))
+                 } }) },
         bottomBar = {
             Column(Modifier.fillMaxWidth().imePadding().padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 if (largeFont) {
@@ -269,7 +295,11 @@ private fun ActiveScreen(screen: SessionComponent.Screen.Active, component: Sess
         },
         floatingActionButton = {
             if (!largeFont) {
-                Button(component::startAddOneOff) { BagCueIcon(BagCueAssets.Add, null); Text(stringResource(Res.string.session_add_item)) }
+                ExtendedFloatingActionButton(
+                    onClick = component::startAddOneOff,
+                    icon = { BagCueIcon(BagCueAssets.Add, null) },
+                    text = { Text(stringResource(Res.string.session_add_item)) },
+                )
             }
         },
     ) { padding ->
@@ -290,6 +320,12 @@ private fun ActiveScreen(screen: SessionComponent.Screen.Active, component: Sess
                      modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
                 if (resolvedTemplateNames.isNotEmpty()) Text(resolvedTemplateNames.joinToString(),
                      style = MaterialTheme.typography.bodySmall)
+                if (screen.undoAvailable) {
+                    OutlinedButton(
+                        component::undoLastChange,
+                        Modifier.fillMaxWidth().padding(top = 12.dp),
+                    ) { Text(stringResource(Res.string.session_undo)) }
+                }
             }
             screen.groups.forEach { group ->
                 item { Row(verticalAlignment = Alignment.CenterVertically) { BagCueIcon(BagCueAssets.Bag,
@@ -297,11 +333,9 @@ private fun ActiveScreen(screen: SessionComponent.Screen.Active, component: Sess
                          Text(groupTitle(group.bag),
                              style = MaterialTheme.typography.titleMedium,
                              modifier = Modifier.padding(top = 18.dp,
-                                 bottom = 4.dp)) } }
+                                 bottom = 4.dp).semantics { heading() }) } }
                 items(group.items, key = { it.id.value }) { item -> ChecklistRow(item, component) }
             }
-            if (screen.undoAvailable) item { OutlinedButton(component::undoLastChange,
-                     Modifier.fillMaxWidth().padding(top = 12.dp)) { Text(stringResource(Res.string.session_undo)) } }
         }
     }
     screen.itemEditor?.let { ItemEditorDialog(it, component) }
@@ -348,17 +382,21 @@ private fun ChecklistRow(item: SessionComponent.ChecklistItem, component: Sessio
                 TextButton(
                     { component.removeItem(item.id) },
                     Modifier.fillMaxWidth().sizeIn(minHeight = 48.dp),
-                ) { BagCueIcon(BagCueAssets.More, null); Text(stringResource(Res.string.session_remove_today)) }
+                ) { BagCueIcon(BagCueAssets.Delete, null); Text(stringResource(Res.string.session_remove_today)) }
             }
         } else {
-            Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                TextButton({ component.startEditItem(item.id) }) { BagCueIcon(BagCueAssets.Edit,
-                         null);
-                     Text(stringResource(Res.string.session_edit_item)) }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.End,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                IconButton({ component.startEditItem(item.id) }) {
+                    BagCueIcon(BagCueAssets.Edit, stringResource(Res.string.session_edit_item_named, name))
+                }
                 TextButton({ component.startSaveItemToTemplates(item.id) }) { Text(stringResource(Res.string.session_save_templates)) }
-                TextButton({ component.removeItem(item.id) }) { BagCueIcon(BagCueAssets.More,
-                         null);
-                     Text(stringResource(Res.string.session_remove_today)) }
+                IconButton({ component.removeItem(item.id) }) {
+                    BagCueIcon(BagCueAssets.Delete, stringResource(Res.string.session_remove_today_named, name))
+                }
             }
         }
         HorizontalDivider()
@@ -466,10 +504,26 @@ private fun ResultScreen(
         verticalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        BagCueBrandMark(Modifier.height(48.dp))
-        Text(stringResource(if (screen.allPacked) Res.string.session_result_success else Res.string.session_result_skipped),
-             style = MaterialTheme.typography.headlineMedium)
-        Text(stringResource(Res.string.session_result_date, screen.date.toString()))
+        Surface(
+            modifier = Modifier.fillMaxWidth(),
+            color = MaterialTheme.colorScheme.secondaryContainer,
+            contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
+            shape = MaterialTheme.shapes.extraLarge,
+        ) {
+            Column(
+                Modifier.padding(24.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                BagCueBrandMark(Modifier.height(48.dp))
+                Text(
+                    stringResource(if (screen.allPacked) Res.string.session_result_success else Res.string.session_result_skipped),
+                    style = MaterialTheme.typography.headlineMedium,
+                    modifier = Modifier.semantics { heading() },
+                )
+                Text(stringResource(Res.string.session_result_date, screen.date.toString()))
+            }
+        }
         if (!screen.allPacked) LazyColumn(Modifier.fillMaxWidth().heightIn(max = 300.dp).padding(vertical = 12.dp)) {
             items(screen.skippedItems) {
                 Text(stringResource(Res.string.common_name_quantity, it.name.resolve(), it.quantity), Modifier.padding(8.dp))

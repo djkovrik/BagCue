@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-final-compose-ui-audit-final-20260909.json",
+  "expectedLedgerDigest": "f9aa8048aba75dad57ac23a08f0a1f6cb33ce67793f48608e72237892788ac2c",
+  "inspectionNote": "Inspected the final immutable Compose audit against the current source and refreshed visual evidence. Accepted the corrected dispositions: SCREEN-003 Undo and SCREEN-010 endpoint error/Retry are visible, disabled offset contrast is resolved, and SCREEN-007 RU/200 is dense but not clipped. Retained adaptive wide-layout and dynamic-state semantics as explicit follow-up work."
+}

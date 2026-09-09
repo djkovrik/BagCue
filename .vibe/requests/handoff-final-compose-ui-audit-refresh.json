@@ -1,0 +1,21 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-final-compose-ui-audit-refresh-20260909",
+  "assignmentId": "final-compose-ui-audit",
+  "productionEvidence": [
+    {
+      "path": "docs/design/compose-audit/final-compose-ui-audit.md",
+      "symbol": "# Final Compose UI audit — refreshed implementation",
+      "surface": "asset-visual"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": [
+    "Expanded layouts remain rail-plus-single-pane rather than the AppSpec list-detail and supporting-pane layouts.",
+    "SCREEN-007 RU/200% PositionEditorDialog visibly overlaps and clips content.",
+    "Dynamic progress, loading, error and undo states lack complete contextual announcement semantics.",
+    "SCREEN-003 undo, SCREEN-010 endpoint status and distinct SCREEN-001 state coverage remain invisible or duplicated in the refreshed goldens."
+  ]
+}

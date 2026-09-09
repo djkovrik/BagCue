@@ -1,0 +1,20 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-final-compose-ui-audit-final-20260909",
+  "assignmentId": "final-compose-ui-audit",
+  "productionEvidence": [
+    {
+      "path": "docs/design/compose-audit/final-compose-ui-audit.md",
+      "symbol": "# Final Compose UI audit — refreshed implementation",
+      "surface": "asset-visual"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": [
+    "Expanded layouts remain rail-plus-single-pane rather than the AppSpec list-detail and supporting-pane layouts.",
+    "Dynamic progress, loading, and undo states outside the corrected Settings error state lack complete contextual announcement semantics.",
+    "The custom two-row large-font navigation and date-selection controls retain component-semantic risks."
+  ]
+}

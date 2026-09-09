@@ -1,0 +1,38 @@
+{
+  "durationSeconds": 0.23991320000004634,
+  "events": [
+    {
+      "at": "2026-09-09T06:14:18.507716Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-09-09T06:14:21.615831Z",
+      "logPath": "D:\\Sources\\Android\\BagCue\\.vibe\\receipts\\RECEIPT-018a5dfe-f29b-46d8-822d-f4c655744c94.log",
+      "stage": "running"
+    },
+    {
+      "at": "2026-09-09T06:15:39.830751Z",
+      "receiptRef": ".vibe/receipts/RECEIPT-018a5dfe-f29b-46d8-822d-f4c655744c94.json",
+      "stage": "receipt-written"
+    },
+    {
+      "at": "2026-09-09T06:16:24.826929Z",
+      "receiptRef": ".vibe/receipts/RECEIPT-018a5dfe-f29b-46d8-822d-f4c655744c94.json",
+      "stage": "receipt-written"
+    },
+    {
+      "at": "2026-09-09T06:16:25.045835Z",
+      "stage": "binding"
+    },
+    {
+      "at": "2026-09-09T06:16:25.324011Z",
+      "durationSeconds": 0.23991320000004634,
+      "receiptRef": ".vibe/receipts/RECEIPT-018a5dfe-f29b-46d8-822d-f4c655744c94.json",
+      "stage": "bound"
+    }
+  ],
+  "jobId": "CHECK-ff135de8-50a5-4d1b-9593-436ca84efad3",
+  "logPath": "D:\\Sources\\Android\\BagCue\\.vibe\\receipts\\RECEIPT-018a5dfe-f29b-46d8-822d-f4c655744c94.log",
+  "receiptRef": ".vibe/receipts/RECEIPT-018a5dfe-f29b-46d8-822d-f4c655744c94.json",
+  "stage": "bound"
+}

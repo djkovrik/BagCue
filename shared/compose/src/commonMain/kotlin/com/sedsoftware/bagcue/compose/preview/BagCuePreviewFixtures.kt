@@ -90,6 +90,7 @@ internal object BagCuePreviewFixtures {
     fun active(
         allPacked: Boolean = false,
         conflict: Boolean = false,
+        editing: Boolean = false,
         undo: Boolean = false,
         skippedConfirmation: Int? = null,
         error: SessionComponent.ErrorKey? = null,
@@ -129,7 +130,18 @@ internal object BagCuePreviewFixtures {
                 totalCount = items.size,
                 canCompleteAll = allPacked && !conflict,
                 canCompleteWithSkipped = !allPacked && !conflict,
-                itemEditor = null,
+                itemEditor = if (editing) SessionComponent.ItemEditor(
+                    itemId = SessionPackingItemId(laptopId.value),
+                    name = SessionComponent.UserText.Resource("starter_item_laptop"),
+                    quantity = 1,
+                    bag = SessionComponent.EditableText.Resource("starter_bag_backpack"),
+                    bagCandidates = listOf(
+                        SessionComponent.EditableText.Resource("starter_bag_backpack"),
+                        SessionComponent.EditableText.Resource("starter_bag_sports"),
+                    ),
+                    source = "Desk drawer",
+                    isSaving = false,
+                ) else null,
                 oneOffEditor = null,
                 saveToTemplates = null,
                 undoAvailable = undo,

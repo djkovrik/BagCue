@@ -1,0 +1,11 @@
+{
+  "action": "assign",
+  "assignmentId": "final-visual-evidence-refresh",
+  "owner": "vibe-developer-visual-testing",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-006"],
+  "allowedFiles": [
+    "docs/design/visual-review/**"
+  ],
+  "inputScopeId": "final-design-review-v1"
+}

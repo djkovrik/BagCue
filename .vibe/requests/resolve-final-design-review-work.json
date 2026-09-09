@@ -1,0 +1,12 @@
+{
+  "action": "resolve-work",
+  "resolvedIds": [
+    "CHECK-6496485af1015183047a6e06f5f0f70c46b7f52423d76aee964a936f71a28fa0",
+    "CHECK-21653839dab7cc7a6c5c0f9983a081460d8de7ea096753dff9bc86d694eaf12a",
+    "BLOCK-dadb868c236d71351df3dca30bd59d7943de7600d4bd18cd8e457714757a4786",
+    "BLOCK-52184725df0b49a8fc964957fbf37bdcfd2a411d2ebc3044119c6c16c38ae83c",
+    "BLOCK-4e4806e9f51ad4805403d491aa6745333ce2f55f0864de0aebfa4ddaaeb70557"
+  ],
+  "receiptRef": ".vibe/receipts/RECEIPT-affc00cf-0f16-40b7-815b-d5a66b0098e7.json",
+  "inspectionNote": "Resolved the two current-review checks with successful current full QG-006 asset-check/asset-visual coverage after manual inspection: all 11 sequential Lazyweb reports are terminal and all 118 refreshed snapshots verify. The three imported audit observations are not defects in the implemented correction scope and are explicitly retained in the accepted final review as follow-up: true adaptive list/detail, broader dynamic-state announcements, and behavioral validation/refinement of date choice and two-row large-font navigation."
+}

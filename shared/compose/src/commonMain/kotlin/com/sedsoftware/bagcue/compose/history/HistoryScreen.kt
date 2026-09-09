@@ -1,6 +1,5 @@
 package com.sedsoftware.bagcue.compose.history
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -16,6 +15,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -30,7 +30,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
 import androidx.compose.ui.unit.dp
@@ -152,8 +152,8 @@ private fun HistoryCalendar(selected: LocalDate?, onSelect: (LocalDate) -> Unit)
 private fun HistoryRow(row: HistoryComponent.SessionRow, component: HistoryComponent) {
     val names = row.templateNames.map { it.resolve() }.joinToString()
     Column(
-        Modifier.fillMaxWidth().clickable(role = Role.Button) { component.openSession(row.id) }
-            .padding(horizontal = 20.dp, vertical = 14.dp).semantics { testTag = "history_${row.id.value}" },
+        Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 14.dp)
+            .semantics { testTag = "history_${row.id.value}" },
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -171,9 +171,9 @@ private fun HistoryRow(row: HistoryComponent.SessionRow, component: HistoryCompo
                 TextButton(onClick = { component.reopenSession(row.id) }) { Text(stringResource(Res.string.history_reopen)) }
                 TextButton(onClick = { component.repeatSession(row.id) }) { Text(stringResource(Res.string.history_repeat)) }
             }
-            TextButton(onClick = { component.requestDelete(row.id) }) { BagCueIcon(BagCueAssets.More,
-                     null);
-                 Text(stringResource(Res.string.history_delete)) }
+            IconButton(onClick = { component.requestDelete(row.id) }) {
+                BagCueIcon(BagCueAssets.Delete, stringResource(Res.string.history_delete))
+            }
         }
     }
     HorizontalDivider()
@@ -182,7 +182,7 @@ private fun HistoryRow(row: HistoryComponent.SessionRow, component: HistoryCompo
 @Composable
 private fun SectionTitle(text: String) {
     Text(text, style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary,
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 12.dp))
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 12.dp).semantics { heading() })
 }
 
 @Composable

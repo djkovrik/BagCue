@@ -1,0 +1,178 @@
+{
+  "algorithm": "sha256",
+  "digest": "26e07c1ab265ce99912bae16c8e23fc54f29b0ab326055bbc9c61d7f27d9b208",
+  "files": [
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml",
+      "sha256": "4aba441a8f0d290bb272ee5622e391eb036d83350052838126b667acc7aff8d2"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_add.xml",
+      "sha256": "aa2bc151da1b2e8277fbedf6ebd7c5deb97f426bf76e76883010db7c1a1f94be"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_arrow_back.xml",
+      "sha256": "463bf340532697b4378fa4b9e3ebbadd5fd0f042cc831752ae865fdbaed0743e"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_bag.xml",
+      "sha256": "ea398efb55a3542b9b528cda3866fa42b529bb6e1d797f1fb70a746aea7dde4c"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_calendar.xml",
+      "sha256": "3d26dbf9c5b784fdcea7ed3c6f55244c4a6b197c62b40b207e7f4da7f1f8fbf2"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_check.xml",
+      "sha256": "8f907261934604e536a05ab1e4c0424459aa8f6f7ba5db236cbbf5893b82f0df"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_cyclone.xml",
+      "sha256": "7f53513fe352f0fe5bd4fbd161326a3d2d702524c53c2a9df9c340ec7688867d"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_dark_mode.xml",
+      "sha256": "cdc9a08b6654ceb82e6cc4088301df78ff9ea19994496b96e60c810c797dcd88"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_delete.xml",
+      "sha256": "644a3a2b690318949bafc8bf20e900642ce9ef35959e6deaf1650226525f9d6b"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_duplicate.xml",
+      "sha256": "ae8ae4ee001b4dadbe901c56af7d0a110e9e6185a8f4f12ab9f56a4d0ae97b06"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_edit.xml",
+      "sha256": "ba7570802e9f33518642ef6b8eda4590e184cce562217fe7ed889a24edc3f331"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_light_mode.xml",
+      "sha256": "6de9720e76a88f26d6f479e3213c427c4e82679142e5582cd72025f3a44f7405"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_more.xml",
+      "sha256": "b2e1a278a0e522067c4ce5dbc4f3b97a50de2797a0f6077defdbae85a416bc9c"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_notifications.xml",
+      "sha256": "665293ab072f71bf738609af4782af91a3d20a5ee7dcdcee5d8137b710b73484"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_privacy.xml",
+      "sha256": "acfb976d689965b2b4edc9162a08fdf33c3d9ec1e4bf5a78afb6a28c6e487afd"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_rotate_right.xml",
+      "sha256": "a9456e3f9f4d3bc9fb6adcb9c642eecac0867447c9dfc486ddd1a9a1e10209da"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_search.xml",
+      "sha256": "81d5ddc1234d74cccf084b6b82bfb663008202581e8a8823c9657bffcbb4d351"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_sessions.xml",
+      "sha256": "40ac649bd29fe5c727abf4c1974a5f99a9e2cb3a94e7e37f0155de9ac3d397d0"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_settings.xml",
+      "sha256": "350e8d7e69a4699f7842b35fc5ac8e53630c191bb6c2c4f1975ce6c52a02c096"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_templates.xml",
+      "sha256": "8407451bffa7f3020582cd54c17a6011ffb22f5bfd43989ba63d160cc9ebf8dd"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/drawable/ic_today.xml",
+      "sha256": "a17734ca3d10163b2f800a9bbc95ac81df661ce6fd109c62bb475211c6c0571a"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/font/IndieFlower-Regular.ttf",
+      "sha256": "e6a139213baa54b2ff51d300f98cc1c16d690b5046a4b0e42435cbf791767853"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/values-ru/strings.xml",
+      "sha256": "dc26bd24ac79fa7bb9367cc21dbee0d6710f9db6a593a578e5b8d8a7798e590a"
+    },
+    {
+      "path": "shared/compose/src/commonMain/composeResources/values/strings.xml",
+      "sha256": "b85afeeaa309337e9d8f944ac5646e0e6fae45c7229c2842bc071c3f26a2d4ab"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/App.kt",
+      "sha256": "ce4b497d03b795865eb1ba14d3f363110b6f29b7f518b3a16597ba1e4a781cb7"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/assets/BagCueAssets.kt",
+      "sha256": "f3626aa9e3f8f3d96455285333bd7cf147666971f7b9aad4663a76ddb02c4e37"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogResources.kt",
+      "sha256": "3a68648f97da3516c2d5ca943e49da88b6448b3c9183c14df839b7fa169116dd"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt",
+      "sha256": "32b973b7522b791f6cbb4bf90d34af898d79b576c05dec5e15390b65f5f3ff1b"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryResources.kt",
+      "sha256": "98623d61eef75a64b0aea1f0d9444b51c54baf3f811f41f96b74693414084252"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/history/HistoryScreen.kt",
+      "sha256": "f92e0cc795fd5818fb3174e96c7710cecafc808ec2c7dabc01c5059c0c25bb6c"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/preview/BagCuePreviewFixtures.kt",
+      "sha256": "501f63239b4403a1722c3c2baeb756912573ee08b121a0932d994c82c72768e6"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/preview/BagCuePreviewMatrix.kt",
+      "sha256": "d9505f2281ba72f671e60eef972d2592d92727ab92d99bdfe80f0233f80ec00d"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionResources.kt",
+      "sha256": "bb4b67897c237a4c7672eb159d26a331c608f9e77a6df204cbe6955a1ae6e9d7"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt",
+      "sha256": "2535bf41584dedca92cbffc8880eb871f4152fad264a45cf4b7d0aca58879285"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt",
+      "sha256": "b6f0db2df75d54329a6641da2620d09eab283f1eb44f7105ea27efe42f181f02"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateResources.kt",
+      "sha256": "1a038002eb211b587310a74535b5a30257cdae98e49271d59788b14f93978aef"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateScreen.kt",
+      "sha256": "6aa9ee3735620478249f0dc9679cefde147c707995c25478c86a77a0ee5741fb"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/Color.kt",
+      "sha256": "6897e5aa760e356ff6be51f7ec5ab50785aa348795a1cb748c84ae59bfe71594"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/Theme.kt",
+      "sha256": "1a200fe1b2b982119af2ce8b9f98052782936b59df6f9ca18e320afdc85474c3"
+    },
+    {
+      "path": "shared/compose/src/commonTest/kotlin/com/sedsoftware/bagcue/compose/ProductShellContractTest.kt",
+      "sha256": "d6b214d48abba425fda16760b9cf542adfad07c0c5a5cb4b79bf4a155317c9ad"
+    },
+    {
+      "path": "shared/compose/src/iosMain/kotlin/main.kt",
+      "sha256": "7e666b4e7d05cee93eea8c901845399c29b438c606aa7e3147d8776279c1e914"
+    },
+    {
+      "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentPreview.kt",
+      "sha256": "56fbd681164728abf5e58dc5a11ffbd2a8904b9e2bb97ff679b14989c3ad7136"
+    }
+  ],
+  "patterns": [
+    "shared/compose/src/**",
+    "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentPreview.kt"
+  ]
+}

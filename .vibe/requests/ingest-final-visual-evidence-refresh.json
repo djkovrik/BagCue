@@ -1,0 +1,6 @@
+{
+  "action": "ingest",
+  "handoffRef": ".vibe/handoffs/HANDOFF-final-visual-evidence-refresh-20260909.json",
+  "expectedLedgerDigest": "ed712561511b1ec202fa5bd4fa5030bbb5494f9fb97ddf9eaf67bea6ad2ea18f",
+  "inspectionNote": "Inspected the regenerated 11-screen contact-sheet index and every current contact sheet. The inventory contains 118 goldens across SCREEN-001 through SCREEN-011; corrected catalog/editor routing, visible Undo, visible Settings endpoint error/Retry, light/dark rendering, expanded states and RU/200% stress states were reviewed."
+}

@@ -1,0 +1,30 @@
+{
+  "action": "assign",
+  "assignmentId": "final-product-design-review",
+  "owner": "vibe-product-designer",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-006"],
+  "allowedFiles": ["docs/design/final-review/**"],
+  "inputScopeId": "final-design-review-v1",
+  "goal": "Audit all 11 current primary-screen contact sheets and production UI against Lazyweb and Material 3, with special attention to cross-screen typography, shapes, heading hierarchy, light/dark contrast, expressive identity, icon consistency, and redundant icon-plus-text actions.",
+  "contractInputs": [
+    "spec/app-spec/design.md",
+    "spec/app-spec/screens/SCREEN-001.md through SCREEN-011.md",
+    "docs/design/visual-review/index.json",
+    "docs/design/visual-review/screens/SCREEN-001-contact-sheet.png through SCREEN-011-contact-sheet.png"
+  ],
+  "requiredReads": [
+    "docs/assignments/REQUEST-2026-09-09-final-design-review.md",
+    "spec/app-spec/design.md",
+    "spec/app-spec/quality.md",
+    "docs/design/visual-review/index.json",
+    "docs/design/visual-review/review-log.md"
+  ],
+  "requestedCommands": [],
+  "acceptanceCriteria": [
+    "Every SCREEN-001 through SCREEN-011 is reviewed from actual golden evidence.",
+    "Lazyweb reports run strictly one screen at a time and terminal URLs/findings are recorded before the next submission.",
+    "The output includes a Material 3 compliance matrix, cross-screen token/typography/shape/contrast audit, complete icon inventory, redundant icon-plus-text findings, and a prioritized implementation brief.",
+    "No production files are changed by this review assignment."
+  ]
+}

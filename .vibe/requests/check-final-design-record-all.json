@@ -1,0 +1,15 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "final-design-review-v1",
+  "tasks": [":shared:compose:visual-test:recordPaparazziDebug"],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": ["asset-visual"]
+    }
+  ],
+  "timeoutSeconds": 3600,
+  "reconcileDrift": "Record the full 118-case scanner-owned Paparazzi matrix because explicit typography and shape tokens affect every screen, while hero/action/preview corrections affect focused subsets."
+}

@@ -1,0 +1,15 @@
+{
+  "acceptanceCriteria": [],
+  "allowedFiles": [
+    "docs/design/visual-review/**"
+  ],
+  "assignmentId": "final-visual-evidence-refresh",
+  "contractInputs": [],
+  "forkTurns": "none",
+  "goal": "Implement assigned obligations within the registered boundary",
+  "obligationIds": [
+    "QG-006"
+  ],
+  "requestedCommands": [],
+  "requiredReads": []
+}

@@ -92,6 +92,8 @@ internal fun AppTheme(
     onThemeChanged(isDark)
     MaterialTheme(
         colorScheme = if (isDark) DarkColorScheme else LightColorScheme,
+        typography = BagCueTypography,
+        shapes = BagCueShapes,
         content = { Surface(content = content) }
     )
 }

@@ -1,0 +1,19 @@
+{
+  "action": "handoff",
+  "handoffId": "HANDOFF-final-compose-ui-audit-20260909",
+  "assignmentId": "final-compose-ui-audit",
+  "productionEvidence": [
+    {
+      "path": "docs/design/compose-audit/final-compose-ui-audit.md",
+      "symbol": "# Final Compose UI audit",
+      "surface": "asset-visual"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": [
+    "Checked-in SCREEN-008 and SCREEN-009 visual evidence predates the current preview-routing corrections and must be re-recorded and inspected before it can support QG-006.",
+    "The audit identifies unresolved accessibility, adaptive-layout, action-semantics, inset, and design-token defects; this read-only assignment did not implement them."
+  ]
+}

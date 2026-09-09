@@ -1,0 +1,8 @@
+{
+  "algorithm": "sha256",
+  "digest": "56c444024a99fdded71cbaa0d3b9303befe2b4b6bdeb9ceb08a7fd7c3859386a",
+  "files": [],
+  "patterns": [
+    "docs/design/final-review/**"
+  ]
+}

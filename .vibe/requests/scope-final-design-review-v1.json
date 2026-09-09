@@ -1,0 +1,8 @@
+{
+  "action": "scope",
+  "scopeId": "final-design-review-v1",
+  "patterns": ["**"],
+  "fallbackReason": "The all-screen visual gate is transitively affected by Compose UI, component preview models, resources, fonts, Paparazzi generation, Gradle build logic, AppSpec screen contracts, and design/asset evidence, so a conservative whole-repository scope is required.",
+  "dependencyRationale": "All production and test inputs to the BagCue all-screen Material 3 and Paparazzi review, including UI/resources, preview fixtures, component models, build logic, AppSpec, design evidence and asset manifest.",
+  "toolchainIdentity": "Gradle 9.3.1 wrapper, JDK 17 target, Kotlin 2.4.10, AGP 9.1.1, Compose Multiplatform 1.12.0, Paparazzi and ComposablePreviewScanner versions pinned by the repository."
+}

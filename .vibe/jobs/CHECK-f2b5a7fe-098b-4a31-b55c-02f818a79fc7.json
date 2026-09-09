@@ -1,0 +1,31 @@
+{
+  "durationSeconds": 0.24426579999999376,
+  "events": [
+    {
+      "at": "2026-09-09T07:31:21.053882Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-09-09T07:31:21.123863Z",
+      "stage": "running"
+    },
+    {
+      "at": "2026-09-09T07:31:24.051138Z",
+      "receiptRef": ".vibe/receipts/RECEIPT-21ebf393-b097-4aff-93ad-15ae89f3dabd.json",
+      "stage": "receipt-written"
+    },
+    {
+      "at": "2026-09-09T07:31:24.098982Z",
+      "stage": "binding"
+    },
+    {
+      "at": "2026-09-09T07:31:24.393411Z",
+      "durationSeconds": 0.24426579999999376,
+      "receiptRef": ".vibe/receipts/RECEIPT-21ebf393-b097-4aff-93ad-15ae89f3dabd.json",
+      "stage": "bound"
+    }
+  ],
+  "jobId": "CHECK-f2b5a7fe-098b-4a31-b55c-02f818a79fc7",
+  "receiptRef": ".vibe/receipts/RECEIPT-21ebf393-b097-4aff-93ad-15ae89f3dabd.json",
+  "stage": "bound"
+}

@@ -18,8 +18,13 @@ class RootComponentPreview(
     private val catalogComponent: CatalogComponent,
     private val settingsComponent: SettingsComponent,
     initialDestination: RootComponent.PrimaryDestination = RootComponent.PrimaryDestination.Today,
+    initialCatalog: Boolean = false,
 ) : RootComponent {
-    private val mutableStack = MutableValue(singleChildStack(childFor(initialDestination)))
+    private val mutableStack = MutableValue(
+        singleChildStack(
+            if (initialCatalog) RootComponent.Child.Catalog(catalogComponent) else childFor(initialDestination),
+        ),
+    )
     private val mutableDestination = MutableValue(initialDestination)
 
     override val stack: Value<ChildStack<*, RootComponent.Child>> = mutableStack

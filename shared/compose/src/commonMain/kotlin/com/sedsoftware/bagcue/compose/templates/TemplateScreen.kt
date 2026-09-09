@@ -1,6 +1,5 @@
 package com.sedsoftware.bagcue.compose.templates
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,6 +19,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -180,7 +180,7 @@ private fun TemplateRow(template: TemplateComponent.TemplateSummary, component: 
     val bagNames = mutableListOf<String>()
     for (bag in template.bagSummary) bagNames += bag.resolve()
     Column(
-        Modifier.fillMaxWidth().clickable { component.openTemplate(template.id) }.padding(16.dp),
+        Modifier.fillMaxWidth().padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         Text(name, style = MaterialTheme.typography.titleMedium)
@@ -213,14 +213,12 @@ private fun TemplateActions(template: TemplateComponent.TemplateSummary, compone
     } else {
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             TextButton(onClick = { component.openTemplate(template.id) }) { Text(stringResource(Res.string.template_open, name)) }
-            TextButton(onClick = { component.duplicateTemplate(template.id) }) { BagCueIcon(BagCueAssets.Duplicate,
-                     null);
-                 Text(stringResource(Res.string.template_duplicate,
-                         name)) }
-            TextButton(onClick = { component.requestDeleteTemplate(template.id) }) { BagCueIcon(BagCueAssets.Delete,
-                     null);
-                 Text(stringResource(Res.string.template_delete,
-                         name)) }
+            IconButton(onClick = { component.duplicateTemplate(template.id) }) {
+                BagCueIcon(BagCueAssets.Duplicate, stringResource(Res.string.template_duplicate, name))
+            }
+            IconButton(onClick = { component.requestDeleteTemplate(template.id) }) {
+                BagCueIcon(BagCueAssets.Delete, stringResource(Res.string.template_delete, name))
+            }
         }
     }
 }
@@ -238,9 +236,9 @@ private fun TemplateEditor(editor: TemplateComponent.Editor, component: Template
                     }
                     Text(stringResource(title))
                 },
-                navigationIcon = { TextButton(component::requestCloseEditor) { BagCueIcon(BagCueAssets.Back,
-                             null);
-                         Text(stringResource(Res.string.common_cancel)) } },
+                navigationIcon = { IconButton(component::requestCloseEditor) {
+                    BagCueIcon(BagCueAssets.Back, stringResource(Res.string.common_cancel))
+                } },
             )
         },
         bottomBar = {
@@ -286,7 +284,7 @@ private fun TemplateEditor(editor: TemplateComponent.Editor, component: Template
 private fun PositionRow(position: TemplateComponent.Position, component: TemplateComponent) {
     val name = position.itemName.resolve()
     val bag = position.bag?.resolve() ?: stringResource(Res.string.template_no_bag)
-    Column(Modifier.fillMaxWidth().clickable { component.editPosition(position.id) }.padding(vertical = 8.dp)) {
+    Column(Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
         Text(name, style = MaterialTheme.typography.titleMedium)
         Text(stringResource(Res.string.template_position_summary, position.quantity, bag))
         position.source?.let { Text(stringResource(Res.string.template_source_hint, it)) }
@@ -295,18 +293,17 @@ private fun PositionRow(position: TemplateComponent.Position, component: Templat
                 TextButton(
                     onClick = { component.editPosition(position.id) },
                     modifier = Modifier.fillMaxWidth().sizeIn(minHeight = 48.dp),
-                ) { BagCueIcon(BagCueAssets.Bag, null); Text(stringResource(Res.string.template_edit_position, name)) }
+                ) { BagCueIcon(BagCueAssets.Edit, null); Text(stringResource(Res.string.template_edit_position, name)) }
                 TextButton(
                     onClick = { component.removePosition(position.id) },
                     modifier = Modifier.fillMaxWidth().sizeIn(minHeight = 48.dp),
                 ) { Text(stringResource(Res.string.template_remove_position, name)) }
             }
         } else {
-            Row {
-                TextButton(onClick = { component.editPosition(position.id) }) { BagCueIcon(BagCueAssets.Bag,
-                         null);
-                     Text(stringResource(Res.string.template_edit_position,
-                             name)) }
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+                IconButton(onClick = { component.editPosition(position.id) }) {
+                    BagCueIcon(BagCueAssets.Edit, stringResource(Res.string.template_edit_position, name))
+                }
                 TextButton(onClick = { component.removePosition(position.id) }) { Text(stringResource(Res.string.template_remove_position,
                              name)) }
             }

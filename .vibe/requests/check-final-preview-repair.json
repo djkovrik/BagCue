@@ -1,0 +1,18 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "final-design-review-v1",
+  "tasks": [
+    ":shared:compose:compileAndroidMain",
+    ":shared:compose:visual-test:generateBagCuePreviewTests"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": ["asset-check"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Compile the production Compose previews and regenerate scanner-owned Paparazzi tests after correcting SCREEN-008 catalog routing and SCREEN-009 session-editor fixture coverage."
+}

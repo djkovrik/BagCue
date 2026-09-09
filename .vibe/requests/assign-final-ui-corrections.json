@@ -1,0 +1,12 @@
+{
+  "action": "assign",
+  "assignmentId": "final-ui-corrections",
+  "owner": "vibe-developer-product-designer-compose-expert",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-006"],
+  "allowedFiles": [
+    "shared/compose/src/**",
+    "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentPreview.kt"
+  ],
+  "inputScopeId": "final-design-review-v1"
+}

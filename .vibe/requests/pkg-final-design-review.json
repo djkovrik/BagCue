@@ -1,0 +1,17 @@
+{
+  "action": "package",
+  "packageId": "final-design-review",
+  "owner": "vibe-developer",
+  "acceptanceScenarioIds": [],
+  "qualityGateIds": ["QG-006"],
+  "fileBoundaries": [
+    "shared/compose/**",
+    "shared/component/**",
+    "shared/root/**",
+    "docs/design/**",
+    "docs/assets/**",
+    "spec/app-spec/**"
+  ],
+  "integrationGoal": "Review every declared BagCue primary screen against current Lazyweb evidence and the Material 3 contract, correct cross-screen typography, shapes, hierarchy, contrast, iconography and redundant icon-plus-text actions, then re-verify the affected deterministic goldens.",
+  "nextAction": "Inventory all 11 screen contact sheets and start one sequential Lazyweb report per screen."
+}

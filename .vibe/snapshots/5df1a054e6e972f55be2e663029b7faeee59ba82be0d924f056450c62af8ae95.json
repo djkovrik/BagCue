@@ -1,0 +1,8 @@
+{
+  "algorithm": "sha256",
+  "digest": "9d703de76833b42d48b5deb7df7bd8e39642eff542439ae6114c3fc8e3ae4bf2",
+  "files": [],
+  "patterns": [
+    "docs/design/compose-audit/**"
+  ]
+}

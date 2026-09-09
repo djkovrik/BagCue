@@ -1,0 +1,16 @@
+{
+  "acceptanceCriteria": [],
+  "allowedFiles": [
+    "shared/compose/src/**",
+    "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentPreview.kt"
+  ],
+  "assignmentId": "final-ui-corrections",
+  "contractInputs": [],
+  "forkTurns": "none",
+  "goal": "Implement assigned obligations within the registered boundary",
+  "obligationIds": [
+    "QG-006"
+  ],
+  "requestedCommands": [],
+  "requiredReads": []
+}

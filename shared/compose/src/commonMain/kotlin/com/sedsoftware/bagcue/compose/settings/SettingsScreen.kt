@@ -14,6 +14,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -28,6 +29,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.LiveRegionMode
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
 import androidx.compose.ui.unit.dp
@@ -94,8 +98,27 @@ fun SettingsScreen(component: SettingsComponent) {
             verticalArrangement = Arrangement.spacedBy(18.dp),
         ) {
             BagCueBrandMark(Modifier.height(48.dp).align(Alignment.CenterHorizontally))
-            Text(stringResource(Res.string.settings_reminders), style = MaterialTheme.typography.titleLarge)
+            Text(stringResource(Res.string.settings_reminders), style = MaterialTheme.typography.titleLarge,
+                modifier = Modifier.semantics { heading() })
             Text(stringResource(Res.string.settings_saved_immediately), style = MaterialTheme.typography.bodySmall)
+            model.error?.let {
+                Column(
+                    Modifier.fillMaxWidth().semantics { liveRegion = LiveRegionMode.Polite },
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    Text(
+                        stringResource(
+                            if (it == SettingsComponent.Error.LoadFailed) {
+                                Res.string.settings_load_failed
+                            } else {
+                                Res.string.settings_save_failed
+                            },
+                        ),
+                        color = MaterialTheme.colorScheme.error,
+                    )
+                    TextButton(component::refresh) { Text(stringResource(Res.string.common_retry)) }
+                }
+            }
             ReminderRow(model.evening,
                  stringResource(Res.string.settings_evening),
                  stringResource(Res.string.settings_evening_support),
@@ -121,9 +144,11 @@ fun SettingsScreen(component: SettingsComponent) {
                 ) { Text(stringResource(Res.string.settings_open_system)) }
                 SettingsComponent.NotificationCapability.Available -> Unit
             }
-            Text(stringResource(Res.string.settings_analytics), style = MaterialTheme.typography.titleLarge)
+            Text(stringResource(Res.string.settings_analytics), style = MaterialTheme.typography.titleLarge,
+                modifier = Modifier.semantics { heading() })
             AnalyticsRow(model, component)
-            Text(stringResource(Res.string.settings_privacy), style = MaterialTheme.typography.titleLarge)
+            Text(stringResource(Res.string.settings_privacy), style = MaterialTheme.typography.titleLarge,
+                modifier = Modifier.semantics { heading() })
             PrivacyControls(model.advertisingPrivacy, component)
             if (model.privacyPolicyUrl != null) {
                 TextButton(
@@ -131,21 +156,9 @@ fun SettingsScreen(component: SettingsComponent) {
                     Modifier.fillMaxWidth().sizeIn(minHeight = 48.dp),
                 ) { Text(stringResource(Res.string.settings_privacy_policy)) }
             }
-            Text(stringResource(Res.string.settings_about), style = MaterialTheme.typography.titleLarge)
+            Text(stringResource(Res.string.settings_about), style = MaterialTheme.typography.titleLarge,
+                modifier = Modifier.semantics { heading() })
             Text(stringResource(Res.string.settings_version, model.about.versionName))
-            model.error?.let {
-                Text(
-                    stringResource(
-                        if (it == SettingsComponent.Error.LoadFailed) {
-                            Res.string.settings_load_failed
-                        } else {
-                            Res.string.settings_save_failed
-                        },
-                    ),
-                    color = MaterialTheme.colorScheme.error,
-                )
-                TextButton(component::refresh) { Text(stringResource(Res.string.common_retry)) }
-            }
             if (model.isLoading || model.isSaving) CircularProgressIndicator(Modifier.align(Alignment.CenterHorizontally))
         }
     }
@@ -269,6 +282,9 @@ private fun ReminderRow(
                 { component.setTime(reminder.kind, reminder.time.shift(-REMINDER_TIME_SHIFT_MINUTES)) },
                 Modifier.fillMaxWidth(),
                 enabled = reminder.enabled,
+                colors = ButtonDefaults.textButtonColors(
+                    disabledContentColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.78f),
+                ),
             ) {
                 Text(stringResource(Res.string.settings_time_earlier))
             }
@@ -276,6 +292,9 @@ private fun ReminderRow(
                 { component.setTime(reminder.kind, reminder.time.shift(REMINDER_TIME_SHIFT_MINUTES)) },
                 Modifier.fillMaxWidth(),
                 enabled = reminder.enabled,
+                colors = ButtonDefaults.textButtonColors(
+                    disabledContentColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.78f),
+                ),
             ) {
                 Text(stringResource(Res.string.settings_time_later))
             }

@@ -1,0 +1,30 @@
+{
+  "acceptanceCriteria": [
+    "Every production Compose screen and shared navigation/theme primitive is inspected.",
+    "Findings cite exact files and symbols and separate objective defects from stylistic opportunities.",
+    "The audit includes API-maturity notes for any proposed M3 Expressive replacement and a concrete minimal implementation plan.",
+    "No production files are changed."
+  ],
+  "allowedFiles": [
+    "docs/design/compose-audit/**"
+  ],
+  "assignmentId": "final-compose-ui-audit",
+  "contractInputs": [
+    "shared/compose/src/commonMain/kotlin/**",
+    "shared/compose/src/commonMain/composeResources/**",
+    "gradle/libs.versions.toml",
+    "docs/design/visual-review/**"
+  ],
+  "forkTurns": "none",
+  "goal": "Audit the existing commonMain Compose UI implementation for Material 3 semantics, cross-screen theme/token consistency, typography and shape hierarchy, contrast-role use, icon semantics, touch targets, inset ownership, and redundant icon-plus-text actions without modifying production code.",
+  "obligationIds": [
+    "QG-006"
+  ],
+  "requestedCommands": [],
+  "requiredReads": [
+    "docs/assignments/REQUEST-2026-09-09-final-design-review.md",
+    "spec/app-spec/design.md",
+    "spec/app-spec/quality.md",
+    "docs/design/visual-review/index.json"
+  ]
+}

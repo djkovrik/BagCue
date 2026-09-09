@@ -33,10 +33,19 @@ private fun previewApp(
     catalog: CatalogComponent = CatalogComponentPreview(BagCuePreviewFixtures.catalog()),
     settings: SettingsComponent = SettingsComponentPreview(BagCuePreviewFixtures.settings()),
     destination: RootComponent.PrimaryDestination = RootComponent.PrimaryDestination.Today,
+    showCatalog: Boolean = false,
     showTestAd: Boolean = false,
 ) {
     App(
-        rootComponent = RootComponentPreview(session, history, templates, catalog, settings, destination),
+        rootComponent = RootComponentPreview(
+            session,
+            history,
+            templates,
+            catalog,
+            settings,
+            destination,
+            initialCatalog = showCatalog,
+        ),
         inlineResultAd = if (showTestAd) ({ PreviewInlineAdSurface() }) else ({}),
     )
 }
@@ -230,42 +239,42 @@ private fun PreviewInlineAdSurface() {
 @Preview(name = "light_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, showBackground = true)
 @Preview(name = "dark_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_008_StarterCatalog() = previewApp(catalog = CatalogComponentPreview(BagCuePreviewFixtures.catalog()),
-     destination = RootComponent.PrimaryDestination.Templates)
+     destination = RootComponent.PrimaryDestination.Templates, showCatalog = true)
 @Preview(name = "light_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, showBackground = true)
 @Preview(name = "dark_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_008_SearchMatchSuggestion_RU200() =
     previewApp(catalog = CatalogComponentPreview(BagCuePreviewFixtures.catalog(duplicate = true)),
-     destination = RootComponent.PrimaryDestination.Templates)
+     destination = RootComponent.PrimaryDestination.Templates, showCatalog = true)
 @Preview(name = "light_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, showBackground = true)
 @Preview(name = "dark_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_008_DependencyDeletion() =
     previewApp(catalog = CatalogComponentPreview(BagCuePreviewFixtures.catalog(deleting = true)),
-     destination = RootComponent.PrimaryDestination.Templates)
+     destination = RootComponent.PrimaryDestination.Templates, showCatalog = true)
 @Preview(name = "light_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, showBackground = true)
 @Preview(name = "dark_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_008_EmptyError_RU200() = previewApp(catalog = CatalogComponentPreview(BagCuePreviewFixtures.catalog(empty = true,
              error = CatalogComponent.ErrorKey.LoadFailed)),
-     destination = RootComponent.PrimaryDestination.Templates)
+     destination = RootComponent.PrimaryDestination.Templates, showCatalog = true)
 @Preview(name = "light_expanded_en-100", widthDp = 960, heightDp = 900, locale = "en", fontScale = 1f, showBackground = true)
 @Preview(name = "dark_expanded_en-100", widthDp = 960, heightDp = 900, locale = "en", fontScale = 1f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_008_ListDetail() = previewApp(catalog = CatalogComponentPreview(BagCuePreviewFixtures.catalog()),
-     destination = RootComponent.PrimaryDestination.Templates)
+     destination = RootComponent.PrimaryDestination.Templates, showCatalog = true)
 
 // SCREEN-009 — Item and position editor
 @Preview(name = "light_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, showBackground = true)
 @Preview(name = "dark_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_009_NewCatalogItem() = previewApp(catalog = CatalogComponentPreview(BagCuePreviewFixtures.catalogEditor()),
-     destination = RootComponent.PrimaryDestination.Templates)
+     destination = RootComponent.PrimaryDestination.Templates, showCatalog = true)
 @Preview(name = "light_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, showBackground = true)
 @Preview(name = "dark_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_009_SeedOverrideMatch_RU200() =
     previewApp(catalog = CatalogComponentPreview(BagCuePreviewFixtures.catalogEditor(existing = true,
              long = true,
              duplicate = true)),
-     destination = RootComponent.PrimaryDestination.Templates)
+     destination = RootComponent.PrimaryDestination.Templates, showCatalog = true)
 @Preview(name = "light_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, showBackground = true)
 @Preview(name = "dark_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, uiMode = 0x20, showBackground = true)
-@Composable fun SCREEN_009_SessionPosition() = previewApp(session = SessionComponentPreview(BagCuePreviewFixtures.active()),
+@Composable fun SCREEN_009_SessionPosition() = previewApp(session = SessionComponentPreview(BagCuePreviewFixtures.active(editing = true)),
      destination = RootComponent.PrimaryDestination.Today)
 @Preview(name = "light_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, showBackground = true)
 @Preview(name = "dark_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, uiMode = 0x20, showBackground = true)
@@ -273,12 +282,12 @@ private fun PreviewInlineAdSurface() {
     previewApp(catalog = CatalogComponentPreview(BagCuePreviewFixtures.catalogEditor(long = true,
              invalid = true,
              error = CatalogComponent.ErrorKey.SaveFailed)),
-     destination = RootComponent.PrimaryDestination.Templates)
+     destination = RootComponent.PrimaryDestination.Templates, showCatalog = true)
 @Preview(name = "light_expanded_en-100", widthDp = 960, heightDp = 900, locale = "en", fontScale = 1f, showBackground = true)
 @Preview(name = "dark_expanded_en-100", widthDp = 960, heightDp = 900, locale = "en", fontScale = 1f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_009_DetailPane() =
     previewApp(catalog = CatalogComponentPreview(BagCuePreviewFixtures.catalogEditor(existing = true)),
-     destination = RootComponent.PrimaryDestination.Templates)
+     destination = RootComponent.PrimaryDestination.Templates, showCatalog = true)
 
 // SCREEN-010 — Settings
 @Preview(name = "light_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, showBackground = true)

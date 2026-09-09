@@ -1,0 +1,52 @@
+{
+  "action": "handoff",
+  "assignmentId": "final-ui-corrections",
+  "handoffId": "HANDOFF-final-ui-corrections-20260909",
+  "productionEvidence": [
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/theme/BagCueDesignSystem.kt",
+      "surface": "asset-visual",
+      "symbol": "internal val BagCueTypography"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/session/SessionScreen.kt",
+      "surface": "asset-visual",
+      "symbol": "private fun TodayScreen"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/catalog/CatalogScreen.kt",
+      "surface": "asset-visual",
+      "symbol": "private fun CatalogEditor"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/templates/TemplateScreen.kt",
+      "surface": "asset-visual",
+      "symbol": "private fun TemplateEditor"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/settings/SettingsScreen.kt",
+      "surface": "asset-check",
+      "symbol": "fun SettingsScreen"
+    },
+    {
+      "path": "shared/compose/src/commonMain/kotlin/com/sedsoftware/bagcue/compose/preview/BagCuePreviewMatrix.kt",
+      "surface": "asset-check",
+      "symbol": "SCREEN_009_SessionPosition"
+    },
+    {
+      "path": "shared/root/src/commonMain/kotlin/com/sedsoftware/bagcue/root/integration/RootComponentPreview.kt",
+      "surface": "asset-check",
+      "symbol": "initialCatalog"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [
+    {
+      "argv": ["git", "diff", "--check"],
+      "exitCode": 0,
+      "details": "Final production and documentation diff contains no whitespace errors; line-ending conversion notices are non-failing."
+    }
+  ],
+  "requestedCommands": [],
+  "blockers": []
+}

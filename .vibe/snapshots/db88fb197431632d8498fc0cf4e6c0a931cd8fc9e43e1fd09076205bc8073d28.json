@@ -1,0 +1,61 @@
+{
+  "algorithm": "sha256",
+  "digest": "d2898e04a381d17ed467288196423f1ae5612b813671dc986693a4b2f59ba518",
+  "files": [
+    {
+      "path": "docs/design/visual-review/index.json",
+      "sha256": "a4d9e75b9c9a8915106f787305abbec806af05087121cb66e162a15aff1cc2c6"
+    },
+    {
+      "path": "docs/design/visual-review/review-log.md",
+      "sha256": "58947ab29fed164596c4bf72ac28b5aa2d2482cc27f6b5ea273f4a82dc6b6754"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-001-contact-sheet.png",
+      "sha256": "536b107c56f37fa96adee8fb43db6241aae223470719d9f7097ce93801e66535"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-002-contact-sheet.png",
+      "sha256": "12b79ba4d45cc360c24a7011648a328aa6517d8cf481b787e5b42477dd64474f"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-003-contact-sheet.png",
+      "sha256": "850ef9dc230d83f265b2c029d5be14e78567e8e6567dad7af943116b6e4fb114"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-004-contact-sheet.png",
+      "sha256": "3056d88bcf1d37fbd398615105d026a637e8e5b8ba875d1024cbaa810bc61d9f"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-005-contact-sheet.png",
+      "sha256": "04a3b34f9e346155a5dfd6cc02c18952a34225caa432c1d8653a6c1bc86ffe12"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-006-contact-sheet.png",
+      "sha256": "7bcc3eec4a44e6936a50ed9f6dfdb54a43e56a55493fd97a4b8f0e9267cd1562"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-007-contact-sheet.png",
+      "sha256": "c0f01c66edbf3bbe318d7d34c3e97f79a9a75fa9f2ba1a08fbcffb0ce78ae0cd"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-008-contact-sheet.png",
+      "sha256": "a38001d4f99c68a44564225bcd94a34a842f24b541f0b602cbfc81088d644c55"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-009-contact-sheet.png",
+      "sha256": "351bdd294c9c9971652f1d5942ed3a8db621accb8b3b4816f05cdc0521adc5fe"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-010-contact-sheet.png",
+      "sha256": "31486a1c5293fc9a8514443cbc39abdc915a25fb2c61c33d7169ba4aed476ac9"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-011-contact-sheet.png",
+      "sha256": "90a5ab538a411195316ed56067d22d6cb3b2b71a5058250906909e1431e733ea"
+    }
+  ],
+  "patterns": [
+    "docs/design/visual-review/**"
+  ]
+}

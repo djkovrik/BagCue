@@ -1,0 +1,20 @@
+{
+  "action": "check",
+  "runner": "command",
+  "kind": "targeted",
+  "inputScopeId": "final-design-review-v1",
+  "argv": [
+    "powershell.exe",
+    "-NoProfile",
+    "-Command",
+    "$log='docs/design/final-review/lazyweb-report-log.md'; $reportCount=(Select-String -LiteralPath $log -Pattern '^### SCREEN-').Count; $urlCount=(Select-String -LiteralPath $log -Pattern '^- URL: <https://www.lazyweb.com/report/lazyweb/').Count; $queueCount=(Select-String -LiteralPath $log -Pattern '^All eleven reports reached terminal `done` state').Count; $index=Get-Content -LiteralPath 'docs/design/visual-review/index.json' -Raw | ConvertFrom-Json; if($reportCount -ne 11 -or $urlCount -ne 11 -or $queueCount -ne 1 -or $index.goldenCount -ne 118 -or $index.screenCount -ne 11){exit 1}; Write-Output '11 terminal Lazyweb reports and 118 goldens across 11 screens verified'"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": ["asset-check", "asset-visual"]
+    }
+  ],
+  "timeoutSeconds": 120,
+  "reconcileDrift": "Verify the final sequential Lazyweb report inventory and the frozen visual-review index after corrected current dispositions were ingested."
+}

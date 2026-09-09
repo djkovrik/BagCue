@@ -123,7 +123,9 @@
     <string name="session_move_from">Move from %1$s</string>
     <string name="session_item_actions">Actions for %1$s</string>
     <string name="session_edit_item">Edit</string>
+    <string name="session_edit_item_named">Edit %1$s</string>
     <string name="session_remove_today">Remove for today</string>
+    <string name="session_remove_today_named">Remove %1$s for today</string>
     <string name="session_save_templates">Save to templates</string>
     <string name="session_add_item">Add item for today</string>
     <string name="session_complete">Complete packing</string>

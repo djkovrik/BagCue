@@ -1,0 +1,15 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "final-design-review-v1",
+  "tasks": [":shared:compose:visual-test:verifyPaparazziDebug"],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": ["asset-visual"]
+    }
+  ],
+  "timeoutSeconds": 3600,
+  "reconcileDrift": "Verify all 118 refreshed light/dark, compact/expanded, EN/RU-200 Paparazzi snapshots after final design-review corrections and manual contact-sheet inspection."
+}

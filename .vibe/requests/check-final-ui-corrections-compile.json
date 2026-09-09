@@ -1,0 +1,18 @@
+{
+  "action": "check",
+  "runner": "gradle",
+  "kind": "targeted",
+  "inputScopeId": "final-design-review-v1",
+  "tasks": [
+    ":shared:compose:compileAndroidMain",
+    ":shared:compose:visual-test:generateBagCuePreviewTests"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-006",
+      "surfaces": ["asset-check"]
+    }
+  ],
+  "timeoutSeconds": 1800,
+  "reconcileDrift": "Compile the final design-review corrections: explicit BagCue typography/shapes, semantic icon actions, hero surfaces, accessibility headings, IME protection, and repaired visual fixtures."
+}

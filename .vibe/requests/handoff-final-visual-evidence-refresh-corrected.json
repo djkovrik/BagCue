@@ -1,0 +1,21 @@
+{
+  "action": "handoff",
+  "assignmentId": "final-visual-evidence-refresh",
+  "handoffId": "HANDOFF-final-visual-evidence-refresh-20260909",
+  "productionEvidence": [
+    {
+      "path": "docs/design/visual-review/index.json",
+      "surface": "asset-visual",
+      "symbol": "\"goldenCount\": 118"
+    },
+    {
+      "path": "docs/design/visual-review/index.json",
+      "surface": "asset-check",
+      "symbol": "\"screenCount\": 11"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

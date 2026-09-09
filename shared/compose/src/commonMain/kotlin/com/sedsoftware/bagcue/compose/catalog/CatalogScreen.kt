@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
@@ -23,6 +24,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -101,9 +103,9 @@ private fun CatalogList(model: CatalogComponent.Model, component: CatalogCompone
             TopAppBar(
                 title = { Text(stringResource(Res.string.catalog_title)) },
                 navigationIcon = {
-                    if (onBack != null) TextButton(onClick = onBack) { BagCueIcon(BagCueAssets.Back,
-                             null);
-                         Text(stringResource(Res.string.item_back)) }
+                    if (onBack != null) IconButton(onClick = onBack) {
+                        BagCueIcon(BagCueAssets.Back, stringResource(Res.string.item_back))
+                    }
                 },
             )
         },
@@ -180,14 +182,12 @@ private fun CatalogRow(
             Column(Modifier.weight(1f)) {
                 CatalogItemDescription(item, name)
             }
-            TextButton(onClick = { onEdit(item.id) }) { BagCueIcon(BagCueAssets.Edit,
-                     null);
-                 Text(stringResource(Res.string.catalog_edit,
-                         name)) }
-            TextButton(onClick = { onDelete(item.id) }) { BagCueIcon(BagCueAssets.Delete,
-                     null);
-                 Text(stringResource(Res.string.catalog_delete,
-                         name)) }
+            IconButton(onClick = { onEdit(item.id) }) {
+                BagCueIcon(BagCueAssets.Edit, stringResource(Res.string.catalog_edit, name))
+            }
+            IconButton(onClick = { onDelete(item.id) }) {
+                BagCueIcon(BagCueAssets.Delete, stringResource(Res.string.catalog_delete, name))
+            }
         }
     }
 }
@@ -217,15 +217,15 @@ private fun CatalogEditor(editor: CatalogComponent.Editor, component: CatalogCom
                     )
                 },
                 navigationIcon = {
-                    TextButton(onClick = component::closeEditor) { BagCueIcon(BagCueAssets.Back,
-                             null);
-                         Text(stringResource(Res.string.item_back)) }
+                    IconButton(onClick = component::closeEditor) {
+                        BagCueIcon(BagCueAssets.Back, stringResource(Res.string.item_back))
+                    }
                 },
             )
         },
     ) { padding ->
         LazyColumn(
-            Modifier.fillMaxSize().padding(padding),
+            Modifier.fillMaxSize().padding(padding).imePadding(),
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {

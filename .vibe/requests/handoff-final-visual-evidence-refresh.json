@@ -1,0 +1,24 @@
+{
+  "action": "handoff",
+  "assignmentId": "final-visual-evidence-refresh",
+  "handoffId": "HANDOFF-final-visual-evidence-refresh-20260909",
+  "productionEvidence": [
+    {
+      "path": "docs/design/visual-review/index.json",
+      "surface": "asset-visual",
+      "symbol": "\"goldenCount\": 118"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-001-contact-sheet.png",
+      "surface": "asset-visual"
+    },
+    {
+      "path": "docs/design/visual-review/screens/SCREEN-011-contact-sheet.png",
+      "surface": "asset-visual"
+    }
+  ],
+  "testEvidence": [],
+  "nonGradleChecks": [],
+  "requestedCommands": [],
+  "blockers": []
+}

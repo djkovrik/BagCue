@@ -123,7 +123,9 @@
     <string name="session_move_from">Переложить из: %1$s</string>
     <string name="session_item_actions">Действия: %1$s</string>
     <string name="session_edit_item">Изменить</string>
+    <string name="session_edit_item_named">Изменить: %1$s</string>
     <string name="session_remove_today">Убрать на сегодня</string>
+    <string name="session_remove_today_named">Убрать на сегодня: %1$s</string>
     <string name="session_save_templates">Сохранить в наборы</string>
     <string name="session_add_item">Добавить предмет на сегодня</string>
     <string name="session_complete">Завершить сборы</string>
