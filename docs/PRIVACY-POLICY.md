@@ -4,14 +4,14 @@ The human-readable source policy for BagCue is [`bagcue-policy.html`](bagcue-pol
 
 ## Repository contract
 
-| Surface | Release behavior | Policy section |
-|---|---|---|
-| Core packing data | Local only; no account or cloud sync | 1–2 |
-| Notifications | Optional, scheduled locally | 3 |
-| Privacy-region request | Source-IP region classification; minimal response cached for at most 72 hours | 4, 8 |
-| Yandex Mobile Ads | One non-blocking inline Android slot after an `AllPacked` result; direct Yandex only; no AD_ID; privacy resolved before initialization | 4–7 |
-| Firebase Analytics | Disabled by default; explicit Settings toggle; fixed, content-free event names; no event parameters, user ID, or user properties | 4–8 |
-| iOS advertising | Unit ID is null, so no Yandex initialization or request | 4 |
+| Surface                | Release behavior                                                                                                                       | Policy section |
+|------------------------|----------------------------------------------------------------------------------------------------------------------------------------|----------------|
+| Core packing data      | Local only; no account or cloud sync                                                                                                   | 1–2            |
+| Notifications          | Optional, scheduled locally                                                                                                            | 3              |
+| Privacy-region request | Source-IP region classification; minimal response cached for at most 72 hours                                                          | 4, 8           |
+| Yandex Mobile Ads      | One non-blocking inline Android slot after an `AllPacked` result; direct Yandex only; no AD_ID; privacy resolved before initialization | 4–7            |
+| Firebase Analytics     | Disabled by default; explicit Settings toggle; fixed, content-free event names; no event parameters, user ID, or user properties       | 4–8            |
+| iOS advertising        | Unit ID is null, so no Yandex initialization or request                                                                                | 4              |
 
 The repository intentionally contains no hosted policy URL. `AppActivity` must continue receiving `privacyPolicyUrl = null` until the owner supplies the reviewed HTTPS URL. A fake or placeholder URL is not acceptable.
 
