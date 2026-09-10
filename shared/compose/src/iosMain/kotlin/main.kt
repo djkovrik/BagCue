@@ -35,12 +35,15 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.todayIn
 import platform.Foundation.NSUUID
 import platform.Foundation.NSBundle
+import platform.Foundation.NSURL
 import platform.UIKit.UIApplication
 import platform.UIKit.UIStatusBarStyleDarkContent
 import platform.UIKit.UIStatusBarStyleLightContent
 import platform.UIKit.UIViewController
 import platform.UIKit.setStatusBarStyle
 import kotlin.time.Clock
+
+private const val PRIVACY_POLICY_URL = "https://sedsoftware.com/apps/bagcue/policy.html"
 
 fun MainViewController(): UIViewController {
     val lifecycle = LifecycleRegistry().apply { resume() }
@@ -95,9 +98,17 @@ fun MainViewController(): UIViewController {
         currentTimeMillis = { Clock.System.now().toEpochMilliseconds() },
         resolveResourceKey = ::resolveCatalogResource,
         createDuplicateTemplateName = ::createDuplicateTemplateName,
-        privacyPolicyUrl = null,
+        privacyPolicyUrl = PRIVACY_POLICY_URL,
         versionName = versionName,
-        openExternalUrl = {},
+        openExternalUrl = { url ->
+            NSURL.URLWithString(url)?.let { policyUrl ->
+                UIApplication.sharedApplication.openURL(
+                    policyUrl,
+                    options = emptyMap<Any?, Any>(),
+                    completionHandler = null,
+                )
+            }
+        },
     ).create(DefaultComponentContext(lifecycle = lifecycle))
 
     return ComposeUIViewController {

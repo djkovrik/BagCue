@@ -23,7 +23,7 @@ Compact is a grouped scrollable list with navigation bar. Expanded uses navigati
 | Reminder enable/time | Full switch rows and time picker | ASSET-014 | Enabled state and time announced |
 | Usage analytics | Full switch row, default off | none | Supporting text discloses app-instance identifier and no packing content |
 | Advertising privacy | Labeled row/choice entry | ASSET-015 | Only shown when fresh protected result makes choice applicable |
-| Privacy policy | Text row/link | ASSET-015 supplementary | Opens policy with localized label |
+| Privacy policy | Text row/link | ASSET-015 supplementary | Opens `https://sedsoftware.com/apps/bagcue/policy.html` with the native external browser and returns focus |
 | Brand/About | Static content | ASSET-001 | Mark decorative when app name adjacent |
 
 ## Text layout expectations
@@ -44,4 +44,3 @@ Group titles remain one line at 100%; privacy/analytics supporting text may wrap
 ## Allowed ad slots
 
 None.
-

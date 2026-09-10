@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "450905735940",
+    "project_id": "bagcue",
+    "storage_bucket": "bagcue.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450905735940:android:d23f54bd83ef92e199c651",
+        "android_client_info": {
+          "package_name": "com.sedsoftware.bagcue"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsjweSxVHBpvaYfRFXUSMJ2iQVI-fS3rY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

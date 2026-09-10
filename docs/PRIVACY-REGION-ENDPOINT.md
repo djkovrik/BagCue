@@ -103,7 +103,7 @@ The shared `network` module owns `PrivacyRegionApi` and `KtorPrivacyRegionApi`, 
 
 ### Observed public-route evidence
 
-One read-only request on 2026-09-08 at 14:20:46 GMT returned HTTP 200, `application/json`, `Content-Length: 132`, `Cache-Control: no-store`, HSTS, `nosniff`, `DENY`, `no-referrer`, and a schema-1 non-protected response expiring within 72 hours. This is reachability evidence only. It does not close the backend tests below: controlled protected/non-protected/unknown routes, spoof resistance, GeoIP freshness, raw-IP/header redaction across logs and traces, ownership, and legal review remain external release blockers.
+One read-only request on 2026-09-08 at 14:20:46 GMT returned HTTP 200, `application/json`, `Content-Length: 132`, `Cache-Control: no-store`, HSTS, `nosniff`, `DENY`, `no-referrer`, and a schema-1 non-protected response expiring within 72 hours. This is reachability evidence only. Legal review and policy ownership were confirmed complete on 2026-09-10. The remaining external blockers are technical and operational: controlled protected/non-protected/unknown routes, spoof resistance, GeoIP freshness, raw-IP/header redaction across logs and traces, and operational ownership.
 
 The endpoint does not itself guarantee non-personalized advertising. Before release, verify in the exact Yandex SDK version that the decline path and removal of `AD_ID` produce the intended ad behavior. Yandex's published API describes a consent boolean, not a product-level guarantee that every ad after a decline is non-personalized. Keep the conservative release fallback: if that behavior cannot be demonstrated and approved, do not show ads after a decline.
 

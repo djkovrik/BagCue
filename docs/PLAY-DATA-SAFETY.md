@@ -1,10 +1,10 @@
 # Google Play Data Safety worksheet
 
-Status: **draft; Play Console submission is externally blocked**.
+Status: **legally reviewed and stable; candidate-specific artifact/network parity remains required**.
 
 This worksheet is intentionally conservative. It describes the release architecture and current provider disclosures, but the owner must answer the Play Console questionnaire from the final signed artifact, provider contracts, actual console configuration, and legal classification. “Collected” in Play terminology can include data transmitted off device by an SDK even when BagCue does not retain it.
 
-## Proposed inventory for final review
+## Approved disclosure inventory
 
 | Play category                                    | When transmitted                                                                                  | Recipient/purpose                                                                                         | Current minimization                                                                                                                           |
 |--------------------------------------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -15,7 +15,7 @@ This worksheet is intentionally conservative. It describes the release architect
 
 Do not mark precise location, contacts, photos, user-created packing text, payment information, health data, or account data as collected by BagCue unless final artifact/network testing reveals a new path.
 
-## Console questions that require owner/legal evidence
+## Approved Console classification inputs
 
 - Whether each provider relationship is “sharing” or service-provider processing under the final contract and Play definitions.
 - Whether every transmitted category is required or optional. Firebase Analytics is optional and user-controlled; advertising and the privacy-region decision are independent.
@@ -29,7 +29,9 @@ Do not mark precise location, contacts, photos, user-created packing text, payme
 1. Generate the final dependency/SBOM and merged release manifest; confirm no `AD_ID` and no undeclared SDK.
 2. Run clean-install network diagnostics for analytics off, analytics on, analytics off again, protected accept, protected decline, non-protected, endpoint failure/expiry, debug, preview/test, and iOS.
 3. Record Firebase retention/signals/linkage/sharing configuration, RSYA ownership/configuration, and privacy-region logging/GeoIP controls.
-4. Have the owner and legal reviewer approve the category/purpose/sharing choices.
-5. Submit in Play Console, export or screenshot the final answers, and compare them to the hosted privacy policy.
+4. Confirm that the approved category/purpose/sharing choices still match the candidate and current provider contracts.
+5. Export or screenshot the submitted Play Console answers and compare them to the canonical hosted policy.
+
+The owner confirmed completion of legal review and policy stabilization on 2026-09-10. The canonical policy is [https://sedsoftware.com/apps/bagcue/policy.html](https://sedsoftware.com/apps/bagcue/policy.html); its reviewed SHA-256 is `3bace33ed5b83c21c0901d20f6fca23c622fb9d7f5402f498209b5e119566e7a`.
 
 Primary references: [Google Play Data Safety guidance](https://support.google.com/googleplay/android-developer/answer/10787469), [Firebase Android disclosure guidance](https://firebase.google.com/docs/android/play-data-disclosure), [Google Analytics disclosure details](https://support.google.com/analytics/answer/11582702), and [Yandex Mobile Ads privacy/security guidance](https://ads.yandex.com/helpcenter/en/easy/integration/android/advanced-settings/security-privacy).

@@ -61,6 +61,8 @@ jobs:
           distribution: temurin
           java-version: "17"
       - uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
+      - name: Verify canonical hosted privacy policy
+        run: python .github/workflows/scripts/validate_privacy_policy.py
       - name: Validate committed Firebase config and materialize release credentials and notes
         env:
           GH_TOKEN: ${{ github.token }}

@@ -2,6 +2,8 @@ package com.sedsoftware.bagcue
 
 import android.Manifest
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
@@ -48,6 +50,8 @@ import kotlinx.datetime.todayIn
 import java.util.UUID
 import kotlin.coroutines.resume
 import kotlin.time.Clock
+
+private const val PRIVACY_POLICY_URL = "https://sedsoftware.com/apps/bagcue/policy.html"
 
 class AppActivity : ComponentActivity() {
     private var notificationPermissionContinuation: CancellableContinuation<NotificationPermissionState>? = null
@@ -121,9 +125,9 @@ class AppActivity : ComponentActivity() {
             currentTimeMillis = System::currentTimeMillis,
             resolveResourceKey = ::resolveCatalogResource,
             createDuplicateTemplateName = ::createDuplicateTemplateName,
-            privacyPolicyUrl = null,
+            privacyPolicyUrl = PRIVACY_POLICY_URL,
             versionName = versionName,
-            openExternalUrl = {},
+            openExternalUrl = ::openExternalUrl,
         ).create(defaultComponentContext())
         setContent {
             App(
@@ -152,6 +156,13 @@ class AppActivity : ComponentActivity() {
             }
             notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
         }
+
+    private fun openExternalUrl(url: String) {
+        val uri = Uri.parse(url).takeIf { it.scheme == "https" } ?: return
+        runCatching {
+            startActivity(Intent(Intent.ACTION_VIEW, uri).addCategory(Intent.CATEGORY_BROWSABLE))
+        }
+    }
 }
 
 @Composable

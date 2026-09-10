@@ -45,7 +45,7 @@ jobs:
           value = float(os.environ['COVERAGE'])
           color = 'brightgreen' if value >= 80 else 'green' if value >= 70 else 'yellow' if value >= 60 else 'red'
           badge = {'schemaVersion': 1, 'label': 'coverage', 'message': f'{value:.2f}%', 'color': color}
-          payload = json.dumps({'files': {'bagcue-coverage.json': {'content': json.dumps(badge)}}}).encode()
+          payload = json.dumps({'files': {'bagcue-coverage-badge.json': {'content': json.dumps(badge)}}}).encode()
           request = urllib.request.Request(
               f"https://api.github.com/gists/{os.environ['COVERAGE_GIST_ID']}", data=payload, method='PATCH',
               headers={'Authorization': f"Bearer {os.environ['GIST_SECRET']}", 'Accept': 'application/vnd.github+json'},

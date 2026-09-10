@@ -2,7 +2,7 @@
 
 ## Approved delivery revision
 
-Revision `2026-09-08-flow-packages` is approved for a fresh BagCue development iteration under the current Vibe skills. Product scope, AC-001 through AC-051, QG-001 through QG-012, SCREEN-001 through SCREEN-011, and ASSET-001 through ASSET-017 remain required as declared. This revision supersedes the previous delivery assumptions.
+Revision `2026-09-10-legal-policy-stable` incorporates the owner's confirmation that all legal reviews are complete and the privacy policy is stable at `https://sedsoftware.com/apps/bagcue/policy.html`, while retaining the previously confirmed CI/release setup. Product scope, AC-001 through AC-051, QG-001 through QG-012, SCREEN-001 through SCREEN-011, and ASSET-001 through ASSET-017 remain required as declared. Legal approval and initial external setup are no longer unperformed prerequisites; candidate-specific build, endpoint, publication, store-parity, device, and receipt evidence remains mandatory.
 
 Treat existing application code as reusable implementation material requiring inspection and new verification. Do not inherit verified statuses, intermediate receipts, handoffs, or completion claims from the paused iteration. Preserve that iteration as history outside the new active delivery state; do not delete its code or relabel its evidence. Starting implementation is a separate action from updating this specification.
 

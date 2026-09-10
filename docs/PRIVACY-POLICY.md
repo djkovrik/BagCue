@@ -1,6 +1,6 @@
 # Privacy policy release record
 
-The human-readable source policy for BagCue is [`bagcue-policy.html`](bagcue-policy.html). This record prevents repository implementation, the hosted policy, and store disclosures from drifting.
+The legally reviewed, stable human-readable source policy for BagCue is [`bagcue-policy.html`](bagcue-policy.html). Its canonical public URL is [https://sedsoftware.com/apps/bagcue/policy.html](https://sedsoftware.com/apps/bagcue/policy.html). This record prevents repository implementation, the hosted policy, and store disclosures from drifting.
 
 ## Repository contract
 
@@ -13,17 +13,15 @@ The human-readable source policy for BagCue is [`bagcue-policy.html`](bagcue-pol
 | Firebase Analytics     | Disabled by default; explicit Settings toggle; fixed, content-free event names; no event parameters, user ID, or user properties       | 4–8            |
 | iOS advertising        | Unit ID is null, so no Yandex initialization or request                                                                                | 4              |
 
-The repository intentionally contains no hosted policy URL. `AppActivity` must continue receiving `privacyPolicyUrl = null` until the owner supplies the reviewed HTTPS URL. A fake or placeholder URL is not acceptable.
+The reviewed source and hosted HTTPS artifact were fetched and compared byte-for-byte on 2026-09-10. Both have SHA-256 `3bace33ed5b83c21c0901d20f6fca23c622fb9d7f5402f498209b5e119566e7a`. Android and iOS production composition roots expose this exact URL and open it through their native external-URL APIs.
 
 ## Publication gate
 
-Before publication, the owner and legal reviewer must:
+Legal review of the processor, legal-basis, international-transfer, retention, contact, rights, category, purpose, and sharing language is complete as of 2026-09-10. Publication must still:
 
-1. approve the processor, legal-basis, international-transfer, retention, contact, and rights language;
-2. reconcile the final Android/iOS dependency and packaged-permission inventories with the policy and `PLAY-DATA-SAFETY.md`;
-3. verify the Firebase, RSYA, and privacy-region external evidence listed in `APA-EXTERNAL-SETUP.md`;
-4. host the exact approved HTML over HTTPS and record its immutable content hash and final URL;
-5. configure that URL in the app and both store listings; and
-6. verify the hosted artifact, in-app copy/link, and Play Console answers are identical in substance.
+1. reconcile the exact Android/iOS candidate dependency and packaged-permission inventories with the policy and `PLAY-DATA-SAFETY.md`;
+2. verify the Firebase, RSYA, and privacy-region technical evidence listed in `APA-EXTERNAL-SETUP.md`;
+3. run `.github/workflows/scripts/validate_privacy_policy.py` so the canonical URL is reachable and byte-identical to the reviewed source;
+4. retain the candidate-specific in-app link and Play Console parity evidence.
 
-Until those steps are recorded, this file is a parity worksheet—not a legal approval or publication receipt.
+This file records completed legal approval and policy publication. It does not replace candidate-specific technical, store, or publication receipts.

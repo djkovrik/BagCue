@@ -49,7 +49,7 @@ QG-003 requires a macOS CI job named `Test and link iOS` (or an explicitly mappe
 
 ## Privacy, ads, and analytics
 
-QG-007 and QG-012 require parity among code, `docs/bagcue-policy.html`, endpoint contract, manifests, SDK configuration, Analytics console, and Google Play Data safety.
+QG-007 and QG-012 require parity among code, the legally reviewed `docs/bagcue-policy.html`, its canonical hosted copy at `https://sedsoftware.com/apps/bagcue/policy.html`, Android/iOS in-app links, endpoint contract, manifests, SDK configuration, Analytics console, and store disclosures.
 
 - Endpoint cache maximum 72 hours; no country/IP stored in-app; fail closed for ads.
 - Consent form appears only when required, includes allow/decline/policy, and remains separate from Analytics.
@@ -71,12 +71,12 @@ QG-010 requires a delivery-time Markdown guide under `docs/` for the user's MacB
 
 ## External publication gates
 
-- QG-005: Google Play developer account, signing, EN/RU listing, hosted policy URL, Data safety answers, content rating, 18+ positioning without an age gate, country availability, credentials, and actual publication result.
-- QG-008: live endpoint HTTPS/schema/expiry, protected/non-protected/unknown controlled routes, trusted-proxy spoof resistance, GeoIP freshness, aggregate-only observability, raw-IP/header redaction, policy owner, and legal review of the protected set/copy.
-- QG-009: real user-supplied Android Yandex ad unit ID for monetized public build, safe secret/config injection, debug/test separation, and controlled physical-device diagnostics.
-- QG-011: Firebase project/app ownership; Android `com.sedsoftware.bagcue` and Apple `com.sedsoftware.bagcue.iosApp` registration; direct commit of the matching files at `androidApp/google-services.json` and `iosApp/iosApp/GoogleService-Info.plist` with no GitHub secrets for either file; packaged-file verification; two-month retention; disabled Ads features/linkage/data sharing; user deletion/control capabilities; and Data safety disclosure.
+- QG-005: completed Google Play developer account and protected publishing environment, signing, EN/RU listing, canonical policy URL, legally approved Data Safety answers, content rating, 18+ positioning without an age gate, country availability, credentials, and an actual Internal-track publication result for the exact release tag.
+- QG-008: with legal review and policy ownership complete, the remaining gate is technical: live endpoint HTTPS/schema/expiry, protected/non-protected/unknown controlled routes, trusted-proxy spoof resistance, GeoIP freshness, aggregate-only observability, raw-IP/header redaction, and operational ownership.
+- QG-009: owner-verified Android Yandex ad unit `R-M-19857241-1` for a monetized public build, safe release-only config injection, debug/test separation, and controlled physical-device diagnostics tied to the exact candidate.
+- QG-011: Firebase project `bagcue` ownership; Android `com.sedsoftware.bagcue` and Apple `com.sedsoftware.bagcue.iosApp` registration; direct commit and packaging of the matching files at `androidApp/google-services.json` and `iosApp/iosApp/GoogleService-Info.plist` with no GitHub secrets for either file; two-month retention; disabled Ads features/linkage/data sharing; user deletion/control capabilities; and store disclosure.
 
-External claims remain blocked until verified; committed CI/configuration is not proof of external publication readiness.
+The owner confirmed completion of every `docs/CI-RELEASE-SETUP.md` item and every legal review on 2026-09-10. The stable canonical policy URL is `https://sedsoftware.com/apps/bagcue/policy.html`; the hosted bytes match `docs/bagcue-policy.html` at approved SHA-256 `3bace33ed5b83c21c0901d20f6fca23c622fb9d7f5402f498209b5e119566e7a`. This resolves setup/legal blockers for QG-003, QG-005, QG-009, QG-011, and QG-012. Each new candidate still needs a current durable result on its declared verification surface. QG-008 remains blocked only on the technical and operational endpoint evidence governed by `docs/APA-EXTERNAL-SETUP.md`.
 
 ## Release acceptance
 

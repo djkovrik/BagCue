@@ -2,100 +2,101 @@
 
 - Protocol: `2.0`
 - Ledger: `LEDGER-daf88a72-e8ed-4785-a86a-1a3cc7429e83`
-- Phase: `blocked`
+- Phase: `reconciling`
 - Active AC: `none`
-- Ledger digest: `914f01f22d2e76140e292692fc5e45156eec7f2a072dd66f5fe316e204cd95ea`
-- AppSpec fingerprint: `11d7c72e913131ab813fe5a325800ad2137c7f27cd0825323fd50ef8a9bff474`
-- Workspace fingerprint: `c1b435366d4212d97e11755007d73662c69b1445aa941f16667ac9528b5b0e6c`
-- Next action: Run AC-046 and QG-003 ios-link-test on macOS when an Apple host is available; external release gates remain blocked by their documented owners and credentials.
+- Ledger digest: `276b61459755fbcc3190b0dbb88f536e7fd390820eb0ca2cac2265c9feb9261b`
+- AppSpec fingerprint: `18b75f4c55598b2ca7cb0fd33a6a166054d22ddf38cd37685e1bbc7be4b0be97`
+- Workspace fingerprint: `71e331953e1fff8843b5731986a42ad352c0740933053017478223b5d890df5a`
+- Next action: Push the legal-policy revision; retain current macOS link, store-parity, and exact-tag Internal publication evidence. Complete only the remaining technical/operational endpoint checks for QG-008.
 
 ## Acceptance scenarios
 
-| ID     | Requirement | Priority | Dependencies           | Status      | Surfaces                                                               | Owner | Receipts                                                         |
-|--------|-------------|----------|------------------------|-------------|------------------------------------------------------------------------|-------|------------------------------------------------------------------|
-| AC-001 | REQ-001     | must     | —                      | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-002 | REQ-001     | must     | —                      | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-003 | REQ-001     | must     | AC-002                 | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-004 | REQ-001     | must     | AC-001                 | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-005 | REQ-001     | must     | AC-001                 | verified    | domain-test, component-test                                            | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-006 | REQ-002     | must     | —                      | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-007 | REQ-002     | must     | —                      | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-008 | REQ-002     | must     | AC-007                 | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-009 | REQ-002     | must     | AC-007                 | verified    | domain-test, component-test, persistence-integration-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-010 | REQ-002     | must     | AC-007                 | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-011 | REQ-002     | must     | —                      | verified    | domain-test, localization-contract-test, persistence-integration-test  | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-012 | REQ-003     | must     | AC-001, AC-007         | verified    | domain-test, component-test, persistence-integration-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-013 | REQ-003     | must     | AC-012                 | verified    | domain-test, component-test                                            | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-014 | REQ-003     | must     | AC-013                 | verified    | domain-test, component-test, golden-test                               | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-015 | REQ-003     | must     | AC-012                 | verified    | domain-test, component-test, persistence-integration-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-016 | REQ-003     | must     | AC-007                 | verified    | domain-test, component-test, golden-test                               | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-017 | REQ-003     | must     | AC-012                 | verified    | domain-test, component-test, persistence-integration-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-018 | REQ-004     | must     | AC-012                 | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-019 | REQ-004     | must     | AC-018                 | verified    | component-test, persistence-integration-test, golden-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-020 | REQ-004     | must     | AC-018                 | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-021 | REQ-004     | must     | AC-018                 | verified    | domain-test, component-test, persistence-integration-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-022 | REQ-004     | must     | AC-018                 | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-023 | REQ-004     | must     | AC-014, AC-019         | verified    | domain-test, component-test, persistence-integration-test, golden-test | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-024 | REQ-004     | must     | AC-014, AC-018         | verified    | domain-test, component-test, persistence-integration-test, golden-test | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-025 | REQ-004     | must     | AC-007, AC-021         | verified    | domain-test, component-test, persistence-integration-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-026 | REQ-005     | must     | AC-012                 | verified    | component-test, persistence-integration-test, golden-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-027 | REQ-005     | must     | AC-023                 | verified    | domain-test, component-test, persistence-integration-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-028 | REQ-005     | must     | AC-026                 | verified    | domain-test, component-test, persistence-integration-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-029 | REQ-005     | must     | AC-026                 | verified    | component-test, persistence-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-030 | REQ-005     | must     | AC-012                 | verified    | domain-test, component-test, platform-test                             | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-031 | REQ-006     | should   | —                      | verified    | settings-integration-test, component-test                              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-032 | REQ-006     | should   | AC-031                 | verified    | settings-integration-test, component-test                              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-033 | REQ-006     | should   | AC-032                 | verified    | settings-integration-test, component-test, platform-test               | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-034 | REQ-006     | should   | AC-033                 | verified    | component-test, platform-test, golden-test                             | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-035 | REQ-006     | should   | AC-012, AC-033         | verified    | domain-test, platform-test                                             | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-036 | REQ-007     | should   | —                      | verified    | settings-integration-test, firebase-contract-test                      | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-037 | REQ-007     | should   | AC-036                 | verified    | component-test, settings-integration-test                              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-038 | REQ-007     | should   | AC-037                 | verified    | component-test, settings-integration-test, firebase-contract-test      | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-039 | REQ-007     | should   | AC-038                 | verified    | analytics-event-contract-test, privacy-static-check                    | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-040 | REQ-008     | should   | —                      | verified    | network-mock-test, settings-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-041 | REQ-008     | should   | AC-040                 | verified    | network-mock-test, settings-integration-test                           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-042 | REQ-008     | should   | AC-040                 | verified    | component-test, settings-integration-test, ad-lifecycle-test           | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-043 | REQ-008     | should   | AC-040                 | verified    | network-mock-test, settings-integration-test, ad-lifecycle-test        | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-044 | REQ-008     | should   | AC-041                 | verified    | component-test, ad-lifecycle-test, network-mock-test                   | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-045 | REQ-008     | should   | AC-023, AC-044         | verified    | component-test, ad-lifecycle-test, golden-test                         | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-046 | REQ-008     | should   | AC-045                 | in-progress | component-test, ad-lifecycle-test, ios-link-test, privacy-static-check | —     | —                                                                |
-| AC-047 | REQ-009     | must     | —                      | verified    | component-test, golden-test, accessibility-test                        | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-048 | REQ-009     | must     | AC-011                 | verified    | localization-contract-test, component-test, golden-test                | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-049 | REQ-009     | must     | AC-047, AC-048         | verified    | accessibility-test, golden-test, manual-visual-review                  | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-050 | REQ-010     | must     | —                      | verified    | component-test, persistence-integration-test, golden-test              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
-| AC-051 | REQ-010     | must     | AC-004, AC-010, AC-029 | verified    | domain-test, persistence-integration-test                              | —     | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json |
+| ID | Requirement | Priority | Dependencies | Status | Surfaces | Owner | Receipts |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| AC-001 | REQ-001 | must | — | not-started | component-test, persistence-integration-test | — | — |
+| AC-002 | REQ-001 | must | — | not-started | component-test, persistence-integration-test | — | — |
+| AC-003 | REQ-001 | must | AC-002 | not-started | component-test, persistence-integration-test | — | — |
+| AC-004 | REQ-001 | must | AC-001 | not-started | component-test, persistence-integration-test | — | — |
+| AC-005 | REQ-001 | must | AC-001 | not-started | domain-test, component-test | — | — |
+| AC-006 | REQ-002 | must | — | not-started | component-test, persistence-integration-test | — | — |
+| AC-007 | REQ-002 | must | — | not-started | component-test, persistence-integration-test | — | — |
+| AC-008 | REQ-002 | must | AC-007 | not-started | component-test, persistence-integration-test | — | — |
+| AC-009 | REQ-002 | must | AC-007 | not-started | domain-test, component-test, persistence-integration-test | — | — |
+| AC-010 | REQ-002 | must | AC-007 | not-started | component-test, persistence-integration-test | — | — |
+| AC-011 | REQ-002 | must | — | not-started | domain-test, localization-contract-test, persistence-integration-test | — | — |
+| AC-012 | REQ-003 | must | AC-001, AC-007 | not-started | domain-test, component-test, persistence-integration-test | — | — |
+| AC-013 | REQ-003 | must | AC-012 | not-started | domain-test, component-test | — | — |
+| AC-014 | REQ-003 | must | AC-013 | not-started | domain-test, component-test, golden-test | — | — |
+| AC-015 | REQ-003 | must | AC-012 | not-started | domain-test, component-test, persistence-integration-test | — | — |
+| AC-016 | REQ-003 | must | AC-007 | not-started | domain-test, component-test, golden-test | — | — |
+| AC-017 | REQ-003 | must | AC-012 | not-started | domain-test, component-test, persistence-integration-test | — | — |
+| AC-018 | REQ-004 | must | AC-012 | not-started | component-test, persistence-integration-test | — | — |
+| AC-019 | REQ-004 | must | AC-018 | not-started | component-test, persistence-integration-test, golden-test | — | — |
+| AC-020 | REQ-004 | must | AC-018 | not-started | component-test, persistence-integration-test | — | — |
+| AC-021 | REQ-004 | must | AC-018 | not-started | domain-test, component-test, persistence-integration-test | — | — |
+| AC-022 | REQ-004 | must | AC-018 | not-started | component-test, persistence-integration-test | — | — |
+| AC-023 | REQ-004 | must | AC-014, AC-019 | not-started | domain-test, component-test, persistence-integration-test, golden-test | — | — |
+| AC-024 | REQ-004 | must | AC-014, AC-018 | not-started | domain-test, component-test, persistence-integration-test, golden-test | — | — |
+| AC-025 | REQ-004 | must | AC-007, AC-021 | not-started | domain-test, component-test, persistence-integration-test | — | — |
+| AC-026 | REQ-005 | must | AC-012 | not-started | component-test, persistence-integration-test, golden-test | — | — |
+| AC-027 | REQ-005 | must | AC-023 | not-started | domain-test, component-test, persistence-integration-test | — | — |
+| AC-028 | REQ-005 | must | AC-026 | not-started | domain-test, component-test, persistence-integration-test | — | — |
+| AC-029 | REQ-005 | must | AC-026 | not-started | component-test, persistence-integration-test | — | — |
+| AC-030 | REQ-005 | must | AC-012 | not-started | domain-test, component-test, platform-test | — | — |
+| AC-031 | REQ-006 | should | — | not-started | settings-integration-test, component-test | — | — |
+| AC-032 | REQ-006 | should | AC-031 | not-started | settings-integration-test, component-test | — | — |
+| AC-033 | REQ-006 | should | AC-032 | not-started | settings-integration-test, component-test, platform-test | — | — |
+| AC-034 | REQ-006 | should | AC-033 | not-started | component-test, platform-test, golden-test | — | — |
+| AC-035 | REQ-006 | should | AC-012, AC-033 | not-started | domain-test, platform-test | — | — |
+| AC-036 | REQ-007 | should | — | not-started | settings-integration-test, firebase-contract-test | — | — |
+| AC-037 | REQ-007 | should | AC-036 | not-started | component-test, settings-integration-test | — | — |
+| AC-038 | REQ-007 | should | AC-037 | not-started | component-test, settings-integration-test, firebase-contract-test | — | — |
+| AC-039 | REQ-007 | should | AC-038 | not-started | analytics-event-contract-test, privacy-static-check | — | — |
+| AC-040 | REQ-008 | should | — | not-started | network-mock-test, settings-integration-test | — | — |
+| AC-041 | REQ-008 | should | AC-040 | not-started | network-mock-test, settings-integration-test | — | — |
+| AC-042 | REQ-008 | should | AC-040 | not-started | component-test, settings-integration-test, ad-lifecycle-test | — | — |
+| AC-043 | REQ-008 | should | AC-040 | not-started | network-mock-test, settings-integration-test, ad-lifecycle-test | — | — |
+| AC-044 | REQ-008 | should | AC-041 | not-started | component-test, ad-lifecycle-test, network-mock-test | — | — |
+| AC-045 | REQ-008 | should | AC-023, AC-044 | not-started | component-test, ad-lifecycle-test, golden-test | — | — |
+| AC-046 | REQ-008 | should | AC-045 | not-started | component-test, ad-lifecycle-test, ios-link-test, privacy-static-check | — | — |
+| AC-047 | REQ-009 | must | — | not-started | component-test, golden-test, accessibility-test | — | — |
+| AC-048 | REQ-009 | must | AC-011 | not-started | localization-contract-test, component-test, golden-test | — | — |
+| AC-049 | REQ-009 | must | AC-047, AC-048 | not-started | accessibility-test, golden-test, manual-visual-review | — | — |
+| AC-050 | REQ-010 | must | — | not-started | component-test, persistence-integration-test, golden-test | — | — |
+| AC-051 | REQ-010 | must | AC-004, AC-010, AC-029 | not-started | domain-test, persistence-integration-test | — | — |
 
 ## Quality gates
 
-| ID     | Category   | Platform | Applicability | Status           | Surfaces                                                                           | Receipts                                                                                                                           |
-|--------|------------|----------|---------------|------------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| QG-001 | repository | all      | applicable    | verified         | repository-check, domain-test, component-test, persistence-integration-test        | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json                                                                   |
-| QG-002 | platform   | android  | applicable    | verified         | android-build, android-platform-test                                               | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json                                                                   |
-| QG-003 | platform   | ios      | applicable    | blocked-external | ios-build, ios-link-test                                                           | —                                                                                                                                  |
-| QG-004 | release    | all      | applicable    | verified         | release-check                                                                      | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json                                                                   |
-| QG-005 | external   | android  | needs-review  | blocked-external | google-play-publication-check                                                      | —                                                                                                                                  |
-| QG-006 | repository | all      | applicable    | verified         | asset-check, asset-visual                                                          | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json, .vibe/receipts/RECEIPT-da23f9e9-3843-47cf-83e6-f43daabed08a.json |
-| QG-007 | repository | all      | applicable    | verified         | network-mock-test, ad-lifecycle-test, firebase-contract-test, privacy-static-check | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json                                                                   |
-| QG-008 | external   | all      | applicable    | blocked-external | privacy-endpoint-check                                                             | —                                                                                                                                  |
-| QG-009 | external   | android  | needs-review  | blocked-external | android-ad-config-check                                                            | —                                                                                                                                  |
-| QG-010 | repository | ios      | applicable    | verified         | documentation-check                                                                | .vibe/receipts/RECEIPT-89e2a6d7-5942-4d53-958f-647a346aba6b.json                                                                   |
-| QG-011 | external   | android  | needs-review  | blocked-external | firebase-console-check                                                             | —                                                                                                                                  |
-| QG-012 | release    | android  | applicable    | blocked-external | privacy-policy-review, data-safety-review                                          | —                                                                                                                                  |
+| ID | Category | Platform | Applicability | Status | Surfaces | Receipts |
+| --- | --- | --- | --- | --- | --- | --- |
+| QG-001 | repository | all | applicable | not-started | repository-check, domain-test, component-test, persistence-integration-test | — |
+| QG-002 | platform | android | applicable | not-started | android-build, android-platform-test | — |
+| QG-003 | platform | ios | applicable | not-started | ios-build, ios-link-test | — |
+| QG-004 | release | all | applicable | not-started | release-check | — |
+| QG-005 | external | android | applicable | implemented-unverified | google-play-publication-check | — |
+| QG-006 | repository | all | applicable | not-started | asset-check, asset-visual | — |
+| QG-007 | repository | all | applicable | not-started | network-mock-test, ad-lifecycle-test, firebase-contract-test, privacy-static-check | — |
+| QG-008 | external | all | applicable | blocked-external | privacy-endpoint-check | — |
+| QG-009 | external | android | applicable | implemented-unverified | android-ad-config-check | — |
+| QG-010 | repository | ios | applicable | not-started | documentation-check | — |
+| QG-011 | external | all | applicable | implemented-unverified | firebase-console-check | — |
+| QG-012 | release | all | applicable | implemented-unverified | privacy-policy-review, data-safety-review | — |
 
 ## Integrated flows (separate from AC verification)
 
-| Package                          | ACs                                                                                                            | Integration | Goal                                                                                                                                                                                                                                                                                                                                 |
-|----------------------------------|----------------------------------------------------------------------------------------------------------------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| adaptive-localization-resilience | AC-047, AC-048, AC-049, AC-050, AC-051                                                                         | integrated  | Deliver a four-destination adaptive product shell, complete EN/RU fallback and authored-text preservation, accessible reflow, failure-retained input, and atomic cascade deletion across the production Android/iOS roots.                                                                                                           |
-| analytics-event-continuation     | AC-036, AC-037, AC-038, AC-039                                                                                 | integrated  | Complete the local analytics integration contract and record TemplateCreated and PackingSessionReopened only after their exact production success points, using the existing content-free six-event adapter and production root injection on Android and iOS.                                                                        |
-| analytics-privacy-ads            | AC-036, AC-037, AC-038, AC-039, AC-040, AC-041, AC-042, AC-043, AC-044, AC-045, AC-046                         | integrated  | Opt-in content-free analytics and a fail-closed privacy-region decision govern one production Yandex inline ad after completion on Android, while every packing screen and default iOS build remain ad-free.                                                                                                                         |
-| assets-and-visual-matrix         | AC-040, AC-041, AC-042, AC-043, AC-044, AC-045, AC-046, AC-047, AC-048, AC-049, AC-050                         | integrated  | Deliver the complete BagCue asset inventory and deterministic preview/golden matrix for all product screens and risk states, then inspect and review the production visual system across themes, locales, text scale and adaptive widths.                                                                                            |
-| catalog-core                     | AC-001, AC-002, AC-003, AC-004, AC-005                                                                         | integrated  | Launch the real BagCue root, open the catalog, save a catalog item, read it, and restore it after process restart                                                                                                                                                                                                                    |
-| reminders                        | AC-031, AC-032, AC-033, AC-034, AC-035                                                                         | integrated  | Users can configure disabled-by-default global and per-session reminders while notification denial leaves packing usable and clock or zone changes reschedule one stable notification per session on Android and iOS.                                                                                                                |
-| repository-release-convergence   | AC-036, AC-037, AC-038, AC-039, AC-040, AC-041, AC-042, AC-043, AC-044, AC-045, AC-046                         | integrated  | Converge BagCue on strict Detekt/Kover and five-workflow CI, reproducible Android release configuration, iOS native linkage contracts, real consent-gated analytics and ads adapters, bounded privacy-region transport, and evidence-backed release documentation without fabricating externally owned credentials or console state. |
-| session-checklist                | AC-012, AC-013, AC-014, AC-015, AC-016, AC-017, AC-018, AC-019, AC-020, AC-021, AC-022, AC-023, AC-024, AC-025 | integrated  | Launch the production root, create or replace the sole dated session from templates, resolve conflicts, pack/edit/add/remove/undo items, complete with or without skipped items, and restore the exact persisted snapshot after restart.                                                                                             |
-| session-history                  | AC-026, AC-027, AC-028, AC-029, AC-030                                                                         | integrated  | A user can browse planned and completed sessions, reopen or repeat history, delete with confirmation and undo, and keep the original local date across timezone changes from both production entry points.                                                                                                                           |
-| template-management              | AC-006, AC-007, AC-008, AC-009, AC-010, AC-011                                                                 | integrated  | Launch the production root, open Templates, create or edit a reusable template, reopen it after restart, and retain independent catalog/session snapshot semantics.                                                                                                                                                                  |
+| Package | ACs | Integration | Goal |
+| --- | --- | --- | --- |
+| adaptive-localization-resilience | AC-047, AC-048, AC-049, AC-050, AC-051 | integrated | Deliver a four-destination adaptive product shell, complete EN/RU fallback and authored-text preservation, accessible reflow, failure-retained input, and atomic cascade deletion across the production Android/iOS roots. |
+| analytics-event-continuation | AC-036, AC-037, AC-038, AC-039 | integrated | Complete the local analytics integration contract and record TemplateCreated and PackingSessionReopened only after their exact production success points, using the existing content-free six-event adapter and production root injection on Android and iOS. |
+| analytics-privacy-ads | AC-036, AC-037, AC-038, AC-039, AC-040, AC-041, AC-042, AC-043, AC-044, AC-045, AC-046 | integrated | Opt-in content-free analytics and a fail-closed privacy-region decision govern one production Yandex inline ad after completion on Android, while every packing screen and default iOS build remain ad-free. |
+| assets-and-visual-matrix | AC-040, AC-041, AC-042, AC-043, AC-044, AC-045, AC-046, AC-047, AC-048, AC-049, AC-050 | integrated | Deliver the complete BagCue asset inventory and deterministic preview/golden matrix for all product screens and risk states, then inspect and review the production visual system across themes, locales, text scale and adaptive widths. |
+| catalog-core | AC-001, AC-002, AC-003, AC-004, AC-005 | integrated | Launch the real BagCue root, open the catalog, save a catalog item, read it, and restore it after process restart |
+| final-design-review |  | in-progress | Review every declared BagCue primary screen against current Lazyweb evidence and the Material 3 contract, correct cross-screen typography, shapes, hierarchy, contrast, iconography and redundant icon-plus-text actions, then re-verify the affected deterministic goldens. |
+| reminders | AC-031, AC-032, AC-033, AC-034, AC-035 | integrated | Users can configure disabled-by-default global and per-session reminders while notification denial leaves packing usable and clock or zone changes reschedule one stable notification per session on Android and iOS. |
+| repository-release-convergence | AC-036, AC-037, AC-038, AC-039, AC-040, AC-041, AC-042, AC-043, AC-044, AC-045, AC-046 | integrated | Converge BagCue on strict Detekt/Kover and five-workflow CI, reproducible Android release configuration, iOS native linkage contracts, real consent-gated analytics and ads adapters, bounded privacy-region transport, and evidence-backed release documentation without fabricating externally owned credentials or console state. |
+| session-checklist | AC-012, AC-013, AC-014, AC-015, AC-016, AC-017, AC-018, AC-019, AC-020, AC-021, AC-022, AC-023, AC-024, AC-025 | integrated | Launch the production root, create or replace the sole dated session from templates, resolve conflicts, pack/edit/add/remove/undo items, complete with or without skipped items, and restore the exact persisted snapshot after restart. |
+| session-history | AC-026, AC-027, AC-028, AC-029, AC-030 | integrated | A user can browse planned and completed sessions, reopen or repeat history, delete with confirmation and undo, and keep the original local date across timezone changes from both production entry points. |
+| template-management | AC-006, AC-007, AC-008, AC-009, AC-010, AC-011 | integrated | Launch the production root, open Templates, create or edit a reusable template, reopen it after restart, and retain independent catalog/session snapshot semantics. |
 
 ## Durable hand-offs
 
@@ -143,9 +144,17 @@
 - `HANDOFF-kover-threshold-recovery-20260908` — `01d0b0ed124bffdfd028bfcdf342c9fb494cfc67d6f2918a4d11d0ecc62f8b26` (.vibe/handoffs/HANDOFF-kover-threshold-recovery-20260908.json)
 - `HANDOFF-android-fragment-lint-20260908` — `b4dc1806fe657789c2d6c7ae632d77ec3a7c5f8b9b83f47a68251b1de23d41ea` (.vibe/handoffs/HANDOFF-android-fragment-lint-20260908.json)
 - `HANDOFF-release-artifact-validator-20260908` — `8f02267768ddb736408d5b645235bf28a68f5fdd573a44f12caf7cdace190b05` (.vibe/handoffs/HANDOFF-release-artifact-validator-20260908.json)
+- `HANDOFF-final-compose-ui-audit-final-20260909` — `295f09e51099b1ad49156860f144e71f2d6bd962a44aa1b0a8842fc38149f204` (.vibe/handoffs/HANDOFF-final-compose-ui-audit-final-20260909.json)
+- `HANDOFF-final-product-design-review-20260909` — `0f7bc8def049099bc8ac77c399e2a002d546677f9b97af12618f724652ca7c61` (.vibe/handoffs/HANDOFF-final-product-design-review-20260909.json)
+- `HANDOFF-final-product-design-review-corrected-20260909` — `c05f9de2f0b46468388dfe0f4082f92fb4b2f01d66082c414f21e8b2804c416d` (.vibe/handoffs/HANDOFF-final-product-design-review-corrected-20260909.json)
+- `HANDOFF-final-ui-corrections-20260909` — `0b1b765c1538988cd16a2aba9b55f6010d41e0fd9d69c541dde61c0eb3204826` (.vibe/handoffs/HANDOFF-final-ui-corrections-20260909.json)
+- `HANDOFF-final-visual-evidence-refresh-20260909` — `22b3855a12e0d9f0162d68566a226a1a6040a92a3f7462fb9e030204b168cfc9` (.vibe/handoffs/HANDOFF-final-visual-evidence-refresh-20260909.json)
+- `HANDOFF-final-compose-ui-audit-20260909` — `1594943c9bb146173117c2e3ca62a1b7f1a363fca530d3127b82e58ae264bd98` (.vibe/handoffs/HANDOFF-final-compose-ui-audit-20260909.json)
+- `HANDOFF-final-compose-ui-audit-refresh-20260909` — `81a13d2594ec29e9580ee56f04cfe0a077a3230babfa60f6b9deaa2a54846244` (.vibe/handoffs/HANDOFF-final-compose-ui-audit-refresh-20260909.json)
+- `HANDOFF-final-compose-ui-audit-supersede-20260909` — `b822276534d724fe60ef0888cd9735c8bf6f0b751d4773737dbc03e6f5841ad4` (.vibe/handoffs/HANDOFF-final-compose-ui-audit-supersede-20260909.json)
 
 ## Closure bindings
 
-- Final receipt: `none`
+- Closure manifest: `none`
 - Audit request: `none`
 - Closure audit: `none`

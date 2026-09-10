@@ -22,7 +22,7 @@ Compact uses a non-dismissible full-screen/basic decision surface sized for scro
 | Privacy context | Heading/supporting symbol | ASSET-015 | Heading is primary; icon decorative |
 | Allow | Filled button | none | Explicit advertising-consent action |
 | Decline | Outlined/text button with equal access | none | States that app continues without ad |
-| Privacy policy | Text link/button | ASSET-015 supplementary | Opens policy and returns focus |
+| Privacy policy | Text link/button | ASSET-015 supplementary | Opens `https://sedsoftware.com/apps/bagcue/policy.html` with the native external browser and returns focus |
 | Back | Icon button only when safe | ASSET-016 | Back behaves as decline/no initialization, never implicit consent |
 
 ## Text layout expectations
@@ -41,4 +41,3 @@ No legal copy is truncated. At RU 200%, the surface scrolls, both choices and po
 ## Allowed ad slots
 
 None. Yandex SDK initialization and requests are prohibited until an eligible Allow path completes.
-
