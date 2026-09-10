@@ -8,167 +8,167 @@
   "launcherDerivatives": [
     {
       "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher.png",
-      "sha256": "4f74dde282a9a88f41e150601e3e7703d20701c33d3a676909777b75c3fbe7e2"
+      "sha256": "c1a7d976a5b76e655f718ace8a297f665dc5890c08bf8a6a4a56a632b862934c"
     },
     {
       "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_background.png",
-      "sha256": "4f74dde282a9a88f41e150601e3e7703d20701c33d3a676909777b75c3fbe7e2"
+      "sha256": "f5321722b08113035948cdb12b78712818e08cd5e90da15f263c1f5ee065b694"
     },
     {
       "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
-      "sha256": "89163ed84b1f3f64b0379c09ef367fd95511e714380629bc3d74df82413a96b5"
+      "sha256": "650cc99e5843546adc0f129367b6229f3dd6f22b770acf70099b12c782147f54"
     },
     {
       "path": "androidApp/src/main/res/mipmap-hdpi/ic_launcher_monochrome.png",
-      "sha256": "1efc629f023a440120590cfec734d090f14d44fcd4a989c1ed77da660fb7adf1"
+      "sha256": "4e6613d251f184b9fa0deddc35f12d99397b1dce9a12ede4f9268e7d170be449"
     },
     {
       "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher.png",
-      "sha256": "561cfe755c31de3844d1d9dc3eff35dd6eca952babed8f15ad63420c348f73b9"
+      "sha256": "a0ba7304d3802a700201b48a92be706b5dd5648b20f2d464eeb1ca3ded47e1ba"
     },
     {
       "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_background.png",
-      "sha256": "561cfe755c31de3844d1d9dc3eff35dd6eca952babed8f15ad63420c348f73b9"
+      "sha256": "5ecd80e5755ef8a99d748a8f7b8af09bb20e44fba856d51e529787485d812c16"
     },
     {
       "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
-      "sha256": "c88d5132325bf54e408bb30653c717294f8b40da178028936e2189ed19a029db"
+      "sha256": "dffe90e10ae087b083f60ed491138a3f4da6113231e09ced1968652b9616b821"
     },
     {
       "path": "androidApp/src/main/res/mipmap-mdpi/ic_launcher_monochrome.png",
-      "sha256": "16a5124677273cef5d7cdec5980dad069892b1dfa8fab9c53621a7140aa7dfd1"
+      "sha256": "d2ee8353b1a320da6699f892b3bf7841d42151a70064c3e6ce924dfdee2b1712"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher.png",
-      "sha256": "65a61851afcdaedcb62568e70fcbef91a187776882bbeac46fcb002095bd9e5d"
+      "sha256": "bd03ebef55909197273d524927943cf53de83bb0a67951f5652e61a19c9e7394"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_background.png",
-      "sha256": "65a61851afcdaedcb62568e70fcbef91a187776882bbeac46fcb002095bd9e5d"
+      "sha256": "c1498660c1dbfca27538340d5e9c771abb8ead9b13bfc043b2f2cddf6771f59a"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
-      "sha256": "6e2840206048a696553ee4b221997b9d9cd87f75c7ec4cec0823fa61b0abe9e7"
+      "sha256": "f5d6277356a3c9ad7439638e1da31f105491049c863fbf375913b3bd84b388be"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xhdpi/ic_launcher_monochrome.png",
-      "sha256": "c6f580082a04c89456f2fa8cdae23705ef5a94cc3404f14c1ab7c71abfd0e32e"
+      "sha256": "fc51411ff98a7002cfab661d24a3531268025be317c75c1b86189c79ccdb1f21"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher.png",
-      "sha256": "70c45d500a64531ae75e29fca2d7d1d7629373a832e1495fafe2a2bf39d49044"
+      "sha256": "16decb56e2c187cf98e42a683a55f84b8f9b20cc5420b510d9238bdb3786d1dc"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_background.png",
-      "sha256": "70c45d500a64531ae75e29fca2d7d1d7629373a832e1495fafe2a2bf39d49044"
+      "sha256": "b2f481d864672aa9516467586a1f2e8395d5f48533f1c2db1db19eca39c379b3"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
-      "sha256": "9a44670d5acb25e904f20bb09314584ea2b89b450714b283eb01c4874ac84056"
+      "sha256": "807ae4ed801054d3152b4103ce6772b393f5e1eb748c64af17c687b25bf5fbb2"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xxhdpi/ic_launcher_monochrome.png",
-      "sha256": "f2cebc2c68b455132f3d48f3527143de325c737729f7cbb40a16fdbc03c79253"
+      "sha256": "ebc9601a99d2156c213f7901dc470f6413e64fd129abb6f33d896329fd047efd"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
-      "sha256": "e786fd40168a1ef057993b07ebf0109e4b45651af75e44b58513214020e3e130"
+      "sha256": "9b9c1f1e2603ef55c239470198c2af974326c8d505b44faadb9b4d849cd7e3bd"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png",
-      "sha256": "e786fd40168a1ef057993b07ebf0109e4b45651af75e44b58513214020e3e130"
+      "sha256": "b661785ff94c98ac829a8efbce77e7dbb1897e6ddd34b1bbacb1c3ce243364f9"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
-      "sha256": "bae3690216f5aa1278d7b46dcc8294c1b58adf2ac2bf7e1b381444db8d0016d9"
+      "sha256": "4c2fafd8efeaca74d796e8e9c77300c79b284e6f08ad73b55fa0655151fa0375"
     },
     {
       "path": "androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher_monochrome.png",
-      "sha256": "2ea30126f724481dca802af6fe03df3f5b4eee93cfedd0f20692bbd34a41de02"
+      "sha256": "188492d764808e1e44e7db3fa980e90fe94435ae5ebedba13c834036bb78c362"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x.png",
-      "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+      "sha256": "b67fd0c99cc3ca6302546987d0d1faaf6b42157debf91f14d1634d7705cdf556"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x~ipad.png",
-      "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+      "sha256": "b67fd0c99cc3ca6302546987d0d1faaf6b42157debf91f14d1634d7705cdf556"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20@3x.png",
-      "sha256": "676bf73cc48267ed461e93ce93bc4e274cf3b65e12997abe0bafd38ad0564c08"
+      "sha256": "efd53caed94040e5d39e1560a22f54651e40f09715af6c9673cf73a7dabe4575"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-20~ipad.png",
-      "sha256": "cad51e4c6d9815fde41c75cddc79781abeb05e3fdf234ed6e57ba8b3a80fff85"
+      "sha256": "ffb0898d67eda32a7847ce79c702f0c4eda6296f06d7deea9d7172075eca4bbb"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29.png",
-      "sha256": "dc9d8f245b87f92a8242da8a121a28541e0e3c9e9fc31289a289c79b632c85a0"
+      "sha256": "3a6edd56536d03806096bc9c888c264367ac60ae801c08f66ffd5fb0e561e165"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x.png",
-      "sha256": "ff7ab16d16bf2b2b981b123399381bf15864adeab6f9452b23e0870f22e2e23d"
+      "sha256": "f1b7661acb17fe5920c09b2188ad7aaa139ae7e4dcd0b939142aa540011ef37d"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x~ipad.png",
-      "sha256": "ff7ab16d16bf2b2b981b123399381bf15864adeab6f9452b23e0870f22e2e23d"
+      "sha256": "f1b7661acb17fe5920c09b2188ad7aaa139ae7e4dcd0b939142aa540011ef37d"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29@3x.png",
-      "sha256": "e15392ba2c07aa9d48e6f55b317b8a4fb47c7c8450e2a5d9f5d049df14c33e39"
+      "sha256": "17d1ad39edcbb61aa5dc1221c368cbc63322e528492c49cd0b20eb5e1d602a87"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-29~ipad.png",
-      "sha256": "dc9d8f245b87f92a8242da8a121a28541e0e3c9e9fc31289a289c79b632c85a0"
+      "sha256": "3a6edd56536d03806096bc9c888c264367ac60ae801c08f66ffd5fb0e561e165"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x.png",
-      "sha256": "457117fd700ffd152c30f05e76e43be15a97a100763615334373787ec6f17b39"
+      "sha256": "df9a2c88ed58efb267425859e57c40d7d22063b92f373b70a23441f837eef453"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x~ipad.png",
-      "sha256": "457117fd700ffd152c30f05e76e43be15a97a100763615334373787ec6f17b39"
+      "sha256": "df9a2c88ed58efb267425859e57c40d7d22063b92f373b70a23441f837eef453"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40@3x.png",
-      "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+      "sha256": "e8a35782ff2ec00b95d5078c2d5207cd849f6316fe2a404f819fdc8bea79c26e"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-40~ipad.png",
-      "sha256": "398349b2f7be00dfd68167e82c760045339048637f985d7efff06a9d240c510a"
+      "sha256": "b67fd0c99cc3ca6302546987d0d1faaf6b42157debf91f14d1634d7705cdf556"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@2x~car.png",
-      "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+      "sha256": "e8a35782ff2ec00b95d5078c2d5207cd849f6316fe2a404f819fdc8bea79c26e"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-60@3x~car.png",
-      "sha256": "d2b1b6b2744efd1588ce472f17caba2ab208be7cd06205f2f7f3471f7b0756dd"
+      "sha256": "db71534978161ec2ec5ee9d33b7ca512d42ab1ef25856e249d96e99b251b44b4"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon-83.5@2x~ipad.png",
-      "sha256": "6d2c72b7d6cec918fddde2ad2cef337b72855886e673e4ca018a6a9a45f8f27b"
+      "sha256": "ff6575e85aaf6c703ae15e9dcf20fc718d0532c306f124ceb4e548e9495c1f33"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x.png",
-      "sha256": "7c9f47b825346ac5ca3665c4bda9be58ced04e1090f346c6af21d284d628d0e6"
+      "sha256": "e8a35782ff2ec00b95d5078c2d5207cd849f6316fe2a404f819fdc8bea79c26e"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@2x~ipad.png",
-      "sha256": "ebdba8a4cef9278bbbf6ddff453319c96ea20d98126b8d7eca581ff6ca4c9d63"
+      "sha256": "da81dac4c189c94f067297523eb4d4ba0f7e53fd0837531f882d068e3adac6c5"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon@3x.png",
-      "sha256": "d2b1b6b2744efd1588ce472f17caba2ab208be7cd06205f2f7f3471f7b0756dd"
+      "sha256": "db71534978161ec2ec5ee9d33b7ca512d42ab1ef25856e249d96e99b251b44b4"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png",
-      "sha256": "b5052c794cf106a08dda8053f7870d6d50f1b374e132bdd03d614759bcc11bfc"
+      "sha256": "fe56a23416a60f1ee63e08960030ed2241095c0b90bb0c433bbd51297994db14"
     },
     {
       "path": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon~ipad.png",
-      "sha256": "6c7355da8be12c03ede80c4b5246948c58b73ea06199885570b453fcb20a2ebc"
+      "sha256": "33cd3b200339ecaea5272fb33198a6bde5b7ef554cceadd6f614df18e26f12a2"
     }
   ],
   "assets": [
@@ -177,7 +177,7 @@
       "outputs": [
         {
           "path": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml",
-          "sha256": "4aba441a8f0d290bb272ee5622e391eb036d83350052838126b667acc7aff8d2"
+          "sha256": "b617ad6c2c673089d7c7f17698723b08d3daa5ba8b0a418f0ead3bf1d458b735"
         }
       ],
       "provenance": {
@@ -186,8 +186,26 @@
         "rights": "Original artwork created for this BagCue project; no third-party artwork incorporated.",
         "generationRecord": {
           "path": "docs/assets/ASSET-001-generation-record.json",
-          "sha256": "6a6b5c29bb9d2451645b0d0d6ddc39461dd32e95b8d9682e9f5d94efe75ea8db"
-        }
+          "sha256": "e4c818ec5e90d698ba3bdcbc66536a88f73273a38e8200c3dbe143862a226ca3"
+        },
+        "sourceArtifacts": [
+          {
+            "path": "docs/assets/sources/bagcue_mark_v3.svg",
+            "sha256": "17b426419a08661fb4b1930bca5ac98ecb2cd611089c50aed9cc39982966b865"
+          },
+          {
+            "path": "docs/assets/sources/bagcue_mark_v3_monochrome.svg",
+            "sha256": "f11a14ff57b020255267e816c3e8a05007f71b6baa11a94eda58963c9fb9c514"
+          },
+          {
+            "path": "docs/assets/sources/bagcue_mark_v3_imagegen_concept.png",
+            "sha256": "cfb280bc9c9a22d96ad72adda645be0a21051c4d1d669e48aeb726e65cf2e4c5"
+          },
+          {
+            "path": "docs/assets/create-brand-source.cjs",
+            "sha256": "9ec60f38b321bd47af582503b9a4d556b8f7f4096eff7659c35fa87a90fe6dc2"
+          }
+        ]
       },
       "usages": [
         {
@@ -204,11 +222,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -238,11 +256,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -272,11 +290,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -306,11 +324,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -340,11 +358,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -378,11 +396,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -413,11 +431,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -448,11 +466,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -483,11 +501,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -521,11 +539,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -558,11 +576,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -592,11 +610,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -626,11 +644,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -661,11 +679,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -696,11 +714,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -736,11 +754,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     },
@@ -772,11 +790,11 @@
       "visualEvidence": [
         {
           "path": "docs/assets/asset-contact-sheet.png",
-          "sha256": "857979dbe421967d9c6254efa97a78bea8dd80608c84be52186286a1d6766461"
+          "sha256": "1e9781a89d54a55c69c4f71c36d0ca6c532841d4ad45c0c8879d9a1e535cdb73"
         },
         {
           "path": "docs/assets/visual-review.md",
-          "sha256": "5ead6cfde1f2b554fa2aa63318c1e2311f0b983d18d2e340606173aeee9822a7"
+          "sha256": "22c08868a32c76ba945b39c11bafd563ba91ebf55e1360d4e8ea15298c5d4c5e"
         }
       ]
     }

@@ -57,6 +57,12 @@ def main() -> int:
         "CreateAndroidRelease.yml", "PublishAndroidRelease.yml",
     }
     require(expected.issubset({p.name for p in workflow_dir.glob("*.yml")}), "required workflow missing")
+    publish_workflow = (workflow_dir / "PublishAndroidRelease.yml").read_text(encoding="utf-8")
+    require("FIREBASE_GOOGLE_SERVICES_JSON_BASE64" not in publish_workflow, "Firebase config must not use a GitHub secret")
+    require(
+        "test -s androidApp/google-services.json" in publish_workflow,
+        "Android release must validate the committed Firebase config",
+    )
     for path in workflow_dir.glob("*.yml"):
         text = path.read_text(encoding="utf-8")
         require("TODO" not in text and "<package" not in text, f"placeholder in {path.name}")

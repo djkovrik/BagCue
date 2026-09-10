@@ -1,0 +1,178 @@
+{
+  "count": 118,
+  "screens": [
+    {
+      "screen": "SCREEN-001",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activeadaptive.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activeadaptive.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activepartial.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activepartial.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_firstrunstarter.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_firstrunstarter.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_nocurrentnextfuture.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_nocurrentnextfuture.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_readfailure_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_readfailure_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-002",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_defaultsoffreminders.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_defaultsoffreminders.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_emptymerge.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_emptymerge.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_existingdatechoice.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_existingdatechoice.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_saveerrorime_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_saveerrorime_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_selectedkitslong_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_selectedkitslong_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_supportingpane.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_002_supportingpane.light_expanded_en-100_w960dp_h900dp_en_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-003",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_allpacked.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_allpacked.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_newofficepool.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_newofficepool.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_partialsourcehints_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_partialsourcehints_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_removeundo_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_removeundo_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_saveerror.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_saveerror.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_supportingpane.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_supportingpane.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_unresolvedbagconflict.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_003_unresolvedbagconflict.light_compact_en-100_w390dp_h844dp_en_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-004",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_adfailurenogap.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_adfailurenogap.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_consentrequired.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_consentrequired.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadaptive.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadaptive.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadhidden.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadhidden.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccesseligiblead_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccesseligiblead_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_skippednoad_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_skippednoad_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-005",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_calendarexpandedfilter_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_calendarexpandedfilter_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_deleteconfirmationundo_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_deleteconfirmationundo_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_emptyandfilteredempty.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_emptyandfilteredempty.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_listdetail.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_listdetail.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_mixedcalendarcollapsed.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_005_mixedcalendarcollapsed.light_compact_en-100_w390dp_h844dp_en_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-006",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_deleteduplicatefeedback_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_deleteduplicatefeedback_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_empty.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_empty.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_listdetail.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_listdetail.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_longcustomtemplates_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_longcustomtemplates_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_startercontent.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_006_startercontent.light_compact_en-100_w390dp_h844dp_en_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-007",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_detailpane.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_detailpane.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_longcustomime_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_longcustomime_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_newempty.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_newempty.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_savefailure.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_savefailure.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_starteroffice.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_007_starteroffice.light_compact_en-100_w390dp_h844dp_en_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-008",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_dependencydeletion.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_dependencydeletion.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_emptyerror_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_emptyerror_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_listdetail.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_listdetail.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_searchmatchsuggestion_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_searchmatchsuggestion_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_startercatalog.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_008_startercatalog.light_compact_en-100_w390dp_h844dp_en_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-009",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_detailpane.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_detailpane.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_newcatalogitem.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_newcatalogitem.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_seedoverridematch_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_seedoverridematch_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_sessionposition.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_sessionposition.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_validationsaveerrorime_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_009_validationsaveerrorime_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-010",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_adaptivegroups.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_adaptivegroups.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_alldefaultsoff.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_alldefaultsoff.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_analyticsonoff.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_analyticsonoff.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_endpointunresolved.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_endpointunresolved.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_protectedprivacychoice_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_protectedprivacychoice_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_remindersonpermissiondenied_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_remindersonpermissiondenied_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png"
+      ]
+    },
+    {
+      "screen": "SCREEN-011",
+      "snapshots": [
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_boundedmodal.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_boundedmodal.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_requiredchoice.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_requiredchoice.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_savefailure.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_savefailure.light_compact_en-100_w390dp_h844dp_en_with_background.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_textstress_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
+        "Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_textstress_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png"
+      ]
+    }
+  ]
+}

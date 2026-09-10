@@ -1,0 +1,205 @@
+{
+  "valid": true,
+  "checks": [
+    {
+      "pair": "OnPrimary/Primary Light",
+      "ratio": 8.58,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnPrimaryContainer/PrimaryContainer Light",
+      "ratio": 9.7,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSecondary/Secondary Light",
+      "ratio": 6.77,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSecondaryContainer/SecondaryContainer Light",
+      "ratio": 10.44,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnTertiary/Tertiary Light",
+      "ratio": 6.02,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnTertiaryContainer/TertiaryContainer Light",
+      "ratio": 9.35,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnError/Error Light",
+      "ratio": 6.45,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnErrorContainer/ErrorContainer Light",
+      "ratio": 13.25,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnBackground/Background Light",
+      "ratio": 15.11,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/Surface Light",
+      "ratio": 15.11,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurfaceVariant/SurfaceVariant Light",
+      "ratio": 7,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainerLowest Light",
+      "ratio": 15.55,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainerLow Light",
+      "ratio": 14.21,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainer Light",
+      "ratio": 13.48,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainerHigh Light",
+      "ratio": 12.76,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainerHighest Light",
+      "ratio": 12.07,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceDim Light",
+      "ratio": 11.19,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceBright Light",
+      "ratio": 15.11,
+      "minimum": 4.5
+    },
+    {
+      "pair": "Outline/Surface Light",
+      "ratio": 4.18,
+      "minimum": 3
+    },
+    {
+      "pair": "OnPrimary/Primary Dark",
+      "ratio": 7.9,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnPrimaryContainer/PrimaryContainer Dark",
+      "ratio": 7.11,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSecondary/Secondary Dark",
+      "ratio": 7.62,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSecondaryContainer/SecondaryContainer Dark",
+      "ratio": 7.02,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnTertiary/Tertiary Dark",
+      "ratio": 7.38,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnTertiaryContainer/TertiaryContainer Dark",
+      "ratio": 6.78,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnError/Error Dark",
+      "ratio": 7.73,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnErrorContainer/ErrorContainer Dark",
+      "ratio": 7.27,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnBackground/Background Dark",
+      "ratio": 14.27,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/Surface Dark",
+      "ratio": 14.27,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurfaceVariant/SurfaceVariant Dark",
+      "ratio": 5.31,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainerLowest Dark",
+      "ratio": 14.92,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainerLow Dark",
+      "ratio": 13.11,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainer Dark",
+      "ratio": 12.38,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainerHigh Dark",
+      "ratio": 10.84,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceContainerHighest Dark",
+      "ratio": 9.22,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceDim Dark",
+      "ratio": 14.27,
+      "minimum": 4.5
+    },
+    {
+      "pair": "OnSurface/SurfaceBright Dark",
+      "ratio": 8.67,
+      "minimum": 4.5
+    },
+    {
+      "pair": "Outline/Surface Dark",
+      "ratio": 5.9,
+      "minimum": 3
+    },
+    {
+      "pair": "Logo pocket/body (least contrasting gradient endpoints)",
+      "ratio": 5.19,
+      "minimum": 3
+    },
+    {
+      "pair": "Logo check/pocket",
+      "ratio": 6.65,
+      "minimum": 3
+    }
+  ]
+}

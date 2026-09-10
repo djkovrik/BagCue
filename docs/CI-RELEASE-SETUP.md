@@ -22,7 +22,7 @@ The committed Kover floor is `72%`. It is the conservative integer floor of the 
 - [ ] Set repository variable `RELEASE_ACTORS` to a comma-separated allowlist of GitHub logins authorized to create releases.
 - [ ] Create a dedicated public gist containing `bagcue-coverage.json`. Set variable `COVERAGE_GIST_ID` to its ID and secret `GIST_SECRET` to a fine-grained token that can edit only that gist. After the real gist exists, construct the Shields endpoint from `https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/raw/`, the actual `COVERAGE_GIST_ID`, and `/bagcue-coverage.json`, then add that resolved URL to the README.
 - [ ] Configure Git LFS checkout for the committed Paparazzi PNG set and verify CI fetches real objects, not pointers.
-- [ ] Add these secrets exactly: `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`, `FIREBASE_GOOGLE_SERVICES_JSON_BASE64`, `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON`.
+- [ ] Add these secrets exactly: `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`, `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON`. Do not create GitHub secrets for the Firebase service configuration files; they are committed repository configuration.
 
 ## Android upload key
 
@@ -35,8 +35,8 @@ The committed Kover floor is `72%`. It is the conservative integer floor of the 
 
 - [ ] Create/select the production Firebase project and register Android app `com.sedsoftware.bagcue` and Apple app `com.sedsoftware.bagcue.iosApp`.
 - [ ] Enable Analytics only. Do not enable Crashlytics or another Firebase product unless AppSpec and privacy artifacts are revised first.
-- [ ] Download Android `google-services.json`, base64 it without logging, and store it as `FIREBASE_GOOGLE_SERVICES_JSON_BASE64`. Policy: the real file is release-only runner material and is not committed.
-- [ ] Download Apple `GoogleService-Info.plist` and add it to the Xcode target only on the controlled macOS setup described in `IOS-RELEASE-SETUP.md`; do not commit an invented file.
+- [ ] Download the Android config for exactly `com.sedsoftware.bagcue`, place it at `androidApp/google-services.json`, and commit it directly. Do not base64-encode it or create a GitHub secret for it. Review the project/app identifiers before commit; never substitute a file from another Firebase project.
+- [ ] Download the Apple config for exactly `com.sedsoftware.bagcue.iosApp`, place it at `iosApp/iosApp/GoogleService-Info.plist`, add it to the `iosApp` application target, and commit it directly. Do not create a GitHub secret for it; never invent or reuse another app's file.
 - [ ] Set Analytics user/event retention to two months. Disable Google Signals, Ads linking, ads personalization, User-ID, user properties, and advertising data sharing.
 - [ ] Verify collection is disabled before first opt-in, disabling takes effect immediately and resets local Analytics/app-instance data, and only the six allowlisted content-free events appear. Never send item/template/bag text, IDs, ad unit IDs, region payloads, or user-authored content.
 - [ ] Firebase Crashlytics/mapping verification is **NOT APPLICABLE**: BagCue does not ship Crashlytics. R8 mapping remains a Google Play release artifact.
@@ -71,4 +71,4 @@ Retry an external failure by manually invoking `Publish Android release` with th
 
 - `QG-003`: **NOT RUN on Windows** until CocoaPods resolution, shared iOS tests/framework link, and workspace `xcodebuild` pass on the specified macOS/Xcode toolchain.
 - `QG-005`: **NOT RUN** until the real Play account, signing, listings, policy forms, hosted policy, service account, Internal upload, and publication result are verified.
-- Firebase/Yandex console ownership, configured secrets, public policy hosting, device diagnostics, environment protection, reviewers, and branch protection remain external state; committed automation does not prove them.
+- Firebase/Yandex console ownership, the correctness of the committed Firebase service files, configured non-Firebase secrets, public policy hosting, device diagnostics, environment protection, reviewers, and branch protection remain external state; committed automation/configuration does not prove them.

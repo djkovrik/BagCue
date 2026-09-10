@@ -13,10 +13,7 @@ try {
 }
 
 const root = path.resolve(__dirname, '../..');
-const blue = '#2563EB';
-const teal = '#0E7490';
-const light = '#ECFEFF';
-const dark = '#082F49';
+const light = '#FFF8F0';
 
 const iconPaths = {
   today: 'M12,3.2L3,10.4V20C3,21.1 3.9,22 5,22H10V16H14V22H19C20.1,22 21,21.1 21,20V10.4L12,3.2ZM19,20H16V14H8V20H5V11.4L12,5.8L19,11.4V20Z',
@@ -37,13 +34,25 @@ const iconPaths = {
   bag: 'M20,6H16V4C16,2.89 15.11,2 14,2H10C8.89,2 8,2.89 8,4V6H4C2.89,6 2,6.89 2,8V19C2,20.11 2.89,21 4,21H20C21.11,21 22,20.11 22,19V8C22,6.89 21.11,6 20,6ZM10,4H14V6H10V4ZM20,19H4V14H9V15C9,15.55 9.45,16 10,16H14C14.55,16 15,15.55 15,15V14H20V19ZM11,14V12H13V14H11ZM20,12H15V11C15,10.45 14.55,10 14,10H10C9.45,10 9,10.45 9,11V12H4V8H20V12Z'
 };
 
-const markSvg = (size, background = null, monochrome = false) => Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 48 48">${background ? `<rect width="48" height="48" rx="10" fill="${background}"/>` : ''}<g transform="translate(4.8 4.8) scale(.8)"><path fill="${monochrome ? '#000' : teal}" d="M10 15C10 11.69 12.69 9 16 9H32C35.31 9 38 11.69 38 15V19H40C42.21 19 44 20.79 44 23V37C44 40.31 41.31 43 38 43H10C6.69 43 4 40.31 4 37V23C4 20.79 5.79 19 8 19H10V15ZM14 19H34V15C34 13.9 33.1 13 32 13H16C14.9 13 14 13.9 14 15V19ZM8 23V37C8 38.1 8.9 39 10 39H38C39.1 39 40 38.1 40 37V23H8Z"/><path fill="${monochrome ? '#000' : blue}" d="M18.2 27.2L22.3 31.3L31.8 21.8C32.58 21.02 33.84 21.02 34.62 21.8C35.4 22.58 35.4 23.84 34.62 24.62L23.72 35.52C22.94 36.3 21.68 36.3 20.9 35.52L15.38 30C14.6 29.22 14.6 27.96 15.38 27.18C16.16 26.4 17.42 26.4 18.2 27.2Z"/></g></svg>`);
+const markSource = fs.readFileSync(path.join(root, 'docs/assets/sources/bagcue_mark_v3.svg'), 'utf8');
+const markContent = markSource.replace(/^.*?<svg[^>]*>|<\/svg>\s*$/gs, '');
+const monochromeContent = fs.readFileSync(path.join(root, 'docs/assets/sources/bagcue_mark_v3_monochrome.svg'), 'utf8').replace(/^.*?<svg[^>]*>|<\/svg>\s*$/gs, '');
+const markSvg = (size, background = null, monochrome = false, scale = .8) => {
+  const artwork = monochrome
+    ? monochromeContent
+    : markContent;
+  const inset = 24 * (1 - scale);
+  return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 48 48">${background ? `<rect width="48" height="48" rx="10" fill="${background}"/>` : ''}<g transform="translate(${inset} ${inset}) scale(${scale})">${artwork}</g></svg>`);
+};
 
 const opaqueMarkSvg = (size, background, monochrome = false) =>
   Buffer.from(markSvg(size, background, monochrome).toString().replace(' rx="10"', ''));
 
 async function png(svg, output, size) {
-  await sharp(svg).resize(size, size).png({ compressionLevel: 9, adaptiveFiltering: true }).toFile(output);
+  const pipeline = sharp(svg).resize(size, size);
+  // Store icons must have no alpha channel; adaptive layers retain real alpha.
+  if (path.basename(output) === 'ic_launcher.png' || path.basename(output) === 'ic_launcher_background.png' || output.includes('AppIcon.appiconset')) pipeline.flatten({ background: light }).removeAlpha();
+  await pipeline.png({ compressionLevel: 9, adaptiveFiltering: true }).toFile(output);
 }
 
 async function main() {
@@ -52,9 +61,11 @@ async function main() {
   for (const [name, size] of Object.entries(density)) {
     const dir = path.join(android, `mipmap-${name}`);
     await png(opaqueMarkSvg(size, light), path.join(dir, 'ic_launcher.png'), size);
-    await png(opaqueMarkSvg(size, light), path.join(dir, 'ic_launcher_background.png'), size);
-    await png(markSvg(size), path.join(dir, 'ic_launcher_foreground.png'), size);
-    await png(markSvg(size, null, true), path.join(dir, 'ic_launcher_monochrome.png'), size);
+    const adaptiveSize = Math.round(size * 108 / 48);
+    await png(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108"><rect width="108" height="108" fill="${light}"/></svg>`), path.join(dir, 'ic_launcher_background.png'), adaptiveSize);
+    // Keep the complete mark within the central 66dp adaptive safe region.
+    await png(markSvg(adaptiveSize, null, false, .64), path.join(dir, 'ic_launcher_foreground.png'), adaptiveSize);
+    await png(markSvg(adaptiveSize, null, true, .64), path.join(dir, 'ic_launcher_monochrome.png'), adaptiveSize);
   }
 
   const iosDir = path.join(root, 'iosApp/iosApp/Assets.xcassets/AppIcon.appiconset');
@@ -79,7 +90,7 @@ async function main() {
     const y = 110 + Math.floor(index / 4) * 94;
     return `<g transform="translate(${x} ${y})"><rect width="136" height="70" rx="12" fill="#0F172A"/><path transform="translate(12 11) scale(2)" fill="#E2E8F0" d="${iconPaths[name]}"/><text x="64" y="64" text-anchor="middle" font-family="Arial" font-size="11" fill="#CBD5E1">${name}</text></g>`;
   }).join('');
-  const sheet = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="560"><rect width="680" height="560" fill="#F1F5F9"/><rect x="680" width="680" height="560" fill="#020617"/><text x="28" y="42" font-family="Arial" font-size="22" font-weight="700" fill="#0F172A">BagCue assets · light · 24dp icons</text><text x="708" y="42" font-family="Arial" font-size="22" font-weight="700" fill="#F8FAFC">BagCue assets · dark · 24dp icons</text><g transform="translate(28 52)"><rect width="48" height="48" rx="10" fill="#ECFEFF"/>${markSvg(48).toString().replace(/^.*?<svg[^>]*>|<\/svg>$/g, '')}</g><g transform="translate(708 52)"><rect width="48" height="48" rx="10" fill="#082F49"/>${markSvg(48).toString().replace(/^.*?<svg[^>]*>|<\/svg>$/g, '')}</g>${cells}${darkCells}</svg>`);
+  const sheet = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="560"><rect width="680" height="560" fill="#F1F5F9"/><rect x="680" width="680" height="560" fill="#020617"/><text x="28" y="42" font-family="Arial" font-size="22" font-weight="700" fill="#0F172A">BagCue assets · light · 24dp icons</text><text x="708" y="42" font-family="Arial" font-size="22" font-weight="700" fill="#F8FAFC">BagCue assets · dark · 24dp icons</text><g transform="translate(28 52)"><rect width="48" height="48" rx="10" fill="#FFF8F0"/>${markSvg(48).toString().replace(/^.*?<svg[^>]*>|<\/svg>$/g, '')}</g><g transform="translate(708 52)"><rect width="48" height="48" rx="10" fill="#13171F"/>${markSvg(48).toString().replace(/^.*?<svg[^>]*>|<\/svg>$/g, '')}</g>${cells}${darkCells}</svg>`);
   await sharp(sheet).png({ compressionLevel: 9 }).toFile(path.join(root, 'docs/assets/asset-contact-sheet.png'));
 }
 

@@ -84,7 +84,7 @@ Production-рекламный блок Android уже создан пользо�
 
 QG-009 больше нельзя считать заблокированным только из-за отсутствия Android ad unit ID. Закрывай его полностью только после проверки конфигурации РСЯ и контролируемого diagnostic-теста на физическом Android-устройстве. Если такая проверка недоступна, оставь только эту непроверенную часть как точный внешний блокер. Не приравнивай наличие ID к подтверждённому production-показу или владению кабинетом.
 
-Не подставляй фиктивные Firebase, signing, Google Play или другие credentials. Не заявляй внешний gate выполненным без проверяемых доказательств.
+Коммить реальные Firebase service configuration files напрямую как `androidApp/google-services.json` и `iosApp/iosApp/GoogleService-Info.plist`; не создавай для них GitHub Secrets и не восстанавливай их из base64 в CI. Перед коммитом проверь соответствие application/bundle ID. Не подставляй фиктивные Firebase, signing, Google Play или другие credentials. Не заявляй внешний gate выполненным без проверяемых доказательств.
 
 UI реализуй по утверждённым SCREEN/FLOW-файлам. Используй Lazyweb до проектирования интерфейса. Рано проверь сборку и scanner на небольшом production preview, затем компилируй previews вместе с изменяемым UI. Record/inspect/verify выполняй для затронутых goldens на границе стабильного экрана или capability package и после визуальных изменений, а не после каждого AC или handoff. Сохрани light/dark для каждого обязательного primary state; дополнительные locale/font/device комбинации выбирай по рискам и pairwise-покрытию, сохраняя все объявленные риски. Отложенный golden-test оставляет AC implemented-unverified.
 

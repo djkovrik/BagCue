@@ -8,7 +8,7 @@ The application adapter accepts only the six names declared by `AnalyticsEventNa
 
 Before a release that contains Firebase, the owner must:
 
-1. Create the Android and iOS Firebase applications and supply the correct production configuration files through the release secret/configuration process. Never commit credentials for an unrelated project.
+1. Create the Android and iOS Firebase applications, download their correct production configuration files, and commit them directly as `androidApp/google-services.json` and `iosApp/iosApp/GoogleService-Info.plist`. These service files are approved repository configuration and must not be stored in GitHub Secrets. Verify their project/app identifiers and never commit a file for an unrelated project.
 2. Confirm in both packaged applications that Analytics collection starts disabled.
 3. In the Analytics/Firebase consoles, set event and user-level retention to two months and disable Google Signals, ads personalization, User-ID, custom user properties, Google Ads linking, and advertising-data sharing.
 4. Confirm the Android merged release manifest has no `com.google.android.gms.permission.AD_ID`, `ACCESS_ADSERVICES_AD_ID`, `ACCESS_ADSERVICES_ATTRIBUTION`, or `android.ext.adservices`; confirm IDFA is not linked on iOS. The repository uses the Firebase Analytics/Core product rather than the AdSupport product.

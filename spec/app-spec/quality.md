@@ -41,11 +41,11 @@ Run the complete review once on stable approved primary-screen PNGs in numeric s
 
 ## Android platform gate
 
-QG-002 requires Android compilation/tests, application ID `com.sedsoftware.bagcue`, min/target SDK decisions from current project standards, local notifications without exact alarms unless later justified, Firebase Analytics default-off configuration, disabled Advertising ID collection, no Google Ads linkage/signals/personalization, Yandex privacy-before-init, release-only real ad ID injection, manifest permission audit, install smoke, process recreation, and offline behavior.
+QG-002 requires Android compilation/tests, application ID `com.sedsoftware.bagcue`, a committed `androidApp/google-services.json` registered for that exact application ID, min/target SDK decisions from current project standards, local notifications without exact alarms unless later justified, Firebase Analytics default-off configuration, disabled Advertising ID collection, no Google Ads linkage/signals/personalization, Yandex privacy-before-init, release-only real ad ID injection, manifest permission audit, install smoke, process recreation, and offline behavior. The Firebase service file is repository configuration and has no GitHub-secret counterpart.
 
 ## iOS platform gate
 
-QG-003 requires a macOS CI job named `Test and link iOS` (or an explicitly mapped stable equivalent) that compiles/tests the shared target, links the iOS application with bundle ID `com.sedsoftware.bagcue.iosApp`, resolves CocoaPods/Xcode dependencies including Yandex SDK, verifies localized native resources, and proves nullable advertising configuration prevents SDK initialization and requests. CI/release contains no production, invented, or demo iOS ad unit ID. Windows does not claim iOS verification.
+QG-003 requires a macOS CI job named `Test and link iOS` (or an explicitly mapped stable equivalent) that compiles/tests the shared target, links the iOS application with bundle ID `com.sedsoftware.bagcue.iosApp` and the committed `iosApp/iosApp/GoogleService-Info.plist` registered for that exact bundle ID, resolves CocoaPods/Xcode dependencies including Yandex SDK, verifies localized native resources, and proves nullable advertising configuration prevents SDK initialization and requests. The Firebase service file is repository configuration and has no GitHub-secret counterpart. CI/release contains no production, invented, or demo iOS ad unit ID. Windows does not claim iOS verification.
 
 ## Privacy, ads, and analytics
 
@@ -74,7 +74,7 @@ QG-010 requires a delivery-time Markdown guide under `docs/` for the user's MacB
 - QG-005: Google Play developer account, signing, EN/RU listing, hosted policy URL, Data safety answers, content rating, 18+ positioning without an age gate, country availability, credentials, and actual publication result.
 - QG-008: live endpoint HTTPS/schema/expiry, protected/non-protected/unknown controlled routes, trusted-proxy spoof resistance, GeoIP freshness, aggregate-only observability, raw-IP/header redaction, policy owner, and legal review of the protected set/copy.
 - QG-009: real user-supplied Android Yandex ad unit ID for monetized public build, safe secret/config injection, debug/test separation, and controlled physical-device diagnostics.
-- QG-011: Firebase project/app ownership, `com.sedsoftware.bagcue` registration, configuration delivery, two-month retention, disabled Ads features/linkage/data sharing, user deletion/control capabilities, and Data safety disclosure.
+- QG-011: Firebase project/app ownership; Android `com.sedsoftware.bagcue` and Apple `com.sedsoftware.bagcue.iosApp` registration; direct commit of the matching files at `androidApp/google-services.json` and `iosApp/iosApp/GoogleService-Info.plist` with no GitHub secrets for either file; packaged-file verification; two-month retention; disabled Ads features/linkage/data sharing; user deletion/control capabilities; and Data safety disclosure.
 
 External claims remain blocked until verified; committed CI/configuration is not proof of external publication readiness.
 

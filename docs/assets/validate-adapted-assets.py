@@ -29,8 +29,9 @@ def main() -> int:
         for name in ("ic_launcher.png", "ic_launcher_background.png", "ic_launcher_foreground.png", "ic_launcher_monochrome.png"):
             with Image.open(base / name) as image:
                 image.load()
-                if image.size != (size, size):
-                    errors.append(f"{name} {density}: expected {size}x{size}, got {image.size}")
+                expected_size = size if name == "ic_launcher.png" else round(size * 108 / 48)
+                if image.size != (expected_size, expected_size):
+                    errors.append(f"{name} {density}: expected {expected_size}x{expected_size}, got {image.size}")
                 alpha = image.convert("RGBA").getchannel("A").getextrema()
                 if name in ("ic_launcher_foreground.png", "ic_launcher_monochrome.png") and alpha != (0, 255):
                     errors.append(f"{name} {density}: expected transparent and visible pixels, got alpha {alpha}")
@@ -51,6 +52,8 @@ def main() -> int:
                 errors.append(f"{item['filename']}: expected {expected}x{expected}, got {image.size}")
             if image.convert("RGBA").getchannel("A").getextrema() != (255, 255):
                 errors.append(f"{item['filename']}: iOS launcher icons must be opaque")
+            if "A" in image.getbands():
+                errors.append(f"{item['filename']}: iOS launcher icons must not contain an alpha channel")
     print(json.dumps({"valid": not errors, "errors": errors, "warnings": warnings}, indent=2))
     return 1 if errors else 0
 

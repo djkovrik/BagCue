@@ -1,28 +1,19 @@
 {
   "schemaVersion": "1.0",
   "assetId": "ASSET-001",
-  "createdAt": "2026-09-08",
+  "createdAt": "2026-09-10",
   "method": "create-vector",
-  "tool": "Codex apply_patch with deterministic local Sharp derivative script",
-  "brief": "Original text-free BagCue mark combining an open bag and check mark in a calm blue-teal palette.",
-  "palette": {
-    "bag": "#0E7490",
-    "check": "#2563EB",
-    "launcherBackground": "#ECFEFF"
-  },
-  "editableSource": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml",
+  "tool": "OpenAI built-in image generation for the user-approved concept; shared path inventory generates SVG and Compose vector XML, Sharp exports platform icons",
+  "brief": "Approved variant 2: navy everyday backpack, apricot front pocket, dark check, ivory checklist, muted blue handle, restrained depth.",
+  "palette": {"body": "#263653", "bodyHighlight": "#304767", "pocket": "#F0BE91", "check": "#263653", "handle": "#819DC5", "launcherBackground": "#FFF8F0"},
+  "editableSource": "docs/assets/create-brand-source.cjs",
+  "designSource": "docs/assets/sources/bagcue_mark_v3.svg",
+  "generatedConcept": "docs/assets/sources/bagcue_mark_v3_imagegen_concept.png",
+  "generatedConceptOriginalFilename": "exec-38309478-e13e-4611-8085-247aa75a9bb7.png",
+  "selection": "User selected variant 2 (navy/apricot) and authorized runtime, launcher and theme integration. The approved composition is adapted into scalable geometry with subtle linear gradients; the raster is provenance, not a runtime dependency.",
+  "generationPromptSummary": "Preserve the approved backpack silhouette, loop handle, shoulder straps, checklist and check. Midnight navy #263653 body, soft apricot #F0BE91 pocket, navy check, muted cornflower #819DC5 handle, ivory checklist. Strong luminance separation, 85 percent flat and 15 percent dimensional, subtle tonal edges and contact shadows, no plastic, fine seams, text or app tile.",
   "derivativeScript": "docs/assets/generate-assets.cjs",
-  "outputs": {
-    "composeRuntime": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml",
-    "androidLauncher": "androidApp/src/main/res/mipmap-{mdpi,hdpi,xhdpi,xxhdpi,xxxhdpi}/ic_launcher*.png",
-    "iosLauncher": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/*.png",
-    "visualReview": "docs/assets/asset-contact-sheet.png"
-  },
-  "selection": "Single approved original vector; no remote generation service or external artwork was used.",
-  "exportSteps": [
-    "Render platform derivatives deterministically from the same vector geometry using Sharp.",
-    "Keep Compose and adaptive foreground/monochrome artwork transparent.",
-    "Flatten iOS and legacy Android icons on the approved launcher background.",
-    "Inspect the 1024px iOS marketing icon and the light/dark 24dp contact sheet."
-  ]
+  "outputs": {"composeRuntime": "shared/compose/src/commonMain/composeResources/drawable/bagcue_mark.xml", "androidLauncher": "androidApp/src/main/res/mipmap-{mdpi,hdpi,xhdpi,xxhdpi,xxxhdpi}/ic_launcher*.png", "iosLauncher": "iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/*.png"},
+  "exportSteps": ["Generate SVG and Compose XML from one path inventory.", "Render legacy launcher artwork at 48dp and adaptive layers at 108dp per density; inset adaptive foreground into the central safe area.", "Use a solid background layer and a dedicated monochrome contour with a transparent check cutout.", "Export every catalogued iOS icon as RGB without alpha.", "Record and verify all 118 production previews in light/dark, EN and RU stress variants."],
+  "rights": "Original artwork created for BagCue; no third-party artwork incorporated."
 }

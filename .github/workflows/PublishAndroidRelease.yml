@@ -61,19 +61,18 @@ jobs:
           distribution: temurin
           java-version: "17"
       - uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
-      - name: Materialize release-only credentials and notes
+      - name: Validate committed Firebase config and materialize release credentials and notes
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ steps.tag.outputs.tag }}
           ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-          FIREBASE_GOOGLE_SERVICES_JSON_BASE64: ${{ secrets.FIREBASE_GOOGLE_SERVICES_JSON_BASE64 }}
           GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
         run: |
-          for name in ANDROID_KEYSTORE_BASE64 FIREBASE_GOOGLE_SERVICES_JSON_BASE64 GOOGLE_PLAY_SERVICE_ACCOUNT_JSON; do
+          for name in ANDROID_KEYSTORE_BASE64 GOOGLE_PLAY_SERVICE_ACCOUNT_JSON; do
             test -n "${!name}" || { echo "Missing secret: $name" >&2; exit 1; }
           done
+          test -s androidApp/google-services.json || { echo 'Missing committed Firebase config: androidApp/google-services.json' >&2; exit 1; }
           printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/bagcue-upload.keystore"
-          printf '%s' "$FIREBASE_GOOGLE_SERVICES_JSON_BASE64" | base64 --decode > androidApp/google-services.json
           printf '%s' "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" > "$RUNNER_TEMP/google-play-service-account.json"
           mkdir -p "$RUNNER_TEMP/whatsnew"
           gh release download "$TAG" --pattern 'release-notes-*.txt' --dir "$RUNNER_TEMP"

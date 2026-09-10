@@ -8,7 +8,7 @@
       "screen": "SCREEN-001",
       "path": "docs/design/visual-review/screens/SCREEN-001-contact-sheet.png",
       "cellCount": 10,
-      "sha256": "d6c0a32549e87f306bdbaa88e4c8ff911a2e59983f0b91156a137d87e41d754d"
+      "sha256": "2a0e94b8cd40f2a7641cd89cf6cb4db30163cd0d31c278dc8d7b69d100e84fce"
     },
     {
       "screen": "SCREEN-002",
@@ -26,7 +26,7 @@
       "screen": "SCREEN-004",
       "path": "docs/design/visual-review/screens/SCREEN-004-contact-sheet.png",
       "cellCount": 12,
-      "sha256": "893900bb63a6157d7c50d86ecbd013de86e81130a524c69b453e126b86a471e7"
+      "sha256": "9f70c18ad3a5bdf83d4b6b26e9c2f735417c599e7edd81bdb554905caee8a7fb"
     },
     {
       "screen": "SCREEN-005",
@@ -62,13 +62,13 @@
       "screen": "SCREEN-010",
       "path": "docs/design/visual-review/screens/SCREEN-010-contact-sheet.png",
       "cellCount": 12,
-      "sha256": "6358c52c2c06fd35a4b72346b8d210c94b1d4752493ff35c372115bd4f91abe6"
+      "sha256": "b6aaa2dc851f8422e589c988cf4f781855809ea37d164cab5c32b9e9f17b59e9"
     },
     {
       "screen": "SCREEN-011",
       "path": "docs/design/visual-review/screens/SCREEN-011-contact-sheet.png",
       "cellCount": 8,
-      "sha256": "8593fea65203269bc46cb644a1dd2cfe1e8956c8990bbde469b00831f026fe2f"
+      "sha256": "f67051c8c8d65a6636c6c6d0cbbe1c0468bd6a7f7baa77ba599dace1f9d651a9"
     }
   ],
   "entries": [
@@ -79,7 +79,7 @@
       "row": 1,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activeadaptive.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
-      "sha256": "7dcaab7009ca5692f758b8c2c33bc41f34e98bb50a28fee10c9c50194d09719b",
+      "sha256": "6699f281ea6496cffa835e59acd345d68db5e473b3576b246470be83e30646d0",
       "pixelWidth": 276,
       "pixelHeight": 276
     },
@@ -90,7 +90,7 @@
       "row": 1,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activeadaptive.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
-      "sha256": "5bfa6572b9502cd5ae3534dee992947137e7ca2c23877928cc3ef7dbe5ef3eb4",
+      "sha256": "8c060d0671e0cc58b205a340d6331bfa1215701f66d0b59fe6c2cafbb51b6bf2",
       "pixelWidth": 276,
       "pixelHeight": 276
     },
@@ -101,7 +101,7 @@
       "row": 1,
       "column": 3,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activepartial.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "b0db1f7947a5d11259774a09b0e8ef24e6c28f594e1460347bdbe27ccba637e8",
+      "sha256": "38110a024717f576d4d35dcc2b3c3b460967d2e6c7fc9ff96723be555f20bafc",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -112,7 +112,7 @@
       "row": 1,
       "column": 4,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_activepartial.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "856ed58a0da98eb25b8c1d7521858aa7084407abd89f971fb24ee6ad60003282",
+      "sha256": "eed0d6841726a6b4417f5a88d36c082c0e50397e639414eadfc2494ada2f32a6",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -123,7 +123,7 @@
       "row": 2,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_firstrunstarter.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "5436f38f5482e7caa1ad86503b85106900afe56002e77b65db930f36d6d73475",
+      "sha256": "71960b3468824c3019da4b6a9ce832927b3b4343528938e6e58742a4eb66ad9b",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -134,7 +134,7 @@
       "row": 2,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_firstrunstarter.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "560f92d89c5f3576a5a67ba652d868a2742d1be4dcd93cdcc999405a2133b90b",
+      "sha256": "76e8ed6149cb17e243450d89e7a13bc3c3278631015b48f6f7711765b0aceab1",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -145,7 +145,7 @@
       "row": 2,
       "column": 3,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_nocurrentnextfuture.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "5436f38f5482e7caa1ad86503b85106900afe56002e77b65db930f36d6d73475",
+      "sha256": "71960b3468824c3019da4b6a9ce832927b3b4343528938e6e58742a4eb66ad9b",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -156,7 +156,7 @@
       "row": 2,
       "column": 4,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_nocurrentnextfuture.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "560f92d89c5f3576a5a67ba652d868a2742d1be4dcd93cdcc999405a2133b90b",
+      "sha256": "76e8ed6149cb17e243450d89e7a13bc3c3278631015b48f6f7711765b0aceab1",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -167,7 +167,7 @@
       "row": 3,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_readfailure_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
-      "sha256": "62544d1c20011466eb47c8fd05bb8f0b57e4dbf4020f8826c70e95dc47dc5c69",
+      "sha256": "cfb0256ba07ba6e4a668e8fb3730c3f89890488b532534a4860ea7dc54140873",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -178,7 +178,7 @@
       "row": 3,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_001_readfailure_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
-      "sha256": "e5158bbcd17b0985073da518cfd8ad7f30937aa39a67060a47b1e39c64438872",
+      "sha256": "793cf04a5109ebd7cc9f1782460c37874b0c2eb6f4904bba69f23232db5a7e50",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -475,7 +475,7 @@
       "row": 1,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_adfailurenogap.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "5fbfd682929f4d4822cfff04a4b861750d4bb7363c8cfb51ed196e712912c8dd",
+      "sha256": "116848488cc96cfb080c208ece9b2dcfa1f9e3f1ec8f3b6398aebe8b07309f64",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -486,7 +486,7 @@
       "row": 1,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_adfailurenogap.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "40aedb7b5ae583883dfd2c186fab96ff6c9301a74ab19437f70e503e3837bc0e",
+      "sha256": "0e1a6acc80b39e8fcbd54a06350c8fbf2d97a7bf150789a8c127bf1ba0725232",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -497,7 +497,7 @@
       "row": 1,
       "column": 3,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_consentrequired.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "628c4972829ae646defce308c8669769bbdf2a0b32e51b82ad6df38dbcb7472b",
+      "sha256": "0020944d2f654ff82af038ee88441cec960ddb32f3b6b1f364ae49cb9d7b2784",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -508,7 +508,7 @@
       "row": 1,
       "column": 4,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_consentrequired.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "cdaf26fc213eea6d2fc2aa9a3ed9cb1f3e04984e6ff471381eed6029e85d62cc",
+      "sha256": "006ff95a778e581ca2df66a632a31cf46496f67082c0d5a656577b3ead0235f2",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -519,7 +519,7 @@
       "row": 2,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadaptive.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
-      "sha256": "9fb6957f0eb2c5251f83ae0c1282c38f40e62ecdb21c71c94b66ce324705c6cb",
+      "sha256": "5f3719c93f383c03408c86bc095da62a34b2515060f2caeedd625ae92d0c0e11",
       "pixelWidth": 276,
       "pixelHeight": 276
     },
@@ -530,7 +530,7 @@
       "row": 2,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadaptive.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
-      "sha256": "f6783f1b916b81c6fd844e6387be6a2324eea51a0c252142f307a56b435f1012",
+      "sha256": "36bcae5f31b17e66a311c0599998bc633fa9b92d2a59df8d94eaf15e6d2f9daf",
       "pixelWidth": 276,
       "pixelHeight": 276
     },
@@ -541,7 +541,7 @@
       "row": 2,
       "column": 3,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadhidden.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "5fbfd682929f4d4822cfff04a4b861750d4bb7363c8cfb51ed196e712912c8dd",
+      "sha256": "116848488cc96cfb080c208ece9b2dcfa1f9e3f1ec8f3b6398aebe8b07309f64",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -552,7 +552,7 @@
       "row": 2,
       "column": 4,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccessadhidden.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "40aedb7b5ae583883dfd2c186fab96ff6c9301a74ab19437f70e503e3837bc0e",
+      "sha256": "0e1a6acc80b39e8fcbd54a06350c8fbf2d97a7bf150789a8c127bf1ba0725232",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -563,7 +563,7 @@
       "row": 3,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccesseligiblead_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
-      "sha256": "0f08e6f72708260ac0f8e0c443eeedbc8103dc13c7f61a6a5fed84e1bf57074c",
+      "sha256": "0e5ddba10f850f0cd75766650bdb69faa22162b1a48c15ad2fa1d2f5029b5fa2",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -574,7 +574,7 @@
       "row": 3,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_fullsuccesseligiblead_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
-      "sha256": "ce7e6063d70b5960e78ea1c5269b5ebd4800d6f978adb6131ac616d1470e8fb4",
+      "sha256": "1a4be0ad89154e5d6393ce2e210c5ee0a4f489068b77e5184eda50dcd526d81c",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -585,7 +585,7 @@
       "row": 3,
       "column": 3,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_skippednoad_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
-      "sha256": "c658ec5adf5cb3e8bc811189e197e32b1b88d251b2902cfcf1ca29e047f53436",
+      "sha256": "7413ae7eb34fd83cc67d29ca533efd418e43102080ed55362aea5223d8ab609a",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -596,7 +596,7 @@
       "row": 3,
       "column": 4,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_004_skippednoad_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
-      "sha256": "e19f959b408e4d47efd29604107988bf12aa018c7185bec9218a41db1bc54ef3",
+      "sha256": "4502caf9ca17da8fbcdd9dd077273005528b86caff8eb9c1fc784e9fb98804de",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -1157,7 +1157,7 @@
       "row": 1,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_adaptivegroups.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
-      "sha256": "02c9b515109f0370ec7ff6c4ea6f6662523b7c4a9482c62d81e1fbb876a8d957",
+      "sha256": "64c44ac75ed83f39cac407e343919c63a054244b555ff42ca81c69f75accc38e",
       "pixelWidth": 276,
       "pixelHeight": 276
     },
@@ -1168,7 +1168,7 @@
       "row": 1,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_adaptivegroups.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
-      "sha256": "d8c66e2f094a6edd422db415f26944d1aeea5bb95b8e951be533e8c4aab5eaf9",
+      "sha256": "7c02335c3a2d2bb05f5877936206c3393ad6a8cb0ae00ad371b3daa7c0f4edc4",
       "pixelWidth": 276,
       "pixelHeight": 276
     },
@@ -1179,7 +1179,7 @@
       "row": 1,
       "column": 3,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_alldefaultsoff.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "4b893f35c93a8cbe2ddf50aac7fe63f58fc5a534a72960baf9518ada3fdee148",
+      "sha256": "1b90bf2c2232ea7ae0bfc2022f218ab2b88986cc99fff224f76a66de7899b24b",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -1190,7 +1190,7 @@
       "row": 1,
       "column": 4,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_alldefaultsoff.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "69a3b83fb985dbc6274afa51fe47b0d1e06dd5ab2f6ad309d5c6b04c6ea2f3c5",
+      "sha256": "47b6e7401fad449d284545e4f91b00c34aa9d946c276f58b67df4ec3907ef071",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -1201,7 +1201,7 @@
       "row": 2,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_analyticsonoff.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "cb5e09440b746b8c56fc76fd54204fce6a6ebe634f853d1635a6f7152df3f73c",
+      "sha256": "c0484c9c34f39fb5d02f37b188acd5b1db879a0106ea37e2480ac1ad2177482c",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -1212,7 +1212,7 @@
       "row": 2,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_analyticsonoff.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "de072a98471129ababa75d9cf4045d0f222745cbcd9581b6199a2e643c25c05a",
+      "sha256": "56ee2916065a1d60e00d26ed35f7f84df083591bd8a0b2e0af47a1805c1b4fbb",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -1223,7 +1223,7 @@
       "row": 2,
       "column": 3,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_endpointunresolved.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "7d41cfeac28ca49aa1ad6c8ea41b63a9bcd03624a1d981ddde03bce0e8c0e61e",
+      "sha256": "0f8d556c19e09dd16703f1fccb1c60168ce7da048040e4b85d445b8fbb89d8e0",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -1234,7 +1234,7 @@
       "row": 2,
       "column": 4,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_endpointunresolved.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "1ddd0e67dd19a5264e914e3391a4281fe5fdfe5a4e41de8d2d836d0310cd3b13",
+      "sha256": "777d3eb82ff47e0fdaab8650268bab5158ba08ff9d0849d0b8dc9ada1f12cc89",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -1245,7 +1245,7 @@
       "row": 3,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_protectedprivacychoice_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
-      "sha256": "aa6de4478d1c4a2ad903970e2ab17fbcc874b3dad20f86daafb5f3339224eec1",
+      "sha256": "8c9b1d0724d81f7b3e9a51c7bd033d2a12197116ed4df8fc0ed627c833806cd9",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -1256,7 +1256,7 @@
       "row": 3,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_protectedprivacychoice_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
-      "sha256": "f4bcf8031a1473455a2e5dd9a39d66c3b50b6b7d6cc73f5437e58a3146aec842",
+      "sha256": "16f0f5b0c61ecca0f4005c531a8dca429de4b6dca64a8b6394e3439d541ee7af",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -1267,7 +1267,7 @@
       "row": 3,
       "column": 3,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_remindersonpermissiondenied_ru200.dark_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background_night.png",
-      "sha256": "dff89e0357e761dfef095e2a2ce461f101859ff4d17a12c53cd9761b6f777c07",
+      "sha256": "56a176689bf695c00469ed2b9f51d7715cae932b5ffd3cf9b76e74b696133fcd",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -1278,7 +1278,7 @@
       "row": 3,
       "column": 4,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_010_remindersonpermissiondenied_ru200.light_compact_ru-200_w390dp_h1260dp_ru_font_2_0f_with_background.png",
-      "sha256": "c221e4e491cbcb4288b6d215eafea2a0d317ec7013f05e58d82e432398ceaecf",
+      "sha256": "1a403e1dc9fc8df04201874595a4ff58d66da9e385e9d7cfa8ff110f84105e8a",
       "pixelWidth": 133,
       "pixelHeight": 430
     },
@@ -1289,7 +1289,7 @@
       "row": 1,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_boundedmodal.dark_expanded_en-100_w960dp_h900dp_en_with_background_night.png",
-      "sha256": "2bc2da8916c72f3b73c75ce7374cfbf11e4858cbd7bbd53dc91b37e7c3c007ff",
+      "sha256": "42f06cca47b61adc32f24529dc284c842ff4fae1f7fb54d6b077af471ca3cb1c",
       "pixelWidth": 276,
       "pixelHeight": 260
     },
@@ -1300,7 +1300,7 @@
       "row": 1,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_boundedmodal.light_expanded_en-100_w960dp_h900dp_en_with_background.png",
-      "sha256": "4cf109d77b820cb0e11541a332d1786b5f255a8fcdd25b5b4893b6ac5b1be0b5",
+      "sha256": "895cd0307c297b4fdd93a083b4c88a85ecf000581b4767dc098ae7e207245316",
       "pixelWidth": 276,
       "pixelHeight": 260
     },
@@ -1311,7 +1311,7 @@
       "row": 1,
       "column": 3,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_requiredchoice.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "628c4972829ae646defce308c8669769bbdf2a0b32e51b82ad6df38dbcb7472b",
+      "sha256": "0020944d2f654ff82af038ee88441cec960ddb32f3b6b1f364ae49cb9d7b2784",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -1322,7 +1322,7 @@
       "row": 1,
       "column": 4,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_requiredchoice.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "cdaf26fc213eea6d2fc2aa9a3ed9cb1f3e04984e6ff471381eed6029e85d62cc",
+      "sha256": "006ff95a778e581ca2df66a632a31cf46496f67082c0d5a656577b3ead0235f2",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -1333,7 +1333,7 @@
       "row": 2,
       "column": 1,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_savefailure.dark_compact_en-100_w390dp_h844dp_en_with_background_night.png",
-      "sha256": "d06d670052c87e6e7b9c8c5c480a2676e53f5186512c03dfa29159248da13afb",
+      "sha256": "31d1929d918d27abc316b072e003b301bb76425ed45c92af41a298902cb861ce",
       "pixelWidth": 199,
       "pixelHeight": 430
     },
@@ -1344,7 +1344,7 @@
       "row": 2,
       "column": 2,
       "golden": "shared/compose/visual-test/src/test/snapshots/images/Paparazzi_Preview_Test_bagcuepreviewmatrixkt.screen_011_savefailure.light_compact_en-100_w390dp_h844dp_en_with_background.png",
-      "sha256": "fc19d7ccca6839fe20a9afc4e74a18977154731e45aca7427612221311020e5a",
+      "sha256": "90cb8b3b88d6694efcd13d314cb9aacd97ae195405a15fc1168115d065a324a9",
       "pixelWidth": 199,
       "pixelHeight": 430
     },

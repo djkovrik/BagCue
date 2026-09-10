@@ -30,7 +30,13 @@ const assets = spec.assetRequirements.items.map(item => {
     generationRecord: {
       path: 'docs/assets/ASSET-001-generation-record.json',
       sha256: sha256('docs/assets/ASSET-001-generation-record.json')
-    }
+    },
+    sourceArtifacts: [
+      'docs/assets/sources/bagcue_mark_v3.svg',
+      'docs/assets/sources/bagcue_mark_v3_monochrome.svg',
+      'docs/assets/sources/bagcue_mark_v3_imagegen_concept.png',
+      'docs/assets/create-brand-source.cjs'
+    ].map(p => ({ path: p, sha256: sha256(p) }))
   } : {
     method: 'reuse',
     source: `Google Material Symbols Rounded: https://fonts.google.com/icons?icon.query=${materialNames[item.id]}&icon.style=Rounded`,
