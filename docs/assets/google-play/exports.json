@@ -1,0 +1,18 @@
+[
+  {
+    "file": "docs/assets/google-play/app-icon-512.png",
+    "width": 512,
+    "height": 512,
+    "bytes": 41392,
+    "format": "png",
+    "hasAlpha": false
+  },
+  {
+    "file": "docs/assets/google-play/feature-graphic-1024x500.png",
+    "width": 1024,
+    "height": 500,
+    "bytes": 375142,
+    "format": "png",
+    "hasAlpha": false
+  }
+]

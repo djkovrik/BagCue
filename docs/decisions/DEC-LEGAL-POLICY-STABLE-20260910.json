@@ -1,0 +1,19 @@
+{
+  "decisionId": "DEC-LEGAL-POLICY-STABLE-20260910",
+  "kind": "spec-change",
+  "obligationIds": [
+    "AppSpec"
+  ],
+  "rationale": "Accept completed legal review, stable policy bytes, canonical public URL, and reconcile QG-005/QG-008/QG-012 plus production link wiring.",
+  "recordedAt": "2026-09-10T10:08:39.442265Z",
+  "schemaVersion": "2.0",
+  "status": "accepted",
+  "supersedes": [],
+  "userApproval": {
+    "actor": "user",
+    "messageId": "user-request-2026-09-10-legal-policy-stable",
+    "path": "docs/decisions/DEC-LEGAL-POLICY-STABLE-20260910-user.txt",
+    "quote": "Следующей итерацией давай обновим спеку и релиз гейты во всем что касается legal review и политики конфиденциальности - считаем что все юридические ревью завершены и политика у нас стабильна, финальная ссылка готова - https://sedsoftware.com/apps/bagcue/policy.html",
+    "sha256": "ef39cd8bcddc13570585d2772b3b209570a0b0b120e5adb24e78e24a8d07d039"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "action": "check",
+  "runner": "command",
+  "kind": "integration",
+  "argv": [
+    "curl.exe",
+    "-fsSL",
+    "-H",
+    "Accept: application/json",
+    "https://168.222.252.178/v1/privacy/region"
+  ],
+  "coveredObligations": [
+    {
+      "obligationId": "QG-008",
+      "surfaces": ["privacy-endpoint-check"]
+    }
+  ],
+  "timeoutSeconds": 120
+}

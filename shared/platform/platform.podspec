@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     spec.vendored_frameworks      = 'build/cocoapods/framework/bagcuePlatform.framework'
     spec.libraries                = 'c++'
     spec.ios.deployment_target    = '16.2'
-    spec.dependency 'FirebaseAnalytics', '12.18.0'
+    spec.dependency 'FirebaseAnalytics/Core', '12.18.0'
     spec.dependency 'YandexMobileAds', '8.4.0'
     if !Dir.exist?('build/cocoapods/framework/bagcuePlatform.framework') || Dir.empty?('build/cocoapods/framework/bagcuePlatform.framework')
         raise "

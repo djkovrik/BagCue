@@ -44,10 +44,11 @@ Open the workspace, select `iosApp`, choose the Apple team/signing profile, and 
 xcodebuild -workspace iosApp/iosApp.xcworkspace -scheme iosApp \
   -sdk iphonesimulator -configuration Debug \
   -destination 'generic/platform=iOS Simulator' \
+  ARCHS=arm64 ONLY_ACTIVE_ARCH=YES \
   CODE_SIGNING_ALLOWED=NO build
 ```
 
-The repository targets ARM64 iOS simulators. On an Apple Silicon Mac use the commands above unchanged. An Intel Mac can cross-compile and link the same candidate by adding `ARCHS=arm64 ONLY_ACTIVE_ARCH=YES` to `xcodebuild`, but it cannot execute the ARM64 Kotlin/Native simulator tests; those tests must complete on the `macos-15` ARM64 CI runner. Compose Multiplatform 1.12.0 does not publish an `iosX64` runtime variant.
+The repository targets ARM64 iOS simulators, so the workspace build pins `ARCHS=arm64` even on Apple Silicon; a generic simulator destination otherwise also requests `x86_64`. An Intel Mac can cross-compile and link the same candidate with this command, but it cannot execute the ARM64 Kotlin/Native simulator tests; those tests must complete on the `macos-15` ARM64 CI runner. Compose Multiplatform 1.12.0 does not publish an `iosX64` runtime variant.
 
 Expected evidence: every test exits zero; `compose.framework` links; Xcode resolves FirebaseAnalytics and YandexMobileAds without duplicate/undefined symbols; the built app reports bundle ID `com.sedsoftware.bagcue.iosApp`; EN/RU native/Compose resources are packaged.
 

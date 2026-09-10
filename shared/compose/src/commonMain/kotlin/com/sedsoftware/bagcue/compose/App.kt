@@ -56,6 +56,7 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
 internal const val EXPANDED_NAVIGATION_BREAKPOINT_DP = 600
+internal const val FONT_SCALE_THRESHOLD = 1.5f
 
 internal enum class ProductNavigationLayout { Bar, Rail }
 
@@ -65,7 +66,7 @@ internal fun productNavigationLayout(width: androidx.compose.ui.unit.Dp): Produc
 internal fun reduceNavigationMotion(durationScale: Float): Boolean = durationScale == 0f
 
 internal fun primaryNavigationRows(fontScale: Float): List<List<PrimaryDestinationUi>> =
-    if (fontScale >= 1.5f) primaryDestinations().chunked(2) else listOf(primaryDestinations())
+    if (fontScale >= FONT_SCALE_THRESHOLD) primaryDestinations().chunked(2) else listOf(primaryDestinations())
 
 @Composable
 fun App(

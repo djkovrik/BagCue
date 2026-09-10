@@ -1,0 +1,19 @@
+{
+  "decisionId": "DEC-CI-RELEASE-SETUP-COMPLETE-20260910",
+  "kind": "spec-change",
+  "obligationIds": [
+    "AppSpec"
+  ],
+  "rationale": "Accept the owner-confirmed completion of docs/CI-RELEASE-SETUP.md and reconcile release verification wording and setup blockers.",
+  "recordedAt": "2026-09-10T09:40:57.653455Z",
+  "schemaVersion": "2.0",
+  "status": "accepted",
+  "supersedes": [],
+  "userApproval": {
+    "actor": "user",
+    "messageId": "user-request-2026-09-10-ci-release-setup-complete",
+    "path": "docs/decisions/DEC-CI-RELEASE-SETUP-COMPLETE-20260910-user.txt",
+    "quote": "Я выполнил все настройки по docs/CI-RELEASE-SETUP.md, давай обновим спеку и соответствующие релиз гейты.",
+    "sha256": "a2770e0528847d5d0464c8a0de9e6e6c965d55fd5033ed175ccccb5ff56fb8b4"
+  }
+}

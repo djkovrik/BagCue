@@ -1,0 +1,19 @@
+{
+  "decisionId": "DEC-QG008-PRODUCTION-READY-20260910",
+  "kind": "spec-change",
+  "obligationIds": [
+    "AppSpec"
+  ],
+  "rationale": "Accept the owner-confirmed production readiness and operational completion of the shared privacy-region endpoint; retain client-side fail-closed verification under QG-007 and close QG-008 without affecting other gates.",
+  "recordedAt": "2026-09-10T13:44:15.991673Z",
+  "schemaVersion": "2.0",
+  "status": "accepted",
+  "supersedes": [],
+  "userApproval": {
+    "actor": "user",
+    "messageId": "user-request-2026-09-10-qg008-production-ready",
+    "path": "docs/decisions/DEC-QG008-PRODUCTION-READY-20260910-user.txt",
+    "quote": "Эндпоинт privacy-region endpoint уже финальный и production ready, все работы по нему завершены. Возможно в [APA-EXTERNAL-SETUP.md](D:/Sources/Android/BagCue/docs/APA-EXTERNAL-SETUP.md) и [quality.md](D:/Sources/Android/BagCue/spec/app-spec/quality.md) были зафиксированы излишне строгие требования, этим эндпоинтом пользуются все наши приложения и он уже стабилен точно. Давай явно закроем QG-008 (плюс обновим требования и доки если надо), с остальными OG поработаю еще.",
+    "sha256": "6a63693636012f76f71b86e466bd46100b2ebbfbb8fe12a66423490d859d8970"
+  }
+}

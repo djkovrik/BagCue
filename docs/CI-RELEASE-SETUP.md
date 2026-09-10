@@ -71,6 +71,6 @@ Retry an external failure by manually invoking `Publish Android release` with th
 
 The owner confirmed completion of every checkbox in this guide on 2026-09-10. The repository therefore no longer treats initial GitHub, signing, Firebase, Google Play, Google Cloud, Yandex, macOS CI, or first Internal-track dry-run setup as an unperformed prerequisite for QG-003, QG-005, QG-009, QG-011, or QG-012.
 
-That confirmation is setup evidence, not a permanent PASS for future source revisions. Each release candidate must retain its own green CI run, signed artifact verification, Internal-track publication result, policy/Data safety comparison, and physical-device acceptance evidence. QG-008 remains separately governed by `docs/APA-EXTERNAL-SETUP.md`; this guide does not attest completion of the production privacy-region endpoint contract.
+That confirmation is setup evidence, not a permanent PASS for future source revisions. Each release candidate must retain its own green CI run, signed artifact verification, Internal-track publication result, policy/Data safety comparison, and physical-device acceptance evidence. The owner separately confirmed the shared privacy-region endpoint production-ready and operationally complete on 2026-09-10; the public protocol smoke and `docs/APA-EXTERNAL-SETUP.md` record close QG-008.
 
 Legal review and policy publication were separately confirmed complete on 2026-09-10. The canonical URL is `https://sedsoftware.com/apps/bagcue/policy.html`; publication runs verify that it remains byte-identical to the reviewed repository source.

@@ -28,7 +28,7 @@ Do not mark precise location, contacts, photos, user-created packing text, payme
 
 1. Generate the final dependency/SBOM and merged release manifest; confirm no `AD_ID` and no undeclared SDK.
 2. Run clean-install network diagnostics for analytics off, analytics on, analytics off again, protected accept, protected decline, non-protected, endpoint failure/expiry, debug, preview/test, and iOS.
-3. Record Firebase retention/signals/linkage/sharing configuration, RSYA ownership/configuration, and privacy-region logging/GeoIP controls.
+3. Record Firebase retention/signals/linkage/sharing configuration and RSYA ownership/configuration. QG-008 production endpoint readiness and shared-service operations are already owner-confirmed.
 4. Confirm that the approved category/purpose/sharing choices still match the candidate and current provider contracts.
 5. Export or screenshot the submitted Play Console answers and compare them to the canonical hosted policy.
 

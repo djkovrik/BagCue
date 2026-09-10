@@ -490,6 +490,7 @@ private fun SkippedDialog(count: Int, component: SessionComponent) = AlertDialog
 )
 
 @Composable
+@Suppress("LongMethod")
 private fun ResultScreen(
     screen: SessionComponent.Screen.Result,
     component: SessionComponent,

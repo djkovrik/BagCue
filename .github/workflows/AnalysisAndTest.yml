@@ -111,6 +111,7 @@ jobs:
           xcodebuild -workspace iosApp/iosApp.xcworkspace -scheme iosApp
           -sdk iphonesimulator -configuration Debug
           -destination 'generic/platform=iOS Simulator'
+          ARCHS=arm64 ONLY_ACTIVE_ARCH=YES
           CODE_SIGNING_ALLOWED=NO build
       - name: Verify iOS identifiers and nullable advertising
         run: python .github/workflows/scripts/validate_repository.py

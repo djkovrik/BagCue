@@ -20,7 +20,7 @@ The reviewed source and hosted HTTPS artifact were fetched and compared byte-for
 Legal review of the processor, legal-basis, international-transfer, retention, contact, rights, category, purpose, and sharing language is complete as of 2026-09-10. Publication must still:
 
 1. reconcile the exact Android/iOS candidate dependency and packaged-permission inventories with the policy and `PLAY-DATA-SAFETY.md`;
-2. verify the Firebase, RSYA, and privacy-region technical evidence listed in `APA-EXTERNAL-SETUP.md`;
+2. verify the candidate-specific Firebase and RSYA evidence listed in `APA-EXTERNAL-SETUP.md`; QG-008 production endpoint readiness is already owner-confirmed and closed;
 3. run `.github/workflows/scripts/validate_privacy_policy.py` so the canonical URL is reachable and byte-identical to the reviewed source;
 4. retain the candidate-specific in-app link and Play Console parity evidence.
 

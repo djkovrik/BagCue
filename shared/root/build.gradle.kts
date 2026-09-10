@@ -22,7 +22,6 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             api(project(":shared:domain"))
-            api(project(":shared:platform"))
             api(project(":shared:component:catalog"))
             api(project(":shared:component:templates"))
             api(project(":shared:component:session"))

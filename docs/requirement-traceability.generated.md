@@ -4,10 +4,10 @@
 - Ledger: `LEDGER-daf88a72-e8ed-4785-a86a-1a3cc7429e83`
 - Phase: `reconciling`
 - Active AC: `none`
-- Ledger digest: `276b61459755fbcc3190b0dbb88f536e7fd390820eb0ca2cac2265c9feb9261b`
-- AppSpec fingerprint: `18b75f4c55598b2ca7cb0fd33a6a166054d22ddf38cd37685e1bbc7be4b0be97`
-- Workspace fingerprint: `71e331953e1fff8843b5731986a42ad352c0740933053017478223b5d890df5a`
-- Next action: Push the legal-policy revision; retain current macOS link, store-parity, and exact-tag Internal publication evidence. Complete only the remaining technical/operational endpoint checks for QG-008.
+- Ledger digest: `239c716b061b946418332c246895cee3d8268018f4580e12b705c2a6ca2655bd`
+- AppSpec fingerprint: `ffac9713c8bbaa0b082619582efdfd31a532863c428b8fe942ce6bb16315e978`
+- Workspace fingerprint: `9867bc1fb37a1c58df1b769b74468f1de8c14a0e9c184689c845a123304bf1e3`
+- Next action: Continue work on the remaining release gates; QG-008 is verified and closed.
 
 ## Acceptance scenarios
 
@@ -73,13 +73,13 @@
 | QG-002 | platform | android | applicable | not-started | android-build, android-platform-test | — |
 | QG-003 | platform | ios | applicable | not-started | ios-build, ios-link-test | — |
 | QG-004 | release | all | applicable | not-started | release-check | — |
-| QG-005 | external | android | applicable | implemented-unverified | google-play-publication-check | — |
+| QG-005 | external | android | needs-review | implemented-unverified | google-play-publication-check | — |
 | QG-006 | repository | all | applicable | not-started | asset-check, asset-visual | — |
 | QG-007 | repository | all | applicable | not-started | network-mock-test, ad-lifecycle-test, firebase-contract-test, privacy-static-check | — |
-| QG-008 | external | all | applicable | blocked-external | privacy-endpoint-check | — |
-| QG-009 | external | android | applicable | implemented-unverified | android-ad-config-check | — |
+| QG-008 | external | all | applicable | verified | privacy-endpoint-check | .vibe/receipts/RECEIPT-d31155f9-4f7d-4d55-ad09-081e8d59f180.json |
+| QG-009 | external | android | needs-review | implemented-unverified | android-ad-config-check | — |
 | QG-010 | repository | ios | applicable | not-started | documentation-check | — |
-| QG-011 | external | all | applicable | implemented-unverified | firebase-console-check | — |
+| QG-011 | external | all | needs-review | implemented-unverified | firebase-console-check | — |
 | QG-012 | release | all | applicable | implemented-unverified | privacy-policy-review, data-safety-review | — |
 
 ## Integrated flows (separate from AC verification)
