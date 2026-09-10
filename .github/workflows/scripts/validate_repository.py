@@ -26,6 +26,9 @@ def main() -> int:
     android_build = (ROOT / "androidApp/build.gradle.kts").read_text(encoding="utf-8")
     manifest = (ROOT / "androidApp/src/main/AndroidManifest.xml").read_text(encoding="utf-8")
     podfile = (ROOT / "iosApp/Podfile").read_text(encoding="utf-8")
+    pod_lock_path = ROOT / "iosApp/Podfile.lock"
+    require(pod_lock_path.is_file(), "iOS Podfile.lock missing")
+    pod_lock = pod_lock_path.read_text(encoding="utf-8")
     project = (ROOT / "iosApp/iosApp.xcodeproj/project.pbxproj").read_text(encoding="utf-8")
     android_firebase_path = ROOT / "androidApp/google-services.json"
     ios_firebase_path = ROOT / "iosApp/iosApp/GoogleService-Info.plist"
@@ -52,9 +55,13 @@ def main() -> int:
     require(android_build.count("R-M-19857241-1") <= 1, "production ad ID must come from the documented property")
     require('buildConfigField("String", "YANDEX_AD_UNIT_ID", "\\"\\"")' in android_build, "debug/default ad ID is not empty")
     require('tools:node="remove"' in manifest and "com.google.android.gms.permission.AD_ID" in manifest, "AD_ID removal missing")
-    require("pod 'FirebaseAnalytics', '12.18.0'" in podfile, "FirebaseAnalytics pod drift")
+    require("pod 'FirebaseAnalytics/Core', '12.18.0'" in podfile, "FirebaseAnalytics/Core pod drift")
     require("pod 'YandexMobileAds', '8.4.0'" in podfile, "YandexMobileAds pod drift")
     require("R-M-" not in podfile and "demo" not in podfile.lower(), "iOS Podfile contains an ad unit")
+    require("FirebaseAnalytics/Core (12.18.0)" in pod_lock, "locked FirebaseAnalytics/Core version drift")
+    require("YandexMobileAds (8.4.0)" in pod_lock, "locked YandexMobileAds version drift")
+    require("GoogleAdsOnDeviceConversion" not in pod_lock, "iOS lockfile includes on-device ads conversion")
+    require("GoogleAppMeasurement/IdentitySupport" not in pod_lock, "iOS lockfile includes IdentitySupport")
     require("adUnitId = null" in ios_controller, "iOS advertising configuration is not nullable")
     require(POLICY_URL in android_entrypoint and "Intent.ACTION_VIEW" in android_entrypoint, "Android privacy policy URL/opening drift")
     require(POLICY_URL in ios_entrypoint and "UIApplication.sharedApplication.openURL" in ios_entrypoint, "iOS privacy policy URL/opening drift")
@@ -80,6 +87,7 @@ def main() -> int:
     }
     require(expected.issubset({p.name for p in workflow_dir.glob("*.yml")}), "required workflow missing")
     publish_workflow = (workflow_dir / "PublishAndroidRelease.yml").read_text(encoding="utf-8")
+    analysis_workflow = (workflow_dir / "AnalysisAndTest.yml").read_text(encoding="utf-8")
     badge_workflow = (workflow_dir / "CodeCoverageBadge.yml").read_text(encoding="utf-8")
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     require("FIREBASE_GOOGLE_SERVICES_JSON_BASE64" not in publish_workflow, "Firebase config must not use a GitHub secret")
@@ -89,6 +97,7 @@ def main() -> int:
     )
     require("validate_privacy_policy.py" in publish_workflow, "Android publication must verify the hosted privacy policy")
     require("bagcue-coverage-badge.json" in badge_workflow, "coverage workflow badge filename drift")
+    require("/Applications/Xcode_26.2.app" in analysis_workflow, "iOS CI must select Firebase-supported Xcode 26.2")
     require("/raw/bagcue-coverage-badge.json" in readme, "README coverage endpoint drift")
     for path in workflow_dir.glob("*.yml"):
         text = path.read_text(encoding="utf-8")

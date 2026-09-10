@@ -6,7 +6,7 @@ target 'iosApp' do
   use_frameworks! :linkage => :static
 
   # Analytics only: do not add AdSupport/IDFA-capable Firebase products.
-  pod 'FirebaseAnalytics', '12.18.0'
+  pod 'FirebaseAnalytics/Core', '12.18.0'
   # Linked for build parity. BagCue iOS supplies no ad unit and never requests an ad.
   pod 'YandexMobileAds', '8.4.0'
 end

@@ -12,7 +12,7 @@ kotlin {
         summary = "BagCue platform services with explicit Firebase Analytics and Yandex link contracts"
         homepage = "https://github.com/sedsoftware/BagCue"
         ios.deploymentTarget = "16.2"
-        pod("FirebaseAnalytics") {
+        pod("FirebaseAnalytics/Core") {
             version = libs.versions.firebaseApple.get()
             moduleName = "FirebaseAnalytics"
         }

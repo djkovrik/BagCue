@@ -5,8 +5,10 @@ import com.sedsoftware.bagcue.domain.apa.AdPlatform
 import com.sedsoftware.bagcue.domain.apa.AnalyticsController
 import com.sedsoftware.bagcue.domain.apa.InlineAdController
 import com.sedsoftware.bagcue.domain.apa.InlineAdState
+import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSUserDefaults
 
+@OptIn(ExperimentalForeignApi::class)
 fun IosAnalyticsController(): AnalyticsController {
     val sink = IosAppOwnedAnalyticsSink()
     return SafeAnalyticsController(sink, sink.isEnabled())
@@ -23,6 +25,7 @@ fun IosInlineAdController(): InlineAdController = PrivacyFirstInlineAdController
     },
 )
 
+@OptIn(ExperimentalForeignApi::class)
 private class IosAppOwnedAnalyticsSink : AnalyticsEventSink {
     private val defaults = NSUserDefaults.standardUserDefaults
 

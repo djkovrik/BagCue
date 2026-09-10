@@ -86,7 +86,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
       - name: Select Xcode and install CocoaPods
         run: |
-          sudo xcode-select --switch /Applications/Xcode.app
+          sudo xcode-select --switch /Applications/Xcode_26.2.app
           gem install cocoapods --version 1.16.2 --no-document
           pod --version
           xcodebuild -version
