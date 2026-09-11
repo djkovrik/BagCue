@@ -70,8 +70,8 @@ android {
         targetSdk = 37
 
         applicationId = "com.sedsoftware.bagcue"
-        versionCode = releaseVersionCode.get()
-        versionName = releaseVersionName.get()
+        versionCode = 1
+        versionName = "1"
 
         buildConfigField("String", "YANDEX_AD_UNIT_ID", "\"\"")
     }

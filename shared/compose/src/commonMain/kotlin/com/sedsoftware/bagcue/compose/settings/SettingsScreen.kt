@@ -59,6 +59,7 @@ import bagcue.shared.compose.generated.resources.settings_privacy_declined
 import bagcue.shared.compose.generated.resources.settings_privacy_not_required
 import bagcue.shared.compose.generated.resources.settings_privacy_policy
 import bagcue.shared.compose.generated.resources.settings_privacy_refresh
+import bagcue.shared.compose.generated.resources.settings_privacy_refresh_failed
 import bagcue.shared.compose.generated.resources.settings_privacy_required
 import bagcue.shared.compose.generated.resources.settings_privacy_unresolved
 import bagcue.shared.compose.generated.resources.settings_save_failed
@@ -108,10 +109,12 @@ fun SettingsScreen(component: SettingsComponent) {
                 ) {
                     Text(
                         stringResource(
-                            if (it == SettingsComponent.Error.LoadFailed) {
-                                Res.string.settings_load_failed
-                            } else {
-                                Res.string.settings_save_failed
+                            when (it) {
+                                SettingsComponent.Error.LoadFailed -> Res.string.settings_load_failed
+                                SettingsComponent.Error.PrivacyRefreshFailed -> {
+                                    Res.string.settings_privacy_refresh_failed
+                                }
+                                else -> Res.string.settings_save_failed
                             },
                         ),
                         color = MaterialTheme.colorScheme.error,

@@ -1,6 +1,8 @@
 package com.sedsoftware.bagcue.settings.store
 
 import com.arkivanov.mvikotlin.main.store.DefaultStoreFactory
+import com.sedsoftware.bagcue.domain.apa.AdvertisingPrivacyResolution
+import com.sedsoftware.bagcue.domain.apa.PrivacyRegionResponse
 import com.sedsoftware.bagcue.domain.reminder.*
 import com.sedsoftware.bagcue.settings.*
 import com.sedsoftware.bagcue.settings.domain.SettingsManager
@@ -21,6 +23,33 @@ class SettingsStoreTest {
     private val dispatcher = StandardTestDispatcher()
     @BeforeTest fun setUp() = Dispatchers.setMain(dispatcher)
     @AfterTest fun tearDown() = Dispatchers.resetMain()
+
+    @Test
+    fun cleanInstallationResolvesNonProtectedPrivacyWithoutShowingAnError() = runTest(dispatcher) {
+        val privacyRepository = FakeAdvertisingPrivacyRepository()
+        val manager = SettingsManager(
+            FakeReminderPreferencesRepository(), FakeReminderSessionRepository(emptyList()), FakeReminderScheduler(),
+            FakeAnalyticsPreferenceRepository(), FakeAnalyticsController(), privacyRepository,
+            FakePrivacyRegionApi(
+                Result.success(PrivacyRegionResponse(1, false, "policy", Long.MAX_VALUE)),
+            ),
+            FakeSettingsInlineAdController(),
+            { Instant.parse("2026-09-08T10:00:00Z") }, { TimeZone.UTC },
+        )
+        val store = SettingsStoreProvider(DefaultStoreFactory(), manager, null, null, "test").provide()
+        try {
+            store.init()
+            advanceUntilIdle()
+
+            assertNull(store.state.error)
+            assertFalse(store.state.preferences.evening.enabled)
+            assertFalse(store.state.preferences.morning.enabled)
+            assertFalse(store.state.privacyState?.response?.consentRequired ?: true)
+            assertIs<AdvertisingPrivacyResolution.Eligible>(store.state.privacyResolution)
+        } finally {
+            store.dispose()
+        }
+    }
 
     @Test
     fun immediateSaveKeepsCoreSettingsAvailableWhenPermissionIsDenied() = runTest(dispatcher) {

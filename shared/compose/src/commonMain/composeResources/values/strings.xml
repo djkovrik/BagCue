@@ -206,6 +206,7 @@
     <string name="settings_privacy_allowed">Advertising is allowed.</string>
     <string name="settings_privacy_declined">Advertising is declined. Ads stay off.</string>
     <string name="settings_privacy_refresh">Refresh privacy status</string>
+    <string name="settings_privacy_refresh_failed">Couldn’t refresh advertising privacy.</string>
     <string name="settings_privacy_allow">Allow advertising</string>
     <string name="settings_privacy_decline">Decline advertising</string>
     <string name="settings_privacy_policy">Privacy policy</string>

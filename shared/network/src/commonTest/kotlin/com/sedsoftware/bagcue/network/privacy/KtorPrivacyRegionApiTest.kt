@@ -104,6 +104,26 @@ class KtorPrivacyRegionApiTest {
     }
 
     @Test
+    fun responseWithinBoundedServerClockSkewIsAccepted() = runTest {
+        val body = validJson.replace("2026-09-10T00:00:00Z", "2026-09-11T00:04:59Z")
+        val engine = MockEngine {
+            respond(body, HttpStatusCode.OK, headersOf(HttpHeaders.ContentType, "application/json"))
+        }
+
+        assertNotNull(api(engine).fetch().getOrThrow())
+    }
+
+    @Test
+    fun responseBeyondBoundedServerClockSkewFailsClosed() = runTest {
+        val body = validJson.replace("2026-09-10T00:00:00Z", "2026-09-11T00:05:01Z")
+        val engine = MockEngine {
+            respond(body, HttpStatusCode.OK, headersOf(HttpHeaders.ContentType, "application/json"))
+        }
+
+        assertIs<InvalidPrivacyRegionResponseException>(api(engine).fetch().exceptionOrNull())
+    }
+
+    @Test
     fun redirectRateLimitAndOutageAreTypedFailuresWithoutFallbackEligibility() = runTest {
         listOf(HttpStatusCode.Found, HttpStatusCode.TooManyRequests, HttpStatusCode.ServiceUnavailable).forEach { status ->
             val engine = MockEngine { respond("{}", status, headersOf(HttpHeaders.ContentType, "application/json")) }

@@ -61,7 +61,12 @@ class KtorPrivacyRegionApi(
             if (dto.schemaVersion != PRIVACY_REGION_SCHEMA_VERSION || dto.policyVersion.isBlank()) {
                 throw InvalidPrivacyRegionResponseException("Unsupported privacy region response")
             }
-            if (expiresAt <= now || expiresAt > now + PRIVACY_REGION_MAX_AGE_MILLIS) {
+            // The endpoint issues expiresAt from its own clock. Allow a small bounded skew here,
+            // then let the settings repository clamp the stored response to the device's 72-hour maximum.
+            if (
+                expiresAt <= now ||
+                expiresAt > now + PRIVACY_REGION_MAX_AGE_MILLIS + MAX_CLOCK_SKEW_MILLIS
+            ) {
                 throw InvalidPrivacyRegionResponseException("Privacy region response is not fresh")
             }
             PrivacyRegionResponse(dto.schemaVersion, dto.consentRequired, dto.policyVersion, expiresAt)
@@ -75,7 +80,10 @@ class KtorPrivacyRegionApi(
 
     override fun close() = client.close()
 
-    private companion object { const val MAX_RESPONSE_BYTES = 4 * 1024 }
+    private companion object {
+        const val MAX_RESPONSE_BYTES = 4 * 1024
+        const val MAX_CLOCK_SKEW_MILLIS = 5L * 60L * 1_000L
+    }
 }
 
 @Serializable

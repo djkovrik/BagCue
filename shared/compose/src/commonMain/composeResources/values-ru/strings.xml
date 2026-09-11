@@ -206,6 +206,7 @@
     <string name="settings_privacy_allowed">Реклама разрешена.</string>
     <string name="settings_privacy_declined">Реклама отклонена и отключена.</string>
     <string name="settings_privacy_refresh">Обновить статус конфиденциальности</string>
+    <string name="settings_privacy_refresh_failed">Не удалось обновить статус конфиденциальности рекламы.</string>
     <string name="settings_privacy_allow">Разрешить рекламу</string>
     <string name="settings_privacy_decline">Отклонить рекламу</string>
     <string name="settings_privacy_policy">Политика конфиденциальности</string>
