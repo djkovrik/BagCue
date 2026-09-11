@@ -24,16 +24,23 @@ interface SessionComponent :
         data class Today(
             val date: LocalDate,
             val session: SessionSummary?,
+            val nextSession: SessionSummary? = null,
+            val starterTemplates: List<TemplateChoice> = emptyList(),
+            val isFirstRun: Boolean = false,
         ) : Screen
 
         data class Create(
+            val today: LocalDate,
             val date: LocalDate,
             val templates: List<TemplateChoice>,
             val mergedItemCount: Int,
             val occupiedSession: SessionSummary?,
             val isSaving: Boolean,
             val validationError: ValidationError?,
-        ) : Screen
+        ) : Screen {
+            val tomorrow: LocalDate
+                get() = LocalDate.fromEpochDays(today.toEpochDays() + 1)
+        }
 
         data class Active(
             val sessionId: PackingSessionId,
@@ -161,6 +168,7 @@ interface SessionComponent :
         RemoveFailed,
         UndoFailed,
         CompleteFailed,
+        ReopenFailed,
         SessionNoLongerExists,
         ItemNoLongerExists,
         RevisionConflict,
@@ -200,6 +208,7 @@ interface SessionItemActions {
 
 interface SessionCompletionActions {
     fun completeAllPacked()
+    fun reopenSession(sessionId: PackingSessionId)
     fun requestCompleteWithSkipped()
     fun confirmCompleteWithSkipped()
     fun dismissCompleteWithSkipped()

@@ -17,6 +17,7 @@ import com.sedsoftware.bagcue.domain.session.PackingSessionRepository
 import com.sedsoftware.bagcue.domain.session.PackingSessionStatus
 import com.sedsoftware.bagcue.domain.session.SaveSessionItemToTemplatesCommand
 import com.sedsoftware.bagcue.domain.session.SessionBagAssignment
+import com.sedsoftware.bagcue.domain.session.SessionHistoryRepository
 import com.sedsoftware.bagcue.domain.session.SessionMergeInput
 import com.sedsoftware.bagcue.domain.session.SessionMutation
 import com.sedsoftware.bagcue.domain.session.SessionPackingItem
@@ -47,6 +48,7 @@ internal data class SessionReferenceData(
     val resolvedNames: Map<String, String>,
 )
 
+@Suppress("TooManyFunctions")
 internal class SessionManager(
     private val sessionRepository: PackingSessionRepository,
     private val templateRepository: KitTemplateRepository,
@@ -59,6 +61,7 @@ internal class SessionManager(
     private val currentTimeMillis: () -> Long,
     private val resolveResourceKey: suspend (ResourceKey) -> String,
     private val analyticsController: AnalyticsController,
+    private val historyRepository: SessionHistoryRepository? = null,
 ) {
     val currentDate: LocalDate get() = today()
 
@@ -80,8 +83,18 @@ internal class SessionManager(
 
     fun observeSession(id: PackingSessionId): Flow<PackingSession?> = sessionRepository.observeSession(id)
 
-    suspend fun findToday(): Result<PackingSession?> = captureResult {
-        sessionRepository.findSessionByDate(today()).getOrThrow()
+    suspend fun loadToday(): Result<TodayOverview> = captureResult {
+        val currentDate = today()
+        val current = sessionRepository.findSessionByDate(currentDate).getOrThrow()
+        val history = historyRepository?.readHistory()?.getOrThrow()
+        TodayOverview(
+            session = current,
+            nextSession = history?.planned.orEmpty()
+                .asSequence()
+                .filter { it.localDate > currentDate }
+                .minByOrNull(PackingSession::localDate),
+            isFirstRun = history?.let { it.planned.isEmpty() && it.completed.isEmpty() } ?: (current == null),
+        )
     }
 
     suspend fun findByDate(date: LocalDate): Result<PackingSession?> = captureResult {
@@ -159,6 +172,12 @@ internal class SessionManager(
     suspend fun completeSkipped(session: PackingSession, count: Int): Result<PackingSession> = captureResult {
         sessionRepository.completeSession(completeWithSkipped(session, count, currentTimeMillis())).getOrThrow().also {
             recordSafely(AnalyticsEventName.PackingSessionCompleted)
+        }
+    }
+
+    suspend fun reopen(id: PackingSessionId): Result<PackingSession> = captureResult {
+        sessionRepository.reopenSession(id).getOrThrow().also {
+            recordSafely(AnalyticsEventName.PackingSessionReopened)
         }
     }
 
@@ -244,6 +263,12 @@ internal fun mergedItemCount(templateIds: Set<KitTemplateId>, data: SessionRefer
     .map { it.itemId }
     .distinct()
     .size
+
+internal data class TodayOverview(
+    val session: PackingSession?,
+    val nextSession: PackingSession?,
+    val isFirstRun: Boolean,
+)
 
 private suspend inline fun <T> captureResult(crossinline block: suspend () -> T): Result<T> = try {
     Result.success(block())

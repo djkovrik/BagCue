@@ -15,7 +15,7 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="BagCue"
-        android:theme="@android:style/Theme.Material.NoActionBar">
+        android:theme="@style/Theme.BagCue">
         <meta-data
             android:name="com.yandex.mobile.ads.AUTOMATIC_SDK_INITIALIZATION"
             android:value="false" />

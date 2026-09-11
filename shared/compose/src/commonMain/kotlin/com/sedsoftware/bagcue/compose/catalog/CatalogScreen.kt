@@ -22,18 +22,23 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExtendedFloatingActionButton
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Snackbar
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
@@ -47,6 +52,7 @@ import bagcue.shared.compose.generated.resources.catalog_edit
 import bagcue.shared.compose.generated.resources.catalog_empty_body
 import bagcue.shared.compose.generated.resources.catalog_empty_title
 import bagcue.shared.compose.generated.resources.catalog_title
+import bagcue.shared.compose.generated.resources.catalog_more
 import bagcue.shared.compose.generated.resources.catalog_usual_location
 import bagcue.shared.compose.generated.resources.delete_body
 import bagcue.shared.compose.generated.resources.delete_confirm
@@ -141,11 +147,16 @@ private fun CatalogList(model: CatalogComponent.Model, component: CatalogCompone
             }
             else -> LazyColumn(
                 Modifier.fillMaxSize().padding(padding),
-                contentPadding = PaddingValues(bottom = if (largeFont) 24.dp else 96.dp),
+                contentPadding = PaddingValues(
+                    start = 12.dp,
+                    top = 8.dp,
+                    end = 12.dp,
+                    bottom = if (largeFont) 24.dp else 96.dp,
+                ),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 items(model.items, key = { it.id.value }) { item ->
                     CatalogRow(item, component::startEdit, component::requestDelete)
-                    HorizontalDivider()
                 }
             }
         }
@@ -159,35 +170,56 @@ private fun CatalogRow(
     onDelete: (PackingItemId) -> Unit,
 ) {
     val name = item.name.resolve()
-    if (LocalDensity.current.fontScale >= LARGE_FONT_SCALE) {
-        Column(
-            Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp),
-        ) {
-            CatalogItemDescription(item, name)
-            TextButton(
-                onClick = { onEdit(item.id) },
-                modifier = Modifier.fillMaxWidth().sizeIn(minHeight = 48.dp),
-            ) { BagCueIcon(BagCueAssets.Edit, null); Text(stringResource(Res.string.catalog_edit, name)) }
-            TextButton(
-                onClick = { onDelete(item.id) },
-                modifier = Modifier.fillMaxWidth().sizeIn(minHeight = 48.dp),
-            ) { BagCueIcon(BagCueAssets.Delete, null); Text(stringResource(Res.string.catalog_delete, name)) }
-        }
-    } else {
+    Surface(
+        onClick = { onEdit(item.id) },
+        color = MaterialTheme.colorScheme.surfaceContainerLow,
+        shape = MaterialTheme.shapes.medium,
+    ) {
         Row(
-            Modifier.fillMaxWidth().padding(start = 16.dp, end = 8.dp, top = 8.dp, bottom = 8.dp),
+            Modifier.fillMaxWidth().padding(horizontal = 6.dp, vertical = 4.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Column(Modifier.weight(1f)) {
+            Column(
+                Modifier.weight(1f).sizeIn(minHeight = 64.dp)
+                    .padding(horizontal = 10.dp, vertical = 8.dp),
+                verticalArrangement = Arrangement.Center,
+            ) {
                 CatalogItemDescription(item, name)
             }
-            IconButton(onClick = { onEdit(item.id) }) {
-                BagCueIcon(BagCueAssets.Edit, stringResource(Res.string.catalog_edit, name))
-            }
-            IconButton(onClick = { onDelete(item.id) }) {
-                BagCueIcon(BagCueAssets.Delete, stringResource(Res.string.catalog_delete, name))
-            }
+            catalogItemActions(item, name, onEdit, onDelete)
+        }
+    }
+}
+
+@Composable
+private fun catalogItemActions(
+    item: CatalogComponent.Item,
+    name: String,
+    onEdit: (PackingItemId) -> Unit,
+    onDelete: (PackingItemId) -> Unit,
+) {
+    var expanded by remember { mutableStateOf(false) }
+    Box {
+        IconButton(onClick = { expanded = true }) {
+            BagCueIcon(BagCueAssets.More, stringResource(Res.string.catalog_more, name))
+        }
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            DropdownMenuItem(
+                text = { Text(stringResource(Res.string.catalog_edit, name)) },
+                onClick = {
+                    expanded = false
+                    onEdit(item.id)
+                },
+                leadingIcon = { BagCueIcon(BagCueAssets.Edit, null) },
+            )
+            DropdownMenuItem(
+                text = { Text(stringResource(Res.string.catalog_delete, name)) },
+                onClick = {
+                    expanded = false
+                    onDelete(item.id)
+                },
+                leadingIcon = { BagCueIcon(BagCueAssets.Delete, null) },
+            )
         }
     }
 }

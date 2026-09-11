@@ -67,14 +67,25 @@ private fun PreviewInlineAdSurface() {
 // SCREEN-001 — Today
 @Preview(name = "light_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, showBackground = true)
 @Preview(name = "dark_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, uiMode = 0x20, showBackground = true)
+@Preview(name = "light_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, showBackground = true)
+@Preview(name = "dark_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_001_FirstRunStarter() = previewApp()
 @Preview(name = "light_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, showBackground = true)
 @Preview(name = "dark_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, uiMode = 0x20, showBackground = true)
+@Preview(name = "light_compact_ru-100", widthDp = 390, heightDp = 844, locale = "ru", fontScale = 1f, showBackground = true)
+@Preview(name = "dark_compact_ru-100", widthDp = 390, heightDp = 844, locale = "ru", fontScale = 1f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_001_ActivePartial() =
     previewApp(session = SessionComponentPreview(BagCuePreviewFixtures.today(BagCuePreviewFixtures.todaySummary())))
 @Preview(name = "light_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, showBackground = true)
 @Preview(name = "dark_compact_en-100", widthDp = 390, heightDp = 844, locale = "en", fontScale = 1f, uiMode = 0x20, showBackground = true)
-@Composable fun SCREEN_001_NoCurrentNextFuture() = previewApp(session = SessionComponentPreview(BagCuePreviewFixtures.today()))
+@Composable fun SCREEN_001_NoCurrentNextFuture() = previewApp(
+    session = SessionComponentPreview(
+        BagCuePreviewFixtures.today(
+            nextSummary = BagCuePreviewFixtures.todaySummary(date = BagCuePreviewFixtures.future, packed = 0),
+            isFirstRun = false,
+        ),
+    ),
+)
 @Preview(name = "light_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, showBackground = true)
 @Preview(name = "dark_compact_ru-200", widthDp = 390, heightDp = 1260, locale = "ru", fontScale = 2f, uiMode = 0x20, showBackground = true)
 @Composable fun SCREEN_001_ReadFailure_RU200() =

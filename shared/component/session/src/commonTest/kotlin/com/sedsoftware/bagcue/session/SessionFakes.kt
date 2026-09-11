@@ -12,7 +12,8 @@ import com.sedsoftware.bagcue.domain.session.CreateSessionResult
 import com.sedsoftware.bagcue.domain.session.OneOffSessionItemCommand
 import com.sedsoftware.bagcue.domain.session.PackingSession
 import com.sedsoftware.bagcue.domain.session.PackingSessionId
-import com.sedsoftware.bagcue.domain.session.PackingSessionRepository
+import com.sedsoftware.bagcue.domain.session.SessionHistory
+import com.sedsoftware.bagcue.domain.session.SessionHistoryRepository
 import com.sedsoftware.bagcue.domain.session.SaveSessionItemToTemplatesCommand
 import com.sedsoftware.bagcue.domain.session.SessionBagAssignment
 import com.sedsoftware.bagcue.domain.session.SessionItemState
@@ -24,6 +25,7 @@ import com.sedsoftware.bagcue.domain.session.SessionPackingItemId
 import com.sedsoftware.bagcue.domain.session.SessionUndoSnapshot
 import com.sedsoftware.bagcue.domain.session.SnapshotText
 import com.sedsoftware.bagcue.domain.session.removeSessionItem
+import com.sedsoftware.bagcue.domain.session.reopenCompletedSession
 import com.sedsoftware.bagcue.domain.template.KitTemplate
 import com.sedsoftware.bagcue.domain.template.KitTemplateId
 import com.sedsoftware.bagcue.domain.template.KitTemplateRepository
@@ -39,10 +41,13 @@ import kotlinx.datetime.LocalDate
 internal class FakeSessionRepository(
     initial: List<PackingSession> = emptyList(),
     var addOneOffFailure: Throwable? = null,
-) : PackingSessionRepository {
+    var reopenFailure: Throwable? = null,
+) : SessionHistoryRepository {
     val sessions = MutableStateFlow(initial)
     override fun observeSession(id: PackingSessionId): Flow<PackingSession?> = sessions.map { values -> values.firstOrNull { it.id == id } }
+    override fun observeHistory(localDate: LocalDate?): Flow<SessionHistory> = sessions.map { values -> history(values, localDate) }
     override suspend fun readSession(id: PackingSessionId) = Result.success(sessions.value.firstOrNull { it.id == id })
+    override suspend fun readHistory(localDate: LocalDate?) = Result.success(history(sessions.value, localDate))
     override suspend fun findSessionByDate(date: LocalDate) = Result.success(sessions.value.firstOrNull { it.localDate == date })
     override suspend fun createSession(session: PackingSession): Result<CreateSessionResult> {
         val occupied = sessions.value.firstOrNull { it.localDate == session.localDate }
@@ -78,10 +83,25 @@ internal class FakeSessionRepository(
         return save(current.copy(revision = current.revision + 1, items = current.items.map { if (it.id == item.id) item else it }))
     }
     override suspend fun completeSession(session: PackingSession): Result<PackingSession> = save(session)
+    override suspend fun reopenSession(id: PackingSessionId): Result<PackingSession> {
+        reopenFailure?.let { return Result.failure(it) }
+        return save(reopenCompletedSession(sessions.value.first { it.id == id }))
+    }
     override suspend fun saveItemToTemplates(command: SaveSessionItemToTemplatesCommand): Result<List<KitTemplate>> = Result.success(emptyList())
+    override suspend fun prepareRepeat(id: PackingSessionId) = error("Not used")
+    override suspend fun deleteSession(id: PackingSessionId) = error("Not used")
+    override suspend fun restoreDeletedSession(undo: com.sedsoftware.bagcue.domain.session.DeletedSessionUndo) = error("Not used")
     private fun save(session: PackingSession): Result<PackingSession> {
         sessions.value = sessions.value.filterNot { it.id == session.id } + session
         return Result.success(session)
+    }
+
+    private fun history(values: List<PackingSession>, localDate: LocalDate?): SessionHistory {
+        val filtered = values.filter { localDate == null || it.localDate == localDate }
+        return SessionHistory(
+            planned = filtered.filter { it.status == PackingSessionStatus.Active }.sortedBy { it.localDate },
+            completed = filtered.filter { it.status == PackingSessionStatus.Completed }.sortedByDescending { it.localDate },
+        )
     }
 }
 

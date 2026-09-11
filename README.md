@@ -36,20 +36,20 @@ Android requires API 23 or newer and currently targets API 37. The iOS deploymen
 
 ## Repository structure
 
-| Path | Responsibility |
-| --- | --- |
-| `androidApp/` | Android entry point, manifest, Firebase and release wiring |
-| `iosApp/` | Swift/Xcode entry point, CocoaPods workspace and native configuration |
-| `shared/domain/` | Pure models, invariants, algorithms, and repository contracts |
-| `shared/data/` | SQLDelight persistence and settings implementations |
-| `shared/network/` | Ktor privacy-region transport |
-| `shared/platform/` | Android/iOS notifications, analytics, ads, and other platform services |
-| `shared/component/*/` | Decompose components and MVIKotlin stores by feature |
-| `shared/root/` | Production component graph and navigation |
-| `shared/compose/` | Shared Compose UI, resources, theme, and previews |
-| `shared/compose/visual-test/` | Paparazzi harness and committed golden images |
-| `spec/app-spec/` | Approved requirements and acceptance contract |
-| `docs/` | CI, release, privacy, design, and platform hand-off documentation |
+| Path                          | Responsibility                                                         |
+|-------------------------------|------------------------------------------------------------------------|
+| `androidApp/`                 | Android entry point, manifest, Firebase and release wiring             |
+| `iosApp/`                     | Swift/Xcode entry point, CocoaPods workspace and native configuration  |
+| `shared/domain/`              | Pure models, invariants, algorithms, and repository contracts          |
+| `shared/data/`                | SQLDelight persistence and settings implementations                    |
+| `shared/network/`             | Ktor privacy-region transport                                          |
+| `shared/platform/`            | Android/iOS notifications, analytics, ads, and other platform services |
+| `shared/component/*/`         | Decompose components and MVIKotlin stores by feature                   |
+| `shared/root/`                | Production component graph and navigation                              |
+| `shared/compose/`             | Shared Compose UI, resources, theme, and previews                      |
+| `shared/compose/visual-test/` | Paparazzi harness and committed golden images                          |
+| `spec/app-spec/`              | Approved requirements and acceptance contract                          |
+| `docs/`                       | CI, release, privacy, design, and platform hand-off documentation      |
 
 ## Prerequisites
 

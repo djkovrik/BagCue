@@ -34,9 +34,38 @@ internal object BagCuePreviewFixtures {
 
     fun today(
         summary: SessionComponent.SessionSummary? = null,
+        nextSummary: SessionComponent.SessionSummary? = null,
+        isFirstRun: Boolean = summary == null && nextSummary == null,
         isLoading: Boolean = false,
         error: SessionComponent.ErrorKey? = null,
-    ) = SessionComponent.Model(SessionComponent.Screen.Today(today, summary), isLoading, error)
+    ) = SessionComponent.Model(
+        SessionComponent.Screen.Today(
+            date = today,
+            session = summary,
+            nextSession = nextSummary,
+            starterTemplates = if (isFirstRun) {
+                listOf(
+                    SessionComponent.TemplateChoice(
+                        officeId,
+                        SessionComponent.UserText.Resource("starter_template_office"),
+                        OFFICE_POSITION_COUNT,
+                        selected = false,
+                    ),
+                    SessionComponent.TemplateChoice(
+                        poolId,
+                        SessionComponent.UserText.Resource("starter_template_pool"),
+                        POOL_POSITION_COUNT,
+                        selected = false,
+                    ),
+                )
+            } else {
+                emptyList()
+            },
+            isFirstRun = isFirstRun,
+        ),
+        isLoading,
+        error,
+    )
 
     fun todaySummary(
         date: LocalDate = today,
@@ -63,6 +92,7 @@ internal object BagCuePreviewFixtures {
         error: SessionComponent.ErrorKey? = null,
     ) = SessionComponent.Model(
         screen = SessionComponent.Screen.Create(
+            today = today,
             date = tomorrow,
             templates = listOf(
                 SessionComponent.TemplateChoice(

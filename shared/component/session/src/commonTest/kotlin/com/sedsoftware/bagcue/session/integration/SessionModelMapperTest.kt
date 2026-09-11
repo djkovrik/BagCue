@@ -24,6 +24,25 @@ import kotlin.test.assertTrue
 
 class SessionModelMapperTest {
     @Test
+    fun createScreenKeepsTodayIndependentFromSelectedFutureDate() {
+        val today = LocalDate(2026, 9, 8)
+        val selectedDate = LocalDate(2026, 9, 15)
+
+        val screen = assertIs<SessionComponent.Screen.Create>(
+            SessionStore.State(
+                route = SessionStore.Route.Create,
+                today = today,
+                createDraft = SessionStore.CreateDraft(selectedDate),
+                isLoading = false,
+            ).toComponentModel().screen,
+        )
+
+        assertEquals(today, screen.today)
+        assertEquals(LocalDate(2026, 9, 9), screen.tomorrow)
+        assertEquals(selectedDate, screen.date)
+    }
+
+    @Test
     fun activeChecklistGroupsConflictsFirstAndHidesPackedMoveHint() {
         val session = session(listOf(
             item("packed", SessionBagAssignment.NoBag, SessionItemState.Packed, "Desk"),

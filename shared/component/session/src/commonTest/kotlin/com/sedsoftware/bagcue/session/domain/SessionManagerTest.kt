@@ -5,6 +5,7 @@ import com.sedsoftware.bagcue.domain.session.CreateSessionResult
 import com.sedsoftware.bagcue.domain.apa.AnalyticsEventName
 import com.sedsoftware.bagcue.domain.session.PackingSessionId
 import com.sedsoftware.bagcue.domain.session.PackingSessionIdGenerator
+import com.sedsoftware.bagcue.domain.session.PackingSessionStatus
 import com.sedsoftware.bagcue.domain.session.SessionBagAssignment
 import com.sedsoftware.bagcue.domain.session.SessionItemState
 import com.sedsoftware.bagcue.domain.session.SessionPackingItemId
@@ -24,9 +25,11 @@ import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.LocalDate
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertFailsWith
 import kotlin.test.assertIs
 import kotlin.test.assertNotEquals
+import kotlin.test.assertNull
 import kotlin.test.assertSame
 
 class SessionManagerTest {
@@ -118,6 +121,29 @@ class SessionManagerTest {
     }
 
     @Test
+    fun reopenPreservesTheCompletedSnapshotAndRecordsTheApprovedEvent() = runTest {
+        val completed = com.sedsoftware.bagcue.session.completedSession("completed")
+        val sessions = FakeSessionRepository(listOf(completed))
+        val analytics = FakeSessionAnalyticsController()
+
+        val reopened = manager(
+            sessions,
+            FakeTemplateRepository(emptyList()),
+            FakeCatalogRepository(emptyList()),
+            analytics,
+        ).reopen(completed.id).getOrThrow()
+
+        assertEquals(completed.id, reopened.id)
+        assertEquals(completed.localDate, reopened.localDate)
+        assertEquals(completed.selectedTemplates, reopened.selectedTemplates)
+        assertEquals(completed.items, reopened.items)
+        assertEquals(PackingSessionStatus.Active, reopened.status)
+        assertNull(reopened.completionMode)
+        assertNull(reopened.completedAtMillis)
+        assertEquals(listOf(AnalyticsEventName.PackingSessionReopened), analytics.events.map { it.name })
+    }
+
+    @Test
     fun failedOneOffSavePreservesOriginalCauseAndPriorDurableSession() = runTest {
         val original = com.sedsoftware.bagcue.session.completedSession("active").copy(
             status = com.sedsoftware.bagcue.domain.session.PackingSessionStatus.Active,
@@ -154,6 +180,33 @@ class SessionManagerTest {
         assertEquals(original, sessions.sessions.value.single())
     }
 
+    @Test
+    fun todayOverviewFindsNearestFutureSessionAndDistinguishesReturningUser() = runTest {
+        val previous = com.sedsoftware.bagcue.session.completedSession("previous").copy(
+            localDate = LocalDate.fromEpochDays(date.toEpochDays() - 1),
+        )
+        val future = com.sedsoftware.bagcue.session.completedSession("future").copy(
+            localDate = LocalDate.fromEpochDays(date.toEpochDays() + 3),
+            status = PackingSessionStatus.Active,
+            completionMode = null,
+            completedAtMillis = null,
+        )
+        val later = future.copy(
+            id = PackingSessionId("later"),
+            localDate = LocalDate.fromEpochDays(date.toEpochDays() + 7),
+        )
+
+        val overview = manager(
+            FakeSessionRepository(listOf(previous, later, future)),
+            FakeTemplateRepository(emptyList()),
+            FakeCatalogRepository(emptyList()),
+        ).loadToday().getOrThrow()
+
+        assertNull(overview.session)
+        assertEquals(future.id, overview.nextSession?.id)
+        assertFalse(overview.isFirstRun)
+    }
+
     private fun manager(
         sessions: FakeSessionRepository,
         templates: FakeTemplateRepository,
@@ -173,6 +226,7 @@ class SessionManagerTest {
             currentTimeMillis = { 1000L },
             resolveResourceKey = { it.value },
             analyticsController = analytics,
+            historyRepository = sessions,
         )
     }
 }

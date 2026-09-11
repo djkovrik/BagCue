@@ -8,8 +8,6 @@ interface SessionHistoryRepository : PackingSessionRepository {
 
     suspend fun readHistory(localDate: LocalDate? = null): Result<SessionHistory>
 
-    suspend fun reopenSession(id: PackingSessionId): Result<PackingSession>
-
     suspend fun prepareRepeat(id: PackingSessionId): Result<RepeatSessionSelection>
 
     suspend fun deleteSession(id: PackingSessionId): Result<SessionDeletion>

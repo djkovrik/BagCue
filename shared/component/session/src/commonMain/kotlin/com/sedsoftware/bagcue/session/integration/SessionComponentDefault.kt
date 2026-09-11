@@ -17,6 +17,7 @@ import com.sedsoftware.bagcue.domain.apa.PrivacyRegionApi
 import com.sedsoftware.bagcue.domain.session.PackingSessionId
 import com.sedsoftware.bagcue.domain.session.PackingSessionIdGenerator
 import com.sedsoftware.bagcue.domain.session.PackingSessionRepository
+import com.sedsoftware.bagcue.domain.session.SessionHistoryRepository
 import com.sedsoftware.bagcue.domain.session.SessionPackingItemId
 import com.sedsoftware.bagcue.domain.session.SessionPackingItemIdGenerator
 import com.sedsoftware.bagcue.domain.template.KitTemplateId
@@ -68,6 +69,7 @@ class SessionComponentDefault(
                     currentTimeMillis = currentTimeMillis,
                     resolveResourceKey = resolveResourceKey,
                     analyticsController = analyticsController,
+                    historyRepository = sessionRepository as? SessionHistoryRepository,
                 ),
                 advertisingManager = ResultAdvertisingManager(
                     privacyRepository = advertisingPrivacyRepository,
@@ -107,6 +109,7 @@ class SessionComponentDefault(
     override fun removeItem(itemId: SessionPackingItemId) = store.accept(SessionStore.Intent.RemoveItem(itemId))
     override fun undoLastChange() = store.accept(SessionStore.Intent.UndoLastChange)
     override fun completeAllPacked() = store.accept(SessionStore.Intent.CompleteAllPacked)
+    override fun reopenSession(sessionId: PackingSessionId) = store.accept(SessionStore.Intent.ReopenSession(sessionId))
     override fun requestCompleteWithSkipped() = store.accept(SessionStore.Intent.RequestCompleteWithSkipped)
     override fun confirmCompleteWithSkipped() = store.accept(SessionStore.Intent.ConfirmCompleteWithSkipped)
     override fun dismissCompleteWithSkipped() = store.accept(SessionStore.Intent.DismissCompleteWithSkipped)

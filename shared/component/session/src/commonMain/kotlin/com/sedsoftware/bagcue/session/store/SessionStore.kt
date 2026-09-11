@@ -38,6 +38,7 @@ internal interface SessionStore : Store<SessionStore.Intent, SessionStore.State,
         data class RemoveItem(val id: SessionPackingItemId) : Intent
         data object UndoLastChange : Intent
         data object CompleteAllPacked : Intent
+        data class ReopenSession(val id: PackingSessionId) : Intent
         data object RequestCompleteWithSkipped : Intent
         data object ConfirmCompleteWithSkipped : Intent
         data object DismissCompleteWithSkipped : Intent
@@ -56,6 +57,8 @@ internal interface SessionStore : Store<SessionStore.Intent, SessionStore.State,
         val referenceData: SessionReferenceData? = null,
         val today: LocalDate? = null,
         val todaySession: PackingSession? = null,
+        val nextSession: PackingSession? = null,
+        val isFirstRun: Boolean = false,
         val createDraft: CreateDraft? = null,
         val session: PackingSession? = null,
         val itemEditor: ItemEditor? = null,
@@ -103,7 +106,7 @@ internal interface SessionStore : Store<SessionStore.Intent, SessionStore.State,
     enum class ValidationError { EmptySession, DateInPast, BagConflict }
 
     enum class Error {
-        LoadFailed, CreateFailed, ReplaceFailed, SaveFailed, RemoveFailed, UndoFailed, CompleteFailed,
+        LoadFailed, CreateFailed, ReplaceFailed, SaveFailed, RemoveFailed, UndoFailed, CompleteFailed, ReopenFailed,
         SessionNoLongerExists, ItemNoLongerExists, RevisionConflict,
     }
 }

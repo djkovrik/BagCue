@@ -1,5 +1,16 @@
 package com.sedsoftware.bagcue.compose
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.ExitTransition
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.snap
@@ -36,6 +47,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import bagcue.shared.compose.generated.resources.Res
 import bagcue.shared.compose.generated.resources.history_title
@@ -60,10 +72,22 @@ internal const val FONT_SCALE_THRESHOLD = 1.5f
 
 internal enum class ProductNavigationLayout { Bar, Rail }
 
+internal enum class RootContentTransition { Forward, Backward, Overlay, None }
+
 internal fun productNavigationLayout(width: androidx.compose.ui.unit.Dp): ProductNavigationLayout =
     if (width < EXPANDED_NAVIGATION_BREAKPOINT_DP.dp) ProductNavigationLayout.Bar else ProductNavigationLayout.Rail
 
 internal fun reduceNavigationMotion(durationScale: Float): Boolean = durationScale == 0f
+
+internal fun rootContentTransition(
+    initial: RootComponent.PrimaryDestination?,
+    target: RootComponent.PrimaryDestination?,
+): RootContentTransition = when {
+    initial == null || target == null -> RootContentTransition.Overlay
+    initial.ordinal < target.ordinal -> RootContentTransition.Forward
+    initial.ordinal > target.ordinal -> RootContentTransition.Backward
+    else -> RootContentTransition.None
+}
 
 internal fun primaryNavigationRows(fontScale: Float): List<List<PrimaryDestinationUi>> =
     if (fontScale >= FONT_SCALE_THRESHOLD) primaryDestinations().chunked(2) else listOf(primaryDestinations())
@@ -76,21 +100,81 @@ fun App(
 ) = AppTheme(onThemeChanged) {
     val stack by rootComponent.stack.subscribeAsState()
     val selectedDestination by rootComponent.selectedPrimaryDestination.subscribeAsState()
+    val durationScale = rememberCoroutineScope().coroutineContext[MotionDurationScale]?.scaleFactor ?: 1f
+    val reduceMotion = reduceNavigationMotion(durationScale)
+    val defaultSpatialSpec = MaterialTheme.motionScheme.defaultSpatialSpec<IntOffset>()
+    val fastSpatialSpec = MaterialTheme.motionScheme.fastSpatialSpec<IntOffset>()
+    val defaultScaleSpec = MaterialTheme.motionScheme.defaultSpatialSpec<Float>()
+    val fastScaleSpec = MaterialTheme.motionScheme.fastSpatialSpec<Float>()
+    val defaultEffectsSpec = MaterialTheme.motionScheme.defaultEffectsSpec<Float>()
+    val fastEffectsSpec = MaterialTheme.motionScheme.fastEffectsSpec<Float>()
     ProductShell(
         selectedDestination = selectedDestination,
         onDestinationSelected = rootComponent::selectPrimaryDestination,
     ) {
-        when (val child = stack.active.instance) {
-            is RootComponent.Child.Session -> SessionScreen(
-                component = child.component,
-                inlineResultAd = inlineResultAd,
-            )
-            is RootComponent.Child.History -> HistoryScreen(child.component)
-            is RootComponent.Child.Settings -> SettingsScreen(child.component)
-            is RootComponent.Child.Templates -> TemplateScreen(child.component)
-            is RootComponent.Child.Catalog -> CatalogScreen(child.component, onBack = rootComponent::showTemplates)
+        AnimatedContent(
+            targetState = stack.active.instance,
+            modifier = Modifier.fillMaxSize(),
+            transitionSpec = {
+                if (reduceMotion) {
+                    EnterTransition.None togetherWith ExitTransition.None
+                } else {
+                    when (
+                        rootContentTransition(
+                            initial = initialState.primaryDestinationOrNull(),
+                            target = targetState.primaryDestinationOrNull(),
+                        )
+                    ) {
+                        RootContentTransition.Forward ->
+                            (
+                                slideInHorizontally(defaultSpatialSpec) { width -> width } +
+                                    fadeIn(defaultEffectsSpec)
+                            ) togetherWith (
+                                slideOutHorizontally(fastSpatialSpec) { width -> -width } +
+                                    fadeOut(fastEffectsSpec)
+                            )
+                        RootContentTransition.Backward ->
+                            (
+                                slideInHorizontally(defaultSpatialSpec) { width -> -width } +
+                                    fadeIn(defaultEffectsSpec)
+                            ) togetherWith (
+                                slideOutHorizontally(fastSpatialSpec) { width -> width } +
+                                    fadeOut(fastEffectsSpec)
+                            )
+                        RootContentTransition.Overlay ->
+                            (
+                                scaleIn(defaultScaleSpec, initialScale = 0.94f) +
+                                    fadeIn(defaultEffectsSpec)
+                            ) togetherWith (
+                                scaleOut(fastScaleSpec, targetScale = 0.94f) +
+                                    fadeOut(fastEffectsSpec)
+                            )
+                        RootContentTransition.None -> EnterTransition.None togetherWith ExitTransition.None
+                    }
+                }
+            },
+            label = "root-content",
+        ) { child ->
+            when (child) {
+                is RootComponent.Child.Session -> SessionScreen(
+                    component = child.component,
+                    inlineResultAd = inlineResultAd,
+                )
+                is RootComponent.Child.History -> HistoryScreen(child.component)
+                is RootComponent.Child.Settings -> SettingsScreen(child.component)
+                is RootComponent.Child.Templates -> TemplateScreen(child.component)
+                is RootComponent.Child.Catalog -> CatalogScreen(child.component, onBack = rootComponent::showTemplates)
+            }
         }
     }
+}
+
+private fun RootComponent.Child.primaryDestinationOrNull(): RootComponent.PrimaryDestination? = when (this) {
+    is RootComponent.Child.Session -> RootComponent.PrimaryDestination.Today
+    is RootComponent.Child.History -> RootComponent.PrimaryDestination.Sessions
+    is RootComponent.Child.Templates -> RootComponent.PrimaryDestination.Templates
+    is RootComponent.Child.Settings -> RootComponent.PrimaryDestination.Settings
+    is RootComponent.Child.Catalog -> null
 }
 
 @Composable
@@ -192,6 +276,15 @@ private fun RowScope.PrimaryNavigationBarItem(
         animationSpec = if (reduceMotion) snap() else MaterialTheme.motionScheme.fastSpatialSpec(),
         label = "primary-navigation-icon-lift",
     )
+    val indicatorColor by animateColorAsState(
+        targetValue = if (selected) {
+            MaterialTheme.colorScheme.primaryContainer
+        } else {
+            MaterialTheme.colorScheme.surfaceContainerHigh.copy(alpha = 0f)
+        },
+        animationSpec = if (reduceMotion) snap() else MaterialTheme.motionScheme.fastEffectsSpec(),
+        label = "primary-navigation-indicator-color",
+    )
     NavigationBarItem(
         selected = selected,
         onClick = { onDestinationSelected(destination.destination) },
@@ -217,7 +310,7 @@ private fun RowScope.PrimaryNavigationBarItem(
         colors = NavigationBarItemDefaults.colors(
             selectedIconColor = MaterialTheme.colorScheme.onPrimaryContainer,
             selectedTextColor = MaterialTheme.colorScheme.primary,
-            indicatorColor = MaterialTheme.colorScheme.primaryContainer,
+            indicatorColor = indicatorColor,
             unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
             unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
         ),

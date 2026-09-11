@@ -36,6 +36,7 @@ class SessionComponentPreview(initialModel: SessionComponent.Model) : SessionCom
     override fun removeItem(itemId: SessionPackingItemId) = Unit
     override fun undoLastChange() = Unit
     override fun completeAllPacked() = Unit
+    override fun reopenSession(sessionId: PackingSessionId) = Unit
     override fun requestCompleteWithSkipped() = Unit
     override fun confirmCompleteWithSkipped() = Unit
     override fun dismissCompleteWithSkipped() = Unit

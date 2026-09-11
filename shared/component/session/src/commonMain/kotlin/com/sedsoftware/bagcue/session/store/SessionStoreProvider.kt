@@ -10,6 +10,7 @@ import com.sedsoftware.bagcue.domain.session.CreateSessionResult
 import com.sedsoftware.bagcue.domain.session.EmptyPackingSessionException
 import com.sedsoftware.bagcue.domain.session.PackingSession
 import com.sedsoftware.bagcue.domain.session.PackingSessionId
+import com.sedsoftware.bagcue.domain.session.PackingSessionNotFoundException
 import com.sedsoftware.bagcue.domain.session.PackingSessionStatus
 import com.sedsoftware.bagcue.domain.session.PastPackingSessionDateException
 import com.sedsoftware.bagcue.domain.session.SessionBagAssignment
@@ -23,6 +24,7 @@ import com.sedsoftware.bagcue.domain.template.KitTemplateId
 import com.sedsoftware.bagcue.domain.template.TemplateBagLabel
 import com.sedsoftware.bagcue.session.domain.SessionManager
 import com.sedsoftware.bagcue.session.domain.SessionReferenceData
+import com.sedsoftware.bagcue.session.domain.TodayOverview
 import com.sedsoftware.bagcue.session.domain.ResultAdvertisingDecision
 import com.sedsoftware.bagcue.session.domain.ResultAdvertisingManager
 import com.sedsoftware.bagcue.session.domain.mergedItemCount
@@ -52,7 +54,7 @@ internal class SessionStoreProvider(
 
     private sealed interface Msg {
         data class ReferenceLoaded(val data: SessionReferenceData) : Msg
-        data class TodayLoaded(val date: LocalDate, val session: PackingSession?) : Msg
+        data class TodayLoaded(val date: LocalDate, val overview: TodayOverview) : Msg
         data class CreateOpened(val draft: SessionStore.CreateDraft) : Msg
         data class CreateDateChanged(val date: LocalDate, val occupied: PackingSession?) : Msg
         data class TemplateSelectionChanged(val ids: Set<KitTemplateId>) : Msg
@@ -117,6 +119,7 @@ internal class SessionStoreProvider(
                 is SessionStore.Intent.RemoveItem -> removeItem(intent.id)
                 SessionStore.Intent.UndoLastChange -> undo()
                 SessionStore.Intent.CompleteAllPacked -> completeAll()
+                is SessionStore.Intent.ReopenSession -> reopenSession(intent.id)
                 SessionStore.Intent.RequestCompleteWithSkipped -> requestSkipped()
                 SessionStore.Intent.ConfirmCompleteWithSkipped -> completeSkipped()
                 SessionStore.Intent.DismissCompleteWithSkipped -> dispatch(Msg.SkippedConfirmation(null))
@@ -149,7 +152,7 @@ internal class SessionStoreProvider(
 
         private fun loadToday() {
             scope.launch {
-                manager.findToday().unwrap(
+                manager.loadToday().unwrap(
                     onSuccess = { dispatch(Msg.TodayLoaded(manager.currentDate, it)) },
                     onFailure = { dispatch(Msg.Failed(SessionStore.Error.LoadFailed)) },
                 )
@@ -346,6 +349,28 @@ internal class SessionStoreProvider(
             save(SessionStore.Error.CompleteFailed) { manager.completeAll(session) }
         }
 
+        private fun reopenSession(id: PackingSessionId) {
+            if (state().isSaving) return
+            dispatch(Msg.Saving(true))
+            hideAdvertising()
+            scope.launch {
+                manager.reopen(id).unwrap(
+                    onSuccess = ::acceptSession,
+                    onFailure = { error ->
+                        dispatch(
+                            Msg.Failed(
+                                if (error is PackingSessionNotFoundException) {
+                                    SessionStore.Error.SessionNoLongerExists
+                                } else {
+                                    SessionStore.Error.ReopenFailed
+                                },
+                            ),
+                        )
+                    },
+                )
+            }
+        }
+
         private fun requestSkipped() {
             val remaining = state().session?.items?.count { it.state == SessionItemState.NotPacked } ?: return
             if (remaining > 0) dispatch(Msg.SkippedConfirmation(remaining))
@@ -468,7 +493,14 @@ internal class SessionStoreProvider(
     private object ReducerImpl : Reducer<SessionStore.State, Msg> {
         override fun SessionStore.State.reduce(msg: Msg): SessionStore.State = when (msg) {
             is Msg.ReferenceLoaded -> copy(referenceData = msg.data, isLoading = false, error = null)
-            is Msg.TodayLoaded -> copy(today = msg.date, todaySession = msg.session, isLoading = false, error = null)
+            is Msg.TodayLoaded -> copy(
+                today = msg.date,
+                todaySession = msg.overview.session,
+                nextSession = msg.overview.nextSession,
+                isFirstRun = msg.overview.isFirstRun,
+                isLoading = false,
+                error = null,
+            )
             is Msg.CreateOpened -> copy(route = SessionStore.Route.Create, createDraft = msg.draft, error = null)
             is Msg.CreateDateChanged -> copy(
                 createDraft = createDraft?.copy(date = msg.date, occupiedSession = msg.occupied, validationError = null),

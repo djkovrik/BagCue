@@ -17,6 +17,15 @@ internal fun SessionStore.State.toComponentModel(): SessionComponent.Model = Ses
         SessionStore.Route.Today -> SessionComponent.Screen.Today(
             date = requireNotNull(today),
             session = todaySession?.toSummary(),
+            nextSession = nextSession?.toSummary(),
+            starterTemplates = if (isFirstRun) {
+                referenceData?.templates.orEmpty()
+                    .filter { it.seedNameKey != null }
+                    .map { it.toChoice(selected = false) }
+            } else {
+                emptyList()
+            },
+            isFirstRun = isFirstRun,
         )
         SessionStore.Route.Create -> createScreen()
         SessionStore.Route.Active -> activeScreen(requireNotNull(session))
@@ -30,6 +39,7 @@ private fun SessionStore.State.createScreen(): SessionComponent.Screen.Create {
     val draft = requireNotNull(createDraft)
     val templates = referenceData?.templates.orEmpty()
     return SessionComponent.Screen.Create(
+        today = requireNotNull(today),
         date = draft.date,
         templates = templates.map { it.toChoice(it.id in draft.selectedTemplateIds) },
         mergedItemCount = referenceData?.let { data ->

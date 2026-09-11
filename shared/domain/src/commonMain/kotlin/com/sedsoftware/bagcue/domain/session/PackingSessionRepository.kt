@@ -25,5 +25,7 @@ interface PackingSessionRepository {
 
     suspend fun completeSession(session: PackingSession): Result<PackingSession>
 
+    suspend fun reopenSession(id: PackingSessionId): Result<PackingSession>
+
     suspend fun saveItemToTemplates(command: SaveSessionItemToTemplatesCommand): Result<List<KitTemplate>>
 }

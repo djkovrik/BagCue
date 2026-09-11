@@ -43,7 +43,7 @@ abstract class GenerateBagCuePreviewTestsTask : DefaultTask() {
                     private val cachedPreviews by lazy { discoverBagCuePreviews(listOf($packageLiterals)) }
                     @JvmStatic @Parameterized.Parameters(name = "{0}")
                     fun previews(): List<ComposablePreview<AndroidPreviewInfo>> = cachedPreviews.also {
-                        check(it.size == 118) { "Expected 118 BagCue previews, found ${'$'}{it.size}" }
+                        check(it.size == 122) { "Expected 122 BagCue previews, found ${'$'}{it.size}" }
                         writeCoverageInventory(it, System.getProperty("bagcue.preview.coverage.file"), "$packagePrefix.")
                     }
                 }
@@ -61,7 +61,7 @@ abstract class GenerateBagCuePreviewTestsTask : DefaultTask() {
 
             class BagCuePreviewDiscoveryTest {
                 @Test fun discoversExactRequiredPreviewMatrix() =
-                    assertEquals(118, discoverBagCuePreviews(listOf($packageLiterals)).size)
+                    assertEquals(122, discoverBagCuePreviews(listOf($packageLiterals)).size)
             }
             """.trimIndent(),
         )

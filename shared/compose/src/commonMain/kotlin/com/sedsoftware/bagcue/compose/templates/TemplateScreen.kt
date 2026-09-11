@@ -17,19 +17,24 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExtendedFloatingActionButton
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Snackbar
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
@@ -61,6 +66,7 @@ import bagcue.shared.compose.generated.resources.template_item_missing
 import bagcue.shared.compose.generated.resources.template_keep_editing
 import bagcue.shared.compose.generated.resources.template_load_failed
 import bagcue.shared.compose.generated.resources.template_missing
+import bagcue.shared.compose.generated.resources.template_more
 import bagcue.shared.compose.generated.resources.template_name_label
 import bagcue.shared.compose.generated.resources.template_name_required
 import bagcue.shared.compose.generated.resources.template_new_title
@@ -85,6 +91,7 @@ import bagcue.shared.compose.generated.resources.templates_catalog
 import bagcue.shared.compose.generated.resources.templates_create
 import bagcue.shared.compose.generated.resources.templates_empty_body
 import bagcue.shared.compose.generated.resources.templates_empty_title
+import bagcue.shared.compose.generated.resources.templates_more
 import bagcue.shared.compose.generated.resources.templates_title
 import com.arkivanov.decompose.extensions.compose.subscribeAsState
 import com.sedsoftware.bagcue.compose.assets.BagCueAssets
@@ -125,7 +132,7 @@ private fun TemplateList(model: TemplateComponent.Model, component: TemplateComp
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(Res.string.templates_title)) },
-                actions = { TextButton(component::openCatalog) { Text(stringResource(Res.string.templates_catalog)) } },
+                actions = { templatesCatalogAction(component, largeFont) },
             )
         },
         bottomBar = {
@@ -163,11 +170,16 @@ private fun TemplateList(model: TemplateComponent.Model, component: TemplateComp
             }
             else -> LazyColumn(
                 Modifier.fillMaxSize().padding(padding),
-                contentPadding = PaddingValues(bottom = if (largeFont) 24.dp else 96.dp),
+                contentPadding = PaddingValues(
+                    start = 12.dp,
+                    top = 8.dp,
+                    end = 12.dp,
+                    bottom = if (largeFont) 24.dp else 96.dp,
+                ),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 items(model.templates, key = { it.id.value }) { template ->
                     TemplateRow(template, component)
-                    HorizontalDivider()
                 }
             }
         }
@@ -179,46 +191,128 @@ private fun TemplateRow(template: TemplateComponent.TemplateSummary, component: 
     val name = template.name.resolve()
     val bagNames = mutableListOf<String>()
     for (bag in template.bagSummary) bagNames += bag.resolve()
-    Column(
-        Modifier.fillMaxWidth().padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp),
-    ) {
-        Text(name, style = MaterialTheme.typography.titleMedium)
-        Text(stringResource(Res.string.template_positions_count, template.positionCount))
-        if (template.bagSummary.isNotEmpty()) {
-            Text(stringResource(Res.string.template_bags_summary, bagNames.joinToString()))
+    Column(Modifier.fillMaxWidth()) {
+        Surface(
+            onClick = { component.openTemplate(template.id) },
+            color = MaterialTheme.colorScheme.surfaceContainerLow,
+            shape = MaterialTheme.shapes.medium,
+        ) {
+            Row(
+                Modifier.fillMaxWidth().padding(horizontal = 6.dp, vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Row(
+                    Modifier.weight(1f).sizeIn(minHeight = 72.dp)
+                        .padding(horizontal = 6.dp, vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    templateIcon()
+                    templateDescription(template, name, bagNames, Modifier.weight(1f))
+                }
+                TemplateActions(template, component, name)
+            }
         }
-        TemplateActions(template, component, name)
     }
 }
 
 @Composable
 private fun TemplateActions(template: TemplateComponent.TemplateSummary, component: TemplateComponent, name: String) {
-    val largeFont = LocalDensity.current.fontScale >= 1.5f
-    if (largeFont) {
-        Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-            TextButton(
-                onClick = { component.openTemplate(template.id) },
-                modifier = Modifier.fillMaxWidth().sizeIn(minHeight = 48.dp),
-            ) { Text(stringResource(Res.string.template_open, name)) }
-            TextButton(
-                onClick = { component.duplicateTemplate(template.id) },
-                modifier = Modifier.fillMaxWidth().sizeIn(minHeight = 48.dp),
-            ) { BagCueIcon(BagCueAssets.Duplicate, null); Text(stringResource(Res.string.template_duplicate, name)) }
-            TextButton(
-                onClick = { component.requestDeleteTemplate(template.id) },
-                modifier = Modifier.fillMaxWidth().sizeIn(minHeight = 48.dp),
-            ) { BagCueIcon(BagCueAssets.Delete, null); Text(stringResource(Res.string.template_delete, name)) }
+    var expanded by remember { mutableStateOf(false) }
+    Box {
+        IconButton(onClick = { expanded = true }) {
+            BagCueIcon(BagCueAssets.More, stringResource(Res.string.template_more, name))
         }
-    } else {
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            TextButton(onClick = { component.openTemplate(template.id) }) { Text(stringResource(Res.string.template_open, name)) }
-            IconButton(onClick = { component.duplicateTemplate(template.id) }) {
-                BagCueIcon(BagCueAssets.Duplicate, stringResource(Res.string.template_duplicate, name))
-            }
-            IconButton(onClick = { component.requestDeleteTemplate(template.id) }) {
-                BagCueIcon(BagCueAssets.Delete, stringResource(Res.string.template_delete, name))
-            }
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            DropdownMenuItem(
+                text = { Text(stringResource(Res.string.template_open, name)) },
+                onClick = {
+                    expanded = false
+                    component.openTemplate(template.id)
+                },
+            )
+            DropdownMenuItem(
+                text = { Text(stringResource(Res.string.template_duplicate, name)) },
+                onClick = {
+                    expanded = false
+                    component.duplicateTemplate(template.id)
+                },
+                leadingIcon = { BagCueIcon(BagCueAssets.Duplicate, null) },
+            )
+            DropdownMenuItem(
+                text = { Text(stringResource(Res.string.template_delete, name)) },
+                onClick = {
+                    expanded = false
+                    component.requestDeleteTemplate(template.id)
+                },
+                leadingIcon = { BagCueIcon(BagCueAssets.Delete, null) },
+            )
+        }
+    }
+}
+
+@Composable
+private fun templatesCatalogAction(component: TemplateComponent, compact: Boolean) {
+    if (!compact) {
+        TextButton(component::openCatalog) { Text(stringResource(Res.string.templates_catalog)) }
+        return
+    }
+    var expanded by remember { mutableStateOf(false) }
+    Box {
+        IconButton(onClick = { expanded = true }) {
+            BagCueIcon(BagCueAssets.More, stringResource(Res.string.templates_more))
+        }
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            DropdownMenuItem(
+                text = { Text(stringResource(Res.string.templates_catalog)) },
+                onClick = {
+                    expanded = false
+                    component.openCatalog()
+                },
+            )
+        }
+    }
+}
+
+@Composable
+private fun templateIcon() {
+    Surface(
+        color = MaterialTheme.colorScheme.primaryContainer,
+        contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+        shape = MaterialTheme.shapes.small,
+    ) {
+        Box(Modifier.sizeIn(minWidth = 40.dp, minHeight = 40.dp), contentAlignment = Alignment.Center) {
+            BagCueIcon(BagCueAssets.Templates, null)
+        }
+    }
+}
+
+@Composable
+private fun templateDescription(
+    template: TemplateComponent.TemplateSummary,
+    name: String,
+    bagNames: List<String>,
+    modifier: Modifier = Modifier,
+) {
+    Column(modifier, verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Text(name, style = MaterialTheme.typography.titleMedium)
+        Surface(
+            color = MaterialTheme.colorScheme.surfaceContainerHighest,
+            contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            shape = MaterialTheme.shapes.extraLarge,
+        ) {
+            Text(
+                stringResource(Res.string.template_positions_count, template.positionCount),
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
+                style = MaterialTheme.typography.labelMedium,
+            )
+        }
+        if (template.bagSummary.isNotEmpty()) {
+            Text(
+                stringResource(Res.string.template_bags_summary, bagNames.joinToString()),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
         }
     }
 }
