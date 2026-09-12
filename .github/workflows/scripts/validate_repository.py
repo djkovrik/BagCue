@@ -96,6 +96,8 @@ def main() -> int:
         "Android release must validate the committed Firebase config",
     )
     require("validate_privacy_policy.py" in publish_workflow, "Android publication must verify the hosted privacy policy")
+    require("track: production" in publish_workflow, "Android publication must target Google Play Production")
+    require("track: internal" not in publish_workflow, "Android publication still targets Internal testing")
     require("bagcue-coverage-badge.json" in badge_workflow, "coverage workflow badge filename drift")
     require("/Applications/Xcode_26.2.app" in analysis_workflow, "iOS CI must select Firebase-supported Xcode 26.2")
     require("/raw/bagcue-coverage-badge.json" in readme, "README coverage endpoint drift")

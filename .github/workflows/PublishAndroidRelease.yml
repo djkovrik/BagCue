@@ -115,13 +115,13 @@ jobs:
             androidApp/build/outputs/bundle/release/androidApp-release.aab
             androidApp/build/outputs/mapping/release/mapping.txt
             androidApp/build/outputs/native-debug-symbols/release/**
-      - name: Publish exact AAB to Google Play Internal testing
+      - name: Publish exact AAB to Google Play Production
         uses: r0adkll/upload-google-play@935ef9c68bb393a8e6116b1575626a7f5be3a7fb # v1.1.3
         with:
           serviceAccountJson: ${{ runner.temp }}/google-play-service-account.json
           packageName: com.sedsoftware.bagcue
           releaseFiles: androidApp/build/outputs/bundle/release/androidApp-release.aab
-          track: internal
+          track: production
           status: completed
           mappingFile: androidApp/build/outputs/mapping/release/mapping.txt
           whatsNewDirectory: ${{ runner.temp }}/whatsnew

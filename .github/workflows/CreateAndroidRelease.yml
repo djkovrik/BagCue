@@ -87,7 +87,7 @@ jobs:
           git tag -a "$TAG" -m "BagCue $TAG"
           git push origin "$TAG"
           gh release create "$TAG" --prerelease --verify-tag --title "BagCue $TAG" \
-            --notes "Automated prerelease for Google Play Internal testing." \
+            --notes "Automated prerelease for Google Play Production publication." \
             release-notes-en-US.txt release-notes-ru-RU.txt
 
   publish:

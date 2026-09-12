@@ -4,10 +4,10 @@
 - Ledger: `LEDGER-daf88a72-e8ed-4785-a86a-1a3cc7429e83`
 - Phase: `reconciling`
 - Active AC: `none`
-- Ledger digest: `239c716b061b946418332c246895cee3d8268018f4580e12b705c2a6ca2655bd`
+- Ledger digest: `111d2d8977455f536c46a1c0a3767a98c591a6bba0930776a82d95d832027f8b`
 - AppSpec fingerprint: `ffac9713c8bbaa0b082619582efdfd31a532863c428b8fe942ce6bb16315e978`
-- Workspace fingerprint: `9867bc1fb37a1c58df1b769b74468f1de8c14a0e9c184689c845a123304bf1e3`
-- Next action: Continue work on the remaining release gates; QG-008 is verified and closed.
+- Workspace fingerprint: `3c7268bbfe0badc0e20cfd624140dec438a89ffe8f347d945a098616fea08385`
+- Next action: Commit and push the Production-track change, confirm Production service-account permission, refresh per-surface acceptance evidence, bind the exact SemVer candidate, and then launch the fresh acceptance audit.
 
 ## Acceptance scenarios
 
@@ -69,18 +69,18 @@
 
 | ID | Category | Platform | Applicability | Status | Surfaces | Receipts |
 | --- | --- | --- | --- | --- | --- | --- |
-| QG-001 | repository | all | applicable | not-started | repository-check, domain-test, component-test, persistence-integration-test | — |
-| QG-002 | platform | android | applicable | not-started | android-build, android-platform-test | — |
-| QG-003 | platform | ios | applicable | not-started | ios-build, ios-link-test | — |
-| QG-004 | release | all | applicable | not-started | release-check | — |
-| QG-005 | external | android | needs-review | implemented-unverified | google-play-publication-check | — |
-| QG-006 | repository | all | applicable | not-started | asset-check, asset-visual | — |
-| QG-007 | repository | all | applicable | not-started | network-mock-test, ad-lifecycle-test, firebase-contract-test, privacy-static-check | — |
-| QG-008 | external | all | applicable | verified | privacy-endpoint-check | .vibe/receipts/RECEIPT-d31155f9-4f7d-4d55-ad09-081e8d59f180.json |
-| QG-009 | external | android | needs-review | implemented-unverified | android-ad-config-check | — |
-| QG-010 | repository | ios | applicable | not-started | documentation-check | — |
-| QG-011 | external | all | needs-review | implemented-unverified | firebase-console-check | — |
-| QG-012 | release | all | applicable | implemented-unverified | privacy-policy-review, data-safety-review | — |
+| QG-001 | repository | all | applicable | implemented-unverified | repository-check, domain-test, component-test, persistence-integration-test | .vibe/receipts/RECEIPT-2087e667-f556-4ae6-a043-6481b86a8e10.json, .vibe/receipts/RECEIPT-a36bb832-8e81-44ed-a233-eac71dc0325b.json |
+| QG-002 | platform | android | applicable | implemented-unverified | android-build, android-platform-test | .vibe/receipts/RECEIPT-2087e667-f556-4ae6-a043-6481b86a8e10.json |
+| QG-003 | platform | ios | applicable | implemented-unverified | ios-build, ios-link-test | .vibe/receipts/RECEIPT-cc08166b-9105-4bba-9efa-c4b5d7c42c69.json |
+| QG-004 | release | all | applicable | implemented-unverified | release-check | .vibe/receipts/RECEIPT-2087e667-f556-4ae6-a043-6481b86a8e10.json, .vibe/receipts/RECEIPT-a36bb832-8e81-44ed-a233-eac71dc0325b.json |
+| QG-005 | external | android | applicable | implemented-unverified | google-play-publication-check | — |
+| QG-006 | repository | all | applicable | implemented-unverified | asset-check, asset-visual | .vibe/receipts/RECEIPT-2087e667-f556-4ae6-a043-6481b86a8e10.json |
+| QG-007 | repository | all | applicable | implemented-unverified | network-mock-test, ad-lifecycle-test, firebase-contract-test, privacy-static-check | .vibe/receipts/RECEIPT-2087e667-f556-4ae6-a043-6481b86a8e10.json |
+| QG-008 | external | all | applicable | implemented-unverified | privacy-endpoint-check | .vibe/receipts/RECEIPT-d31155f9-4f7d-4d55-ad09-081e8d59f180.json |
+| QG-009 | external | android | applicable | implemented-unverified | android-ad-config-check | — |
+| QG-010 | repository | ios | applicable | implemented-unverified | documentation-check | .vibe/receipts/RECEIPT-cc08166b-9105-4bba-9efa-c4b5d7c42c69.json |
+| QG-011 | external | all | applicable | implemented-unverified | firebase-console-check | — |
+| QG-012 | release | all | applicable | implemented-unverified | privacy-policy-review, data-safety-review | .vibe/receipts/RECEIPT-deaf8258-e502-4b67-8ada-2dff32e44696.json, .vibe/receipts/RECEIPT-eb53aa3e-058f-4302-91fe-b2c10655bfc8.json |
 
 ## Integrated flows (separate from AC verification)
 
